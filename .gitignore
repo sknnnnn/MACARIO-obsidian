@@ -1,0 +1,19 @@
+# Obsidian: configuración y estado local de la app, no es documentación
+.obsidian/
+
+# Papelera local de Obsidian (si en algún momento se activa "mover a .trash")
+.trash/
+
+# Archivos temporales / basura de sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backups y archivos temporales de edición
+*.tmp
+*.bak
+*~
+
+# Copias de conflicto que puede generar OneDrive al sincronizar
+*-conflicto*.md
+*(conflicted copy*).md
