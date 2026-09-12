@@ -44,9 +44,18 @@ Pendiente de definir explícitamente. No documentado en el original más allá d
 
 ## 4. Pendientes de contenido
 
-Definir y completar el contenido editorial e informativo de cada destino (estructura, contenido, imágenes, narrativa, información útil, relación con experiencias, navegación) es conocimiento pendiente registrado en el documento original.
+Estado real confirmado en el código (`assets/js/destinos-data.js`), 12 destinos en total:
 
-Esta sección documenta qué información falta, únicamente a fines de conocimiento del proyecto. No reemplaza ni sustituye el seguimiento operativo: cualquier tarea de seguimiento para completar este contenido debe crearse y trackearse en Linear.
+**Con contenido real cargado:**
+- Argentina: Bariloche, Ushuaia, San Martín de los Andes, Villa Pehuenia, Norte Neuquino.
+- Perú: tarjeta general "Perú".
+
+**Pendientes / en preparación** (marcados explícitamente en el código como tales, sin contenido inventado):
+- Norte Argentino (Argentina) — tiene imagen y resumen cargados, pero el destino sigue marcado como en preparación.
+- Choquequirao (Perú) — imagen y resumen reales ya cargados (reutilizados de la Travesía "Choquequirao Trekking"), pero el destino sigue marcado como en preparación.
+- Paracas, Huacachina, Arequipa, Lima (Perú) — sin imagen ni contenido real; el código muestra "Imagen pendiente" / "En preparación" en vez de contenido inventado o prestado de otro destino.
+
+Definir y completar el contenido editorial e informativo de estos destinos pendientes (estructura, imágenes, narrativa, información útil) sigue siendo trabajo pendiente. Esta sección documenta qué información falta, únicamente a fines de conocimiento del proyecto. No reemplaza ni sustituye el seguimiento operativo: cualquier tarea de seguimiento para completar este contenido debe crearse y trackearse en Linear.
 
 ---
 

@@ -49,5 +49,5 @@ Proyecto Raíces es un proyecto de turismo de aventura y experiencias (tours, tr
 ## Enlaces externos
 
 **Sitio:** https://proyectoraices.com.ar
-**Repositorio:** Pendiente de definir.
+**Repositorio:** https://github.com/sknnnnn/proyecto-raices.git
 **Proyecto en Linear:** Pendiente de definir.

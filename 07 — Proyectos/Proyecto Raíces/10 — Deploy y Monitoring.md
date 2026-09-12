@@ -7,7 +7,7 @@
 
 ## 1. Proceso de deploy
 
-Pendiente de documentar. No hay información específica de Proyecto Raíces sobre el proceso de deploy en la documentación original.
+Pendiente de documentar. No se encontró ningún archivo de configuración de deploy en el repositorio (sin `netlify.toml`, `vercel.json` ni workflows de GitHub Actions al momento de esta auditoría). Esto no confirma el proveedor de deploy — solo indica que no está configurado como código dentro del propio repositorio. El proveedor y el proceso real de deploy siguen pendientes de confirmar con Ignacio.
 
 ---
 

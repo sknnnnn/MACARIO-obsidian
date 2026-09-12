@@ -7,13 +7,15 @@
 
 ## Linear
 
-**Proyecto:** Pendiente de definir. El documento original indica que las tareas operativas viven en Linear, pero no registra una URL.
+**Proyecto:** Pendiente de definir. Verificado por API (2026-09-12): no existe actualmente ningún proyecto llamado "Raíces"/"Raices" en el workspace de Linear.
 
 ---
 
 ## GitHub
 
-**Repositorio:** Pendiente de definir. El documento original indica "agregar enlace al repositorio oficial cuando corresponda".
+**Repositorio:** https://github.com/sknnnnn/proyecto-raices.git (confirmado por auditoría de Git, 2026-09-12).
+
+Nota: al momento de esta auditoría, el checkout local del repositorio tenía activa la rama `claude/proyecto-raices-visual-language-q04g3y`, con trabajo de rediseño visual/contenido que todavía no está en `main`. El seguimiento del estado de ramas y PRs vive en GitHub, no se documenta acá.
 
 ---
 
