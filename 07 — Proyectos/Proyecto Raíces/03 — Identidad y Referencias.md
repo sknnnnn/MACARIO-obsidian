@@ -48,17 +48,52 @@ No hay una definición adicional de tono/voz editorial más allá de estos atrib
 
 ## 4. Referencias visuales
 
+### 4.1 Referencias de dirección visual de Proyecto Raíces
+
+Referencias específicas del universo visual de Raíces. Tienen prioridad sobre la biblioteca general (sección 4.2) para decisiones relacionadas con: fotografía, aventura, destinos, experiencias, narrativa, composición foto + contenido e identidad visual.
+
 - **Wamani** — referencia de estética de turismo de aventura (documentado originalmente y confirmado en `PROJECT-CONTEXT.md`).
 - **NicoTrip** — referencia adicional confirmada en `PROJECT-CONTEXT.md`.
 - **TrekaTravel** — referencia adicional confirmada en `PROJECT-CONTEXT.md`.
 
 Estas referencias priorizan: composición, jerarquía, fotografía, navegación, presentación de experiencias y sensación general. No deben copiarse literalmente.
 
+### 4.2 Biblioteca general de referencias de diseño
+
+Bancos de inspiración de uso general (no específicos de viajes/aventura), agrupados por para qué sirve cada uno.
+
+- **Visual Design** — [Inspora](https://t.co/fBFjbiIyBV): dirección visual e inspiración general.
+- **Social Post Design** — [Posts.design](https://t.co/RK97QMhnHh): diseño de posts para redes sociales.
+- **Mobile Websites** — [Loadmo.re](https://t.co/oDtgaAastm): referencias de sitios web mobile.
+- **AI agent Design / .md Files** — [Styles Refero](https://t.co/mSGX5DI19g): estilos y archivos `.md` para agentes de IA.
+- **UI Screens** — [Mobbin](https://t.co/YxsQM2IoaD): capturas de pantallas UI reales de apps.
+- **Recent Design** — [Recent.design](https://t.co/8DFr095CH7): diseños recientes de referencia.
+- **UI Animation** — [60fps.design](https://t.co/N4N9EUHc5B): animaciones e interacciones de UI.
+- **Hero Sections** — [Supahero](https://t.co/aC0h1rVEFO): ejemplos de hero sections.
+- **Navbar Designs** — [Navbar Gallery](https://t.co/jEPQN5cpns): ejemplos de barras de navegación.
+- **Gradients** — [UI Gradients](https://t.co/YhQzZDfEdV): paletas de gradientes para UI.
+- **CTA Designs** — [CTA Gallery](https://t.co/SvpA9VKvoR): ejemplos de llamados a la acción.
+- **Logo Inspiration** — [Logobook](https://t.co/PnOpcaLwIy): inspiración de logotipos.
+- **Dashboard Inspiration** — [Pageflows](https://t.co/LA3laDjZoZ): flujos y pantallas de dashboards.
+- **Design Systems** — [Component Gallery](https://t.co/9kAEoD5FUf): referencias de sistemas de diseño y componentes.
+- **Icon / UI reference** — **Morphicon**: referencia de íconos/UI (sin URL documentada todavía en el vault).
+
 ---
 
 ## 5. Referencias de producto / competencia
 
 Pendiente de definir. No hay competencia ni referencias de producto documentadas más allá de las referencias visuales de la sección anterior.
+
+---
+
+## 6. Criterio de uso de las referencias
+
+- Estas referencias son fuentes de inspiración y benchmarking, no diseños para copiar.
+- Proyecto Raíces mantiene su propia identidad visual.
+- Las referencias generales (4.2) se consultan según la necesidad concreta del diseño puntual que se esté resolviendo.
+- Wamani, NicoTrip y TrekaTravel (4.1) tienen prioridad cuando la decisión involucra el lenguaje específico de viajes, aventura, fotografía, destinos y experiencias de Raíces.
+- Las referencias generales pueden complementar decisiones sobre UI, navegación, hero sections, cards, animaciones, sistemas de diseño, etc.
+- Esta lista no es una colección de reglas rígidas.
 
 ---
 
