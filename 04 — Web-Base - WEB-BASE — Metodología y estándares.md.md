@@ -1,14 +1,14 @@
 # WEB-BASE — Metodología y estándares
 
-> WEB-BASE es la metodología reutilizable de MACARIO para diseñar, construir, validar y cerrar proyectos digitales.
+> WEB-BASE es la Foundation de MACARIO: la base técnica reutilizable desde la que nace cada proyecto digital, e implementa la metodología de MACARIO para diseñarlo, construirlo, validarlo y cerrarlo.
 
 ---
 
 # 1. Qué es WEB-BASE
 
-**WEB-BASE es el sistema metodológico de MACARIO.**
+**WEB-BASE es la base técnica reutilizable (Foundation) de MACARIO.**
 
-Su función es convertir una necesidad o idea en un proyecto digital terminado mediante un proceso repetible, verificable y adaptable.
+Su función es convertir una necesidad o idea en un proyecto digital terminado mediante un proceso repetible, verificable y adaptable. La metodología en sí (las etapas y sus criterios) se define a nivel MACARIO; WEB-BASE es el punto de partida técnico reutilizable que la implementa.
 
 WEB-BASE no es:
 
@@ -25,7 +25,7 @@ WEB-BASE no es:
 - una aplicación independiente.
     
 
-Es una **metodología reutilizable**.
+Es la **Foundation: la base técnica reutilizable de MACARIO**.
 
 ---
 
@@ -799,7 +799,7 @@ WEB-BASE incluye un flujo para preparar nuevos proyectos.
 
 Su objetivo es:
 
-> **scaffoldear un proyecto nuevo utilizando la metodología WEB-BASE.**
+> **scaffoldear un proyecto nuevo a partir de la Foundation WEB-BASE.**
 
 No debe:
 
@@ -920,22 +920,24 @@ MACARIO
    │
    ├── Principios
    │
+   ├── Metodología
+   │      └── cómo trabajamos (ver "MACARIO — Flujo de trabajo")
+   │
    ├── WEB-BASE
-   │      └── cómo trabajamos
+   │      └── Foundation: base técnica reutilizable
    │
    ├── MACARIO OS
    │      └── cómo coordinamos
-   │
-   ├── ITS
-   │      └── cómo mostramos el trabajo
    │
    └── Proyectos
           └── dónde aplicamos el sistema
 ```
 
+La presentación externa del trabajo (PRANA, e ITS como expresión personal dentro de PRANA) es una capa distinta, fuera de esta estructura interna.
+
 WEB-BASE no es MACARIO completo.
 
-Es el **motor metodológico** dentro de MACARIO.
+Es la **Foundation técnica** dentro de MACARIO: el punto de partida reutilizable para cada proyecto.
 
 ---
 

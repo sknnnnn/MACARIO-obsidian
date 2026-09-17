@@ -74,7 +74,7 @@ No debemos convertir una herramienta en una copia de otra.
 
 ### WEB-BASE
 
-**Metodología.**
+**Foundation — base técnica reutilizable.**
 
 ### MACARIO OS
 
@@ -654,7 +654,7 @@ para revisión visual.
 
 # 17. Proyectos reales alimentan ITS
 
-ITS es el portfolio personal de Ignacio.
+ITS es el portfolio personal de Ignacio. Vive dentro de PRANA, la marca externa del ecosistema, como su expresión personal — no como marca independiente.
 
 Por eso los proyectos reales pueden convertirse en:
 

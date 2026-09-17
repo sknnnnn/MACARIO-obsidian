@@ -1068,9 +1068,9 @@ Antes de construir una nueva capa preguntar:
     
 - responsabilidades de herramientas;
     
-- relación MACARIO / WEB-BASE / ITS / proyectos;
+- relación MACARIO / WEB-BASE / PRANA (ITS) / proyectos;
     
-- metodología WEB-BASE v1;
+- WEB-BASE v1 (Foundation) implementando la metodología;
     
 - Linear como sistema operativo;
     

@@ -49,7 +49,7 @@ Busca tener:
 |GitHub|código e historial|
 |Claude Code|implementación técnica|
 |ChatGPT|análisis, estrategia y razonamiento|
-|Web-Base|metodología|
+|Web-Base|base técnica reutilizable (Foundation)|
 |MACARIO OS|orquestación|
 |Figma|diseño y referencias visuales|
 |Playwright|QA automatizado|
@@ -260,11 +260,11 @@ Puede utilizarse para:
 
 ## Responsabilidad
 
-**Metodología reutilizable de MACARIO.**
+**Foundation — base técnica reutilizable de MACARIO.**
 
 No es una herramienta externa.
 
-Es el sistema que define:
+Es el punto de partida técnico desde el que nace cada proyecto, e implementa:
 
 - etapas;
     
@@ -285,7 +285,7 @@ Es el sistema que define:
 
 WEB-BASE responde:
 
-> **¿Cómo trabajamos?**
+> **¿Desde qué base partimos?**
 
 ---
 

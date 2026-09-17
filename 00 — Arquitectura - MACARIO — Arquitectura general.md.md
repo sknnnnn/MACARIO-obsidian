@@ -9,22 +9,24 @@
 
 **MACARIO** es el sistema general desde el cual se diseñan, construyen, documentan, gestionan y evolucionan proyectos digitales.
 
-No es solamente una marca ni una herramienta.
+No es una marca ni una herramienta: es el **System** operativo interno.
 
 Es la combinación de:
 
-- una marca/estudio;
-    
 - una metodología de trabajo;
     
 - un sistema de documentación;
     
 - un sistema de ejecución;
     
-- una capa de orquestación;
+- una capa de orquestación (MACARIO OS);
+    
+- una base técnica reutilizable (Web-Base, Foundation);
     
 - y una colección de proyectos reales que validan y mejoran el sistema.
     
+
+La identidad externa con la que ese trabajo se presenta hacia afuera es **PRANA**. MACARIO organiza; PRANA muestra; Web-Base inicia.
 
 La arquitectura busca que cada herramienta tenga una responsabilidad clara y que la información no se duplique innecesariamente.
 
@@ -32,28 +34,47 @@ La arquitectura busca que cada herramienta tenga una responsabilidad clara y que
 
 ## 2. Arquitectura general
 
+**Capa externa — lo que se ve:**
+
 ```
-                         MACARIO
-                    Marca / Estudio
+                     PRANA
+              Marca / identidad externa
+                       │
+           ┌───────────┴───────────┐
+           │                       │
+           ▼                       ▼
+          ITS              PROYECTOS REALES
+  expresión personal        (casos que PRANA
+  de Ignacio, dentro         presenta hacia
+  de PRANA                   afuera)
+```
+
+**Capa interna — cómo se organiza:**
+
+```
+                        MACARIO
+                         System
                            │
              ┌─────────────┼─────────────┐
              │             │             │
              ▼             ▼             ▼
-            ITS        WEB-BASE      MACARIO OS
-         Portfolio     Metodología    Orquestación
-             │             │             │
-             └─────────────┼─────────────┘
-                           │
-                           ▼
-                   PROYECTOS REALES
-                           │
-          ┌────────────────┼────────────────┐
-          │                │                │
-          ▼                ▼                ▼
-     Raíces              GXK              Onda
-          │
-          ▼
-      futuros proyectos
+         WEB-BASE      MACARIO OS    gestión de
+         Foundation    Orquestación   proyectos
+```
+
+**Relación entre capas:**
+
+```
+MACARIO (organiza) → PROYECTOS REALES → PRANA (muestra)
+```
+
+Los proyectos reales concretos actuales:
+
+```
+Raíces
+GXK
+Onda
+futuros proyectos
 ```
 
 Los proyectos reales alimentan el sistema:
@@ -63,13 +84,11 @@ PROYECTOS
     ↓
 aprendizajes
     ↓
-WEB-BASE
-    ↓
-mejor metodología
+MACARIO (metodología) + WEB-BASE (base técnica)
     ↓
 mejores proyectos
     ↓
-mejores casos para ITS
+mejores casos para PRANA / ITS
 ```
 
 ---
@@ -78,7 +97,7 @@ mejores casos para ITS
 
 ### 3.1 MACARIO
 
-Es la capa superior.
+Es el System operativo interno.
 
 Responsabilidades:
 
@@ -97,13 +116,15 @@ Responsabilidades:
 
 MACARIO no reemplaza a las herramientas que utiliza.
 
+MACARIO no es una marca: la identidad externa con la que el trabajo se presenta es **PRANA**.
+
 ---
 
 ### 3.2 ITS
 
-**ITS es el portfolio personal/profesional de Ignacio.**
+**ITS es la firma personal y el portfolio de Ignacio.**
 
-No es un producto separado de MACARIO ni una segunda marca independiente.
+Vive **dentro de PRANA**, como expresión personal de la marca — no como una marca independiente ni como un producto separado de MACARIO.
 
 Su función principal es:
 
@@ -120,9 +141,9 @@ Su función principal es:
 - facilitar la captación de clientes.
     
 
-ITS funciona como la **capa pública y comercial** del trabajo realizado dentro del ecosistema MACARIO.
+ITS funciona como la **capa personal** dentro de PRANA, la marca pública y comercial del trabajo realizado dentro del ecosistema MACARIO.
 
-Los proyectos reales pueden convertirse en casos, referencias o evidencia para ITS.
+Los proyectos reales pueden convertirse en casos, referencias o evidencia para PRANA / ITS.
 
 ```
 MACARIO
@@ -131,7 +152,9 @@ proyectos reales
    ↓
 trabajo validado
    ↓
-ITS
+PRANA (marca externa)
+   ↓
+ITS (expresión personal de Ignacio, dentro de PRANA)
    ↓
 presentación / captación
 ```
@@ -140,9 +163,9 @@ presentación / captación
 
 ### 3.3 WEB-BASE
 
-**WEB-BASE es la metodología reutilizable de MACARIO.**
+**WEB-BASE es la Foundation: la base técnica reutilizable de MACARIO.**
 
-Define cómo se construyen proyectos digitales de forma consistente.
+Es el punto de partida técnico desde el que nace cada proyecto, e implementa la metodología definida a nivel MACARIO.
 
 Incluye:
 
@@ -174,7 +197,7 @@ Los proyectos utilizan WEB-BASE como sistema de trabajo.
 ```
 WEB-BASE
     ↓
-metodología
+base técnica
     ↓
 proyecto
     ↓
@@ -254,11 +277,11 @@ Cada proyecto debe mantener su propia identidad, contenido, repositorio y decisi
 
 No debe quedar acoplado estructuralmente a WEB-BASE.
 
-WEB-BASE proporciona el método.
+WEB-BASE proporciona la base técnica.
 
 MACARIO OS coordina las herramientas.
 
-ITS presenta el trabajo cuando corresponde.
+PRANA presenta el trabajo hacia afuera; ITS es el canal personal de Ignacio dentro de PRANA cuando corresponde.
 
 ---
 
@@ -366,7 +389,7 @@ Claude Code se utiliza principalmente para:
 - trabajar sobre repositorios.
     
 
-Debe respetar la metodología WEB-BASE y las decisiones registradas.
+Debe respetar la metodología de MACARIO, la base técnica de WEB-BASE y las decisiones registradas.
 
 ---
 
@@ -557,11 +580,13 @@ Solo aquello que sea:
 
 ### Consolidado
 
-- MACARIO como sistema general.
+- MACARIO como sistema general (System).
     
-- ITS como portfolio personal/profesional.
+- PRANA como marca / identidad externa.
     
-- WEB-BASE como metodología.
+- ITS como portfolio personal/profesional de Ignacio, dentro de PRANA.
+    
+- WEB-BASE como base técnica reutilizable (Foundation).
     
 - MACARIO OS como capa de orquestación.
     
@@ -621,7 +646,7 @@ Solo aquello que sea:
 
 **MACARIO no es una herramienta.**
 
-Es el sistema que permite que marca, metodología, conocimiento, ejecución y proyectos funcionen como una sola estructura sin perder la independencia de cada componente.
+Es el sistema que permite que la marca (PRANA), la metodología, el conocimiento, la ejecución y los proyectos funcionen como una sola estructura sin perder la independencia de cada componente.
 
 [[01 — Principios y decisiones - MACARIO — Principios y decisiones.md]]
 

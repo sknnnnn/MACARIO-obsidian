@@ -1,6 +1,6 @@
 # ITS — Portfolio y posicionamiento
 
-> ITS es el portfolio personal y profesional de Ignacio dentro del ecosistema MACARIO.  
+> ITS es el portfolio personal y profesional de Ignacio, la expresión personal de PRANA dentro del ecosistema MACARIO.  
 > Su función es presentar trabajo, criterio y capacidad para generar oportunidades profesionales y comerciales.
 
 ---
@@ -9,7 +9,7 @@
 
 **ITS es el portfolio personal de Ignacio.**
 
-Funciona como la capa pública de presentación del trabajo desarrollado dentro del ecosistema MACARIO.
+Vive dentro de **PRANA**, la marca externa del ecosistema, como su expresión personal, y funciona como capa pública de presentación del trabajo desarrollado dentro de MACARIO.
 
 ITS no es:
 
@@ -23,6 +23,8 @@ ITS no es:
     
 - un reemplazo de MACARIO;
     
+- una marca independiente de PRANA;
+    
 - ni una página web adicional que deba mantenerse separadamente.
     
 
@@ -35,7 +37,9 @@ proyectos reales
    ↓
 trabajo realizado
    ↓
-ITS
+PRANA (marca externa)
+   ↓
+ITS (expresión personal de Ignacio, dentro de PRANA)
    ↓
 presentación / captación
 ```
@@ -94,19 +98,28 @@ La presentación debe transmitir capacidad real, no una lista genérica de servi
 
 # 4. Relación con MACARIO
 
-MACARIO es el sistema general.
+MACARIO es el sistema general: organiza.
 
-ITS es su capa de presentación personal.
+PRANA es la marca externa: muestra.
+
+ITS es la expresión personal de Ignacio dentro de PRANA.
 
 ```
-                    MACARIO
-                       │
-             ┌─────────┼─────────┐
-             │         │         │
-         WEB-BASE   MACARIO OS  PROYECTOS
-                                  │
-                                  ▼
-                                 ITS
+MACARIO (organiza) ──produce──▶ PROYECTOS REALES ──se presentan en──▶ PRANA (muestra)
+                                                                           │
+                                                                           ▼
+                                                                          ITS
+                                                              (expresión personal,
+                                                                dentro de PRANA)
+```
+
+Internamente, MACARIO coordina WEB-BASE y MACARIO OS para producir esos proyectos:
+
+```
+MACARIO
+   │
+   ├── WEB-BASE
+   └── MACARIO OS
 ```
 
 ITS puede mostrar el resultado de proyectos construidos utilizando:
@@ -506,7 +519,7 @@ Un proyecto puede utilizarse internamente sin necesariamente poder utilizarse p�
 
 ITS se encuentra definido como:
 
-**Portfolio personal/profesional de Ignacio dentro de MACARIO.**
+**Portfolio personal/profesional de Ignacio, dentro de PRANA.**
 
 La dirección visual actual:
 
