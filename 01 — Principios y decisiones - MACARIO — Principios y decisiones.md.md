@@ -74,7 +74,7 @@ No debemos convertir una herramienta en una copia de otra.
 
 ### WEB-BASE
 
-**Foundation — base técnica reutilizable.**
+**Foundation — base técnica reutilizable para websites y web apps, dentro de Product Development.** No es la única Foundation posible: MACARIO puede tener otras (Mobile-Base a futuro, otras según necesidad).
 
 ### MACARIO OS
 
@@ -191,6 +191,8 @@ La conexión debe producirse mediante metodología, herramientas y referencias.
 ---
 
 # 5. WEB-BASE debe ser reutilizable
+
+WEB-BASE es una Foundation dentro de Product Development, no MACARIO completo. No debe absorber responsabilidades de Research, Visual/Assets, UX/UI o gestión que pertenecen a MACARIO en general.
 
 WEB-BASE no debe construirse alrededor de un único proyecto.
 

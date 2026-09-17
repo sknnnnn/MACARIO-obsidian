@@ -1,14 +1,14 @@
 # WEB-BASE — Metodología y estándares
 
-> WEB-BASE es la Foundation de MACARIO: la base técnica reutilizable desde la que nace cada proyecto digital, e implementa la metodología de MACARIO para diseñarlo, construirlo, validarlo y cerrarlo.
+> WEB-BASE es una Foundation de MACARIO, dentro de Product Development: la base técnica reutilizable desde la que nace cada proyecto de website o web app, e implementa el ciclo general de MACARIO para diseñarlo, construirlo, validarlo y cerrarlo.
 
 ---
 
 # 1. Qué es WEB-BASE
 
-**WEB-BASE es la base técnica reutilizable (Foundation) de MACARIO.**
+**WEB-BASE es una Foundation de MACARIO: la base técnica reutilizable para websites y web apps, dentro del área de Product Development.**
 
-Su función es convertir una necesidad o idea en un proyecto digital terminado mediante un proceso repetible, verificable y adaptable. La metodología en sí (las etapas y sus criterios) se define a nivel MACARIO; WEB-BASE es el punto de partida técnico reutilizable que la implementa.
+Su función es convertir una necesidad o idea en un proyecto digital terminado mediante un proceso repetible, verificable y adaptable. El ciclo general (las etapas y sus criterios) se define a nivel MACARIO en [[MACARIO — Flujo de trabajo]]; WEB-BASE es el punto de partida técnico reutilizable que lo implementa, con mayor granularidad, para websites y web apps.
 
 WEB-BASE no es:
 
@@ -22,10 +22,12 @@ WEB-BASE no es:
     
 - un repositorio de proyectos;
     
-- una aplicación independiente.
+- una aplicación independiente;
+    
+- ni MACARIO completo.
     
 
-Es la **Foundation: la base técnica reutilizable de MACARIO**.
+Es la **Foundation: la base técnica reutilizable de MACARIO para websites y web apps** — una entre varias posibles (Mobile-Base a futuro, otras según necesidad). WEB-BASE no reemplaza ni absorbe las áreas de Research, Visual/Assets o UX/UI de MACARIO: sus etapas de Context, Discovery y Visual Direction son la aplicación técnica y acotada de esas áreas dentro de un proyecto de Web-Base, no la definición general de esas áreas a nivel MACARIO.
 
 ---
 
@@ -77,7 +79,23 @@ El objetivo es reducir:
 
 # 3. Las 12 etapas
 
-WEB-BASE utiliza doce etapas principales:
+WEB-BASE traduce el ciclo general de MACARIO ([[MACARIO — Flujo de trabajo]]) en doce etapas específicas para websites y web apps:
+
+|Ciclo general MACARIO|Etapas WEB-BASE|
+|---|---|
+|Idea|—|
+|Research|Intake, Context, Discovery|
+|Product Definition|Scope|
+|Visual|Visual Direction|
+|UX / UI|(parte de Visual Direction y Architecture)|
+|Technical Architecture|Architecture|
+|Development|Implementation|
+|QA|QA, Audit|
+|Release|Deploy|
+|Analytics / Operations|(fuera del alcance actual de WEB-BASE; ver [[MACARIO OS — Arquitectura y roadmap]])|
+|Iteration|Documentation, Close alimentan la siguiente Idea|
+
+Las doce etapas:
 
 ```
 01 Intake
@@ -920,11 +938,13 @@ MACARIO
    │
    ├── Principios
    │
-   ├── Metodología
+   ├── Metodología (ciclo general)
    │      └── cómo trabajamos (ver "MACARIO — Flujo de trabajo")
    │
-   ├── WEB-BASE
-   │      └── Foundation: base técnica reutilizable
+   ├── Product Development (una de las 6 áreas)
+   │      └── WEB-BASE
+   │             └── Foundation: base técnica reutilizable para websites/web apps
+   │      └── (futuras foundations: Mobile-Base, otras)
    │
    ├── MACARIO OS
    │      └── cómo coordinamos
@@ -937,7 +957,7 @@ La presentación externa del trabajo (PRANA, e ITS como expresión personal dent
 
 WEB-BASE no es MACARIO completo.
 
-Es la **Foundation técnica** dentro de MACARIO: el punto de partida reutilizable para cada proyecto.
+Es la **Foundation técnica** dentro del área de Product Development de MACARIO: el punto de partida reutilizable para cada proyecto de website o web app. No es la única Foundation posible.
 
 ---
 

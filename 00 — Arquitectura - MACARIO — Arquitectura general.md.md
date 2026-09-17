@@ -1,666 +1,268 @@
 # MACARIO — Arquitectura general
 
 > Documento maestro de arquitectura.  
-> Define qué es MACARIO, cómo se relacionan sus partes y cuál es la responsabilidad de cada sistema.
+> Mapa general del sistema: qué es MACARIO, cómo se relacionan sus partes y cuál es la responsabilidad de cada capa.  
+> No es un documento metodológico ni un catálogo de herramientas: la metodología vive en [[MACARIO — Flujo de trabajo]], el detalle de herramientas en [[MACARIO — Herramientas y ecosistema]].
 
 ---
 
 ## 1. Qué es MACARIO
 
-**MACARIO** es el sistema general desde el cual se diseñan, construyen, documentan, gestionan y evolucionan proyectos digitales.
+**MACARIO** es el sistema operativo interno desde el cual se diseñan, construyen, documentan, gestionan y evolucionan productos digitales.
 
-No es una marca ni una herramienta: es el **System** operativo interno.
+No es una marca ni una herramienta: es el **System**.
+
+MACARIO es agnóstico de plataforma. No está limitado a sitios web. Debe poder utilizarse para:
+
+- Websites
+- Web apps
+- Mobile apps
+- Dashboards
+- Herramientas internas
+- E-commerce
+- Otros productos digitales
 
 Es la combinación de:
 
+- una arquitectura operativa (áreas y ciclo de vida);
 - una metodología de trabajo;
-    
-- un sistema de documentación;
-    
-- un sistema de ejecución;
-    
-- una capa de orquestación (MACARIO OS);
-    
-- una base técnica reutilizable (Web-Base, Foundation);
-    
-- y una colección de proyectos reales que validan y mejoran el sistema.
-    
+- un sistema de documentación (capas transversales);
+- bases técnicas reutilizables (**Foundations**), como Web-Base;
+- y una colección de proyectos reales (**Projects**) que validan y mejoran el sistema.
 
-La identidad externa con la que ese trabajo se presenta hacia afuera es **PRANA**. MACARIO organiza; PRANA muestra; Web-Base inicia.
-
-La arquitectura busca que cada herramienta tenga una responsabilidad clara y que la información no se duplique innecesariamente.
+La identidad externa con la que ese trabajo se presenta hacia afuera es **PRANA**. MACARIO organiza; PRANA muestra.
 
 ---
 
-## 2. Arquitectura general
-
-**Capa externa — lo que se ve:**
-
-```
-                     PRANA
-              Marca / identidad externa
-                       │
-           ┌───────────┴───────────┐
-           │                       │
-           ▼                       ▼
-          ITS              PROYECTOS REALES
-  expresión personal        (casos que PRANA
-  de Ignacio, dentro         presenta hacia
-  de PRANA                   afuera)
-```
+## 2. Relación PRANA / MACARIO / Foundation / Project
 
 **Capa interna — cómo se organiza:**
 
 ```
-                        MACARIO
-                         System
-                           │
-             ┌─────────────┼─────────────┐
-             │             │             │
-             ▼             ▼             ▼
-         WEB-BASE      MACARIO OS    gestión de
-         Foundation    Orquestación   proyectos
+                      MACARIO
+                       System
+                         │
+                  organiza el trabajo
+                         │
+                         ▼
+                    FOUNDATION
+              (Web-Base, Mobile-Base…)
+                         │
+                  habilita técnicamente
+                         │
+                         ▼
+                      PROJECT
+                (Raíces, GXK, Onda…)
 ```
 
-**Relación entre capas:**
+**Capa externa — lo que se ve:**
 
 ```
-MACARIO (organiza) → PROYECTOS REALES → PRANA (muestra)
+                      PROJECT
+                         │
+                    materializa
+                         │
+                         ▼
+                       PRANA
+              marca / identidad externa
+                         │
+              ┌──────────┴──────────┐
+              ▼                     ▼
+             ITS              proyectos reales
+     expresión personal        (casos que PRANA
+     de Ignacio, dentro         presenta hacia
+         de PRANA                  afuera)
 ```
 
-Los proyectos reales concretos actuales:
+MACARIO no aparece hacia afuera. Lo que se ve públicamente es PRANA, y dentro de PRANA, ITS como expresión personal de Ignacio. Ver [[ITS — Portfolio y posicionamiento]].
+
+Los proyectos reales alimentan el sistema de vuelta:
 
 ```
-Raíces
-GXK
-Onda
-futuros proyectos
-```
-
-Los proyectos reales alimentan el sistema:
-
-```
-PROYECTOS
-    ↓
-aprendizajes
-    ↓
-MACARIO (metodología) + WEB-BASE (base técnica)
-    ↓
-mejores proyectos
-    ↓
-mejores casos para PRANA / ITS
-```
-
----
-
-## 3. Componentes principales
-
-### 3.1 MACARIO
-
-Es el System operativo interno.
-
-Responsabilidades:
-
-- definir la dirección general;
-    
-- establecer principios;
-    
-- decidir cómo se trabaja;
-    
-- definir el ecosistema de herramientas;
-    
-- conectar metodología, proyectos y portfolio;
-    
-- mantener una visión unificada del sistema.
-    
-
-MACARIO no reemplaza a las herramientas que utiliza.
-
-MACARIO no es una marca: la identidad externa con la que el trabajo se presenta es **PRANA**.
-
----
-
-### 3.2 ITS
-
-**ITS es la firma personal y el portfolio de Ignacio.**
-
-Vive **dentro de PRANA**, como expresión personal de la marca — no como una marca independiente ni como un producto separado de MACARIO.
-
-Su función principal es:
-
-- presentar el trabajo;
-    
-- mostrar proyectos;
-    
-- comunicar capacidades;
-    
-- transmitir el criterio visual y técnico;
-    
-- generar confianza;
-    
-- facilitar la captación de clientes.
-    
-
-ITS funciona como la **capa personal** dentro de PRANA, la marca pública y comercial del trabajo realizado dentro del ecosistema MACARIO.
-
-Los proyectos reales pueden convertirse en casos, referencias o evidencia para PRANA / ITS.
-
-```
-MACARIO
-   ↓
-proyectos reales
-   ↓
-trabajo validado
-   ↓
-PRANA (marca externa)
-   ↓
-ITS (expresión personal de Ignacio, dentro de PRANA)
-   ↓
-presentación / captación
+PROJECTS → aprendizajes → MACARIO (metodología) + FOUNDATION (base técnica) → mejores proyectos
 ```
 
 ---
 
-### 3.3 WEB-BASE
+## 3. Principio central
 
-**WEB-BASE es la Foundation: la base técnica reutilizable de MACARIO.**
+> **MACARIO organiza → Foundation habilita → Project materializa.**
 
-Es el punto de partida técnico desde el que nace cada proyecto, e implementa la metodología definida a nivel MACARIO.
+- **MACARIO organiza**: define áreas, ciclo de vida, principios, capas transversales y criterios de decisión — sin importar la plataforma del producto.
+- **Foundation habilita**: convierte esa organización en una base técnica reutilizable para una plataforma concreta (Web-Base para websites y web apps; Mobile-Base para mobile, en el futuro).
+- **Project materializa**: usa una Foundation para construir un producto real, con su propia identidad, repositorio y decisiones.
 
-Incluye:
+Ninguna capa reemplaza a la anterior. MACARIO no construye productos directamente; una Foundation no es un producto; un Project no es metodología.
 
-- etapas;
-    
-- criterios;
-    
-- quality gates;
-    
-- estándares;
-    
-- templates;
-    
-- skills;
-    
-- comandos;
-    
-- documentación metodológica;
-    
-- criterios de QA;
-    
-- reglas para nuevos proyectos.
-    
+---
 
-WEB-BASE no contiene los proyectos reales.
+## 4. Arquitectura del sistema
 
-Los proyectos utilizan WEB-BASE como sistema de trabajo.
+MACARIO organiza el trabajo en seis áreas. No son etapas estrictamente secuenciales ni exclusivas de un tipo de producto: son las funciones que cualquier producto digital necesita, sin importar la plataforma.
+
+|Área|Responde a|
+|---|---|
+|**Research**|¿Qué problema resolvemos y para quién?|
+|**Visual / Assets**|¿Qué identidad y recursos visuales usamos?|
+|**UX / UI**|¿Cómo se experimenta y se ve el producto?|
+|**Product Development**|¿Cómo se construye técnicamente? (incluye las Foundations)|
+|**QA**|¿Funciona como fue definido?|
+|**Analytics / Operations**|¿Cómo se mide y opera una vez publicado?|
+
+El orden en que se recorren estas áreas durante un proyecto, y qué produce cada una, está definido en [[MACARIO — Flujo de trabajo]].
+
+---
+
+## 5. Capas transversales
+
+Estas capas atraviesan las seis áreas: no pertenecen a un área específica, están disponibles en todas.
+
+|Capa|Fuente de verdad para|
+|---|---|
+|**Obsidian**|conocimiento, contexto y decisiones|
+|**Linear**|trabajo, tareas, milestones y estado|
+|**Figma**|diseño visual, UX/UI y prototipos|
+|**GitHub**|código y versiones|
+|**Claude Code**|implementación y ejecución técnica|
+
+Claude Code no es una fuente de verdad: trabaja sobre las fuentes correspondientes (código en GitHub, tareas de Linear, decisiones de Obsidian, diseño de Figma).
+
+Otras herramientas (Playwright, Sentry, PostHog, Resend, n8n, Supabase, Cloudflare, ChatGPT, etc.) son especializadas dentro de un área concreta y no forman parte de esta capa transversal. Su responsabilidad y criterio de uso viven en [[MACARIO — Herramientas y ecosistema]].
+
+---
+
+## 6. Foundations
+
+Una **Foundation** es una base técnica reutilizable dentro de **Product Development**. Implementa, para una plataforma concreta, la metodología definida a nivel MACARIO.
+
+Actualmente:
+
+- **Web-Base** → foundation para websites y web apps. Ver [[WEB-BASE — Metodología y estándares]].
+- **Mobile-Base** → futura foundation para mobile apps.
+- Otras foundations (dashboards, e-commerce, herramientas internas…) → futuras, según necesidad real y comprobada.
+
+Una Foundation no es MACARIO completo. MACARIO es el sistema; cada Foundation es una pieza reutilizable dentro de una de sus áreas.
+
+Una Foundation no contiene proyectos reales dentro de su propio repositorio: los proyectos la usan como punto de partida técnico, no como contenedor.
+
+---
+
+## 7. Projects
+
+Los **Projects** son donde se aplica y valida todo el sistema.
+
+Ejemplos actuales: Proyecto Raíces, GXK, Onda, CONCRETO, futuros proyectos y clientes.
+
+Cada proyecto:
+
+- se construye a partir de una Foundation;
+- mantiene su propia identidad, contenido, repositorio y decisiones;
+- no queda acoplado estructuralmente a la Foundation que lo originó;
+- puede convertirse en caso, referencia o evidencia para PRANA / ITS cuando corresponde.
+
+---
+
+## 8. Relación entre todas las capas
 
 ```
-WEB-BASE
-    ↓
-base técnica
-    ↓
-proyecto
-    ↓
-implementación
+                         MACARIO
+             (áreas + metodología + principios)
+                            │
+        ┌───────────┬───────┴───────┬───────────┐
+        ▼           ▼               ▼           ▼
+    Research   Visual/Assets     UX/UI      Analytics/Ops
+        │           │               │           │
+        └───────────┴───────┬───────┴───────────┘
+                             ▼
+                    PRODUCT DEVELOPMENT
+                             │
+                        FOUNDATION
+                    (Web-Base, Mobile-Base…)
+                             │
+                             ▼
+                           QA
+                             │
+                             ▼
+                          PROJECT
+                             │
+                             ▼
+                           PRANA
+                  (muestra el resultado)
 ```
 
----
-
-### 3.4 MACARIO OS
-
-**MACARIO OS es la capa de orquestación.**
-
-Su función es conectar y coordinar los distintos sistemas utilizados durante el trabajo.
-
-No reemplaza a:
-
-- Linear;
-    
-- GitHub;
-    
-- Obsidian;
-    
-- Claude Code;
-    
-- ChatGPT;
-    
-- ni otras herramientas especializadas.
-    
-
-MACARIO OS define cómo se relacionan.
-
-Ejemplo:
+Durante todo el ciclo, las capas transversales quedan disponibles para cualquier área, con mayor peso relativo según corresponda:
 
 ```
-Obsidian
-   │
-   │ conocimiento
-   ▼
-MACARIO OS
-   │
-   ├── Linear → tareas
-   ├── GitHub → código
-   ├── Claude Code → implementación
-   ├── ChatGPT → análisis / estrategia
-   ├── Playwright → QA
-   ├── Sentry → errores
-   ├── PostHog → analítica
-   ├── Resend → email
-   ├── n8n → automatizaciones
-   ├── Figma → referencias visuales
-   ├── Supabase → backend / datos
-   └── Cloudflare → infraestructura / deploy
+Obsidian    ← conocimiento, en cualquier área
+Linear      ← trabajo, en cualquier área
+Figma       ← diseño, principalmente Visual/Assets y UX/UI
+GitHub      ← código, principalmente Product Development
+Claude Code ← ejecución técnica, principalmente Product Development y QA
 ```
 
-MACARIO OS es principalmente una **capa conceptual y operativa de coordinación**.
+MACARIO OS coordina esta relación entre capas sin reemplazar ninguna herramienta. Ver [[MACARIO OS — Arquitectura y roadmap]].
 
 ---
 
-## 4. Proyectos reales
+## 9. Principio de no duplicación
 
-Los proyectos reales son donde se aplica y valida todo el sistema.
-
-Ejemplos actuales:
-
-- Proyecto Raíces
-    
-- GXK
-    
-- Onda
-    
-- CONCRETO
-    
-- futuros proyectos y clientes
-    
-
-Cada proyecto debe mantener su propia identidad, contenido, repositorio y decisiones.
-
-No debe quedar acoplado estructuralmente a WEB-BASE.
-
-WEB-BASE proporciona la base técnica.
-
-MACARIO OS coordina las herramientas.
-
-PRANA presenta el trabajo hacia afuera; ITS es el canal personal de Ignacio dentro de PRANA cuando corresponde.
-
----
-
-## 5. Responsabilidad de cada herramienta
-
-### Obsidian — Conocimiento
-
-Obsidian es la documentación permanente.
-
-Debe contener:
-
-- arquitectura;
-    
-- contexto;
-    
-- decisiones;
-    
-- aprendizajes;
-    
-- metodología;
-    
-- documentación de proyectos;
-    
-- criterios;
-    
-- referencias;
-    
-- conocimiento reutilizable.
-    
-
-Obsidian no debe convertirse en una copia de Linear.
-
----
-
-### Linear — Ejecución
-
-Linear representa el trabajo operativo.
-
-Debe contener:
-
-- tareas;
-    
-- microtareas;
-    
-- prioridades;
-    
-- estados;
-    
-- ciclos;
-    
-- dependencias;
-    
-- bugs;
-    
-- trabajo pendiente;
-    
-- seguimiento de proyectos.
-    
-
-Linear responde:
-
-> **¿Qué tenemos que hacer?**
-
----
-
-### GitHub — Implementación
-
-GitHub representa el código real.
-
-Contiene:
-
-- repositorios;
-    
-- ramas;
-    
-- commits;
-    
-- Pull Requests;
-    
-- código;
-    
-- historial de implementación.
-    
-
-GitHub responde:
-
-> **¿Qué construimos realmente?**
-
----
-
-### Claude Code — Implementación asistida
-
-Claude Code se utiliza principalmente para:
-
-- implementar;
-    
-- modificar;
-    
-- refactorizar;
-    
-- auditar;
-    
-- ejecutar QA técnico;
-    
-- trabajar sobre repositorios.
-    
-
-Debe respetar la metodología de MACARIO, la base técnica de WEB-BASE y las decisiones registradas.
-
----
-
-### ChatGPT — Análisis y estrategia
-
-ChatGPT se utiliza principalmente para:
-
-- analizar;
-    
-- investigar;
-    
-- pensar arquitectura;
-    
-- comparar alternativas;
-    
-- definir estrategia;
-    
-- revisar resultados;
-    
-- ayudar a tomar decisiones.
-    
-
----
-
-## 6. Flujo general de información
-
-```
-IDEA / CLIENTE
-      ↓
-   WEB-BASE
-      ↓
-  DISCOVERY
-      ↓
-    SCOPE
-      ↓
- ARCHITECTURE
-      ↓
- VISUAL DIRECTION
-      ↓
- IMPLEMENTATION
-      ↓
-      QA
-      ↓
-    AUDIT
-      ↓
-    DEPLOY
-      ↓
- DOCUMENTATION
-      ↓
-    CIERRE
-```
-
-Durante ese proceso:
-
-```
-Obsidian ← conocimiento permanente
-Linear   ← tareas y seguimiento
-GitHub   ← implementación
-Claude   ← ejecución técnica
-ChatGPT  ← análisis y estrategia
-MACARIO OS ← coordinación
-```
-
----
-
-## 7. Principio de no duplicación
-
-Cada información debe tener un lugar principal.
-
-### Ejemplo
-
-Una decisión arquitectónica:
-
-**Obsidian**
-
-Una tarea para implementar esa decisión:
-
-**Linear**
-
-El código que implementa la decisión:
-
-**GitHub**
-
-El proceso utilizado para llegar a esa implementación:
-
-**WEB-BASE**
-
-La coordinación entre todas esas partes:
-
-**MACARIO OS**
-
----
-
-## 8. Fuente de verdad
-
-La fuente de verdad depende del tipo de información.
+Cada información debe tener un lugar principal:
 
 |Información|Fuente principal|
 |---|---|
 |Arquitectura / decisiones|Obsidian|
-|Metodología|WEB-BASE + Obsidian|
-|Tareas|Linear|
-|Estado del trabajo|Linear|
-|Código|GitHub|
-|Historial de cambios|GitHub|
+|Metodología|Obsidian ([[MACARIO — Flujo de trabajo]], [[WEB-BASE — Metodología y estándares]])|
+|Tareas / estado del trabajo|Linear|
+|Diseño / UX-UI|Figma|
+|Código / historial técnico|GitHub|
 |Implementación|GitHub + Claude Code|
-|Análisis / estrategia|ChatGPT + Obsidian|
-|Errores de producción|Sentry|
-|Analítica|PostHog|
-|Deploy / infraestructura|Cloudflare|
-|Datos / backend|Supabase|
-|Automatizaciones|n8n|
+
+El detalle completo de esta regla y sus criterios de decisión vive en [[MACARIO — Principios y decisiones]].
 
 ---
 
-## 9. Principios de arquitectura
-
-### 9.1 Separación de responsabilidades
-
-Cada herramienta debe resolver el problema para el que fue elegida.
-
-No convertir una herramienta en sustituto innecesario de otra.
-
-### 9.2 Una fuente por tipo de información
-
-Evitar duplicaciones que puedan generar contradicciones.
-
-### 9.3 Los proyectos son independientes
-
-Raíces, GXK, Onda y futuros proyectos deben poder existir y evolucionar independientemente.
-
-### 9.4 WEB-BASE es reutilizable
-
-Las mejoras descubiertas durante proyectos reales deben poder transformarse en metodología reutilizable.
-
-### 9.5 MACARIO OS coordina, no reemplaza
-
-MACARIO OS debe conectar sistemas, no reconstruir innecesariamente las funcionalidades que ya ofrecen.
-
-### 9.6 Documentar decisiones importantes
-
-Las decisiones que afectan arquitectura, metodología, identidad o estrategia deben quedar documentadas.
-
-### 9.7 El trabajo real valida el sistema
-
-La metodología no debe crecer por teoría.
-
-Debe evolucionar a partir de problemas reales, aprendizajes y resultados.
-
----
-
-## 10. Ciclo de aprendizaje
-
-Cada proyecto puede producir conocimiento reutilizable.
-
-```
-PROYECTO
-   ↓
-problema / aprendizaje
-   ↓
-documentación en Obsidian
-   ↓
-evaluación
-   ↓
-si es reutilizable:
-   ↓
-WEB-BASE
-   ↓
-mejora del sistema
-```
-
-No todo aprendizaje debe convertirse en metodología.
-
-Solo aquello que sea:
-
-- repetible;
-    
-- útil;
-    
-- comprobado;
-    
-- y aplicable a otros proyectos.
-    
-
----
-
-## 11. Estado actual
+## 10. Estado actual
 
 ### Consolidado
 
-- MACARIO como sistema general (System).
-    
+- MACARIO como sistema general (System), agnóstico de plataforma.
+- Seis áreas operativas: Research, Visual/Assets, UX/UI, Product Development, QA, Analytics/Operations.
 - PRANA como marca / identidad externa.
-    
 - ITS como portfolio personal/profesional de Ignacio, dentro de PRANA.
-    
-- WEB-BASE como base técnica reutilizable (Foundation).
-    
+- Web-Base como Foundation para websites y web apps.
 - MACARIO OS como capa de orquestación.
-    
-- Linear como sistema operativo de tareas.
-    
-- GitHub como sistema de código.
-    
-- Obsidian como documentación permanente.
-    
+- Linear, GitHub y Obsidian como capas transversales operativas.
 
 ### En construcción
 
-- bóveda MACARIO;
-    
-- documentación maestra;
-    
-- migración desde Linear;
-    
-- integración Obsidian ↔ herramientas;
-    
-- MACARIO OS.
-    
+- bóveda MACARIO completa;
+- Mobile-Base y otras futuras foundations;
+- MACARIO OS como integración real;
+- documentación maestra terminada.
 
 ### Proyectos actuales
 
 - Proyecto Raíces
-    
 - GXK
-    
 - Onda
-    
 - CONCRETO
-    
 - futuros proyectos
-    
 
 ---
 
-## 12. Documentos relacionados
+## 11. Documentos relacionados
 
 - [[MACARIO — Principios y decisiones]]
-    
 - [[MACARIO — Flujo de trabajo]]
-    
 - [[MACARIO — Herramientas y ecosistema]]
-    
 - [[WEB-BASE — Metodología y estándares]]
-    
 - [[MACARIO OS — Arquitectura y roadmap]]
-    
 - [[ITS — Portfolio y posicionamiento]]
-    
 
 ---
 
-## 13. Regla final
+## 12. Regla final
 
-**MACARIO no es una herramienta.**
+**MACARIO no es una herramienta ni un sitio web.**
 
-Es el sistema que permite que la marca (PRANA), la metodología, el conocimiento, la ejecución y los proyectos funcionen como una sola estructura sin perder la independencia de cada componente.
-
-[[01 — Principios y decisiones - MACARIO — Principios y decisiones.md]]
-
-[[02 — Metodología - MACARIO — Flujo de trabajo.md]]
-
-[[03 — Herramientas - MACARIO — Herramientas y ecosistema.md]]
-
-[[04 — Web-Base - WEB-BASE — Metodología y estándares.md]]
-
-[[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap.md]]
-
-[[06 — ITS - ITS — Portfolio y posicionamiento.md]]
-
-[[07 — Proyectos - Proyecto Raíces - Proyecto Raíces — Contexto.md]]
-
-
-
+Es el sistema que permite que la marca (PRANA), la metodología, el conocimiento, las Foundations y los proyectos funcionen como una sola estructura sin perder la independencia de cada componente.

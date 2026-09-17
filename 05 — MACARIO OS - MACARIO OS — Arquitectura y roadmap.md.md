@@ -118,33 +118,33 @@ MACARIO OS conoce cómo conectarlos.
 # 4. Arquitectura conceptual
 
 ```
-                         MACARIO OS
-                              │
-          ┌───────────────────┼───────────────────┐
-          │                   │                   │
-          ▼                   ▼                   ▼
-      CONTEXTO             EJECUCIÓN          CONTROL
-          │                   │                   │
-          ▼                   ▼                   ▼
-      Obsidian             Claude Code        Linear
-                              │                 │
-                              ▼                 ▼
-                           GitHub          prioridades /
-                              │             estados
-                              ▼
-                           Proyecto
-                              │
-             ┌────────────────┼────────────────┐
-             │                │                │
-             ▼                ▼                ▼
-         Playwright         Sentry          PostHog
-             │                │                │
-             └────────────────┼────────────────┘
-                              ▼
-                         PRODUCCIÓN
-                              │
-                          Cloudflare
+                                MACARIO OS
+                                     │
+        ┌───────────┬───────────────┼───────────────┬───────────┐
+        ▼           ▼               ▼               ▼           ▼
+    CONTEXTO      DISEÑO        EJECUCIÓN         CONTROL   VERIFICACIÓN /
+        │           │               │               │       INFRAESTRUCTURA
+        ▼           ▼               ▼               ▼
+    Obsidian      Figma       Claude Code         Linear
+                                    │                 │
+                                    ▼                 ▼
+                                 GitHub          prioridades /
+                                    │             estados
+                                    ▼
+                                 Proyecto
+                                    │
+                   ┌────────────────┼────────────────┐
+                   ▼                ▼                ▼
+               Playwright         Sentry          PostHog
+                   │                │                │
+                   └────────────────┼────────────────┘
+                                    ▼
+                               PRODUCCIÓN
+                                    │
+                                Cloudflare
 ```
+
+Las cinco capas transversales de MACARIO (Obsidian, Linear, Figma, GitHub, Claude Code — ver [[MACARIO — Arquitectura general]]) son las que MACARIO OS coordina de forma constante. El resto de las herramientas (Playwright, Sentry, PostHog, etc.) se conectan según la etapa y el proyecto.
 
 ---
 
@@ -298,12 +298,31 @@ Responsabilidad:
     
 - documentar aprendizajes;
     
-- alimentar WEB-BASE.
+- alimentar la Foundation correspondiente (Web-Base u otra).
     
 
 Fuente principal:
 
 **Obsidian**
+
+---
+
+## 5.8 Design Layer
+
+Responsabilidad:
+
+- dirección visual;
+    
+- UX/UI;
+    
+- wireframes y prototipos;
+    
+- handoff hacia implementación.
+    
+
+Fuente principal:
+
+**Figma**
 
 ---
 

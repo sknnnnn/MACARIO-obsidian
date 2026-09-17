@@ -1,7 +1,7 @@
 # MACARIO — Herramientas y ecosistema
 
 > Mapa maestro de herramientas utilizadas por MACARIO.  
-> Define qué responsabilidad tiene cada herramienta, cuándo utilizarla y qué información debe permanecer en ella.
+> Define qué responsabilidad tiene cada herramienta, a qué área del sistema sirve principalmente, cuándo utilizarla y qué información debe permanecer en ella.
 
 ---
 
@@ -12,164 +12,83 @@ MACARIO no busca tener la mayor cantidad posible de herramientas.
 Busca tener:
 
 - las herramientas correctas;
-    
 - con responsabilidades claras;
-    
 - conectadas entre sí;
-    
 - sin duplicación innecesaria;
-    
 - y activadas solamente cuando aportan valor.
-    
-
-```
-                    MACARIO OS
-                         │
-       ┌─────────────────┼─────────────────┐
-       │                 │                 │
-   CONOCIMIENTO       EJECUCIÓN        IMPLEMENTACIÓN
-       │                 │                 │
-    Obsidian           Linear           GitHub
-       │                 │                 │
-       └─────────────────┼─────────────────┘
-                         │
-                  Claude / ChatGPT
-                         │
-                    PROYECTOS
-```
 
 ---
 
 # 2. Mapa rápido
 
-|Herramienta|Responsabilidad principal|
-|---|---|
-|Obsidian|conocimiento y documentación permanente|
-|Linear|ejecución y seguimiento|
-|GitHub|código e historial|
-|Claude Code|implementación técnica|
-|ChatGPT|análisis, estrategia y razonamiento|
-|Web-Base|base técnica reutilizable (Foundation)|
-|MACARIO OS|orquestación|
-|Figma|diseño y referencias visuales|
-|Playwright|QA automatizado|
-|Sentry|monitoreo de errores|
-|PostHog|analítica de producto|
-|Resend|email transaccional|
-|n8n|automatizaciones|
-|Supabase|backend / datos|
-|Cloudflare|infraestructura / deploy|
-|Grok|herramienta complementaria de IA|
-|Artifact / Preview|revisión visual|
+|Herramienta|Responsabilidad principal|Área principal|
+|---|---|---|
+|Obsidian|conocimiento y documentación permanente|transversal|
+|Linear|ejecución y seguimiento|transversal|
+|GitHub|código e historial|transversal|
+|Claude Code|implementación técnica|transversal|
+|Figma|diseño y referencias visuales|transversal (Visual/Assets, UX/UI)|
+|ChatGPT|análisis, estrategia y razonamiento|Research|
+|Grok|IA complementaria|Research|
+|Banana|generación/edición de imágenes con IA|Visual / Assets|
+|Artifact / Preview|revisión visual|Visual/Assets, UX/UI|
+|Web-Base|Foundation — base técnica reutilizable|Product Development|
+|Supabase|backend / datos|Product Development|
+|Playwright|QA automatizado|QA|
+|Sentry|monitoreo de errores|Analytics / Operations|
+|PostHog|analítica de producto|Analytics / Operations|
+|Resend|email transaccional|Analytics / Operations|
+|n8n|automatizaciones|Analytics / Operations|
+|Cloudflare|infraestructura / deploy|Analytics / Operations (Release)|
+|MACARIO OS|orquestación|coordinación (ver [[MACARIO OS — Arquitectura y roadmap]])|
 
 ---
 
-# 3. Obsidian
+# 3. Capas transversales (fuente de verdad)
 
-## Responsabilidad
+Estas cinco herramientas atraviesan las seis áreas de MACARIO y cada una es fuente principal de verdad para un tipo de información. Ver [[MACARIO — Arquitectura general]] para la relación entre capas y áreas.
 
-**Fuente de conocimiento permanente de MACARIO.**
+## 3.1 Obsidian — Conocimiento
 
-Contiene:
+Fuente de conocimiento permanente de MACARIO.
 
-- arquitectura;
-    
-- principios;
-    
-- decisiones;
-    
-- metodología;
-    
-- aprendizajes;
-    
-- documentación de proyectos;
-    
-- contexto;
-    
-- referencias;
-    
-- criterios reutilizables.
-    
+Contiene: arquitectura, principios, decisiones, metodología, aprendizajes, documentación de proyectos, contexto, referencias, criterios reutilizables.
 
 No debe contener una copia completa de las tareas de Linear.
 
-### Pregunta que responde
-
 > **¿Qué sabemos y por qué hacemos las cosas así?**
 
-### Uso
+## 3.2 Linear — Trabajo
 
-Obsidian es especialmente importante para información que debe seguir siendo útil meses o años después.
+Sistema operativo del trabajo.
 
----
+Contiene: issues, microtareas, bugs, prioridades, estados, dependencias, ciclos, proyectos, iniciativas, seguimiento operativo.
 
-# 4. Linear
-
-## Responsabilidad
-
-**Sistema operativo del trabajo.**
-
-Contiene:
-
-- issues;
-    
-- microtareas;
-    
-- bugs;
-    
-- prioridades;
-    
-- estados;
-    
-- dependencias;
-    
-- ciclos;
-    
-- proyectos;
-    
-- iniciativas;
-    
-- seguimiento operativo.
-    
-
-Linear organiza el trabajo alrededor de issues, proyectos, iniciativas y ciclos; los proyectos agrupan trabajo alrededor de un resultado común, mientras que las iniciativas se sitúan por encima de proyectos para objetivos más amplios. citeturn0search5turn0search6
-
-### Pregunta que responde
+Linear organiza el trabajo alrededor de issues, proyectos e iniciativas; los proyectos agrupan trabajo alrededor de un resultado común, mientras que las iniciativas se sitúan por encima de proyectos para objetivos más amplios.
 
 > **¿Qué tenemos que hacer?**
 
-### Regla MACARIO
+### Regla
 
-Linear debe mantenerse operativo.
+Linear debe mantenerse operativo. No usarlo como wiki.
 
-No usarlo como wiki.
+## 3.3 Figma — Diseño
 
----
+Diseño visual, UX/UI y prototipos.
 
-# 5. GitHub
+Puede utilizarse para: exploración visual, wireframes, UI, identidad, referencias, handoff.
 
-## Responsabilidad
+> **¿Cómo se ve y se experimenta el producto?**
 
-**Fuente de verdad de la implementación.**
+### Regla
 
-Contiene:
+Figma es **opt-in**. No todos los proyectos lo necesitan. Una dirección visual clara y un Artifact/preview pueden ser suficientes para proyectos simples.
 
-- repositorios;
-    
-- código;
-    
-- ramas;
-    
-- commits;
-    
-- Pull Requests;
-    
-- historial;
-    
-- releases cuando corresponda.
-    
+## 3.4 GitHub — Código
 
-### Pregunta que responde
+Fuente de verdad de la implementación.
+
+Contiene: repositorios, código, ramas, commits, Pull Requests, historial, releases cuando corresponda.
 
 > **¿Qué construimos realmente?**
 
@@ -177,45 +96,13 @@ Contiene:
 
 Si existe una diferencia entre una descripción antigua y el código real, el código real tiene prioridad.
 
----
+## 3.5 Claude Code — Ejecución
 
-# 6. Claude Code
+Implementación y trabajo técnico asistido.
 
-## Responsabilidad
+Puede utilizarse para: implementar features, corregir bugs, refactorizar, auditar, ejecutar QA, revisar estructura, generar documentación técnica, trabajar sobre repositorios.
 
-**Implementación y trabajo técnico asistido.**
-
-Puede utilizarse para:
-
-- implementar features;
-    
-- corregir bugs;
-    
-- refactorizar;
-    
-- auditar;
-    
-- ejecutar QA;
-    
-- revisar estructura;
-    
-- generar documentación técnica;
-    
-- trabajar sobre repositorios.
-    
-
-Claude Code debe seguir:
-
-- las decisiones documentadas;
-    
-- el scope;
-    
-- WEB-BASE;
-    
-- las reglas del proyecto;
-    
-- y las restricciones de Git.
-    
+Claude Code no es una fuente de verdad: debe seguir las decisiones documentadas en Obsidian, el scope de Linear, el código de GitHub y el diseño de Figma.
 
 ### Regla
 
@@ -223,306 +110,105 @@ Claude Code no debe tomar silenciosamente decisiones importantes de arquitectura
 
 ---
 
-# 7. ChatGPT
+# 4. Herramientas especializadas por área
 
-## Responsabilidad
+Estas herramientas sirven principalmente a un área concreta del sistema (ver [[MACARIO — Arquitectura general]]) y son **opt-in**: se incorporan cuando el proyecto lo justifica, no por defecto.
 
-**Análisis, estrategia y razonamiento.**
+## 4.1 Research
 
-Puede utilizarse para:
+### ChatGPT
 
-- pensar arquitectura;
-    
-- analizar problemas;
-    
-- comparar alternativas;
-    
-- investigar;
-    
-- definir estrategia;
-    
-- revisar auditorías;
-    
-- interpretar resultados;
-    
-- diseñar procesos;
-    
-- coordinar el ecosistema.
-    
+Análisis, estrategia y razonamiento.
 
-### Pregunta que responde
+Puede utilizarse para: pensar arquitectura, analizar problemas, comparar alternativas, investigar, definir estrategia, revisar auditorías, interpretar resultados, diseñar procesos.
 
 > **¿Qué deberíamos hacer y por qué?**
 
----
+### Grok / Grokbot
 
-# 8. WEB-BASE
+IA complementaria. Se utiliza cuando aporta una ventaja específica frente a ChatGPT o Claude para exploración, comparación, investigación o generación de alternativas.
 
-## Responsabilidad
+No reemplaza automáticamente a ChatGPT o Claude: debe usarse cuando exista una razón concreta.
 
-**Foundation — base técnica reutilizable de MACARIO.**
+## 4.2 Visual / Assets
 
-No es una herramienta externa.
+### Banana
 
-Es el punto de partida técnico desde el que nace cada proyecto, e implementa:
+Generación y edición de imágenes con IA. Se incorpora cuando el proyecto necesita producir o iterar assets visuales que no provienen de fotografía o diseño manual.
 
-- etapas;
-    
-- quality gates;
-    
-- templates;
-    
-- skills;
-    
-- commands;
-    
-- estándares;
-    
-- criterios de QA;
-    
-- flujo de nuevos proyectos.
-    
+> Nota: esta herramienta no tenía documentación previa en la bóveda; se incorpora aquí según el uso real del sistema. Confirmar y ampliar su criterio de uso cuando haya evidencia de proyectos concretos.
 
-WEB-BASE responde:
+### Artifact / Preview
+
+Validación visual y presentación del trabajo.
+
+Cuando una herramienta permite generar un Artifact, preview, render, prototipo o resultado navegable, debe utilizarse cuando ayude a revisar el trabajo. Especialmente útil para UI, rediseños, landing pages, portfolios, componentes visuales, experiencias interactivas.
+
+> El resultado debe poder verse, no solamente describirse.
+
+## 4.3 UX / UI
+
+Figma y Artifact/Preview (ver secciones 3.3 y 4.2) son las herramientas principales de esta área.
+
+## 4.4 Product Development
+
+### Web-Base (Foundation)
+
+Base técnica reutilizable de MACARIO para websites y web apps.
+
+No es una herramienta externa: es el punto de partida técnico desde el que nace cada proyecto de ese tipo, e implementa etapas, quality gates, templates, skills, commands, estándares y criterios de QA.
 
 > **¿Desde qué base partimos?**
 
----
+Ver [[WEB-BASE — Metodología y estándares]].
 
-# 9. MACARIO OS
+### Supabase
 
-## Responsabilidad
-
-**Orquestación.**
-
-MACARIO OS conecta:
-
-- Obsidian;
-    
-- Linear;
-    
-- GitHub;
-    
-- Claude Code;
-    
-- ChatGPT;
-    
-- herramientas de QA;
-    
-- infraestructura;
-    
-- analítica;
-    
-- automatizaciones.
-    
-
-No debe duplicar funcionalidades que ya existen en estas herramientas.
-
-### Pregunta que responde
-
-> **¿Cómo hacemos que todo el sistema funcione coordinadamente?**
-
-MACARIO OS es una capa que se construye progresivamente.
-
-No necesita estar completamente implementado desde el inicio.
-
----
-
-# 10. Figma
-
-## Responsabilidad
-
-**Diseño visual y referencia.**
-
-Puede utilizarse para:
-
-- exploración visual;
-    
-- wireframes;
-    
-- UI;
-    
-- identidad;
-    
-- referencias;
-    
-- handoff.
-    
+Backend y datos cuando el proyecto lo necesita: PostgreSQL, autenticación, storage, APIs, funciones, realtime.
 
 ### Regla
 
-Figma es **opt-in**.
+Supabase no es obligatorio. Un sitio estático simple no necesita una base de datos solo porque Supabase esté disponible.
 
-No todos los proyectos necesitan Figma.
+## 4.5 QA
 
-Una dirección visual clara y un Artifact/preview pueden ser suficientes para proyectos simples.
+### Playwright
 
----
-
-# 11. Playwright
-
-## Responsabilidad
-
-**QA y testing automatizado del navegador.**
-
-Puede utilizarse para:
-
-- E2E;
-    
-- navegación;
-    
-- formularios;
-    
-- flujos críticos;
-    
-- regresión;
-    
-- validaciones responsive;
-    
-- smoke tests.
-    
+QA y testing automatizado del navegador: E2E, navegación, formularios, flujos críticos, regresión, validaciones responsive, smoke tests.
 
 ### Regla
 
-Playwright no es obligatorio para todos los proyectos.
+Playwright no es obligatorio para todos los proyectos. Se incorpora cuando existe un flujo crítico, hay suficiente complejidad, existe riesgo de regresión, o el proyecto justifica automatizar QA.
 
-Se incorpora cuando:
+## 4.6 Analytics / Operations
 
-- existe un flujo crítico;
-    
-- hay suficiente complejidad;
-    
-- existe riesgo de regresión;
-    
-- o el proyecto justifica automatizar QA.
-    
+### Sentry
 
----
-
-# 12. Sentry
-
-## Responsabilidad
-
-**Monitoreo de errores en producción.**
-
-Puede utilizarse para:
-
-- excepciones;
-    
-- errores frontend;
-    
-- errores backend;
-    
-- trazas;
-    
-- contexto de errores;
-    
-- alertas.
-    
+Monitoreo de errores en producción: excepciones, errores frontend/backend, trazas, contexto de errores, alertas.
 
 ### Regla
 
-Sentry es **opt-in**.
+Sentry es opt-in. Tiene sentido especialmente cuando el proyecto está en producción, tiene usuarios reales, tiene suficiente complejidad, o necesita observabilidad.
 
-Tiene sentido especialmente cuando el proyecto:
+### PostHog
 
-- está en producción;
-    
-- tiene usuarios reales;
-    
-- tiene suficiente complejidad;
-    
-- o necesita observabilidad.
-    
-
----
-
-# 13. PostHog
-
-## Responsabilidad
-
-**Analítica y comportamiento del producto.**
-
-Puede utilizarse para:
-
-- eventos;
-    
-- funnels;
-    
-- comportamiento;
-    
-- conversiones;
-    
-- feature usage;
-    
-- experimentación cuando corresponda.
-    
+Analítica y comportamiento del producto: eventos, funnels, comportamiento, conversiones, feature usage, experimentación cuando corresponda.
 
 ### Regla
 
-No instalar analytics simplemente porque sí.
+No instalar analytics simplemente porque sí. Primero definir: ¿qué queremos medir y qué decisión tomaremos con ese dato? Si no existe respuesta, PostHog probablemente todavía no sea necesario.
 
-Primero definir:
+### Resend
 
-> ¿Qué queremos medir y qué decisión tomaremos con ese dato?
-
-Si no existe respuesta, PostHog probablemente todavía no sea necesario.
-
----
-
-# 14. Resend
-
-## Responsabilidad
-
-**Email transaccional.**
-
-Puede utilizarse para:
-
-- formularios;
-    
-- emails de contacto;
-    
-- confirmaciones;
-    
-- notificaciones;
-    
-- workflows de email.
-    
+Email transaccional: formularios, emails de contacto, confirmaciones, notificaciones, workflows de email.
 
 ### Regla
 
-No usar Resend si un proyecto no necesita envío de email real.
+No usar Resend si un proyecto no necesita envío de email real. Los formularios deben tener una estrategia explícita de destino y procesamiento.
 
-Los formularios deben tener una estrategia explícita de destino y procesamiento.
+### n8n
 
----
-
-# 15. n8n
-
-## Responsabilidad
-
-**Automatización entre sistemas.**
-
-Puede conectar:
-
-- Linear;
-    
-- GitHub;
-    
-- email;
-    
-- formularios;
-    
-- APIs;
-    
-- bases de datos;
-    
-- analítica;
-    
-- servicios externos.
-    
-
-Ejemplo:
+Automatización entre sistemas. Puede conectar Linear, GitHub, email, formularios, APIs, bases de datos, analítica, servicios externos.
 
 ```
 Formulario
@@ -538,157 +224,29 @@ Obsidian / documentación cuando corresponda
 
 ### Regla
 
-Automatizar solamente procesos:
+Automatizar solamente procesos repetitivos, suficientemente estables y con beneficio real. No automatizar procesos que todavía están cambiando constantemente.
 
-- repetitivos;
-    
-- suficientemente estables;
-    
-- y con beneficio real.
-    
+### Cloudflare
 
-No automatizar procesos que todavía están cambiando constantemente.
-
----
-
-# 16. Supabase
-
-## Responsabilidad
-
-**Backend y datos cuando el proyecto lo necesita.**
-
-Puede utilizarse para:
-
-- PostgreSQL;
-    
-- autenticación;
-    
-- storage;
-    
-- datos;
-    
-- APIs;
-    
-- funciones;
-    
-- realtime;
-    
-- backend de aplicaciones.
-    
+Infraestructura y publicación (Release): hosting, Pages, Workers, DNS, dominios, CDN, seguridad, servicios edge.
 
 ### Regla
 
-Supabase no es obligatorio.
-
-Un sitio estático simple no necesita una base de datos solo porque Supabase esté disponible.
+La infraestructura debe ser proporcional al proyecto. No introducir complejidad de infraestructura si un hosting estático simple resuelve correctamente la necesidad.
 
 ---
 
-# 17. Cloudflare
+# 5. MACARIO OS — Coordinación
 
-## Responsabilidad
+MACARIO OS no es una herramienta más: es la capa que conecta a todas las anteriores sin duplicar sus funciones.
 
-**Infraestructura y publicación.**
+> **¿Cómo hacemos que todo el sistema funcione coordinadamente?**
 
-Puede utilizarse para:
-
-- hosting;
-    
-- Pages;
-    
-- Workers;
-    
-- DNS;
-    
-- dominios;
-    
-- CDN;
-    
-- seguridad;
-    
-- servicios edge.
-    
-
-### Regla
-
-La infraestructura debe ser proporcional al proyecto.
-
-No introducir complejidad de infraestructura si un hosting estático simple resuelve correctamente la necesidad.
+Su arquitectura y roadmap completos viven en [[MACARIO OS — Arquitectura y roadmap]].
 
 ---
 
-# 18. Grok / Grokbot
-
-## Responsabilidad
-
-**IA complementaria.**
-
-Puede utilizarse cuando aporte una ventaja específica frente a las herramientas principales.
-
-Posibles usos:
-
-- exploración;
-    
-- comparación;
-    
-- investigación;
-    
-- generación de alternativas;
-    
-- análisis complementario.
-    
-
-### Regla
-
-Grok no reemplaza automáticamente a ChatGPT o Claude.
-
-Debe utilizarse cuando exista una razón concreta para hacerlo.
-
----
-
-# 19. Artifact / Preview
-
-## Responsabilidad
-
-**Validación visual y presentación del trabajo.**
-
-Cuando una herramienta permite generar un:
-
-- Artifact;
-    
-- preview;
-    
-- render;
-    
-- prototipo;
-    
-- resultado navegable;
-    
-
-debe utilizarse cuando ayude a revisar el trabajo.
-
-Especialmente útil para:
-
-- UI;
-    
-- rediseños;
-    
-- landing pages;
-    
-- portfolios;
-    
-- componentes visuales;
-    
-- experiencias interactivas.
-    
-
-### Principio
-
-> El resultado debe poder verse, no solamente describirse.
-
----
-
-# 20. Integraciones entre herramientas
+# 6. Integraciones entre herramientas
 
 La arquitectura ideal busca enlaces, no duplicaciones.
 
@@ -721,92 +279,54 @@ La arquitectura ideal busca enlaces, no duplicaciones.
 
 ---
 
-# 21. Estado de integración
+# 7. Estado de integración
 
 ## Ya forman parte del sistema
 
 - Linear
-    
 - GitHub
-    
 - Claude Code
-    
 - ChatGPT
-    
 - Obsidian
-    
-- WEB-BASE
-    
+- Web-Base
 
 ## Integraciones / herramientas disponibles según necesidad
 
 - Figma
-    
 - Playwright
-    
 - Sentry
-    
 - Resend
-    
 - PostHog
-    
 - n8n
-    
 - Supabase
-    
 - Cloudflare
-    
 - Grok
-    
+- Banana
 
 ## Futuro
 
 - MACARIO OS como capa real de orquestación;
-    
 - contexto unificado;
-    
 - automatizaciones;
-    
 - integración más profunda entre documentación, tareas y código.
-    
 
 ---
 
-# 22. Criterio para agregar una herramienta
+# 8. Criterio para agregar una herramienta
 
 Antes de incorporar una nueva herramienta:
 
-### 1. Problema
-
-¿Qué problema concreto resuelve?
-
-### 2. Frecuencia
-
-¿Ese problema aparece una vez o repetidamente?
-
-### 3. Beneficio
-
-¿Cuánto tiempo, calidad o claridad aporta?
-
-### 4. Complejidad
-
-¿Qué mantenimiento agrega?
-
-### 5. Integración
-
-¿Dónde encaja dentro de MACARIO?
-
-### 6. Fuente de verdad
-
-¿Qué información va a manejar?
-
-### 7. Reversibilidad
-
-¿Podemos quitarla fácilmente si deja de aportar valor?
+1. **Problema** — ¿Qué problema concreto resuelve?
+2. **Frecuencia** — ¿Ese problema aparece una vez o repetidamente?
+3. **Beneficio** — ¿Cuánto tiempo, calidad o claridad aporta?
+4. **Complejidad** — ¿Qué mantenimiento agrega?
+5. **Integración** — ¿A qué área de MACARIO sirve?
+6. **Fuente de verdad** — ¿Qué información va a manejar?
+7. **Reversibilidad** — ¿Podemos quitarla fácilmente si deja de aportar valor?
 
 ---
 
-# 23. Herramientas obligatorias vs. optativas
+# 9. Herramientas obligatorias vs. optativas
 
 ### Base mínima
 
@@ -818,7 +338,7 @@ GitHub
 Claude Code
 Obsidian
 ChatGPT
-WEB-BASE
+Web-Base (o la Foundation correspondiente)
 ```
 
 ### Según necesidad
@@ -833,43 +353,23 @@ n8n
 Supabase
 Cloudflare
 Grok
+Banana
 ```
 
 La metodología no debe obligar a activar herramientas que el proyecto no necesita.
 
 ---
 
-# 24. Principio de evolución
+# 10. Principio de evolución
 
-El stack no está cerrado para siempre.
+El stack no está cerrado para siempre. Puede cambiar. Una herramienta puede incorporarse, reemplazarse, eliminarse, quedar experimental o convertirse en estándar.
 
-Puede cambiar.
-
-Una herramienta puede:
-
-- incorporarse;
-    
-- reemplazarse;
-    
-- eliminarse;
-    
-- quedar experimental;
-    
-- convertirse en estándar.
-    
-
-Pero cada cambio importante debe documentarse en:
-
-`**MACARIO — Principios y decisiones**`
-
-y reflejarse aquí.
+Cada cambio importante debe documentarse en [[MACARIO — Principios y decisiones]] y reflejarse aquí.
 
 ---
 
-# 25. Regla final
+# 11. Regla final
 
-> **No buscamos tener todas las herramientas. Buscamos que cada herramienta que usamos tenga una razón clara para existir.**
+> **No buscamos tener todas las herramientas. Buscamos que cada herramienta que usamos tenga una razón clara para existir, y que sirva a un área concreta de MACARIO.**
 
-El valor de MACARIO no está en la cantidad de herramientas.
-
-Está en cómo se conectan para producir mejores proyectos.
+El valor de MACARIO no está en la cantidad de herramientas. Está en cómo se conectan para producir mejores proyectos.
