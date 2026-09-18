@@ -11,6 +11,7 @@
         IDEA
           ↓
       RESEARCH
+       (Discovery)
           ↓
   PRODUCT DEFINITION
           ↓
@@ -61,13 +62,149 @@ Pero **QA → Release → Analytics/Operations → Iteration** funciona como tra
 |**Analytics / Operations**|El producto en producción|Datos de uso, errores, métricas, aprendizaje operativo|Iteration|
 |**Iteration**|Los aprendizajes de Analytics/Operations|Nuevas ideas o ajustes de alcance, que vuelven a alimentar Research o Product Definition|Idea / Research (siguiente ciclo)|
 
+> Research se ejecuta mediante el proceso formal de **Discovery** — ver sección 3.
+
 ### Regla
 
 > No inventar información faltante. Si algo no está confirmado en Research o Product Definition, se documenta como pendiente y se pregunta antes de avanzar.
 
 ---
 
-## 3. Sistema de capas por etapa
+## 3. Discovery: el proceso detrás de Research
+
+> Discovery es el proceso formal mediante el cual la etapa Research transforma una idea, pedido, brief, problema o proyecto existente en información suficientemente clara para pasar a Product Definition **sin inventar requisitos**.
+
+Discovery no es una etapa aparte en el ciclo general: es el nombre formal del proceso con el que se ejecuta Research, inmediatamente antes de Product Definition.
+
+### 3.1 Proceso
+
+1. Preguntar
+2. Investigar (incluye cruzar fuentes — ver 3.4)
+3. Organizar
+4. Detectar faltantes, contradicciones e incertidumbres
+5. Convertir la información en decisiones
+
+Este ciclo se repite tantas veces como sea necesario hasta cumplir el gate (3.7). Discovery no es un cuestionario fijo.
+
+### 3.2 Mapa de información
+
+Discovery cubre, según lo que cada proyecto realmente necesite:
+
+- problema / necesidad
+- objetivo
+- usuarios / audiencia
+- producto o servicio
+- alcance inicial
+- modelo de negocio
+- contenido y datos disponibles
+- funcionalidades conocidas
+- referencias
+- marca y restricciones
+- canales y contexto de uso
+- recursos disponibles
+- restricciones técnicas
+- tiempo y presupuesto
+- criterios de éxito
+
+Esto es un **mapa de información, no un cuestionario fijo**. MACARIO no pregunta siempre las mismas áreas: pregunta únicamente lo necesario según el proyecto, lo que ya se sabe y los gaps detectados.
+
+### 3.3 Estados de la información
+
+Cada dato de Discovery se clasifica, cuando corresponda, en uno de estos estados:
+
+- **Confirmado** — verificado directamente en una fuente confiable del propio proyecto (documentación MACARIO, repositorio, cliente).
+- **Confirmado en otra fuente** — la información existe y puede verificarse en otra fuente del proyecto (repositorio, README, `PROJECT-CONTEXT` o equivalente, documentación de marca, código/configuración), pero todavía no fue incorporada ni reconciliada en la documentación correspondiente de MACARIO. No equivale a `Faltante`: el dato existe, solo falta traerlo — ver 3.4 y 3.5.
+- **Decisión** — ya fue resuelto explícitamente por elección deliberada, no es un hecho externo a verificar.
+- **Hipótesis** — suposición razonable, todavía no confirmada ni decidida.
+- **Faltante** — no existe en ninguna fuente disponible del proyecto. Se pregunta antes de avanzar; no se inventa.
+- **No aplica** — el área no es relevante para este proyecto puntual.
+
+No forzar un dato a un estado si realmente no existe.
+
+### 3.4 Cruce de fuentes
+
+Antes de marcar un dato como `Faltante`, se revisan las fuentes del proyecto razonablemente relevantes para ese dato puntual — no todo el repositorio de forma indiscriminada. Según corresponda:
+
+- documentación de MACARIO del proyecto;
+- repositorio del proyecto;
+- README, `PROJECT-CONTEXT` o equivalente;
+- documentación de marca;
+- código o configuración, cuando sea relevante para el dato buscado.
+
+Si el dato aparece en alguna de estas fuentes pero no en la documentación de MACARIO, se marca `Confirmado en otra fuente`, no `Faltante`.
+
+Para datos y decisiones relevantes que puedan cambiar durante el desarrollo — no para cada dato menor — registrar, cuando corresponda:
+
+- fuente;
+- fecha o referencia temporal (commit, versión, fecha del documento);
+- vigencia (¿sigue siendo cierto?);
+- conflicto con otra fuente, si existe.
+
+### 3.5 Reconciliación
+
+Cuando otra fuente demuestra que algo que MACARIO tenía marcado como pendiente ya fue resuelto, se reconcilia en vez de dejarlo como pendiente:
+
+```
+MACARIO dice "pendiente"
+        ↓
+otra fuente demuestra que ya fue resuelto
+        ↓
+reconciliar
+        ↓
+registrar la decisión
+        ↓
+actualizar la fuente canónica correspondiente
+```
+
+Reconciliar no reabre todo el Discovery: solo actualiza el dato puntual afectado y, si corresponde, registra la decisión permanente en la nota de decisiones del proyecto.
+
+### 3.6 Tres capas
+
+1. **Discovery interno de MACARIO** — determina qué necesitamos conocer, qué ya está confirmado, qué es hipótesis, qué falta, qué contradicciones existen y qué decisiones están bloqueadas.
+2. **Discovery con cliente** — traduce esas necesidades internas en preguntas naturales y fáciles de responder, sin jerga técnica innecesaria.
+3. **Procesamiento** — convierte las respuestas más la investigación en decisiones, requisitos, alcance, riesgos, preguntas pendientes y próximos pasos.
+
+### 3.7 Discovery Gate
+
+> ¿Tenemos suficiente información para pasar a Product Definition sin inventar requisitos?
+
+El gate admite tres estados:
+
+- **Sí** — la información disponible alcanza para pasar a Product Definition sin inventar requisitos.
+- **Parcial** — hay base suficiente para avanzar, pero con gaps conocidos que se aceptan conscientemente como riesgo. Para declarar Parcial se registra:
+  - qué está resuelto;
+  - qué falta;
+  - qué de eso bloquea Product Definition;
+  - qué riesgo se acepta si se continúa.
+- **No** — falta información necesaria para definir el producto. Discovery continúa hasta resolver los gaps que bloquean Product Definition (no todos los gaps posibles).
+
+No todo gap es bloqueante: la diferencia entre información necesaria para definir el producto y riesgo aceptado conscientemente es la que decide si algo impide pasar a Product Definition o no.
+
+**Chequeos obligatorios.** El gate revisa explícitamente estas tres áreas, incluso si el resultado es que no aplican:
+
+- objetivo medible;
+- modelo de negocio / monetización;
+- tiempo / presupuesto.
+
+Si alguna no aplica al proyecto, se registra como `No aplica` con su justificación — nunca se omite en silencio ni se inventa un valor.
+
+### 3.8 Discovery continuo
+
+El Discovery inicial establece una base suficiente para pasar a Product Definition, pero no es una verdad inmutable del proyecto. Durante el desarrollo pueden aparecer nuevos datos, decisiones, restricciones, cambios de alcance o contradicciones.
+
+Cuando aparecen, se reconcilian y documentan con las herramientas correspondientes (ver 3.5), sin reabrir artificialmente todo el Discovery. Que algo nuevo aparezca después no significa que el Discovery original haya sido incorrecto: significa que el proyecto avanzó y generó información que no existía antes.
+
+### 3.9 Relación con Web-Base
+
+Web-Base traduce Research en tres sub-etapas propias: Intake, Context y Discovery (ver [[WEB-BASE — Metodología y estándares]]). La sub-etapa "Discovery" de Web-Base es la aplicación técnica y acotada de este proceso general para websites y web apps (investigación de referencias, competencia, contenido existente, stack) — no una definición paralela ni un sistema distinto.
+
+### 3.10 Qué documentar
+
+Lo que Discovery deja resuelto para un proyecto se documenta en `07 — Proyectos/_Plantilla/01 — Contexto y Brief`, incluidos su Discovery Gate y los estados/fuentes relevantes. Las reconciliaciones y decisiones permanentes se registran en `11 — Decisiones y Changelog` del proyecto. La metodología general de Discovery vive únicamente acá.
+
+---
+
+## 4. Sistema de capas por etapa
 
 Cada etapa utiliza las capas transversales necesarias, no todas por defecto.
 
@@ -89,7 +226,7 @@ MACARIO OS coordina estas relaciones. Ver [[MACARIO OS — Arquitectura y roadma
 
 ---
 
-## 4. Linear vs Obsidian
+## 5. Linear vs Obsidian
 
 ### Linear
 
@@ -110,7 +247,7 @@ Contiene: contexto del negocio, decisiones, estructura, aprendizajes, referencia
 
 ---
 
-## 5. GitHub
+## 6. GitHub
 
 GitHub representa la implementación real.
 
@@ -129,7 +266,7 @@ Nunca asumir que el estado local está actualizado.
 
 ---
 
-## 6. Quality gates
+## 7. Quality gates
 
 Cada etapa debe producir una condición verificable.
 
@@ -138,9 +275,9 @@ IDEA
 ↓
 ¿Entendemos el pedido?
 
-RESEARCH
+RESEARCH (DISCOVERY)
 ↓
-¿Entendemos el negocio/problema/usuario?
+¿Tenemos suficiente información para pasar a Product Definition sin inventar requisitos?
 
 PRODUCT DEFINITION
 ↓
@@ -181,7 +318,7 @@ ITERATION
 
 ---
 
-## 7. Flujo de aprobación
+## 8. Flujo de aprobación
 
 ### Claude puede avanzar solo
 
@@ -197,7 +334,7 @@ Commit final, push, merge, deploy, decisiones comerciales, publicación definiti
 
 ---
 
-## 8. Flujo de revisión visual
+## 9. Flujo de revisión visual
 
 Cuando el trabajo tiene impacto visual:
 
@@ -221,7 +358,7 @@ La revisión visual humana tiene prioridad sobre la percepción del agente.
 
 ---
 
-## 9. Aprendizaje posterior al proyecto
+## 10. Aprendizaje posterior al proyecto
 
 Después de cerrar un proyecto (fin de un ciclo de Release/Analytics-Operations):
 
@@ -235,7 +372,7 @@ No toda experiencia se convierte en una nueva regla.
 
 ---
 
-## 10. Evolución de MACARIO
+## 11. Evolución de MACARIO
 
 ```
 PROYECTOS REALES
@@ -259,7 +396,7 @@ MACARIO OS aparece por encima de este ciclo para coordinarlo.
 
 ---
 
-## 11. Regla de eficiencia
+## 12. Regla de eficiencia
 
 Antes de comenzar una tarea:
 
@@ -274,7 +411,7 @@ El objetivo no es hacer más. El objetivo es **resolver mejor con menos fricció
 
 ---
 
-## 12. Relación con las Foundations
+## 13. Relación con las Foundations
 
 Este documento describe el ciclo general de MACARIO, válido para cualquier plataforma.
 
