@@ -145,6 +145,24 @@ Una Foundation no es MACARIO completo. MACARIO es el sistema; cada Foundation es
 
 Una Foundation no contiene proyectos reales dentro de su propio repositorio: los proyectos la usan como punto de partida técnico, no como contenedor.
 
+### Criterio para incorporar una nueva Foundation
+
+Mobile-Base y otras futuras Foundations no se diseñan por adelantado: se incorporan solo cuando existe una necesidad real y comprobada. Antes de crear una:
+
+1. ¿Existe una plataforma concreta (mobile, dashboards, e-commerce…) que hoy no tiene base técnica reutilizable?
+2. ¿Hay evidencia de al menos un proyecto real que la necesita, no solo una hipótesis?
+3. ¿El ciclo general de MACARIO ([[MACARIO — Flujo de trabajo]]) le alcanza sin modificarse, igual que le alcanza a Web-Base?
+4. ¿Puede implementarse como Foundation independiente, sin absorber Research, Visual/Assets o UX/UI ni duplicar su metodología?
+
+Toda Foundation nueva:
+
+- implementa el mismo ciclo general de MACARIO, adaptado a su plataforma — no crea un ciclo propio;
+- vive dentro de Product Development, igual que Web-Base;
+- no contiene metodología general de MACARIO, solo su aplicación técnica acotada a esa plataforma;
+- se distribuye y se relaciona con sus proyectos de la misma forma que Web-Base (ver [[WEB-BASE — Metodología y estándares]] §18).
+
+Si la respuesta a 1-3 no es clara y comprobada, la Foundation todavía no se crea.
+
 ---
 
 ## 7. Projects

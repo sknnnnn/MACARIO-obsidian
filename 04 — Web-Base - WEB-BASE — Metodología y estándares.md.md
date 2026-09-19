@@ -29,6 +29,21 @@ WEB-BASE no es:
 
 Es la **Foundation: la base técnica reutilizable de MACARIO para websites y web apps** — una entre varias posibles (Mobile-Base a futuro, otras según necesidad). WEB-BASE no reemplaza ni absorbe las áreas de Research, Visual/Assets o UX/UI de MACARIO: sus etapas de Context, Discovery y Visual Direction son la aplicación técnica y acotada de esas áreas dentro de un proyecto de Web-Base, no la definición general de esas áreas a nivel MACARIO.
 
+## 1.1 Cuándo se usa
+
+WEB-BASE entra en juego en el momento en que una idea ya pasó (o está pasando, si el proyecto es simple) por Research general de MACARIO y se decide que el producto a construir es un website o una web app. A partir de ahí, WEB-BASE es el punto de partida técnico: no se usa para research puro, para decisiones de negocio, ni para gestionar el proyecto una vez cerrado (eso pertenece a Analytics/Operations, fuera de su alcance actual).
+
+## 1.2 Qué recibe y qué entrega
+
+|WEB-BASE|Detalle|
+|---|---|
+|**Recibe**|una necesidad o idea con contexto suficiente para iniciar Intake (ver [[MACARIO — Flujo de trabajo]] §3), y la decisión de que se materializa como website o web app|
+|**Entrega**|un proyecto propio (repositorio independiente, base técnica implementada, documentación de cierre) que atravesó las doce etapas hasta Close, listo para pasar a Analytics/Operations|
+
+## 1.3 Relación con un proyecto concreto
+
+WEB-BASE no es el proyecto: es el punto de partida que el proyecto usa una sola vez, al nacer. Una vez creado el repositorio del proyecto (ver §18, modelo de distribución), ese proyecto sigue su propia vida — su propio contexto, decisiones e identidad — sin quedar acoplado técnicamente a WEB-BASE. Mejoras futuras a WEB-BASE no se propagan automáticamente a proyectos ya creados.
+
 ---
 
 # 2. Objetivo
@@ -811,15 +826,50 @@ Antes de cerrar:
 
 ---
 
-# 18. `/nuevo-proyecto`
+# 18. Distribución y `/nuevo-proyecto`
 
-WEB-BASE incluye un flujo para preparar nuevos proyectos.
+## 18.1 Modelo de distribución
+
+WEB-BASE se distribuye como **GitHub Template repository**. Un proyecto nuevo nace copiando esa plantilla a un repositorio propio, no clonando ni referenciando el repositorio de WEB-BASE:
+
+```
+MACARIO
+   ↓
+GitHub Web-Base Template
+   ↓
+nuevo repositorio independiente
+   ↓
+/nuevo-proyecto
+   ↓
+Proyecto
+```
+
+La creación del repositorio (vía "Use this template" de GitHub) es un paso previo y separado de `/nuevo-proyecto`. `/nuevo-proyecto` actúa **después**, ya dentro del repositorio nuevo, y solo prepara técnicamente lo que ya existe — no crea el repositorio.
+
+## 18.2 `/nuevo-proyecto`
+
+WEB-BASE incluye un flujo para preparar técnicamente un proyecto nuevo una vez que su repositorio ya existe.
 
 Su objetivo es:
 
-> **scaffoldear un proyecto nuevo a partir de la Foundation WEB-BASE.**
+> **scaffoldear un proyecto nuevo a partir de la Foundation WEB-BASE, dentro de un repositorio ya creado.**
 
-No debe:
+`/nuevo-proyecto` **no**:
+
+- crea repositorios (el repositorio se crea con GitHub Template, ver 18.1);
+    
+- copia manualmente HTML/CSS/JS/assets (eso ya viene incluido por el Template);
+    
+- decide identidad del proyecto;
+    
+- decide alcance del proyecto;
+    
+- hace commit ni push.
+    
+
+Estas decisiones (identidad, alcance, y toda acción de Git que confirme el estado) pertenecen a Intake/Context/Scope (etapas 01-04) y a la autorización de Ignacio, no al scaffolding técnico.
+
+No debe, además:
 
 - convertir Web-Base en contenedor de proyectos;
     
@@ -836,7 +886,7 @@ No debe:
 
 El nuevo proyecto debe existir como repositorio independiente.
 
-WEB-BASE proporciona el método y los recursos reutilizables.
+WEB-BASE proporciona el método y los recursos reutilizables; la identidad, el alcance y las decisiones de negocio son siempre del proyecto.
 
 ---
 
