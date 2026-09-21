@@ -1,15 +1,19 @@
 # ITS — Portfolio y posicionamiento
 
-> ITS es el portfolio personal y profesional de Ignacio, la expresión personal de PRANA dentro del ecosistema MACARIO.  
-> Su función es presentar trabajo, criterio y capacidad para generar oportunidades profesionales y comerciales.
+> ITS es la identidad personal, autoría y portfolio de Ignacio. PRANA, la marca / negocio que Ignacio crea, es una de sus creaciones, con superficie propia.  
+> Su función es presentar trabajo, criterio y capacidad para generar oportunidades profesionales relacionadas con la persona. No es el canal comercial de PRANA.
 
 ---
 
 # 1. Qué es ITS
 
-**ITS es el portfolio personal de Ignacio.**
+**ITS es la identidad personal de Ignacio: autoría, criterio, proceso, experimentación y portfolio.**
 
-Vive dentro de **PRANA**, la marca externa del ecosistema, como su expresión personal, y funciona como capa pública de presentación del trabajo desarrollado dentro de MACARIO.
+ITS responde principalmente: **"¿Quién está detrás y cómo piensa?"**
+
+Es una superficie separada de **PRANA**, la marca / negocio independiente que Ignacio crea y que produce soluciones digitales. PRANA es una creación de autoría de ITS, pero ITS no es PRANA ni PRANA es una sección de ITS. Ver [[PRANA — Estrategia]].
+
+ITS funciona como capa pública de presentación del trabajo desarrollado dentro de MACARIO, desde la perspectiva del autor.
 
 ITS no es:
 
@@ -23,26 +27,24 @@ ITS no es:
     
 - un reemplazo de MACARIO;
     
-- una marca independiente de PRANA;
+- una sección o submarca de PRANA;
     
-- ni una página web adicional que deba mantenerse separadamente.
+- ni una dependencia de PRANA.
+
+ITS y PRANA son superficies separadas. PRANA es una creación de autoría de ITS (ITS → autoría → PRANA), no una submarca ni una sección de ITS.
     
 
 La relación correcta es:
 
 ```
-MACARIO
-   ↓
-proyectos reales
-   ↓
-trabajo realizado
-   ↓
-PRANA (marca externa)
-   ↓
-ITS (expresión personal de Ignacio, dentro de PRANA)
-   ↓
-presentación / captación
+ITS (autor / identidad personal)
+   │
+   └── autoría ──▶ PRANA (marca / negocio independiente)
 ```
+
+ITS ≠ PRANA y PRANA ≠ ITS, pero PRANA es una creación de autoría de ITS. Es simplemente la separación entre **autor / identidad personal** y **marca / negocio creado por ese autor**.
+
+Los proyectos reales producidos con MACARIO pueden mostrarse en ambas superficies, cada una desde su perspectiva (ver §4).
 
 ---
 
@@ -100,18 +102,37 @@ La presentación debe transmitir capacidad real, no una lista genérica de servi
 
 MACARIO es el sistema general: organiza.
 
-PRANA es la marca externa: muestra.
+PRANA es la marca / negocio hacia afuera: muestra qué puede producir.
 
-ITS es la expresión personal de Ignacio dentro de PRANA.
+ITS es la identidad personal de Ignacio: muestra quién está detrás y cómo piensa.
 
 ```
-MACARIO (organiza) ──produce──▶ PROYECTOS REALES ──se presentan en──▶ PRANA (muestra)
-                                                                           │
-                                                                           ▼
-                                                                          ITS
-                                                              (expresión personal,
-                                                                dentro de PRANA)
+MACARIO (organiza) ──produce──▶ PROYECTOS REALES ──▶ PRANA (casos públicos)
+                                       │
+                                       └──────────▶ ITS (perspectiva del autor)
+
+ITS ──autoría──▶ PRANA
 ```
+
+### ITS y PRANA
+
+ITS puede mostrar PRANA desde la perspectiva del autor:
+
+- cómo nació;
+- por qué existe;
+- cómo se desarrolló;
+- qué criterio hay detrás;
+- cómo evoluciona;
+- qué experimentación surge alrededor de PRANA.
+
+PRANA debe poder funcionar públicamente por sí mismo, sin depender de ITS. Ver [[PRANA — Estrategia]].
+
+Portfolios separados, con perspectivas distintas:
+
+- **ITS:** autor → criterio → proceso → experimentación → proyectos / creaciones.
+- **PRANA:** problema → enfoque → solución → resultado → proyectos.
+
+Pueden mostrar algunos de los mismos proyectos, pero no deben ser dos copias del mismo portfolio.
 
 Internamente, MACARIO coordina WEB-BASE y MACARIO OS para producir esos proyectos:
 
@@ -138,6 +159,8 @@ ITS puede mostrar el resultado de proyectos construidos utilizando:
 Pero el usuario final no necesita conocer toda la arquitectura interna.
 
 La complejidad interna debe traducirse en una experiencia pública simple.
+
+ITS puede mostrar y explicar su proceso, herramientas, sistemas y decisiones (incluido MACARIO, como proyecto propio de autoría) porque forman parte de su autoría y experimentación. Eso no significa que MACARIO o Web-Base sean productos ni elementos que PRANA deba exponer públicamente.
 
 ---
 
@@ -233,6 +256,8 @@ Los proyectos actuales del ecosistema incluyen:
     
 - CONCRETO;
     
+- Bresstore;
+    
 - futuros proyectos.
     
 
@@ -248,6 +273,8 @@ Un proyecto puede aparecer en ITS solamente cuando:
     
 - existe autorización cuando corresponde.
     
+
+La documentación interna puede contener proyectos en distintos estados; ITS muestra solamente proyectos suficientemente preparados, desde la perspectiva del autor. El portfolio público de PRANA se define por separado (ver [[PRANA — Estrategia]]).
 
 ---
 
@@ -349,7 +376,9 @@ Si algo todavía no está confirmado:
 
 # 12. Captación
 
-ITS funciona también como herramienta comercial.
+ITS capta oportunidades relacionadas con la persona: colaboraciones, proyectos personales, trabajo profesional, experimentación, portfolio y autoría.
+
+ITS no funciona como canal comercial alternativo para vender las soluciones de PRANA. El funnel comercial de PRANA lleva hacia PRANA. Si una oportunidad nace desde ITS y corresponde a una solución comercial de PRANA, puede derivarse conceptualmente hacia PRANA (ver [[PRANA — Estrategia]]).
 
 El visitante debe poder pasar naturalmente por:
 
@@ -519,7 +548,7 @@ Un proyecto puede utilizarse internamente sin necesariamente poder utilizarse p�
 
 ITS se encuentra definido como:
 
-**Portfolio personal/profesional de Ignacio, dentro de PRANA.**
+**Identidad personal, autoría y portfolio de Ignacio; superficie separada de PRANA.**
 
 La dirección visual actual:
 

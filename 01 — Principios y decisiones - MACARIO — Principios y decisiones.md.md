@@ -654,9 +654,9 @@ para revisión visual.
 
 ---
 
-# 17. Proyectos reales alimentan ITS
+# 17. Proyectos reales alimentan ITS y PRANA
 
-ITS es el portfolio personal de Ignacio. Vive dentro de PRANA, la marca externa del ecosistema, como su expresión personal — no como marca independiente.
+ITS es la identidad personal de Ignacio: autoría, criterio, proceso, experimentación y portfolio. PRANA es la marca / negocio que Ignacio crea y funciona públicamente por sí misma. Son superficies separadas: PRANA es una creación de autoría de ITS, no una sección de ITS.
 
 Por eso los proyectos reales pueden convertirse en:
 
@@ -673,7 +673,7 @@ Por eso los proyectos reales pueden convertirse en:
 - piezas de captación.
     
 
-Pero no todo proyecto tiene que aparecer en ITS.
+Pero no todo proyecto tiene que aparecer en ITS ni en el portfolio público de PRANA. La documentación interna puede contener proyectos en distintos estados; el portfolio público de PRANA muestra solamente proyectos suficientemente preparados. Ver [[PRANA — Estrategia]].
 
 La decisión depende de:
 

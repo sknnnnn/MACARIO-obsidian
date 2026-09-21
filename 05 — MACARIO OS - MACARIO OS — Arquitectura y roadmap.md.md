@@ -1087,7 +1087,7 @@ Antes de construir una nueva capa preguntar:
     
 - responsabilidades de herramientas;
     
-- relación MACARIO / WEB-BASE / PRANA (ITS) / proyectos;
+- relación MACARIO / WEB-BASE / PRANA / ITS / proyectos;
     
 - WEB-BASE v1 (Foundation) implementando la metodología;
     

@@ -64,17 +64,15 @@ La identidad externa con la que ese trabajo se presenta hacia afuera es **PRANA*
                          │
                          ▼
                        PRANA
-              marca / identidad externa
-                         │
-              ┌──────────┴──────────┐
-              ▼                     ▼
-             ITS              proyectos reales
-     expresión personal        (casos que PRANA
-     de Ignacio, dentro         presenta hacia
-         de PRANA                  afuera)
+            marca / negocio hacia afuera
+          (casos públicos y portfolio propio)
+
+       ITS  ──── autoría ────▶  PRANA
+ autor / identidad personal     marca / negocio
+    (superficie propia)        (superficie propia)
 ```
 
-MACARIO no aparece hacia afuera. Lo que se ve públicamente es PRANA, y dentro de PRANA, ITS como expresión personal de Ignacio. Ver [[ITS — Portfolio y posicionamiento]].
+MACARIO no aparece hacia afuera: su arquitectura no se expone al público. Hacia afuera se ven dos superficies separadas: PRANA (marca / negocio) e ITS (autor / identidad personal). PRANA es una creación de autoría de ITS, pero no es una sección de ITS ni depende de ITS para funcionar públicamente. Ver [[PRANA — Estrategia]] y [[ITS — Portfolio y posicionamiento]].
 
 Los proyectos reales alimentan el sistema de vuelta:
 
@@ -169,14 +167,14 @@ Si la respuesta a 1-3 no es clara y comprobada, la Foundation todavía no se cre
 
 Los **Projects** son donde se aplica y valida todo el sistema.
 
-Ejemplos actuales: Proyecto Raíces, GXK, Onda, CONCRETO, futuros proyectos y clientes.
+Ejemplos actuales: Proyecto Raíces, GXK, Onda, CONCRETO, Bresstore, futuros proyectos y clientes.
 
 Cada proyecto:
 
 - se construye a partir de una Foundation;
 - mantiene su propia identidad, contenido, repositorio y decisiones;
 - no queda acoplado estructuralmente a la Foundation que lo originó;
-- puede convertirse en caso, referencia o evidencia para PRANA / ITS cuando corresponde.
+- puede convertirse en caso, referencia o evidencia para PRANA (portfolio público) o para ITS (perspectiva del autor) cuando corresponde; puede documentarse internamente sin ser público.
 
 ---
 
@@ -246,7 +244,7 @@ El detalle completo de esta regla y sus criterios de decisión vive en [[MACARIO
 - MACARIO como sistema general (System), agnóstico de plataforma.
 - Seis áreas operativas: Research, Visual/Assets, UX/UI, Product Development, QA, Analytics/Operations.
 - PRANA como marca / identidad externa.
-- ITS como portfolio personal/profesional de Ignacio, dentro de PRANA.
+- ITS como identidad personal, autoría y portfolio de Ignacio: superficie separada de PRANA (PRANA es una creación de su autoría).
 - Web-Base como Foundation para websites y web apps.
 - MACARIO OS como capa de orquestación.
 - Linear, GitHub y Obsidian como capas transversales operativas.
@@ -264,6 +262,7 @@ El detalle completo de esta regla y sus criterios de decisión vive en [[MACARIO
 - GXK
 - Onda
 - CONCRETO
+- Bresstore
 - futuros proyectos
 
 ---
@@ -276,6 +275,7 @@ El detalle completo de esta regla y sus criterios de decisión vive en [[MACARIO
 - [[WEB-BASE — Metodología y estándares]]
 - [[MACARIO OS — Arquitectura y roadmap]]
 - [[ITS — Portfolio y posicionamiento]]
+- [[PRANA — Estrategia]]
 
 ---
 

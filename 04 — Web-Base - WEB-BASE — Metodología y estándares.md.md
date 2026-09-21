@@ -1003,7 +1003,7 @@ MACARIO
           └── dónde aplicamos el sistema
 ```
 
-La presentación externa del trabajo (PRANA, e ITS como expresión personal dentro de PRANA) es una capa distinta, fuera de esta estructura interna.
+La presentación externa del trabajo (PRANA e ITS son superficies separadas; PRANA es una creación de autoría de ITS) es una capa distinta, fuera de esta estructura interna.
 
 WEB-BASE no es MACARIO completo.
 
