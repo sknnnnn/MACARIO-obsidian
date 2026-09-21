@@ -1,6 +1,6 @@
-# PRANA — Brand Core v0.2
+# PRANA — Brand Core v0.3
 
-> **v0.2 — Hipótesis de marca.** No es identidad definitiva.
+> **v0.3 — Hipótesis de marca.** No es identidad definitiva.
 > Complementa a [[PRANA — Estrategia]] (estrategia general); no la reemplaza.
 
 ---
@@ -30,6 +30,8 @@ Una oportunidad puede no tener todavía una forma concreta.
 PRANA entra en ese punto y lo transforma en movimiento:
 
 **entender → definir → diseñar → construir → evolucionar.**
+
+Evolucionar es una etapa que puede continuar después de la entrega: el cliente puede probar lo construido y aportar feedback, y ese feedback (junto con el de usuarios o el contexto real de uso, cuando corresponda) puede revelar problemas que no eran evidentes, nuevas necesidades y oportunidades de mejora.
 
 La idea de movimiento funciona como concepto de marca, no necesariamente como slogan público.
 
@@ -146,7 +148,9 @@ Una buena idea que nunca llega a existir no alcanza. Y lo que existe no puede es
 
 ### 05. Iterar
 
-Las soluciones pueden evolucionar después de ser lanzadas.
+Las soluciones pueden evolucionar después de ser lanzadas. El uso real revela lo que no se veía al principio, y PRANA puede aprovechar ese feedback para mejorar lo construido.
+
+El cliente aporta experiencia, necesidades y feedback. PRANA aporta criterio para interpretar ese feedback y decidir cómo resolverlo. La colaboración no elimina ese criterio: escuchar no es hacer todo lo que se pide.
 
 ### 06. Mantener curiosidad
 
@@ -375,6 +379,8 @@ Una futura decisión de PRANA debería poder responder:
 
 **¿Permite crecer hacia nuevas formas de producción?**
 
+**¿Permite que lo creado siga evolucionando con el uso real?**
+
 **¿Mantiene la puerta abierta para alguien que todavía no sabe qué necesita?**
 
 **¿Se siente real y producible, no solamente conceptual?**
@@ -387,7 +393,7 @@ Si la respuesta es no, la decisión debería revisarse.
 
 ## Estado
 
-**v0.2 — Hipótesis de marca**
+**v0.3 — Hipótesis de marca**
 
 Este documento establece una dirección inicial.
 
