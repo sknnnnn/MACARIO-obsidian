@@ -1,8 +1,7 @@
 # GXK12:2 — Índice
 
 > Nota de entrada del proyecto dentro de MACARIO.
-> Fuentes: Linear = ejecución/tareas · GitHub = código · Obsidian = documentación · Brand & E-commerce Bible = verdad de marca/UX/contenido · Figma Pro = dirección visual (una vez cerrado el diseño).
-> Esta nota es el punto de partida para orientarse en el proyecto.
+> Fuentes: Linear = ejecución/tareas · GitHub = código · Obsidian = documentación · Brand & E-commerce Bible = verdad de marca/UX/contenido · Dirección Visual = traducción visual aprobada · Figma Pro = exploración y validación visual.
 
 ---
 
@@ -14,24 +13,26 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 ## Estado general
 
-**Estado:** Proyecto activo. Existe una base técnica de e-commerce funcional (Storefront, Admin Web, Supabase/schema/RLS, catálogo, variantes e inventario, stock y operaciones atómicas, carrito, guest checkout, base de Mercado Pago, arquitectura de shipping con Andreani / Correo Argentino preparados a nivel técnico, sistema de pedidos y estados, outfits a nivel de modelo de datos). Ahora comienza la evolución hacia el producto GXK completo, guiada por la [[07 — Proyectos/GXK12.2/04 — GXK12.2 — Brand & E-commerce Bible|Brand & E-commerce Bible]] y el [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de producto|Roadmap de producto]] (6 bloques). **Bloque actual: 1 — Fundación visual + Home**, con dirección visual definida primero en Figma Pro.
-**Última actualización:** 2026-09-29.
+**Estado:** Proyecto activo. Existe una base técnica de e-commerce funcional (Storefront, Admin Web, Supabase/schema/RLS, catálogo, variantes e inventario, stock y operaciones atómicas, carrito, guest checkout, base de Mercado Pago, arquitectura de shipping con Andreani / Correo Argentino preparados a nivel técnico, sistema de pedidos y estados, outfits a nivel de modelo de datos). Ahora comienza la evolución hacia el producto GXK completo, guiada por la [[07 — Proyectos/GXK12.2/04 — GXK12.2 — Brand & E-commerce Bible|Brand & E-commerce Bible]], la [[07 — Proyectos/GXK12.2/06 — GXK12.2 — Dirección visual — Reglas aprobadas|Dirección Visual — Reglas aprobadas]] y el [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de producto|Roadmap de producto]] (6 bloques). **Bloque actual: 4 — Dirección de páginas**, con V0.1 + V0.2 de dirección visual cerradas.
+
+**Última actualización:** 2026-10-06.
 
 ---
 
 ## Documentación del proyecto
 
-- [[07 — Proyectos/GXK12.2/01 — GXK12.2 — Requerimientos]]
-- [[07 — Proyectos/GXK12.2/02 — GXK12.2 — Arquitectura funcional]]
-- [[07 — Proyectos/GXK12.2/03 — GXK12.2 — Arquitectura técnica]]
-- [[07 — Proyectos/GXK12.2/04 — GXK12.2 — Brand & E-commerce Bible]] — fuente de verdad de marca, UX y contenido
-- [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de producto]] — 6 bloques y metodología Figma → implementación → QA
+- [[07 — Proyectos/GXK12.2/01 — GXK12.2 — Requerimientos|Requerimientos]]
+- [[07 — Proyectos/GXK12.2/02 — GXK12.2 — Arquitectura funcional|Arquitectura funcional]]
+- [[07 — Proyectos/GXK12.2/03 — GXK12.2 — Arquitectura técnica|Arquitectura técnica]]
+- [[07 — Proyectos/GXK12.2/04 — GXK12.2 — Brand & E-commerce Bible|Brand & E-commerce Bible]] — fuente de verdad de marca, UX y contenido
+- [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de producto|Roadmap de producto]] — 6 bloques y metodología Figma → implementación → QA
+- [[07 — Proyectos/GXK12.2/06 — GXK12.2 — Dirección visual — Reglas aprobadas|Dirección Visual — Reglas aprobadas]] — síntesis aprobada V0.1 + V0.2
 
 ---
 
 ## Enlaces externos
 
-**Sitio:** Pendiente de completar (sin evidencia de URL en esta documentación).
-**Repositorio:** Pendiente de completar (sin evidencia de URL en esta documentación).
+**Sitio:** Pendiente de completar.
+**Repositorio:** Pendiente de completar.
 **Proyecto en Linear:** Existe (estructurado en 6 bloques); enlace pendiente de completar.
-**Figma:** Pendiente de completar (dirección visual a definir en Figma Pro, Bloque 1).
+**Figma:** PRANA STUDIOS — laboratorio y dirección visual GXK.
