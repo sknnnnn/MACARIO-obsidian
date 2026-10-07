@@ -24,8 +24,10 @@ Proyecto Raíces es un proyecto de turismo de aventura y experiencias (tours, tr
 
 ## Estado general
 
-**Estado:** Pendiente de definir explícitamente. El documento original describe trabajo en curso (contenido de Destinos, revisión integral del sitio) pero no declara un estado formal (activo/pausado/cerrado). El seguimiento de ese trabajo vive en Linear.
-**Última actualización:** Pendiente de definir.
+**Estado:** **Activo — fase de reorganización de código, documentación, arquitectura / modelo de datos y preparación del Admin/CMS**. El proyecto **no está terminado**: el sitio público funciona, pero el trabajo actual es reorganizar el código y la documentación, consolidar la arquitectura y el modelo de datos (System Reset, [[07 — Proyectos/Proyecto Raíces/04 — Arquitectura|Arquitectura]] §6–§7) y preparar el Admin/CMS, que todavía debe implementarse sobre esa base. El seguimiento operativo vive en Linear.
+
+> Estado histórico: el 2026-09-28, Linear registró la "etapa funcional cerrada", con el foco puesto en UX/UI y dirección visual. Ese estado quedó superado.
+**Última actualización:** 2026-10-07 — migración de conocimiento desde Linear (auditoría 2026-10). Las secciones no tocadas en esa migración no se re-verificaron desde 2026-09-12.
 
 ---
 
@@ -50,4 +52,5 @@ Proyecto Raíces es un proyecto de turismo de aventura y experiencias (tours, tr
 
 **Sitio:** https://proyectoraices.com.ar
 **Repositorio:** https://github.com/sknnnnn/proyecto-raices.git
-**Proyecto en Linear:** Pendiente de definir.
+**Proyecto en Linear:** [Rediseño y lanzamiento Web](https://linear.app/proyecto-raices/project/rediseno-y-lanzamiento-web-2a37c58672be)
+**Figma:** [tablero de referencias y dirección visual](https://www.figma.com/design/RqXlNyOZPYDsJFtX9Kk6dj/PRANA-STUDIOS?node-id=54-26) (archivo `PRANA STUDIOS`)

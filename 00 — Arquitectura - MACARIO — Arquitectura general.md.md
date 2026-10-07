@@ -2,7 +2,7 @@
 
 > Documento maestro de arquitectura.  
 > Mapa general del sistema: qué es MACARIO, cómo se relacionan sus partes y cuál es la responsabilidad de cada capa.  
-> No es un documento metodológico ni un catálogo de herramientas: la metodología vive en [[02 — Metodología - MACARIO — Flujo de trabajo]], el detalle de herramientas en [[03 — Herramientas - MACARIO — Herramientas y ecosistema]].
+> No es un documento metodológico ni un catálogo de herramientas: la metodología vive en [[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]], el detalle de herramientas en [[03 — Herramientas - MACARIO — Herramientas y ecosistema.md|MACARIO — Herramientas y ecosistema]].
 
 ---
 
@@ -27,14 +27,25 @@ Es la combinación de:
 - una arquitectura operativa (áreas y ciclo de vida);
 - una metodología de trabajo;
 - un sistema de documentación (capas transversales);
-- bases técnicas reutilizables (**Foundations**), como Web-Base;
+- bases técnicas reutilizables (**Foundations**); Web-Base fue la primera y hoy es una referencia histórica congelada (ver §6);
 - y una colección de proyectos reales (**Projects**) que validan y mejoran el sistema.
 
-La identidad externa con la que ese trabajo se presenta hacia afuera es **PRANA**. MACARIO organiza; PRANA muestra.
+MACARIO opera como **MACARIO ESTUDIO**: el estudio / estructura de trabajo desde la cual se organizan los proyectos, la metodología y la operación. Ver §2.
 
 ---
 
-## 2. Relación PRANA / MACARIO / Foundation / Project
+## 2. Jerarquía de identidad y relación MACARIO / Foundation / Project
+
+> **Decisión vigente (2026-10-07).** Reemplaza versiones anteriores que equiparaban PRANA con la identidad externa de MACARIO o con "MACARIO STUDIO".
+
+| Identidad | Qué es | Qué NO es |
+|---|---|---|
+| **MACARIO ESTUDIO** | El estudio / estructura de trabajo desde la cual se organizan proyectos, metodología y operación. | — |
+| **PRANA** | Un proyecto / marca / posible futura empresa **independiente de MACARIO**, en evaluación. | No reemplaza a MACARIO ESTUDIO. No es sinónimo de MACARIO ni su canal público definitivo. |
+| **ITS** | Identidad / proyecto personal de Ignacio, cuando corresponda. | No es sinónimo de PRANA ni de MACARIO ESTUDIO. |
+
+- No usar "PRANA = MACARIO" ni "PRANA reemplazó a MACARIO ESTUDIO".
+- El archivo de Figma llamado `PRANA STUDIOS` es solo el nombre de un recurso visual; no modifica esta jerarquía.
 
 **Capa interna — cómo se organiza:**
 
@@ -52,27 +63,15 @@ La identidad externa con la que ese trabajo se presenta hacia afuera es **PRANA*
                          │
                          ▼
                       PROJECT
-                (Raíces, GXK, Onda…)
+                (Raíces, GXK…)
 ```
 
-**Capa externa — lo que se ve:**
+**Superficies externas:** PRANA e ITS tienen superficies propias y separadas. Ver [[PRANA — Estrategia]] y [[06 — ITS - ITS — Portfolio y posicionamiento.md|ITS — Portfolio y posicionamiento]].
 
-```
-                      PROJECT
-                         │
-                    materializa
-                         │
-                         ▼
-                       PRANA
-            marca / negocio hacia afuera
-          (casos públicos y portfolio propio)
-
-       ITS  ──── autoría ────▶  PRANA
- autor / identidad personal     marca / negocio
-    (superficie propia)        (superficie propia)
-```
-
-MACARIO no aparece hacia afuera: su arquitectura no se expone al público. Hacia afuera se ven dos superficies separadas: PRANA (marca / negocio) e ITS (autor / identidad personal). PRANA es una creación de autoría de ITS, pero no es una sección de ITS ni depende de ITS para funcionar públicamente. Ver [[PRANA — Estrategia]] y [[06 — ITS - ITS — Portfolio y posicionamiento]].
+> ⚠️ **Decisión abierta — superficie pública:** versiones anteriores de este documento definían a PRANA como la superficie donde se publican los casos de los proyectos de MACARIO ("MACARIO organiza; PRANA muestra"). Regla actual (2026-10-07), mientras no se decida:
+> - PRANA está en evaluación; MACARIO ESTUDIO es el estudio.
+> - No asumir que PRANA es el canal público definitivo del estudio.
+> - No mantener documentación interna de MACARIO publicada como si fuera contenido público.
 
 Los proyectos reales alimentan el sistema de vuelta:
 
@@ -107,35 +106,63 @@ MACARIO organiza el trabajo en seis áreas. No son etapas estrictamente secuenci
 |**QA**|¿Funciona como fue definido?|
 |**Analytics / Operations**|¿Cómo se mide y opera una vez publicado?|
 
-El orden en que se recorren estas áreas durante un proyecto, y qué produce cada una, está definido en [[02 — Metodología - MACARIO — Flujo de trabajo]].
+El orden en que se recorren estas áreas durante un proyecto, y qué produce cada una, está definido en [[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]].
 
 ---
 
-## 5. Capas transversales
+## 5. Capas fundamentales
 
-Estas capas atraviesan las seis áreas: no pertenecen a un área específica, están disponibles en todas.
+> **Modelo vigente (2026-10-07).** Estas capas atraviesan las seis áreas: no pertenecen a un área específica, están disponibles en todas.
 
-|Capa|Fuente de verdad para|
-|---|---|
-|**Obsidian**|conocimiento, contexto y decisiones|
-|**Linear**|trabajo, tareas, milestones y estado|
-|**Figma**|diseño visual, UX/UI y prototipos|
-|**GitHub**|código y versiones|
-|**Claude Code**|implementación y ejecución técnica|
+|Capa|Rol|Responsabilidad|
+|---|---|---|
+|**Obsidian**|Memory / Context|conocimiento permanente, contexto, decisiones, principios, metodología, arquitectura|
+|**Linear**|Operations / Work|tareas, bugs, mejoras, prioridades, estados, planificación y seguimiento|
+|**GitHub**|Implementation / Code|repositorios, código, ramas, commits, PRs, estado técnico|
+|**Figma**|Visual Source|fuente de verdad visual: referencias, assets, reglas visuales y diseños aprobados|
+|**Claude Design**|Creative Engine|exploración visual, composición, prototipado e iteración antes de la aprobación|
+|**Claude Code**|Implementation Engine|implementación del diseño aprobado, desarrollo, integración, correcciones y mantenimiento|
+|**Preview / QA**|Validación|validación del producto real|
+|**Cowork**|Audit / Coordination / Cross-tool Operations|auditoría transversal, coordinación entre herramientas, detección de inconsistencias, informes y tareas transversales delegadas|
 
-Claude Code no es una fuente de verdad: trabaja sobre las fuentes correspondientes (código en GitHub, tareas de Linear, decisiones de Obsidian, diseño de Figma).
+- **Fuentes de verdad:** Obsidian (conocimiento), Linear (trabajo), GitHub (código), Figma (visual).
+- **Motores** (no son fuente de verdad; trabajan sobre las fuentes): Claude Design, Claude Code, Cowork.
+- **Claude Design no reemplaza a Figma**, y Cowork no reemplaza ninguna herramienta: coordina, audita y ejecuta tareas transversales cuando corresponde.
+- **Alcance de Figma como Visual Source (2026-10-07):** Figma es la fuente visual de verdad **cuando un proyecto tiene una definición visual que deba preservarse, explorarse, aprobarse o implementarse de forma sistemática**: un sistema visual, un diseño aprobado, referencias, assets o una dirección visual relevante. Los proyectos y cambios simples no necesitan crearse ni pasar por Figma. Claude Design no reemplaza a Figma.
 
-Otras herramientas (Playwright, Sentry, PostHog, Resend, n8n, Supabase, Cloudflare, ChatGPT, etc.) son especializadas dentro de un área concreta y no forman parte de esta capa transversal. Su responsabilidad y criterio de uso viven en [[03 — Herramientas - MACARIO — Herramientas y ecosistema]].
+### Flujo visual
+
+```
+Referencias + Figma
+        ↓
+Claude Design  (exploración / composición / prototipo)
+        ↓
+diseño aprobado
+        ↓
+Figma como Visual Source
+        ↓
+Claude Code
+        ↓
+producto
+        ↓
+Preview / QA
+```
+
+Otras herramientas (Playwright, Sentry, PostHog, Resend, n8n, Supabase, Cloudflare, etc.) son especializadas dentro de un área concreta y no forman parte de las capas fundamentales. ChatGPT, Gemini y Grok pueden usarse como herramientas auxiliares cuando corresponda, pero no son capas de la arquitectura ni dependencias estructurales. Ver [[03 — Herramientas - MACARIO — Herramientas y ecosistema.md|MACARIO — Herramientas y ecosistema]].
 
 ---
 
 ## 6. Foundations
 
+> ⚠️ **Web-Base — HISTÓRICO / FUNDACIONAL / CONGELADO (decisión 2026-10-07).** Web-Base ya no es una línea activa de desarrollo ni un sistema obligatorio. MACARIO ESTUDIO absorbió sus aprendizajes útiles. El repositorio y esta documentación se conservan como referencia histórica.
+>
+> ⚠️ **Decisión abierta:** si el concepto de *Foundation* se mantiene como capa de MACARIO para bases futuras (Mobile-Base u otras). Las reglas de esta sección describen el modelo con el que se construyó Web-Base.
+
 Una **Foundation** es una base técnica reutilizable dentro de **Product Development**. Implementa, para una plataforma concreta, la metodología definida a nivel MACARIO.
 
 Actualmente:
 
-- **Web-Base** → foundation para websites y web apps. Ver [[04 — Web-Base - WEB-BASE — Metodología y estándares]].
+- **Web-Base** → foundation histórica para websites y web apps, **congelada**: ya no se desarrolla. Ver [[04 — Web-Base - WEB-BASE — Metodología y estándares.md|WEB-BASE — Metodología y estándares]].
 - **Mobile-Base** → futura foundation para mobile apps.
 - Otras foundations (dashboards, e-commerce, herramientas internas…) → futuras, según necesidad real y comprobada.
 
@@ -149,7 +176,7 @@ Mobile-Base y otras futuras Foundations no se diseñan por adelantado: se incorp
 
 1. ¿Existe una plataforma concreta (mobile, dashboards, e-commerce…) que hoy no tiene base técnica reutilizable?
 2. ¿Hay evidencia de al menos un proyecto real que la necesita, no solo una hipótesis?
-3. ¿El ciclo general de MACARIO ([[02 — Metodología - MACARIO — Flujo de trabajo]]) le alcanza sin modificarse, igual que le alcanza a Web-Base?
+3. ¿El ciclo general de MACARIO ([[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]]) le alcanza sin modificarse, igual que le alcanza a Web-Base?
 4. ¿Puede implementarse como Foundation independiente, sin absorber Research, Visual/Assets o UX/UI ni duplicar su metodología?
 
 Toda Foundation nueva:
@@ -157,7 +184,7 @@ Toda Foundation nueva:
 - implementa el mismo ciclo general de MACARIO, adaptado a su plataforma — no crea un ciclo propio;
 - vive dentro de Product Development, igual que Web-Base;
 - no contiene metodología general de MACARIO, solo su aplicación técnica acotada a esa plataforma;
-- se distribuye y se relaciona con sus proyectos de la misma forma que Web-Base (ver [[04 — Web-Base - WEB-BASE — Metodología y estándares]] §18).
+- se distribuye y se relaciona con sus proyectos de la misma forma que Web-Base (ver [[04 — Web-Base - WEB-BASE — Metodología y estándares.md|WEB-BASE — Metodología y estándares]] §18).
 
 Si la respuesta a 1-3 no es clara y comprobada, la Foundation todavía no se crea.
 
@@ -167,21 +194,7 @@ Si la respuesta a 1-3 no es clara y comprobada, la Foundation todavía no se cre
 
 Los **Projects** son donde se aplica y valida todo el sistema.
 
-Actualmente, dentro del ecosistema activo de MACARIO:
-
-- **GXK12:2** — proyecto activo;
-- **Proyecto Raíces** — proyecto funcionalmente terminado; actualmente recibe iteración visual y ajustes puntuales;
-- **Bresstore** — proyecto real pendiente de cierre;
-- futuros proyectos.
-
-Proyectos históricos o archivados conceptualmente:
-
-- **Web-Base** — Foundation histórica/fundacional, congelada como línea de desarrollo independiente;
-- **CONCRETO** — concepto histórico de marca;
-- **tienda-ropa-demo** — repositorio histórico;
-- **Onda** — fuera del ecosistema MACARIO actual.
-
-No deben tratarse proyectos históricos, archivados o externos como trabajo activo por defecto.
+Ejemplos actuales: Proyecto Raíces, GXK, Bresstore, futuros proyectos y clientes. CONCRETO se conserva solo como concepto histórico / muestra (ver §10).
 
 Cada proyecto:
 
@@ -223,14 +236,17 @@ Cada proyecto:
 Durante todo el ciclo, las capas transversales quedan disponibles para cualquier área, con mayor peso relativo según corresponda:
 
 ```
-Obsidian    ← conocimiento, en cualquier área
-Linear      ← trabajo, en cualquier área
-Figma       ← diseño, principalmente Visual/Assets y UX/UI
-GitHub      ← código, principalmente Product Development
-Claude Code ← ejecución técnica, principalmente Product Development y QA
+Obsidian      ← memoria / contexto, en cualquier área
+Linear        ← trabajo, en cualquier área
+Figma         ← fuente visual, principalmente Visual/Assets y UX/UI
+Claude Design ← exploración visual, principalmente Visual/Assets y UX/UI
+GitHub        ← código, principalmente Product Development
+Claude Code   ← implementación, principalmente Product Development y QA
+Preview / QA  ← validación del producto real, principalmente QA
+Cowork        ← auditoría y coordinación transversal, en cualquier área
 ```
 
-MACARIO OS coordina esta relación entre capas sin reemplazar ninguna herramienta. Ver [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap]].
+MACARIO OS coordina esta relación entre capas sin reemplazar ninguna herramienta. Ver [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap.md|MACARIO OS — Arquitectura y roadmap]].
 
 ---
 
@@ -240,14 +256,17 @@ Cada información debe tener un lugar principal:
 
 |Información|Fuente principal|
 |---|---|
-|Arquitectura / decisiones|Obsidian|
-|Metodología|Obsidian ([[02 — Metodología - MACARIO — Flujo de trabajo]], [[04 — Web-Base - WEB-BASE — Metodología y estándares]])|
-|Tareas / estado del trabajo|Linear|
-|Diseño / UX-UI|Figma|
+|Decisiones permanentes / principios / arquitectura|Obsidian|
+|Metodología|Obsidian ([[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]]; Web-Base como referencia histórica)|
+|Tareas / estado del trabajo / bugs / prioridades|Linear|
+|Diseño aprobado / assets / reglas visuales|Figma|
+|Exploración visual en curso|Claude Design (hasta su aprobación; lo aprobado pasa a Figma)|
 |Código / historial técnico|GitHub|
 |Implementación|GitHub + Claude Code|
 
-El detalle completo de esta regla y sus criterios de decisión vive en [[01 — Principios y decisiones - MACARIO — Principios y decisiones]].
+Linear puede enlazar a Obsidian, pero no es una segunda wiki.
+
+El detalle completo de esta regla y sus criterios de decisión vive en [[01 — Principios y decisiones - MACARIO — Principios y decisiones.md|MACARIO — Principios y decisiones]].
 
 ---
 
@@ -255,41 +274,55 @@ El detalle completo de esta regla y sus criterios de decisión vive en [[01 — 
 
 ### Consolidado
 
-- MACARIO como sistema general (System), agnóstico de plataforma.
+- MACARIO como sistema general (System), agnóstico de plataforma, operado como **MACARIO ESTUDIO**.
 - Seis áreas operativas: Research, Visual/Assets, UX/UI, Product Development, QA, Analytics/Operations.
-- PRANA como marca / identidad externa.
-- ITS como identidad personal, autoría y portfolio de Ignacio: superficie separada de PRANA (PRANA es una creación de su autoría).
-- Web-Base como Foundation para websites y web apps.
-- MACARIO OS como capa de orquestación.
-- Linear, GitHub y Obsidian como capas transversales operativas.
+- PRANA como marca / proyecto / negocio separado, en evaluación (ver §2).
+- ITS como identidad personal, autoría y portfolio de Ignacio: superficie separada de PRANA y de MACARIO ESTUDIO.
+- Capas fundamentales y flujo visual (§5).
+- MACARIO OS como capa de orquestación (en pausa).
+
+### Pendiente de decisión
+
+- Si el concepto de *Foundation* se mantiene para bases futuras (ver §6).
 
 ### En construcción
 
-- consolidación de la bóveda MACARIO;
+- bóveda MACARIO completa;
+- Mobile-Base y otras futuras foundations;
 - MACARIO OS como integración real;
-- documentación maestra y gobierno operativo.
+- documentación maestra terminada.
 
-Las Foundations futuras se incorporan solamente cuando exista una necesidad real y comprobada.
+### Proyectos
 
-### Proyectos actuales
+El estado operativo de cada proyecto vive en Linear; la documentación permanente, en `07 — Proyectos/`.
 
-- GXK12:2
-- Proyecto Raíces
-- Bresstore
-- futuros proyectos
+- GXK12:2 — activo (principal).
+- Proyecto Raíces — **Activo — fase de reorganización de código, documentación, arquitectura / modelo de datos y preparación del Admin/CMS**. Que el sitio público funcione no significa que el proyecto esté terminado.
+- Bresstore — proyecto real pendiente, de menor prioridad.
+- ITS Portfolio — pausado.
+- MACARIO OS — conceptual / pausado.
+- PRANA — estructura separada de MACARIO ESTUDIO (ver §2).
 
-Web-Base queda como Foundation histórica/fundacional congelada: no es una línea activa de desarrollo independiente.
+**Históricos / referencia (no operativos):**
+
+- Web-Base — histórico / fundacional / congelado. MACARIO absorbió sus aprendizajes útiles.
+- CONCRETO — concepto histórico de marca de ropa; se conserva como referencia / muestra.
+- `tienda-ropa-demo` — repositorio histórico, no operativo.
+
+**Fuera del ecosistema MACARIO:**
+
+- Onda — no es proyecto, prospecto ni iniciativa de MACARIO.
 
 ---
 
 ## 11. Documentos relacionados
 
-- [[01 — Principios y decisiones - MACARIO — Principios y decisiones]]
-- [[02 — Metodología - MACARIO — Flujo de trabajo]]
-- [[03 — Herramientas - MACARIO — Herramientas y ecosistema]]
-- [[04 — Web-Base - WEB-BASE — Metodología y estándares]]
-- [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap]]
-- [[06 — ITS - ITS — Portfolio y posicionamiento]]
+- [[01 — Principios y decisiones - MACARIO — Principios y decisiones.md|MACARIO — Principios y decisiones]]
+- [[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]]
+- [[03 — Herramientas - MACARIO — Herramientas y ecosistema.md|MACARIO — Herramientas y ecosistema]]
+- [[04 — Web-Base - WEB-BASE — Metodología y estándares.md|WEB-BASE — Metodología y estándares]]
+- [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap.md|MACARIO OS — Arquitectura y roadmap]]
+- [[06 — ITS - ITS — Portfolio y posicionamiento.md|ITS — Portfolio y posicionamiento]]
 - [[PRANA — Estrategia]]
 
 ---
@@ -298,4 +331,4 @@ Web-Base queda como Foundation histórica/fundacional congelada: no es una líne
 
 **MACARIO no es una herramienta ni un sitio web.**
 
-Es el sistema que permite que la marca (PRANA), la metodología, el conocimiento, las Foundations y los proyectos funcionen como una sola estructura sin perder la independencia de cada componente.
+Es el sistema que permite que el estudio (MACARIO ESTUDIO), la metodología, el conocimiento, las Foundations y los proyectos funcionen como una sola estructura sin perder la independencia de cada componente.

@@ -290,6 +290,8 @@ CTA: "Conocé ITS →"
 - **MACARIO** → sistema interno de ejecución
 - **Web-Base** → fundamento técnico reutilizable
 
+> ⚠️ Superado (2026-10-07): MACARIO ESTUDIO es independiente de PRANA y no es su "sistema interno". Web-Base está congelado como referencia histórica. Se conserva como registro de la definición original.
+
 Es secundaria para la comunicación pública y **no debe convertirse en el centro de la experiencia del cliente**.
 
 ---

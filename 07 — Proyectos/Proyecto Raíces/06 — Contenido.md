@@ -22,6 +22,23 @@ obtener información real
 incorporar
 ```
 
+### Guía editorial de descripciones de experiencias (2026-09-10)
+
+Toda descripción debe poder organizarse conceptualmente en: 1) qué es; 2) qué experiencia ofrece; 3) qué se hace o recorre; 4) qué la hace especial; 5) para quién está pensada, cuando corresponda; 6) información / logística relevante. Es una guía editorial, no una plantilla de texto literal. (Fuente: doc Linear PRO-40 §7.)
+
+### Decisiones de contenido (2026-09-30, PRO-115)
+
+- El contenido de **Covid / mascarilla** se elimina de la propuesta pública.
+- **Choquequirao** no se muestra como "Próximamente" cuando existe una experiencia cargada para ese destino.
+- **Fotografías:** no hay reemplazos automáticos ni imágenes inventadas. La selección y el reemplazo se hacen a mano, revisando las imágenes reales una por una. Las fotos finales tienen que ser reales de Raíces; las imágenes generadas sirven solo como preview / referencia, nunca como contenido final.
+- No se introducen contenidos ni secciones no definidas para el rediseño.
+
+### Fuente editorial real
+
+Las descripciones de destinos se actualizan desde la fuente real disponible en Google Drive (carpeta "Proyecto Raíces"); no se inventa contenido cuando existe una fuente editorial real. (Fuente: doc Linear Roadmap §2, fase C.)
+
+> Nota 2026-10-07: el estado por destino de la sección 4 se tomó de `destinos-data.js`, archivo eliminado el 2026-09-30 al migrar a Supabase. Hay que re-verificarlo contra Supabase.
+
 ---
 
 ## 2. Tono y voz

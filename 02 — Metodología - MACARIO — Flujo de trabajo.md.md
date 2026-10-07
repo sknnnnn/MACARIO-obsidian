@@ -1,7 +1,7 @@
 # MACARIO — Flujo de trabajo
 
 > Define cómo MACARIO transforma una idea en un producto digital terminado, documentado y reutilizable — sin importar la plataforma (website, web app, mobile app, dashboard, herramienta interna, e-commerce, etc.).  
-> La implementación concreta y granular de este ciclo para websites y web apps vive en la Foundation correspondiente: [[04 — Web-Base - WEB-BASE — Metodología y estándares]].
+> Web-Base, la Foundation donde se había implementado este ciclo de forma granular para websites y web apps, está **congelado como referencia histórica** (2026-10-07). Este documento es la metodología vigente.
 
 ---
 
@@ -53,8 +53,8 @@ Pero **QA → Release → Analytics/Operations → Iteration** funciona como tra
 |**Idea**|Un pedido informal (mensaje, reunión, problema, cliente)|Una necesidad identificada, sin convertirla todavía en solución|Research|
 |**Research**|La idea/necesidad|Contexto de negocio, usuario, problema, competencia, restricciones, información faltante marcada como pendiente|Product Definition|
 |**Product Definition**|El research|Alcance: qué entra, qué no entra, qué queda pendiente; objetivos verificables|Visual|
-|**Visual**|El alcance definido|Dirección visual: identidad, referencias, paleta, tipografía, tono, assets|UX / UI|
-|**UX / UI**|La dirección visual + el alcance|Flujos, wireframes, interacciones, pantallas — validados en Figma, Artifact o preview|Technical Architecture|
+|**Visual**|El alcance definido|Dirección visual: identidad, referencias, paleta, tipografía, tono, assets — explorada en Claude Design y aprobada en Figma (ver §9)|UX / UI|
+|**UX / UI**|La dirección visual + el alcance|Flujos, wireframes, interacciones, pantallas — prototipados en Claude Design y aprobados en Figma (ver §9)|Technical Architecture|
 |**Technical Architecture**|UX/UI aprobado + alcance|Solución técnica: estructura, componentes, datos, integraciones, stack|Development|
 |**Development**|La arquitectura técnica aprobada|Una versión funcional del producto|QA|
 |**QA**|La versión funcional|Verificación funcional, responsive, accesibilidad y técnica; hallazgos clasificados (bloqueante / importante / mejora)|Release|
@@ -194,9 +194,11 @@ El Discovery inicial establece una base suficiente para pasar a Product Definiti
 
 Cuando aparecen, se reconcilian y documentan con las herramientas correspondientes (ver 3.5), sin reabrir artificialmente todo el Discovery. Que algo nuevo aparezca después no significa que el Discovery original haya sido incorrecto: significa que el proyecto avanzó y generó información que no existía antes.
 
-### 3.9 Relación con Web-Base
+### 3.9 Relación con Web-Base (histórica)
 
-Web-Base traduce Research en tres sub-etapas propias: Intake, Context y Discovery (ver [[04 — Web-Base - WEB-BASE — Metodología y estándares]]). La sub-etapa "Discovery" de Web-Base es la aplicación técnica y acotada de este proceso general para websites y web apps (investigación de referencias, competencia, contenido existente, stack) — no una definición paralela ni un sistema distinto.
+> Web-Base está congelado (2026-10-07). Esta sección describe la relación tal como estaba definida.
+
+Web-Base traduce Research en tres sub-etapas propias: Intake, Context y Discovery (ver [[04 — Web-Base - WEB-BASE — Metodología y estándares.md|WEB-BASE — Metodología y estándares]]). La sub-etapa "Discovery" de Web-Base es la aplicación técnica y acotada de este proceso general para websites y web apps (investigación de referencias, competencia, contenido existente, stack) — no una definición paralela ni un sistema distinto.
 
 ### 3.10 Qué documentar
 
@@ -213,16 +215,16 @@ Cada etapa utiliza las capas transversales necesarias, no todas por defecto.
 |Idea|Linear + Obsidian|
 |Research|Obsidian + GitHub (contexto existente)|
 |Product Definition|Linear + Obsidian|
-|Visual|Figma + Obsidian + Artifact/preview|
-|UX / UI|Figma + Obsidian + Artifact/preview|
+|Visual|Figma (referencias + aprobado) + Claude Design (exploración) + Obsidian (reglas)|
+|UX / UI|Figma (aprobado) + Claude Design (prototipo) + Obsidian|
 |Technical Architecture|Obsidian + GitHub|
 |Development|Claude Code + GitHub|
-|QA|Claude Code + Playwright cuando corresponda|
+|QA|Preview / QA + Claude Code + Playwright cuando corresponda|
 |Release|GitHub + infraestructura del proyecto (Cloudflare u otra)|
 |Analytics / Operations|PostHog + Sentry + Obsidian|
 |Iteration|Linear + Obsidian|
 
-MACARIO OS coordina estas relaciones. Ver [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap]]. El detalle de cada herramienta vive en [[03 — Herramientas - MACARIO — Herramientas y ecosistema]].
+Cowork atraviesa todas las etapas como capa de auditoría y coordinación transversal (estado de proyectos, inconsistencias entre herramientas, informes). MACARIO OS coordina estas relaciones a futuro. Ver [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap.md|MACARIO OS — Arquitectura y roadmap]]. El detalle de cada herramienta vive en [[03 — Herramientas - MACARIO — Herramientas y ecosistema.md|MACARIO — Herramientas y ecosistema]].
 
 ---
 
@@ -244,6 +246,8 @@ Contiene: contexto del negocio, decisiones, estructura, aprendizajes, referencia
 
 > Si mañana necesitamos volver a entender algo, probablemente pertenece en Obsidian.  
 > Si necesitamos hacer algo, probablemente pertenece en Linear.
+
+Reglas confirmadas (2026-10-07): ver [[01 — Principios y decisiones - MACARIO — Principios y decisiones.md|MACARIO — Principios y decisiones]] §3. Linear puede enlazar a Obsidian, pero no es una segunda wiki; no se migra Linear entero, solo conocimiento durable.
 
 ---
 
@@ -334,7 +338,49 @@ Commit final, push, merge, deploy, decisiones comerciales, publicación definiti
 
 ---
 
-## 9. Flujo de revisión visual
+## 9. Flujo visual y de revisión
+
+### 9.1 Flujo visual (vigente desde 2026-10-07)
+
+```
+Referencias + Figma
+        ↓
+Claude Design — exploración / composición / prototipo / iteración
+        ↓
+diseño aprobado
+        ↓
+Figma como Visual Source
+        ↓
+Claude Code — implementación
+        ↓
+producto
+        ↓
+Preview / QA
+```
+
+- Claude Design no reemplaza a Figma: es el motor de exploración; Figma conserva referencias, assets, reglas y diseños aprobados.
+- **Cuándo aplica:** este flujo se usa cuando el proyecto tiene una definición visual que deba preservarse, explorarse, aprobarse o implementarse de forma sistemática. Los proyectos y cambios simples no necesitan crearse ni pasar por Figma; si ya existe un sistema visual, un diseño aprobado, referencias, assets o una dirección visual relevante, Figma es la fuente visual de verdad.
+- La identidad visual no se inventa directamente en código: Claude Code implementa diseño ya aprobado.
+- **Referencias dentro de Figma:** las referencias visuales se colocan directamente en el tablero de Figma del proyecto y se usan como contexto durante la exploración y la implementación. Orientan composición, fotografía, tipografía, color, ritmo, jerarquía y tratamiento visual; no se copian literalmente. (Método validado en Raíces, 2026-09-28 — fuente: proyecto Linear "Rediseño y lanzamiento Web".)
+
+### 9.2 Desarrollo funcional primero, refinamiento visual después
+
+Los proyectos llegan primero a un estado **100% funcional**, con sus features implementadas y validadas. Durante esa etapa no se busca el acabado visual definitivo, pero se mantiene una **línea visual coherente**: cada feature nueva se integra al sistema visual existente, sin soluciones estéticas aisladas.
+
+```
+feature nueva → funcionalidad → integración con el sistema visual existente → QA
+```
+
+El refinamiento visual profundo se hace después, sobre una base funcional estable, siguiendo el flujo visual (9.1).
+
+Aprendizajes que sostienen esta regla (laboratorio ITS, 2026-09):
+
+- Claude Code funciona mejor como implementador cuando la dirección visual ya está definida.
+- La exploración visual se separa de la arquitectura y la funcionalidad.
+
+Fuentes: descripción del proyecto Linear "Web-Base — Foundation / Starter Kit"; doc Linear "MACARIO — Arquitectura maestra y sistema documental". Aplicado en Raíces (etapa funcional del 2026-09-28; el proyecto sigue activo) y GXK12:2 (cierre funcional 2026-10-02).
+
+### 9.3 Revisión visual
 
 Cuando el trabajo tiene impacto visual:
 
@@ -365,7 +411,7 @@ Después de cerrar un proyecto (fin de un ciclo de Release/Analytics-Operations)
 1. identificar problemas repetidos;
 2. identificar soluciones reutilizables;
 3. documentarlas en Obsidian;
-4. decidir si alguna debe entrar en la Foundation correspondiente (Web-Base u otra);
+4. decidir si alguna debe incorporarse a la metodología o a las bases reutilizables de MACARIO (Web-Base está congelado);
 5. actualizar la metodología solamente si existe evidencia suficiente.
 
 No toda experiencia se convierte en una nueva regla.
@@ -413,8 +459,10 @@ El objetivo no es hacer más. El objetivo es **resolver mejor con menos fricció
 
 ## 13. Relación con las Foundations
 
+> Web-Base está congelado (2026-10-07); el ejemplo siguiente es histórico. Si el concepto de Foundation se mantiene para bases futuras es una decisión abierta.
+
 Este documento describe el ciclo general de MACARIO, válido para cualquier plataforma.
 
-Cada Foundation implementa este ciclo con más granularidad para su plataforma concreta. Por ejemplo, Web-Base traduce este ciclo general en doce etapas específicas para websites y web apps (Intake, Context, Discovery, Scope, Architecture, Visual Direction, Implementation, QA, Audit, Deploy, Documentation, Close) — ver [[04 — Web-Base - WEB-BASE — Metodología y estándares]].
+Cada Foundation implementa este ciclo con más granularidad para su plataforma concreta. Por ejemplo, Web-Base traduce este ciclo general en doce etapas específicas para websites y web apps (Intake, Context, Discovery, Scope, Architecture, Visual Direction, Implementation, QA, Audit, Deploy, Documentation, Close) — ver [[04 — Web-Base - WEB-BASE — Metodología y estándares.md|WEB-BASE — Metodología y estándares]].
 
 Cuando una Foundation cambie su implementación, este documento debe revisarse para mantener alineados: principios, metodología general, herramientas y MACARIO OS.

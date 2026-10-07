@@ -1,5 +1,11 @@
 # Auditoría estructural y limpieza de Obsidian — 2026-10-07
 
+> ⚠️ **AUDITORÍA HISTÓRICA — superada.** Esta nota registra una auditoría intermedia del 2026-10-07 y se conserva como registro. **No describe el estado vigente:**
+> - **Raíces:** la descripción "funcionalmente terminado, con iteración visual" quedó superada. Estado vigente: **activo**, en reorganización de código, documentación, arquitectura / modelo de datos y preparación del Admin/CMS (ver [[07 — Proyectos/Proyecto Raíces/00 — Índice|Proyecto Raíces — Índice]]).
+> - **Bresstore:** "pendiente de cierre" quedó superado. Estado vigente: pendiente, de menor prioridad.
+> - **Wikilinks:** el conteo y el estado de los links de esta auditoría quedaron superados por la limpieza posterior (0 links rotos). Los links con forma corta que usó esta auditoría no resolvían con los archivos de doble extensión `.md.md`.
+> - El estado vigente se toma de la documentación actual, empezando por [[00 — Arquitectura - MACARIO — Arquitectura general.md|MACARIO — Arquitectura general]] §10.
+
 > Registro de la auditoría estructural realizada después de la reparación puntual de wikilinks.
 >
 > Objetivo: ordenar la bóveda según el estado real de MACARIO sin borrar decisiones históricas válidas ni convertir Obsidian en un espejo de Linear.

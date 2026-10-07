@@ -4,6 +4,8 @@
 > Es la fuente de verdad para decisiones de marca, web, contenido, proyectos y adquisición.
 > **No define identidad visual** (colores, tipografías, logo, dirección visual) **ni arquitectura interna**: la identidad visual se documentará por separado y la arquitectura interna vive en los documentos de MACARIO.
 
+> ⚠️ **Jerarquía vigente (2026-10-07):** MACARIO ESTUDIO es el estudio / estructura de trabajo; PRANA es una marca / proyecto / negocio **separado, en evaluación**, que no reemplaza a MACARIO ESTUDIO. Ver [[00 — Arquitectura - MACARIO — Arquitectura general.md|MACARIO — Arquitectura general]] §2. Las partes de este documento que ubican a MACARIO como "sistema interno de PRANA" (p. ej. `PRANA → MACARIO → Web-Base → Proyectos`) quedan **pendientes de revisión** y no deben leerse como vigentes.
+
 **Estado:** definición estratégica vigente al 2026-09-21. Es estrategia y arquitectura de contenido, no diseño ni implementación.
 
 ---
@@ -130,7 +132,7 @@ Las capacidades son **medios, no necesariamente el producto final**.
 
 No es una metodología rígida ni necesariamente lineal: se adapta al proyecto.
 
-La metodología interna con la que se ejecuta el trabajo es un tema de MACARIO, no de PRANA. Ver [[02 — Metodología - MACARIO — Flujo de trabajo]].
+La metodología interna con la que se ejecuta el trabajo es un tema de MACARIO, no de PRANA. Ver [[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]].
 
 ---
 
@@ -142,9 +144,9 @@ La metodología interna con la que se ejecuta el trabajo es un tema de MACARIO, 
 
 | Proyecto | Situación | Rol para PRANA |
 |---|---|---|
-| Proyecto Raíces | Proyecto real | Caso público principal. Ver [[07 — Proyectos/Proyecto Raíces/00 — Índice|Proyecto Raíces]]. |
+| Proyecto Raíces | Proyecto real | Caso público principal. Ver [[07 — Proyectos/Proyecto Raíces/00 — Índice\|Proyecto Raíces]]. |
 
-**Proyectos internos / en progreso:** se siguen documentando internamente aunque todavía no formen parte del portfolio público (por ejemplo GXK, Onda, CONCRETO y Bresstore). No se eliminan ni se listan como casos hasta estar preparados. Sus clientes, resultados, métricas y estados no se inventan.
+**Proyectos internos / en progreso:** se siguen documentando internamente aunque todavía no formen parte del portfolio público (por ejemplo GXK y Bresstore). No se eliminan ni se listan como casos hasta estar preparados. Sus clientes, resultados, métricas y estados no se inventan.
 
 **Bresstore** es un proyecto real en progreso. Puede aparecer en documentación interna y todavía no es caso público de PRANA; solo podría serlo más adelante, cuando tenga suficiente nivel de terminación.
 
@@ -164,7 +166,9 @@ No se inventan resultados que todavía no existen: un caso sin resultado verific
 
 ## 9. Relación con ITS, MACARIO y Web-Base
 
-Se mantiene la arquitectura ya definida:
+> ⚠️ **Superado (2026-10-07):** la tabla y el párrafo siguientes ubican a MACARIO como "sistema interno de ejecución" de PRANA. Jerarquía vigente: **MACARIO ESTUDIO ≠ PRANA**. PRANA es un proyecto / marca / posible futura empresa independiente; no reemplaza a MACARIO ESTUDIO ni es su canal público definitivo. Web-Base está congelado como referencia histórica. Se conserva como registro de la definición original.
+
+Se mantenía esta arquitectura:
 
 | Componente | Rol |
 |---|---|
@@ -176,11 +180,11 @@ Se mantiene la arquitectura ya definida:
 
 Este documento no redefine esa arquitectura. Para el detalle:
 
-- [[00 — Arquitectura - MACARIO — Arquitectura general]]
-- [[01 — Principios y decisiones - MACARIO — Principios y decisiones]]
-- [[03 — Herramientas - MACARIO — Herramientas y ecosistema]]
-- [[04 — Web-Base - WEB-BASE — Metodología y estándares]]
-- [[06 — ITS - ITS — Portfolio y posicionamiento]]
+- [[00 — Arquitectura - MACARIO — Arquitectura general.md|MACARIO — Arquitectura general]]
+- [[01 — Principios y decisiones - MACARIO — Principios y decisiones.md|MACARIO — Principios y decisiones]]
+- [[03 — Herramientas - MACARIO — Herramientas y ecosistema.md|MACARIO — Herramientas y ecosistema]]
+- [[04 — Web-Base - WEB-BASE — Metodología y estándares.md|WEB-BASE — Metodología y estándares]]
+- [[06 — ITS - ITS — Portfolio y posicionamiento.md|ITS — Portfolio y posicionamiento]]
 
 **MACARIO hacia afuera.** MACARIO es el sistema interno de ejecución y producción; su arquitectura no se expone al público. Internamente se conserva `PRANA → MACARIO → Web-Base → Proyectos`, pero la comunicación pública de PRANA no depende de mostrar esa arquitectura. Públicamente PRANA explica cómo trabaja con Entender → Definir → Diseñar → Construir → Evolucionar (sección 7), sin necesidad de mencionar MACARIO, Web-Base ni otras estructuras operativas. PRANA no presenta MACARIO ni Web-Base como producto, servicio o caso público; ITS sí puede mostrarlos como parte de su proceso, sistema, experimentación y autoría.
 
@@ -345,10 +349,10 @@ Etapas:
 
 ## Documentos relacionados
 
-- [[00 — Arquitectura - MACARIO — Arquitectura general]] — relación PRANA / MACARIO / Foundation / Project.
-- [[01 — Principios y decisiones - MACARIO — Principios y decisiones]]
-- [[02 — Metodología - MACARIO — Flujo de trabajo]]
-- [[03 — Herramientas - MACARIO — Herramientas y ecosistema]]
-- [[04 — Web-Base - WEB-BASE — Metodología y estándares]]
-- [[06 — ITS - ITS — Portfolio y posicionamiento]]
+- [[00 — Arquitectura - MACARIO — Arquitectura general.md|MACARIO — Arquitectura general]] — relación PRANA / MACARIO / Foundation / Project.
+- [[01 — Principios y decisiones - MACARIO — Principios y decisiones.md|MACARIO — Principios y decisiones]]
+- [[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]]
+- [[03 — Herramientas - MACARIO — Herramientas y ecosistema.md|MACARIO — Herramientas y ecosistema]]
+- [[04 — Web-Base - WEB-BASE — Metodología y estándares.md|WEB-BASE — Metodología y estándares]]
+- [[06 — ITS - ITS — Portfolio y posicionamiento.md|ITS — Portfolio y posicionamiento]]
 - [[07 — Proyectos/Proyecto Raíces/00 — Índice|Proyecto Raíces]]
