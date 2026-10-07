@@ -53,8 +53,8 @@ Pero **QA → Release → Analytics/Operations → Iteration** funciona como tra
 |**Idea**|Un pedido informal (mensaje, reunión, problema, cliente)|Una necesidad identificada, sin convertirla todavía en solución|Research|
 |**Research**|La idea/necesidad|Contexto de negocio, usuario, problema, competencia, restricciones, información faltante marcada como pendiente|Product Definition|
 |**Product Definition**|El research|Alcance: qué entra, qué no entra, qué queda pendiente; objetivos verificables|Visual|
-|**Visual**|El alcance definido|Dirección visual: identidad, referencias, paleta, tipografía, tono, assets|UX / UI|
-|**UX / UI**|La dirección visual + el alcance|Flujos, wireframes, interacciones, pantallas — validados en Figma, Artifact o preview|Technical Architecture|
+|**Visual**|El alcance definido|Dirección visual: identidad, referencias, paleta, tipografía, tono, assets — explorada en Claude Design y aprobada en Figma (ver §9)|UX / UI|
+|**UX / UI**|La dirección visual + el alcance|Flujos, wireframes, interacciones, pantallas — prototipados en Claude Design y aprobados en Figma (ver §9)|Technical Architecture|
 |**Technical Architecture**|UX/UI aprobado + alcance|Solución técnica: estructura, componentes, datos, integraciones, stack|Development|
 |**Development**|La arquitectura técnica aprobada|Una versión funcional del producto|QA|
 |**QA**|La versión funcional|Verificación funcional, responsive, accesibilidad y técnica; hallazgos clasificados (bloqueante / importante / mejora)|Release|
@@ -213,16 +213,16 @@ Cada etapa utiliza las capas transversales necesarias, no todas por defecto.
 |Idea|Linear + Obsidian|
 |Research|Obsidian + GitHub (contexto existente)|
 |Product Definition|Linear + Obsidian|
-|Visual|Figma + Obsidian + Artifact/preview|
-|UX / UI|Figma + Obsidian + Artifact/preview|
+|Visual|Figma (referencias + aprobado) + Claude Design (exploración) + Obsidian (reglas)|
+|UX / UI|Figma (aprobado) + Claude Design (prototipo) + Obsidian|
 |Technical Architecture|Obsidian + GitHub|
 |Development|Claude Code + GitHub|
-|QA|Claude Code + Playwright cuando corresponda|
+|QA|Preview / QA + Claude Code + Playwright cuando corresponda|
 |Release|GitHub + infraestructura del proyecto (Cloudflare u otra)|
 |Analytics / Operations|PostHog + Sentry + Obsidian|
 |Iteration|Linear + Obsidian|
 
-MACARIO OS coordina estas relaciones. Ver [[MACARIO OS — Arquitectura y roadmap]]. El detalle de cada herramienta vive en [[MACARIO — Herramientas y ecosistema]].
+Cowork atraviesa todas las etapas como capa de auditoría y coordinación transversal (estado de proyectos, inconsistencias entre herramientas, informes). MACARIO OS coordina estas relaciones a futuro. Ver [[MACARIO OS — Arquitectura y roadmap]]. El detalle de cada herramienta vive en [[MACARIO — Herramientas y ecosistema]].
 
 ---
 
@@ -244,6 +244,8 @@ Contiene: contexto del negocio, decisiones, estructura, aprendizajes, referencia
 
 > Si mañana necesitamos volver a entender algo, probablemente pertenece en Obsidian.  
 > Si necesitamos hacer algo, probablemente pertenece en Linear.
+
+Reglas confirmadas (2026-10-07): ver [[01 — Principios y decisiones - MACARIO — Principios y decisiones.md|MACARIO — Principios y decisiones]] §3. Linear puede enlazar a Obsidian, pero no es una segunda wiki; no se migra Linear entero, solo conocimiento durable.
 
 ---
 
@@ -334,7 +336,49 @@ Commit final, push, merge, deploy, decisiones comerciales, publicación definiti
 
 ---
 
-## 9. Flujo de revisión visual
+## 9. Flujo visual y de revisión
+
+### 9.1 Flujo visual (vigente desde 2026-10-07)
+
+```
+Referencias + Figma
+        ↓
+Claude Design — exploración / composición / prototipo / iteración
+        ↓
+diseño aprobado
+        ↓
+Figma como Visual Source
+        ↓
+Claude Code — implementación
+        ↓
+producto
+        ↓
+Preview / QA
+```
+
+- Claude Design no reemplaza a Figma: es el motor de exploración; Figma conserva referencias, assets, reglas y diseños aprobados.
+- **Cuándo aplica:** este flujo se usa cuando el proyecto tiene una definición visual que deba preservarse, explorarse, aprobarse o implementarse de forma sistemática. Los proyectos y cambios simples no necesitan crearse ni pasar por Figma; si ya existe un sistema visual, un diseño aprobado, referencias, assets o una dirección visual relevante, Figma es la fuente visual de verdad.
+- La identidad visual no se inventa directamente en código: Claude Code implementa diseño ya aprobado.
+- **Referencias dentro de Figma:** las referencias visuales se colocan directamente en el tablero de Figma del proyecto y se usan como contexto durante la exploración y la implementación. Orientan composición, fotografía, tipografía, color, ritmo, jerarquía y tratamiento visual; no se copian literalmente. (Método validado en Raíces, 2026-09-28 — fuente: proyecto Linear "Rediseño y lanzamiento Web".)
+
+### 9.2 Desarrollo funcional primero, refinamiento visual después
+
+Los proyectos llegan primero a un estado **100% funcional**, con sus features implementadas y validadas. Durante esa etapa no se busca el acabado visual definitivo, pero se mantiene una **línea visual coherente**: cada feature nueva se integra al sistema visual existente, sin soluciones estéticas aisladas.
+
+```
+feature nueva → funcionalidad → integración con el sistema visual existente → QA
+```
+
+El refinamiento visual profundo se hace después, sobre una base funcional estable, siguiendo el flujo visual (9.1).
+
+Aprendizajes que sostienen esta regla (laboratorio ITS, 2026-09):
+
+- Claude Code funciona mejor como implementador cuando la dirección visual ya está definida.
+- La exploración visual se separa de la arquitectura y la funcionalidad.
+
+Fuentes: descripción del proyecto Linear "Web-Base — Foundation / Starter Kit"; doc Linear "MACARIO — Arquitectura maestra y sistema documental". Aplicado en Raíces (etapa funcional cerrada 2026-09-28) y GXK12:2 (cierre funcional 2026-10-02).
+
+### 9.3 Revisión visual
 
 Cuando el trabajo tiene impacto visual:
 

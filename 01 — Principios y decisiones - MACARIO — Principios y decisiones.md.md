@@ -52,25 +52,43 @@ Una herramienta sin una necesidad clara agrega complejidad.
 
 No debemos convertir una herramienta en una copia de otra.
 
-### Obsidian
+> **Modelo vigente (2026-10-07).** Detalle en [[00 — Arquitectura - MACARIO — Arquitectura general.md|MACARIO — Arquitectura general]] §5.
 
-**Conocimiento permanente.**
+### Obsidian — Memory / Context
 
-### Linear
+**Conocimiento permanente:** contexto, decisiones, principios, metodología, arquitectura.
 
-**Trabajo operativo.**
+### Linear — Operations / Work
 
-### GitHub
+**Trabajo operativo:** tareas, bugs, mejoras, prioridades, estados, seguimiento.
+
+### GitHub — Implementation / Code
 
 **Código e historial técnico.**
 
-### Claude Code
+### Figma — Visual Source
 
-**Implementación y trabajo técnico asistido.**
+**Fuente de verdad visual:** referencias, assets, reglas visuales y diseños aprobados.
 
-### ChatGPT
+### Claude Design — Creative Engine
 
-**Análisis, estrategia y razonamiento.**
+**Exploración, composición, prototipado e iteración visual** antes de la aprobación. No reemplaza a Figma: lo aprobado se consolida en Figma.
+
+### Claude Code — Implementation Engine
+
+**Implementación del diseño aprobado, desarrollo, integración, correcciones y mantenimiento.**
+
+### Preview / QA
+
+**Validación del producto real.**
+
+### Cowork — Audit / Coordination / Cross-tool Operations
+
+**Auditoría transversal, coordinación entre herramientas, detección de inconsistencias, informes y ejecución de tareas transversales delegadas.** No reemplaza ninguna herramienta.
+
+### Herramientas auxiliares
+
+ChatGPT, Gemini y Grok pueden usarse cuando corresponda, pero **no forman parte de las capas fundamentales** y no deben convertirse en dependencias estructurales del sistema.
 
 ### WEB-BASE
 
@@ -148,6 +166,14 @@ Obsidian debe contener:
     
 
 Cuando una tarea de Linear genera conocimiento reutilizable, ese conocimiento puede convertirse en documentación de Obsidian.
+
+### Reglas confirmadas (2026-10-07)
+
+- Decisiones permanentes, principios, metodología, arquitectura y conocimiento estable → **Obsidian**.
+- Estado, tareas, bugs, mejoras, prioridades y seguimiento → **Linear**.
+- Linear puede enlazar a Obsidian, pero no debe convertirse en una segunda wiki.
+- **No se migra Linear entero a Obsidian:** solo el conocimiento durable, dejando enlaces a Linear o GitHub cuando sean la referencia operativa correcta.
+- Los planes históricos y las issues cerradas no se convierten en decisiones vigentes al migrarlos.
 
 ```
 Linear
@@ -557,6 +583,12 @@ Nunca colocar secretos en:
 
 Las variables sensibles deben manejarse mediante los mecanismos apropiados del servicio utilizado.
 
+### Visibilidad de repositorios
+
+> **Private by default. Public only by explicit decision.** (2026-10-07)
+
+Todo repositorio de MACARIO es privado por defecto, aunque no contenga secretos: la documentación, el historial y la estrategia también son información sensible. La documentación interna de MACARIO no se mantiene publicada como si fuera contenido público. Un repositorio se abre solo por decisión explícita, después de revisar qué documentación, código, historial y estrategia quedan expuestos.
+
 ---
 
 # 15. Integraciones opt-in
@@ -589,10 +621,6 @@ Se incorpora cuando existe una automatización suficientemente repetible.
 
 Se incorpora cuando realmente se necesita backend, base de datos, autenticación, storage u otras capacidades.
 
-### Figma
-
-Se utiliza cuando aporta valor para dirección visual, diseño o handoff.
-
 ### Cloudflare
 
 Se utiliza como infraestructura/deploy cuando corresponde al proyecto.
@@ -600,6 +628,8 @@ Se utiliza como infraestructura/deploy cuando corresponde al proyecto.
 La regla general es:
 
 > **Opt-in, no default.**
+
+**Figma** tiene un rol propio: es la fuente visual de verdad (Visual Source) **cuando un proyecto tiene una definición visual que deba preservarse, explorarse, aprobarse o implementarse de forma sistemática** (sistema visual, diseño aprobado, referencias, assets o dirección visual relevante). En ese caso, lo aprobado —incluido lo explorado en Claude Design— se consolida en Figma. Los proyectos y cambios simples no necesitan crearse ni pasar por Figma.
 
 ---
 
@@ -656,7 +686,9 @@ para revisión visual.
 
 # 17. Proyectos reales alimentan ITS y PRANA
 
-ITS es la identidad personal de Ignacio: autoría, criterio, proceso, experimentación y portfolio. PRANA es la marca / negocio que Ignacio crea y funciona públicamente por sí misma. Son superficies separadas: PRANA es una creación de autoría de ITS, no una sección de ITS.
+ITS es la identidad personal de Ignacio: autoría, criterio, proceso, experimentación y portfolio. PRANA es una marca / proyecto / negocio separado que se está evaluando; no reemplaza a MACARIO ESTUDIO (ver [[00 — Arquitectura - MACARIO — Arquitectura general.md|Arquitectura general]] §2). ITS y PRANA son superficies separadas.
+
+> ⚠️ **Decisión abierta:** la superficie pública de los casos de MACARIO ESTUDIO. Mientras tanto: no asumir que PRANA es el canal público definitivo del estudio, y no mantener documentación interna de MACARIO publicada como si fuera contenido público.
 
 Por eso los proyectos reales pueden convertirse en:
 
@@ -762,12 +794,22 @@ Estas decisiones quedan abiertas hasta que exista una necesidad concreta:
     
 - paquete estándar de Sentry / PostHog / Resend / n8n;
     
-- Figma obligatorio u opcional;
-    
 - convención definitiva de nombres de repositorios;
     
 - alcance futuro de MACARIO OS.
     
 
+- superficie pública del trabajo de MACARIO ESTUDIO (ver §17);
+    
+- destino de Web-Base (terminado; qué partes sobreviven dentro de MACARIO ESTUDIO).
+    
+
 Estas decisiones deben resolverse cuando aporten valor real, no por adelantado.
+
+### Decisiones resueltas
+
+- **2026-10-07 — Figma obligatorio u opcional:** Figma es la fuente visual de verdad cuando existe una definición visual que preservar, explorar, aprobar o implementar sistemáticamente; los proyectos y cambios simples no necesitan pasar por Figma (§15).
+- **2026-10-07 — Fuente de verdad Obsidian vs Linear:** ver §3, "Reglas confirmadas".
+- **2026-10-07 — Jerarquía de identidad:** MACARIO ESTUDIO / PRANA / ITS, ver Arquitectura general §2.
+- **2026-10-07 — Repositorios:** *private by default, public only by explicit decision* (ver §14).
 

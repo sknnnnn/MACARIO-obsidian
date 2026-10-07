@@ -21,15 +21,20 @@ Busca tener:
 
 # 2. Mapa rápido
 
-|Herramienta|Responsabilidad principal|Área principal|
-|---|---|---|
-|Obsidian|conocimiento y documentación permanente|transversal|
-|Linear|ejecución y seguimiento|transversal|
-|GitHub|código e historial|transversal|
-|Claude Code|implementación técnica|transversal|
-|Figma|diseño y referencias visuales|transversal (Visual/Assets, UX/UI)|
-|ChatGPT|análisis, estrategia y razonamiento|Research|
-|Grok|IA complementaria|Research|
+> **Modelo vigente (2026-10-07).** Ver [[00 — Arquitectura - MACARIO — Arquitectura general.md|MACARIO — Arquitectura general]] §5.
+
+|Herramienta|Rol|Responsabilidad principal|Área principal|
+|---|---|---|---|
+|Obsidian|Memory / Context|conocimiento y documentación permanente|transversal|
+|Linear|Operations / Work|ejecución y seguimiento|transversal|
+|GitHub|Implementation / Code|código e historial|transversal|
+|Figma|Visual Source|fuente de verdad visual: referencias, assets, reglas, diseños aprobados|transversal (Visual/Assets, UX/UI)|
+|Claude Design|Creative Engine|exploración, composición, prototipado e iteración visual|Visual/Assets, UX/UI|
+|Claude Code|Implementation Engine|implementación técnica del diseño aprobado|transversal|
+|Preview / QA|Validación|validación del producto real|QA|
+|Cowork|Audit / Coordination|auditoría, coordinación y operaciones entre herramientas|transversal|
+|ChatGPT|auxiliar|análisis y razonamiento cuando corresponda|Research|
+|Grok / Gemini|auxiliar|IA complementaria / segunda opinión cuando corresponda|Research|
 |Banana|generación/edición de imágenes con IA|Visual / Assets|
 |Artifact / Preview|revisión visual|Visual/Assets, UX/UI|
 |Web-Base|Foundation — base técnica reutilizable|Product Development|
@@ -44,9 +49,9 @@ Busca tener:
 
 ---
 
-# 3. Capas transversales (fuente de verdad)
+# 3. Capas fundamentales
 
-Estas cinco herramientas atraviesan las seis áreas de MACARIO y cada una es fuente principal de verdad para un tipo de información. Ver [[MACARIO — Arquitectura general]] para la relación entre capas y áreas.
+Obsidian, Linear, GitHub y Figma son **fuentes de verdad**, cada una para un tipo de información. Claude Design, Claude Code y Cowork son **motores**: trabajan sobre esas fuentes y no las reemplazan. Preview / QA valida el producto real. Ver [[MACARIO — Arquitectura general]] para la relación entre capas y áreas.
 
 ## 3.1 Obsidian — Conocimiento
 
@@ -72,17 +77,21 @@ Linear organiza el trabajo alrededor de issues, proyectos e iniciativas; los pro
 
 Linear debe mantenerse operativo. No usarlo como wiki.
 
-## 3.3 Figma — Diseño
+## 3.3 Figma — Visual Source
 
-Diseño visual, UX/UI y prototipos.
+Fuente de verdad visual del producto.
 
-Puede utilizarse para: exploración visual, wireframes, UI, identidad, referencias, handoff.
+Contiene: referencias visuales (colocadas en el tablero del proyecto), assets, sistema visual, reglas visuales consolidadas y diseños aprobados.
 
-> **¿Cómo se ve y se experimenta el producto?**
+> **¿Cómo se ve el producto aprobado?**
 
 ### Regla
 
-Figma es **opt-in**. No todos los proyectos lo necesitan. Una dirección visual clara y un Artifact/preview pueden ser suficientes para proyectos simples.
+Figma es la fuente visual de verdad **cuando un proyecto tiene una definición visual que deba preservarse, explorarse, aprobarse o implementarse de forma sistemática**: un sistema visual, un diseño aprobado, referencias, assets o una dirección visual relevante. En ese caso, lo aprobado —incluido lo explorado en Claude Design— se consolida en Figma. Los proyectos y cambios simples no necesitan crearse ni pasar por Figma.
+
+Figma no es el motor de exploración principal; ese rol es de Claude Design (3.6).
+
+> Cambio respecto de la versión anterior (Figma *opt-in* genérico): decisión del 2026-10-07.
 
 ## 3.4 GitHub — Código
 
@@ -106,7 +115,29 @@ Claude Code no es una fuente de verdad: debe seguir las decisiones documentadas 
 
 ### Regla
 
-Claude Code no debe tomar silenciosamente decisiones importantes de arquitectura, alcance o negocio.
+Claude Code no debe tomar silenciosamente decisiones importantes de arquitectura, alcance o negocio, ni inventar la identidad visual en código: implementa diseño aprobado en Figma.
+
+## 3.6 Claude Design — Creative Engine
+
+Exploración visual, composición, prototipado, experimentación e iteración de conceptos antes de su aprobación.
+
+> **¿Cómo podría verse?**
+
+### Regla
+
+Claude Design **no reemplaza a Figma**. Lo que se aprueba en Claude Design se consolida en Figma como Visual Source; Claude Code implementa desde ahí.
+
+## 3.7 Preview / QA — Validación
+
+Validación del producto real (previews, Artifacts de revisión, QA funcional y visual) antes de cerrar.
+
+## 3.8 Cowork — Audit / Coordination / Cross-tool Operations
+
+Auditoría transversal, coordinación entre herramientas, análisis del estado de los proyectos, detección de inconsistencias y gaps, preparación de informes y ejecución de tareas transversales que se le deleguen.
+
+### Regla
+
+Cowork no reemplaza ninguna herramienta ni es fuente de verdad: lee y coordina las fuentes, y propone cambios antes de ejecutarlos cuando no son reversibles.
 
 ---
 
@@ -115,6 +146,8 @@ Claude Code no debe tomar silenciosamente decisiones importantes de arquitectura
 Estas herramientas sirven principalmente a un área concreta del sistema (ver [[MACARIO — Arquitectura general]]) y son **opt-in**: se incorporan cuando el proyecto lo justifica, no por defecto.
 
 ## 4.1 Research
+
+> ChatGPT, Grok y Gemini son **herramientas auxiliares**: pueden usarse cuando corresponda, pero no forman parte de las capas fundamentales ni son dependencias estructurales de MACARIO (decisión 2026-10-07).
 
 ### ChatGPT
 
@@ -148,7 +181,7 @@ Cuando una herramienta permite generar un Artifact, preview, render, prototipo o
 
 ## 4.3 UX / UI
 
-Figma y Artifact/Preview (ver secciones 3.3 y 4.2) son las herramientas principales de esta área.
+Claude Design (exploración y prototipo), Figma (diseño aprobado) y Preview (ver secciones 3.3, 3.6 y 3.7) son las herramientas principales de esta área.
 
 ## 4.4 Product Development
 
@@ -281,18 +314,25 @@ La arquitectura ideal busca enlaces, no duplicaciones.
 
 # 7. Estado de integración
 
-## Ya forman parte del sistema
+## Capas fundamentales
 
+- Obsidian
 - Linear
 - GitHub
+- Figma
+- Claude Design
 - Claude Code
+- Preview / QA
+- Cowork
+
+## Auxiliares
+
 - ChatGPT
-- Obsidian
-- Web-Base
+- Grok / Gemini
 
 ## Integraciones / herramientas disponibles según necesidad
 
-- Figma
+- Web-Base (destino pendiente de definición)
 - Playwright
 - Sentry
 - Resend
@@ -300,7 +340,6 @@ La arquitectura ideal busca enlaces, no duplicaciones.
 - n8n
 - Supabase
 - Cloudflare
-- Grok
 - Banana
 
 ## Futuro
@@ -333,18 +372,18 @@ Antes de incorporar una nueva herramienta:
 Todo proyecto puede comenzar solamente con:
 
 ```
+Obsidian
 Linear
 GitHub
 Claude Code
-Obsidian
-ChatGPT
-Web-Base (o la Foundation correspondiente)
+Preview / QA
 ```
+
+Cuando el proyecto tiene una definición visual que preservar, explorar, aprobar o implementar sistemáticamente, se suman **Figma** (Visual Source) y **Claude Design** (exploración). Cowork se suma para auditoría y coordinación transversal. Web-Base u otra Foundation se usa cuando corresponda (destino de Web-Base pendiente de definición).
 
 ### Según necesidad
 
 ```
-Figma
 Playwright
 Sentry
 PostHog
@@ -352,8 +391,8 @@ Resend
 n8n
 Supabase
 Cloudflare
-Grok
 Banana
+ChatGPT / Grok / Gemini (auxiliares)
 ```
 
 La metodología no debe obligar a activar herramientas que el proyecto no necesita.
