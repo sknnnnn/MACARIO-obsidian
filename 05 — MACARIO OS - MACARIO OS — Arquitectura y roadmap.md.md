@@ -144,7 +144,7 @@ MACARIO OS conoce cómo conectarlos.
                                 Cloudflare
 ```
 
-Las cinco capas transversales de MACARIO (Obsidian, Linear, Figma, GitHub, Claude Code — ver [[MACARIO — Arquitectura general]]) son las que MACARIO OS coordina de forma constante. El resto de las herramientas (Playwright, Sentry, PostHog, etc.) se conectan según la etapa y el proyecto.
+Las cinco capas transversales de MACARIO (Obsidian, Linear, Figma, GitHub, Claude Code — ver [[00 — Arquitectura - MACARIO — Arquitectura general]]) son las que MACARIO OS coordina de forma constante. El resto de las herramientas (Playwright, Sentry, PostHog, etc.) se conectan según la etapa y el proyecto.
 
 ---
 

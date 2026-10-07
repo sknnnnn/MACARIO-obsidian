@@ -40,13 +40,13 @@ Busca tener:
 |Resend|email transaccional|Analytics / Operations|
 |n8n|automatizaciones|Analytics / Operations|
 |Cloudflare|infraestructura / deploy|Analytics / Operations (Release)|
-|MACARIO OS|orquestación|coordinación (ver [[MACARIO OS — Arquitectura y roadmap]])|
+|MACARIO OS|orquestación|coordinación (ver [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap]])|
 
 ---
 
 # 3. Capas transversales (fuente de verdad)
 
-Estas cinco herramientas atraviesan las seis áreas de MACARIO y cada una es fuente principal de verdad para un tipo de información. Ver [[MACARIO — Arquitectura general]] para la relación entre capas y áreas.
+Estas cinco herramientas atraviesan las seis áreas de MACARIO y cada una es fuente principal de verdad para un tipo de información. Ver [[00 — Arquitectura - MACARIO — Arquitectura general]] para la relación entre capas y áreas.
 
 ## 3.1 Obsidian — Conocimiento
 
@@ -112,7 +112,7 @@ Claude Code no debe tomar silenciosamente decisiones importantes de arquitectura
 
 # 4. Herramientas especializadas por área
 
-Estas herramientas sirven principalmente a un área concreta del sistema (ver [[MACARIO — Arquitectura general]]) y son **opt-in**: se incorporan cuando el proyecto lo justifica, no por defecto.
+Estas herramientas sirven principalmente a un área concreta del sistema (ver [[00 — Arquitectura - MACARIO — Arquitectura general]]) y son **opt-in**: se incorporan cuando el proyecto lo justifica, no por defecto.
 
 ## 4.1 Research
 
@@ -160,7 +160,7 @@ No es una herramienta externa: es el punto de partida técnico desde el que nace
 
 > **¿Desde qué base partimos?**
 
-Ver [[WEB-BASE — Metodología y estándares]].
+Ver [[04 — Web-Base - WEB-BASE — Metodología y estándares]].
 
 ### Supabase
 
@@ -242,7 +242,7 @@ MACARIO OS no es una herramienta más: es la capa que conecta a todas las anteri
 
 > **¿Cómo hacemos que todo el sistema funcione coordinadamente?**
 
-Su arquitectura y roadmap completos viven en [[MACARIO OS — Arquitectura y roadmap]].
+Su arquitectura y roadmap completos viven en [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap]].
 
 ---
 
@@ -364,7 +364,7 @@ La metodología no debe obligar a activar herramientas que el proyecto no necesi
 
 El stack no está cerrado para siempre. Puede cambiar. Una herramienta puede incorporarse, reemplazarse, eliminarse, quedar experimental o convertirse en estándar.
 
-Cada cambio importante debe documentarse en [[MACARIO — Principios y decisiones]] y reflejarse aquí.
+Cada cambio importante debe documentarse en [[01 — Principios y decisiones - MACARIO — Principios y decisiones]] y reflejarse aquí.
 
 ---
 
