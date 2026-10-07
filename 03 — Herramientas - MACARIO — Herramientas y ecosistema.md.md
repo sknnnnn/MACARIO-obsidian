@@ -61,6 +61,10 @@ Contiene: arquitectura, principios, decisiones, metodología, aprendizajes, docu
 
 No debe contener una copia completa de las tareas de Linear.
 
+**Acceso de los agentes:**
+- **Local:** Claude Code consulta el vault mediante **Obsidian Agent MCP**, un servidor MCP local verificado como operativo (2026-09-12, PRO-71). Esta conexión ya no es trabajo pendiente; las futuras integraciones de MACARIO OS cubren capacidades nuevas.
+- **Sesiones en la nube y Cowork:** leen el vault a través del repositorio de GitHub `MACARIO-obsidian`, que es privado (regla *private by default*).
+
 > **¿Qué sabemos y por qué hacemos las cosas así?**
 
 ## 3.2 Linear — Trabajo
