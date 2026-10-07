@@ -16,6 +16,49 @@ Cada entrada nueva se agrega arriba, con fecha. No se borran entradas anteriores
 
 ## Decisiones
 
+> Las entradas del 2026-09-07 al 2026-10-05 se migraron desde Linear el 2026-10-07 (doc "Roadmap — MACARIO STUDIO + WEB-BASE + RAÍCES", doc "PRO-40 — Contrato técnico maestro de experiencias" y la descripción del proyecto "Rediseño y lanzamiento Web"). Linear conserva los originales como referencia.
+
+### Pendiente de decisión — Destino de `comentarios.html`
+
+**Estado:** ⚠️ requiere decisión de Ignacio.
+**Contexto:** `comentarios.html` existe, pero no forma parte del Page System aprobado el 2026-10-05.
+**Hipótesis preferida (no decidida):** convertir comentarios / testimonios en contenido contextual dentro de Home, Destino, Experiencia u otras páginas.
+**Mientras tanto:** no se elimina; queda como legacy.
+
+### Fecha: 2026-10-05 — System Reset: arquitectura Foundation → Components → Patterns → Pages → Content
+
+**Decisión:** la arquitectura de Raíces se consolida como Foundation → Components → Patterns → Pages → Content, migrando progresivamente la base funcional existente, sin rehacer el proyecto desde cero.
+**Razón:** ordenar el sistema visual y de contenido, y preparar un futuro Admin / CMS simple.
+**Consecuencias:** principio de preservación de lo funcional ([[07 — Proyectos/Proyecto Raíces/08 — Desarrollo|Desarrollo]] §5); el Admin se construye después de estabilizar el modelo ([[07 — Proyectos/Proyecto Raíces/04 — Arquitectura|Arquitectura]] §6–§7).
+**Alternativas descartadas:** rehacer el proyecto desde cero.
+
+### Fecha: 2026-10-05 — Principio "mucha lógica detrás, poca fricción delante" y motion
+
+**Decisión:** Raíces (junto con GXK12:2) adopta "simple por defecto → potente cuando hace falta". El motion se define como orgánico, editorial y cinematográfico. Ver [[07 — Proyectos/Proyecto Raíces/05 — UX-UI|UX-UI]] §7–§8.
+
+### Fecha: 2026-09-28 — Hito: etapa funcional cerrada
+
+Arquitectura, funcionalidad, datos y QA se dan por cerrados. El proyecto sigue abierto para el cierre de UX/UI y dirección visual, trabajados con referencias dentro de Figma. La etapa funcional ya estaba mergeada a `main`.
+
+> Nota 2026-10-07: el cierre de QA convive con una contradicción abierta sobre Sentry ([[07 — Proyectos/Proyecto Raíces/10 — Deploy y Monitoring|Deploy y Monitoring]] §4).
+
+### Fecha: 2026-09-10 — Contrato técnico y de presentación de experiencias
+
+**Decisión:** el modelo de experiencias es núcleo común + `detalle` JSONB por tipo + tablas relacionales para imágenes, actividades y paquetes. La ficha pública muestra solo la información esencial por tipo.
+**Razón:** la auditoría del esquema mostró que ya cubría casi todo el contrato; no convenía una migración grande.
+**Detalle:** [[07 — Proyectos/Proyecto Raíces/07 — Datos e Integraciones|Datos e Integraciones]] §1 y [[07 — Proyectos/Proyecto Raíces/05 — UX-UI|UX-UI]] §6.
+**Alternativas descartadas:** convertir todos los atributos de `detalle` en columnas o tablas separadas.
+
+### Fecha: 2026-09-08 — Secuencia de incorporación de herramientas
+
+**Decisión registrada en su momento:** Playwright y Sentry se implementan primero en Raíces y luego se generalizan en Web-Base; Archify se valida primero en Web-Base; PostHog y n8n no se incorporan sin una necesidad concreta; Resend se incorpora cuando los formularios reales estén definidos.
+**Estado al 2026-10-07:** Playwright y Resend están en uso; Sentry está integrado pero sin DSN; la generalización a Web-Base queda sujeta al destino de Web-Base, que está pendiente de definición.
+
+### Fecha: 2026-09-07 — Supabase como fuente central de datos
+
+**Decisión:** migrar el frontend a Supabase como fuente de datos (PRO-44, PRO-47; commit `ed0b829`), con `data-api.js` como única capa de acceso.
+**Consecuencias:** los archivos de datos JS planos quedaron obsoletos y se eliminaron el 2026-09-30 (commit `5decc72`).
+
 ### Fecha: 2026-09-04 — Separación de Patagonia en 5 destinos navegables reales
 
 **Decisión:** El destino agregado "Patagonia" se reemplaza por 5 destinos concretos: Bariloche, Ushuaia, San Martín de los Andes, Villa Pehuenia y Norte Neuquino.

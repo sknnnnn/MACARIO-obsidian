@@ -22,6 +22,16 @@ obtener información real
 incorporar
 ```
 
+### Guía editorial de descripciones de experiencias (2026-09-10)
+
+Toda descripción debe poder organizarse conceptualmente en: 1) qué es; 2) qué experiencia ofrece; 3) qué se hace o recorre; 4) qué la hace especial; 5) para quién está pensada, cuando corresponda; 6) información / logística relevante. Es una guía editorial, no una plantilla de texto literal. (Fuente: doc Linear PRO-40 §7.)
+
+### Fuente editorial real
+
+Las descripciones de destinos se actualizan desde la fuente real disponible en Google Drive (carpeta "Proyecto Raíces"); no se inventa contenido cuando existe una fuente editorial real. (Fuente: doc Linear Roadmap §2, fase C.)
+
+> Nota 2026-10-07: el estado por destino de la sección 4 se tomó de `destinos-data.js`, archivo eliminado el 2026-09-30 al migrar a Supabase. Hay que re-verificarlo contra Supabase.
+
 ---
 
 ## 2. Tono y voz

@@ -72,6 +72,41 @@ Implementado: en `catalogo.html`, todas las cards de experiencias tienen el mism
 - Sistema de contenido "en preparación": pill visual punteada con el texto "En preparación" / "Imagen pendiente", usado de forma consistente en destinos sin contenido real y en perfiles de equipo sin datos confirmados (reemplaza textos repetidos como "Rol pendiente"/"Descripción pendiente").
 - Fix de overflow horizontal en mobile/tablet (el menú lateral fuera de pantalla inflaba el ancho de scroll del documento).
 
+## 6. Contrato de presentación de la ficha de experiencia (2026-09-10)
+
+El modelo de datos puede ser más completo que lo que se muestra. La ficha pública **no renderiza automáticamente todos los campos**.
+
+- **Detalle = información esencial para decidir.** **Itinerario = información para imaginar el viaje.** **Qué incluye / Qué no incluye = lo contemplado y las exclusiones.**
+- Tener un dato en Supabase no implica que deba aparecer en Detalle.
+- **Tour — Detalle base:** destino, duración, modalidad, dificultad, fecha cuando corresponda, salida / regreso solo con información real. No mostrar por defecto alojamiento, comidas, actividades, distancia o desnivel.
+- **Travesía — Detalle base:** destino, duración, modalidad, dificultad, fechas. Alojamiento, comidas y distancia van en Qué incluye, Itinerario u otra sección con función editorial clara.
+- **Paquete — Detalle base:** destino, duración, modalidad, fechas cuando corresponda, características esenciales de la propuesta.
+- Los tipos no comparten exactamente los mismos campos: **núcleo común + conjunto específico por tipo**. Las excepciones se justifican por valor para el usuario, no por disponibilidad del dato.
+- **Comidas:** el label estándar es "Comidas" (no "Comidas incluidas"); el valor se adapta al contenido real.
+- **Actividades:** la relación se conserva para filtros, pero no se muestra como sección independiente al final de la ficha.
+- `propuesta.html` selecciona los campos de Detalle según `tipo_producto`; los campos sin valor real se ocultan; nunca se completan datos por inferencia.
+- Objetivo visual: una experiencia de viaje clara y editorial, no una ficha técnica.
+
+Fuente: doc Linear [PRO-40](https://linear.app/proyecto-raices/document/pro-40-contrato-tecnico-maestro-de-experiencias-6f54d70eb333) §10, migrado el 2026-10-07.
+
+## 7. Motion (decisión 2026-10-05)
+
+- Movimiento **orgánico, editorial y cinematográfico**, asociado a territorio, fotografía, recorrido y descubrimiento.
+- Reveals, transiciones, desplazamientos y cambios de composición acompañan el ritmo **pausa → inmersión → información → pausa → descubrimiento → conversión**.
+- Evitar efectos de dashboard / SaaS, scroll effects gratuitos y sliders agresivos.
+- El responsive también recompone el movimiento.
+- `prefers-reduced-motion` y rendimiento son requisitos.
+- La animación es parte del sistema de diseño, no maquillaje posterior; no se abre una nueva exploración visual solo para motion: se deriva de la identidad y del sistema aprobado.
+- Raíces y GXK comparten el criterio de sistema, **no la estética de movimiento** (GXK = tensión / energía; Raíces = territorio / fluidez / pausa).
+
+## 8. Principio de interfaz (decisión 2026-10-05)
+
+> **Mucha lógica detrás, poca fricción delante.** Simple por defecto → potente cuando hace falta.
+
+La complejidad del modelo, las relaciones y el sistema editorial se resuelve internamente (estructura, defaults, validaciones, automatización). Aplica especialmente al futuro Admin / CMS: quien edita no debería necesitar conocer la arquitectura interna. Principio compartido con GXK12:2.
+
+Fuente §7–§8: doc Linear [Roadmap](https://linear.app/proyecto-raices/document/roadmap-macario-studio-web-base-raices-3beb4db4f227) §13, migrado el 2026-10-07.
+
 ---
 
 ## Documentos relacionados

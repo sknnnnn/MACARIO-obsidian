@@ -7,7 +7,11 @@
 
 ## Linear
 
-**Proyecto:** Pendiente de definir. Verificado por API (2026-09-12): no existe actualmente ningún proyecto llamado "Raíces"/"Raices" en el workspace de Linear.
+**Proyecto:** [Rediseño y lanzamiento Web](https://linear.app/proyecto-raices/project/rediseno-y-lanzamiento-web-2a37c58672be) (verificado 2026-10-07). El nombre del proyecto no menciona "Raíces"; por eso la verificación del 2026-09-12 no lo encontró.
+
+**Documentos de Linear con conocimiento de Raíces** (migrado a esta documentación el 2026-10-07; se conservan como referencia histórica):
+- [Roadmap — MACARIO STUDIO + WEB-BASE + RAÍCES](https://linear.app/proyecto-raices/document/roadmap-macario-studio-web-base-raices-3beb4db4f227) — §12–13 (System Reset, Admin/CMS, motion).
+- [PRO-40 — Contrato técnico maestro de experiencias](https://linear.app/proyecto-raices/document/pro-40-contrato-tecnico-maestro-de-experiencias-6f54d70eb333).
 
 ---
 
@@ -25,9 +29,13 @@ Nota: al momento de esta auditoría, el checkout local del repositorio tenía ac
 
 ---
 
+## Figma
+
+[Tablero de referencias y dirección visual](https://www.figma.com/design/RqXlNyOZPYDsJFtX9Kk6dj/PRANA-STUDIOS?node-id=54-26) — archivo `PRANA STUDIOS` (el nombre del archivo no implica relación de identidad con PRANA).
+
 ## Otros enlaces
 
-Pendiente de documentar.
+- Google Drive: carpeta "Proyecto Raíces" (branding, minutas, banco de imágenes, fuente real de descripciones de destinos).
 
 ---
 

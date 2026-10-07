@@ -60,6 +60,8 @@ Estas referencias priorizan: composición, jerarquía, fotografía, navegación,
 
 ### 4.2 Biblioteca general de referencias de diseño
 
+> ⚠️ **Contradicción abierta (2026-10-07):** existen **dos listas de referencias generales**: esta (14 fuentes) y la del doc de Linear "Biblioteca de referencias visuales — Director de Arte IA" (18 fuentes, colgada de PRO-50). Las dos se superponen parcialmente. Queda pendiente determinar: (1) cuál es la biblioteca maestra; (2) cuál es específica de Raíces; (3) qué parte pertenece a la metodología general de MACARIO. No unificar hasta decidirlo.
+
 Bancos de inspiración de uso general (no específicos de viajes/aventura), agrupados por para qué sirve cada uno.
 
 - **Visual Design** — [Inspora](https://t.co/fBFjbiIyBV): dirección visual e inspiración general.
