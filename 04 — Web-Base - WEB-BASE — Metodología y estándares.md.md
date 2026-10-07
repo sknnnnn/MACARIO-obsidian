@@ -1,5 +1,9 @@
 # WEB-BASE — Metodología y estándares
 
+> **Estado actual: Foundation histórica/fundacional — congelada como línea de desarrollo independiente.**
+>
+> Este documento conserva el modelo y los aprendizajes de WEB-BASE. MACARIO absorbe los principios reutilizables que sigan vigentes. No se debe iniciar nuevo desarrollo de WEB-BASE como línea independiente salvo decisión explícita posterior.
+
 > WEB-BASE es una Foundation de MACARIO, dentro de Product Development: la base técnica reutilizable desde la que nace cada proyecto de website o web app, e implementa el ciclo general de MACARIO para diseñarlo, construirlo, validarlo y cerrarlo.
 
 ---
