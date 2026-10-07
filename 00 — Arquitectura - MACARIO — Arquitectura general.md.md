@@ -167,7 +167,21 @@ Si la respuesta a 1-3 no es clara y comprobada, la Foundation todavía no se cre
 
 Los **Projects** son donde se aplica y valida todo el sistema.
 
-Ejemplos actuales: Proyecto Raíces, GXK, Onda, CONCRETO, Bresstore, futuros proyectos y clientes.
+Actualmente, dentro del ecosistema activo de MACARIO:
+
+- **GXK12:2** — proyecto activo;
+- **Proyecto Raíces** — proyecto funcionalmente terminado; actualmente recibe iteración visual y ajustes puntuales;
+- **Bresstore** — proyecto real pendiente de cierre;
+- futuros proyectos.
+
+Proyectos históricos o archivados conceptualmente:
+
+- **Web-Base** — Foundation histórica/fundacional, congelada como línea de desarrollo independiente;
+- **CONCRETO** — concepto histórico de marca;
+- **tienda-ropa-demo** — repositorio histórico;
+- **Onda** — fuera del ecosistema MACARIO actual.
+
+No deben tratarse proyectos históricos, archivados o externos como trabajo activo por defecto.
 
 Cada proyecto:
 
@@ -251,19 +265,20 @@ El detalle completo de esta regla y sus criterios de decisión vive en [[01 — 
 
 ### En construcción
 
-- bóveda MACARIO completa;
-- Mobile-Base y otras futuras foundations;
+- consolidación de la bóveda MACARIO;
 - MACARIO OS como integración real;
-- documentación maestra terminada.
+- documentación maestra y gobierno operativo.
+
+Las Foundations futuras se incorporan solamente cuando exista una necesidad real y comprobada.
 
 ### Proyectos actuales
 
+- GXK12:2
 - Proyecto Raíces
-- GXK
-- Onda
-- CONCRETO
 - Bresstore
 - futuros proyectos
+
+Web-Base queda como Foundation histórica/fundacional congelada: no es una línea activa de desarrollo independiente.
 
 ---
 
