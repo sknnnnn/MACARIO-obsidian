@@ -246,19 +246,14 @@ La profundidad depende del valor del caso.
 
 # 8. Relación con proyectos reales
 
-Los proyectos actuales del ecosistema incluyen:
+Los proyectos que actualmente pueden formar parte del ecosistema de trabajo incluyen:
 
 - Proyecto Raíces;
-    
-- GXK;
-    
-- Onda;
-    
-- CONCRETO;
-    
+- GXK12:2;
 - Bresstore;
-    
 - futuros proyectos.
+
+Los proyectos históricos o fuera del ecosistema actual no se presentan como proyectos activos de MACARIO.
     
 
 Un proyecto puede aparecer en ITS solamente cuando:
