@@ -1,7 +1,7 @@
 # MACARIO — Flujo de trabajo
 
 > Define cómo MACARIO transforma una idea en un producto digital terminado, documentado y reutilizable — sin importar la plataforma (website, web app, mobile app, dashboard, herramienta interna, e-commerce, etc.).  
-> La implementación concreta y granular de este ciclo para websites y web apps vive en la Foundation correspondiente: [[WEB-BASE — Metodología y estándares]].
+> La implementación concreta y granular de este ciclo para websites y web apps vive en la Foundation correspondiente: [[04 — Web-Base - WEB-BASE — Metodología y estándares]].
 
 ---
 
@@ -196,7 +196,7 @@ Cuando aparecen, se reconcilian y documentan con las herramientas correspondient
 
 ### 3.9 Relación con Web-Base
 
-Web-Base traduce Research en tres sub-etapas propias: Intake, Context y Discovery (ver [[WEB-BASE — Metodología y estándares]]). La sub-etapa "Discovery" de Web-Base es la aplicación técnica y acotada de este proceso general para websites y web apps (investigación de referencias, competencia, contenido existente, stack) — no una definición paralela ni un sistema distinto.
+Web-Base traduce Research en tres sub-etapas propias: Intake, Context y Discovery (ver [[04 — Web-Base - WEB-BASE — Metodología y estándares]]). La sub-etapa "Discovery" de Web-Base es la aplicación técnica y acotada de este proceso general para websites y web apps (investigación de referencias, competencia, contenido existente, stack) — no una definición paralela ni un sistema distinto.
 
 ### 3.10 Qué documentar
 
@@ -222,7 +222,7 @@ Cada etapa utiliza las capas transversales necesarias, no todas por defecto.
 |Analytics / Operations|PostHog + Sentry + Obsidian|
 |Iteration|Linear + Obsidian|
 
-MACARIO OS coordina estas relaciones. Ver [[MACARIO OS — Arquitectura y roadmap]]. El detalle de cada herramienta vive en [[MACARIO — Herramientas y ecosistema]].
+MACARIO OS coordina estas relaciones. Ver [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap]]. El detalle de cada herramienta vive en [[03 — Herramientas - MACARIO — Herramientas y ecosistema]].
 
 ---
 
@@ -415,6 +415,6 @@ El objetivo no es hacer más. El objetivo es **resolver mejor con menos fricció
 
 Este documento describe el ciclo general de MACARIO, válido para cualquier plataforma.
 
-Cada Foundation implementa este ciclo con más granularidad para su plataforma concreta. Por ejemplo, Web-Base traduce este ciclo general en doce etapas específicas para websites y web apps (Intake, Context, Discovery, Scope, Architecture, Visual Direction, Implementation, QA, Audit, Deploy, Documentation, Close) — ver [[WEB-BASE — Metodología y estándares]].
+Cada Foundation implementa este ciclo con más granularidad para su plataforma concreta. Por ejemplo, Web-Base traduce este ciclo general en doce etapas específicas para websites y web apps (Intake, Context, Discovery, Scope, Architecture, Visual Direction, Implementation, QA, Audit, Deploy, Documentation, Close) — ver [[04 — Web-Base - WEB-BASE — Metodología y estándares]].
 
 Cuando una Foundation cambie su implementación, este documento debe revisarse para mantener alineados: principios, metodología general, herramientas y MACARIO OS.
