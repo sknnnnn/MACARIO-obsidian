@@ -8,7 +8,7 @@
 
 **WEB-BASE es una Foundation de MACARIO: la base técnica reutilizable para websites y web apps, dentro del área de Product Development.**
 
-Su función es convertir una necesidad o idea en un proyecto digital terminado mediante un proceso repetible, verificable y adaptable. El ciclo general (las etapas y sus criterios) se define a nivel MACARIO en [[MACARIO — Flujo de trabajo]]; WEB-BASE es el punto de partida técnico reutilizable que lo implementa, con mayor granularidad, para websites y web apps.
+Su función es convertir una necesidad o idea en un proyecto digital terminado mediante un proceso repetible, verificable y adaptable. El ciclo general (las etapas y sus criterios) se define a nivel MACARIO en [[02 — Metodología - MACARIO — Flujo de trabajo]]; WEB-BASE es el punto de partida técnico reutilizable que lo implementa, con mayor granularidad, para websites y web apps.
 
 WEB-BASE no es:
 
@@ -37,7 +37,7 @@ WEB-BASE entra en juego en el momento en que una idea ya pasó (o está pasando,
 
 |WEB-BASE|Detalle|
 |---|---|
-|**Recibe**|una necesidad o idea con contexto suficiente para iniciar Intake (ver [[MACARIO — Flujo de trabajo]] §3), y la decisión de que se materializa como website o web app|
+|**Recibe**|una necesidad o idea con contexto suficiente para iniciar Intake (ver [[02 — Metodología - MACARIO — Flujo de trabajo]] §3), y la decisión de que se materializa como website o web app|
 |**Entrega**|un proyecto propio (repositorio independiente, base técnica implementada, documentación de cierre) que atravesó las doce etapas hasta Close, listo para pasar a Analytics/Operations|
 
 ## 1.3 Relación con un proyecto concreto
@@ -94,7 +94,7 @@ El objetivo es reducir:
 
 # 3. Las 12 etapas
 
-WEB-BASE traduce el ciclo general de MACARIO ([[MACARIO — Flujo de trabajo]]) en doce etapas específicas para websites y web apps:
+WEB-BASE traduce el ciclo general de MACARIO ([[02 — Metodología - MACARIO — Flujo de trabajo]]) en doce etapas específicas para websites y web apps:
 
 |Ciclo general MACARIO|Etapas WEB-BASE|
 |---|---|
@@ -107,7 +107,7 @@ WEB-BASE traduce el ciclo general de MACARIO ([[MACARIO — Flujo de trabajo]]) 
 |Development|Implementation|
 |QA|QA, Audit|
 |Release|Deploy|
-|Analytics / Operations|(fuera del alcance actual de WEB-BASE; ver [[MACARIO OS — Arquitectura y roadmap]])|
+|Analytics / Operations|(fuera del alcance actual de WEB-BASE; ver [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap]])|
 |Iteration|Documentation, Close alimentan la siguiente Idea|
 
 Las doce etapas:
