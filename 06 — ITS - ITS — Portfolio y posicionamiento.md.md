@@ -255,6 +255,8 @@ Los proyectos actuales del ecosistema incluyen:
 - GXK;
     
 - CONCRETO (concepto histórico de marca de ropa; referencia / muestra, no operativo);
+
+Los proyectos históricos o fuera del ecosistema actual no se presentan como proyectos activos de MACARIO.
     
 - Bresstore;
     

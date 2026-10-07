@@ -1,6 +1,6 @@
 # WEB-BASE — Metodología y estándares
 
-> ⚠️ **Web-Base — HISTÓRICO / FUNDACIONAL / CONGELADO (decisión 2026-10-07).** Web-Base ya no es una línea activa de desarrollo ni un sistema obligatorio. MACARIO ESTUDIO absorbió sus aprendizajes útiles. El repositorio y esta documentación se conservan como referencia histórica. Lo que sigue describe Web-Base tal como estaba definido; no es metodología vigente. La metodología vigente está en [[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]].
+> ⚠️ **Web-Base — HISTÓRICO / FUNDACIONAL / CONGELADO (decisión 2026-10-07).** Web-Base ya no es una línea activa de desarrollo ni un sistema obligatorio. MACARIO ESTUDIO absorbió sus aprendizajes útiles. El repositorio y esta documentación se conservan como referencia histórica. Lo que sigue describe Web-Base tal como estaba definido; no es metodología vigente. La metodología vigente está en [[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]]. No se debe iniciar nuevo desarrollo de WEB-BASE como línea independiente, salvo una decisión explícita posterior.
 
 > WEB-BASE es una Foundation de MACARIO, dentro de Product Development: la base técnica reutilizable desde la que nace cada proyecto de website o web app, e implementa el ciclo general de MACARIO para diseñarlo, construirlo, validarlo y cerrarlo.
 
