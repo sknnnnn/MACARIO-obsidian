@@ -2,7 +2,7 @@
 
 > Documento maestro de arquitectura.  
 > Mapa general del sistema: qué es MACARIO, cómo se relacionan sus partes y cuál es la responsabilidad de cada capa.  
-> No es un documento metodológico ni un catálogo de herramientas: la metodología vive en [[MACARIO — Flujo de trabajo]], el detalle de herramientas en [[MACARIO — Herramientas y ecosistema]].
+> No es un documento metodológico ni un catálogo de herramientas: la metodología vive en [[02 — Metodología - MACARIO — Flujo de trabajo]], el detalle de herramientas en [[03 — Herramientas - MACARIO — Herramientas y ecosistema]].
 
 ---
 
@@ -72,7 +72,7 @@ La identidad externa con la que ese trabajo se presenta hacia afuera es **PRANA*
     (superficie propia)        (superficie propia)
 ```
 
-MACARIO no aparece hacia afuera: su arquitectura no se expone al público. Hacia afuera se ven dos superficies separadas: PRANA (marca / negocio) e ITS (autor / identidad personal). PRANA es una creación de autoría de ITS, pero no es una sección de ITS ni depende de ITS para funcionar públicamente. Ver [[PRANA — Estrategia]] y [[ITS — Portfolio y posicionamiento]].
+MACARIO no aparece hacia afuera: su arquitectura no se expone al público. Hacia afuera se ven dos superficies separadas: PRANA (marca / negocio) e ITS (autor / identidad personal). PRANA es una creación de autoría de ITS, pero no es una sección de ITS ni depende de ITS para funcionar públicamente. Ver [[PRANA — Estrategia]] y [[06 — ITS - ITS — Portfolio y posicionamiento]].
 
 Los proyectos reales alimentan el sistema de vuelta:
 
@@ -107,7 +107,7 @@ MACARIO organiza el trabajo en seis áreas. No son etapas estrictamente secuenci
 |**QA**|¿Funciona como fue definido?|
 |**Analytics / Operations**|¿Cómo se mide y opera una vez publicado?|
 
-El orden en que se recorren estas áreas durante un proyecto, y qué produce cada una, está definido en [[MACARIO — Flujo de trabajo]].
+El orden en que se recorren estas áreas durante un proyecto, y qué produce cada una, está definido en [[02 — Metodología - MACARIO — Flujo de trabajo]].
 
 ---
 
@@ -125,7 +125,7 @@ Estas capas atraviesan las seis áreas: no pertenecen a un área específica, es
 
 Claude Code no es una fuente de verdad: trabaja sobre las fuentes correspondientes (código en GitHub, tareas de Linear, decisiones de Obsidian, diseño de Figma).
 
-Otras herramientas (Playwright, Sentry, PostHog, Resend, n8n, Supabase, Cloudflare, ChatGPT, etc.) son especializadas dentro de un área concreta y no forman parte de esta capa transversal. Su responsabilidad y criterio de uso viven en [[MACARIO — Herramientas y ecosistema]].
+Otras herramientas (Playwright, Sentry, PostHog, Resend, n8n, Supabase, Cloudflare, ChatGPT, etc.) son especializadas dentro de un área concreta y no forman parte de esta capa transversal. Su responsabilidad y criterio de uso viven en [[03 — Herramientas - MACARIO — Herramientas y ecosistema]].
 
 ---
 
@@ -135,7 +135,7 @@ Una **Foundation** es una base técnica reutilizable dentro de **Product Develop
 
 Actualmente:
 
-- **Web-Base** → foundation para websites y web apps. Ver [[WEB-BASE — Metodología y estándares]].
+- **Web-Base** → foundation para websites y web apps. Ver [[04 — Web-Base - WEB-BASE — Metodología y estándares]].
 - **Mobile-Base** → futura foundation para mobile apps.
 - Otras foundations (dashboards, e-commerce, herramientas internas…) → futuras, según necesidad real y comprobada.
 
@@ -149,7 +149,7 @@ Mobile-Base y otras futuras Foundations no se diseñan por adelantado: se incorp
 
 1. ¿Existe una plataforma concreta (mobile, dashboards, e-commerce…) que hoy no tiene base técnica reutilizable?
 2. ¿Hay evidencia de al menos un proyecto real que la necesita, no solo una hipótesis?
-3. ¿El ciclo general de MACARIO ([[MACARIO — Flujo de trabajo]]) le alcanza sin modificarse, igual que le alcanza a Web-Base?
+3. ¿El ciclo general de MACARIO ([[02 — Metodología - MACARIO — Flujo de trabajo]]) le alcanza sin modificarse, igual que le alcanza a Web-Base?
 4. ¿Puede implementarse como Foundation independiente, sin absorber Research, Visual/Assets o UX/UI ni duplicar su metodología?
 
 Toda Foundation nueva:
@@ -157,7 +157,7 @@ Toda Foundation nueva:
 - implementa el mismo ciclo general de MACARIO, adaptado a su plataforma — no crea un ciclo propio;
 - vive dentro de Product Development, igual que Web-Base;
 - no contiene metodología general de MACARIO, solo su aplicación técnica acotada a esa plataforma;
-- se distribuye y se relaciona con sus proyectos de la misma forma que Web-Base (ver [[WEB-BASE — Metodología y estándares]] §18).
+- se distribuye y se relaciona con sus proyectos de la misma forma que Web-Base (ver [[04 — Web-Base - WEB-BASE — Metodología y estándares]] §18).
 
 Si la respuesta a 1-3 no es clara y comprobada, la Foundation todavía no se crea.
 
@@ -216,7 +216,7 @@ GitHub      ← código, principalmente Product Development
 Claude Code ← ejecución técnica, principalmente Product Development y QA
 ```
 
-MACARIO OS coordina esta relación entre capas sin reemplazar ninguna herramienta. Ver [[MACARIO OS — Arquitectura y roadmap]].
+MACARIO OS coordina esta relación entre capas sin reemplazar ninguna herramienta. Ver [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap]].
 
 ---
 
@@ -227,13 +227,13 @@ Cada información debe tener un lugar principal:
 |Información|Fuente principal|
 |---|---|
 |Arquitectura / decisiones|Obsidian|
-|Metodología|Obsidian ([[MACARIO — Flujo de trabajo]], [[WEB-BASE — Metodología y estándares]])|
+|Metodología|Obsidian ([[02 — Metodología - MACARIO — Flujo de trabajo]], [[04 — Web-Base - WEB-BASE — Metodología y estándares]])|
 |Tareas / estado del trabajo|Linear|
 |Diseño / UX-UI|Figma|
 |Código / historial técnico|GitHub|
 |Implementación|GitHub + Claude Code|
 
-El detalle completo de esta regla y sus criterios de decisión vive en [[MACARIO — Principios y decisiones]].
+El detalle completo de esta regla y sus criterios de decisión vive en [[01 — Principios y decisiones - MACARIO — Principios y decisiones]].
 
 ---
 
@@ -269,12 +269,12 @@ El detalle completo de esta regla y sus criterios de decisión vive en [[MACARIO
 
 ## 11. Documentos relacionados
 
-- [[MACARIO — Principios y decisiones]]
-- [[MACARIO — Flujo de trabajo]]
-- [[MACARIO — Herramientas y ecosistema]]
-- [[WEB-BASE — Metodología y estándares]]
-- [[MACARIO OS — Arquitectura y roadmap]]
-- [[ITS — Portfolio y posicionamiento]]
+- [[01 — Principios y decisiones - MACARIO — Principios y decisiones]]
+- [[02 — Metodología - MACARIO — Flujo de trabajo]]
+- [[03 — Herramientas - MACARIO — Herramientas y ecosistema]]
+- [[04 — Web-Base - WEB-BASE — Metodología y estándares]]
+- [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap]]
+- [[06 — ITS - ITS — Portfolio y posicionamiento]]
 - [[PRANA — Estrategia]]
 
 ---
