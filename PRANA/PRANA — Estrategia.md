@@ -142,7 +142,7 @@ La metodología interna con la que se ejecuta el trabajo es un tema de MACARIO, 
 
 | Proyecto | Situación | Rol para PRANA |
 |---|---|---|
-| Proyecto Raíces | Proyecto real | Caso público principal. Ver [[07 — Proyectos/Proyecto Raíces/00 — Índice\|Proyecto Raíces]]. |
+| Proyecto Raíces | Proyecto real | Caso público principal. Ver [[07 — Proyectos/Proyecto Raíces/00 — Índice|Proyecto Raíces]]. |
 
 **Proyectos internos / en progreso:** se siguen documentando internamente aunque todavía no formen parte del portfolio público (por ejemplo GXK, Onda, CONCRETO y Bresstore). No se eliminan ni se listan como casos hasta estar preparados. Sus clientes, resultados, métricas y estados no se inventan.
 
