@@ -254,9 +254,7 @@ Los proyectos actuales del ecosistema incluyen:
     
 - GXK;
     
-- Onda;
-    
-- CONCRETO;
+- CONCRETO (concepto histórico de marca de ropa; referencia / muestra, no operativo);
     
 - Bresstore;
     

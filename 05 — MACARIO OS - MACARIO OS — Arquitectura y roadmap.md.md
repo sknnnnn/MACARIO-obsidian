@@ -413,10 +413,6 @@ Proyecto Raíces
     ↓
 solo contexto Raíces
 
-Proyecto Onda
-    ↓
-solo contexto Onda
-
 Proyecto GXK
     ↓
 solo contexto GXK
@@ -795,7 +791,6 @@ El modelo preferido es:
 MACARIO OS
      │
      ├── Proyecto Raíces
-     ├── Proyecto Onda
      ├── Proyecto GXK
      ├── Web-Base
      └── ITS

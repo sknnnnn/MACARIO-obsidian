@@ -877,8 +877,6 @@ No debe, además:
     
 - acoplar Web-Base a Raíces;
     
-- acoplar Web-Base a Onda;
-    
 - acoplar Web-Base a GXK;
     
 - acoplar Web-Base a ITS.

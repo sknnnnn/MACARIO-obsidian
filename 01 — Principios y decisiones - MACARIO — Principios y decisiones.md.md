@@ -228,8 +228,6 @@ No debe asumir:
     
 - GXK;
     
-- Onda;
-    
 - CONCRETO;
     
 - ITS;
