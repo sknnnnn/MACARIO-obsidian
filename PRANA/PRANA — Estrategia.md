@@ -4,6 +4,8 @@
 > Es la fuente de verdad para decisiones de marca, web, contenido, proyectos y adquisición.
 > **No define identidad visual** (colores, tipografías, logo, dirección visual) **ni arquitectura interna**: la identidad visual se documentará por separado y la arquitectura interna vive en los documentos de MACARIO.
 
+> ⚠️ **Jerarquía vigente (2026-10-07):** MACARIO ESTUDIO es el estudio / estructura de trabajo; PRANA es una marca / proyecto / negocio **separado, en evaluación**, que no reemplaza a MACARIO ESTUDIO. Ver [[00 — Arquitectura - MACARIO — Arquitectura general.md|MACARIO — Arquitectura general]] §2. Las partes de este documento que ubican a MACARIO como "sistema interno de PRANA" (p. ej. `PRANA → MACARIO → Web-Base → Proyectos`) quedan **pendientes de revisión** y no deben leerse como vigentes.
+
 **Estado:** definición estratégica vigente al 2026-09-21. Es estrategia y arquitectura de contenido, no diseño ni implementación.
 
 ---

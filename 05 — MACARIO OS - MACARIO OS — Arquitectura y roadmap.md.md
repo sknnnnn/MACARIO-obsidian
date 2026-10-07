@@ -338,7 +338,9 @@ Ejemplo:
 |Linear|tareas|necesidades/trabajo|estado/prioridad|
 |GitHub|código|cambios|commits/PRs|
 |Claude Code|implementación|contexto + tareas|código/reportes|
-|ChatGPT|análisis|información|decisiones/análisis|
+|Claude Design|exploración visual|referencias + contexto|propuestas visuales|
+|Cowork|auditoría / coordinación|todas las fuentes|informes / acciones transversales|
+|ChatGPT (auxiliar)|análisis|información|análisis|
 |Playwright|QA|aplicación|resultados|
 |Sentry|errores|producción|eventos|
 |PostHog|analítica|usuarios|métricas|
@@ -346,7 +348,7 @@ Ejemplo:
 |n8n|automatización|eventos|acciones|
 |Supabase|datos|operaciones|datos/API|
 |Cloudflare|infraestructura|deploy|producción|
-|Figma|diseño|referencias|dirección visual|
+|Figma|Visual Source|diseño aprobado / referencias|fuente visual de verdad|
 
 El Integration Registry debe convertirse posteriormente en una referencia central para entender el ecosistema.
 
@@ -1005,6 +1007,32 @@ Esta fase no debe comenzar hasta que el flujo subyacente esté suficientemente p
 
 ---
 
+# 23.1 Evolución y Project Operating System
+
+Secuencia de evolución registrada (fuente: doc Linear "Roadmap — MACARIO STUDIO + WEB-BASE + RAÍCES" y descripción del proyecto "MACARIO OS — Command Center", migrados el 2026-10-07):
+
+```
+proyectos reales → aprender → estandarizar → validar en más proyectos
+→ identificar patrones repetidos → Project Operating System → MACARIO OS → Agente MACARIO
+```
+
+**Project Operating System:** antes de MACARIO OS se define qué información transversal deberían poder relacionar todos los proyectos: Brief, Goals, References, Brand, Architecture, UX, UI, Content, Data, Development, QA, Deployment, Analytics, Monitoring, Automations y Documentation. La unidad de trabajo debe poder conectar entidades como *issue de Linear ↔ PR de GitHub ↔ diseño de Figma ↔ test de Playwright ↔ error de Sentry ↔ documentación*.
+
+**Multiusuario y modelo de datos inicial:** diseñar desde el inicio para multiusuario:
+
+```
+Users → Organizations → Projects → Integrations → Permissions
+```
+
+Después se complementa con roles, miembros por organización / proyecto, credenciales seguras del lado servidor, audit log, notificaciones, jobs de sincronización y separación entre información interna y futuro acceso de clientes. Roles conceptuales iniciales:
+
+- **Admin:** proyectos, tareas, documentación, integraciones, usuarios y configuración global.
+- **Collaborator:** trabajo operativo, sin administrar usuarios ni configuración global.
+
+**Regla:** no construir MACARIO OS por adelantado. Los proyectos reales deben mostrar qué información y conexiones vale la pena centralizar.
+
+---
+
 # 24. Roadmap actual de Linear
 
 Las iniciativas relacionadas son:
@@ -1080,6 +1108,8 @@ Antes de construir una nueva capa preguntar:
 ---
 
 # 27. Estado actual
+
+> **Estado al 2026-10-07:** proyecto en **pausa** (Linear: Backlog, "retomar después de cerrar GXK12.2 y Proyecto Raíces"). La lista que sigue refleja el estado previo y queda como referencia histórica.
 
 ### Completado
 

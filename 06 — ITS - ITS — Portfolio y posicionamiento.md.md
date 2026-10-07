@@ -100,19 +100,21 @@ La presentación debe transmitir capacidad real, no una lista genérica de servi
 
 # 4. Relación con MACARIO
 
-MACARIO es el sistema general: organiza.
+> **Jerarquía vigente (2026-10-07):** MACARIO ESTUDIO es el estudio / estructura de trabajo; PRANA es una marca / proyecto / negocio separado, en evaluación; ITS es la identidad / proyecto personal de Ignacio. Ninguno es sinónimo de otro. Ver [[00 — Arquitectura - MACARIO — Arquitectura general.md|MACARIO — Arquitectura general]] §2.
 
-PRANA es la marca / negocio hacia afuera: muestra qué puede producir.
+MACARIO (MACARIO ESTUDIO) es el sistema general: organiza.
+
+PRANA es una marca / negocio separado, en evaluación.
 
 ITS es la identidad personal de Ignacio: muestra quién está detrás y cómo piensa.
 
 ```
-MACARIO (organiza) ──produce──▶ PROYECTOS REALES ──▶ PRANA (casos públicos)
-                                       │
-                                       └──────────▶ ITS (perspectiva del autor)
+MACARIO ESTUDIO (organiza) ──produce──▶ PROYECTOS REALES ──▶ ITS (perspectiva del autor)
 
 ITS ──autoría──▶ PRANA
 ```
+
+> ⚠️ Pendiente de decisión: versiones anteriores ubicaban a PRANA como la superficie de "casos públicos" de los proyectos de MACARIO. Mientras PRANA está en evaluación, esa relación queda abierta.
 
 ### ITS y PRANA
 
@@ -302,7 +304,16 @@ No es obligatorio utilizar esta estructura en todos los casos.
 
 ITS debe mantener una identidad propia.
 
-La dirección aprobada actualmente busca una estética:
+> **Estado de la dirección visual (2026-09-17 → 2026-09-22; fuente: proyecto Linear "ITS Portfolio" y doc "MACARIO — Arquitectura maestra"):**
+> - La dirección **minimal dark ya no se considera cerrada**.
+> - `its-home-bright-pop` (implementada en el repositorio el 2026-09-16) fue una **prueba de handoff Figma → Claude Code**, no la identidad definitiva.
+> - La dirección street / graffiti / urbana quedó en investigación (PRO-95, cancelada el 2026-09-28 sin una decisión documentada).
+> - La paleta `#9E1F32 / #FED3A8 / #1B5956` es una **dirección candidata**, no aprobada.
+> - Al 2026-09-22 ITS está en pausa; la dirección visual definitiva se retoma según el flujo visual de MACARIO.
+>
+> La descripción que sigue corresponde a la dirección anterior y se conserva como referencia histórica.
+
+La dirección aprobada en su momento buscaba una estética:
 
 - oscura;
     
@@ -550,7 +561,7 @@ ITS se encuentra definido como:
 
 **Identidad personal, autoría y portfolio de Ignacio; superficie separada de PRANA.**
 
-La dirección visual actual:
+Dirección visual: **abierta** (ver §10). La dirección anterior era:
 
 - minimal dark;
     

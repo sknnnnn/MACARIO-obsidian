@@ -1013,6 +1013,14 @@ Es la **Foundation técnica** dentro del área de Product Development de MACARIO
 
 # 23. Estado actual
 
+> **Estado al 2026-10-07:** **Web-Base 2.0 cerrado** el 2026-09-18 (commit `6a518b4`): Forms, Feedback, Secondary Page, navegación activa, theming y tabla base, con QA de responsive, accesibilidad, funcional, código y alcance. En 2.0 se retiraron del repositorio la carpeta `metodologia/` y la skill metodológica, porque la metodología general vive en este vault; `/nuevo-proyecto` quedó reducido a scaffolding técnico mínimo.
+>
+> ⚠️ **Destino pendiente de definición:** Web-Base se trata como proyecto terminado. No está decidido si se mantiene como Foundation ni qué partes sobreviven dentro de MACARIO ESTUDIO (PRO-154 "Revisar destino de Web-Base"; PRO-123 propone desmantelarlo; ninguna de las dos está decidida). Hasta esa decisión, este documento describe Web-Base como estaba definido.
+>
+> Fuente: descripción del proyecto Linear "Web-Base — Foundation / Starter Kit" y repositorio (2026-10-07).
+
+Descripción de la versión v1 (histórica, previa a 2.0):
+
 WEB-BASE v1 se encuentra implementado en su repositorio principal.
 
 La versión actual incluye:

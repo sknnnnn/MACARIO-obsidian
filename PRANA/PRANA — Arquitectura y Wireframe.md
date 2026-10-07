@@ -435,6 +435,10 @@ ITS — Ignacio Tomás Sconza
 - Header y footer, y comportamiento mobile.
 - Movimiento / animación.
 
+### Estado de implementación (2026-10-07)
+
+Existe una primera web funcional provisional en el repositorio `prana` (privado; último commit 2026-09-23, "apply provisional visual foundation"), desplegable en Vercel según la descripción del proyecto en Linear. Proyecto en pausa en Linear desde el 2026-09-22.
+
 ### Pendiente de implementación
 
 - Mecanismo de preselección en Contacto (p. ej. parámetro en la URL).
