@@ -24,7 +24,9 @@ Proyecto Raíces es un proyecto de turismo de aventura y experiencias (tours, tr
 
 ## Estado general
 
-**Estado:** Activo — **etapa funcional cerrada** (arquitectura, funcionalidad, datos y QA cerrados al 2026-09-28; fuente: proyecto Linear). El foco actual es UX/UI y dirección visual / iterativa, bajo la nueva arquitectura de sistema decidida el 2026-10-05 (ver [[07 — Proyectos/Proyecto Raíces/04 — Arquitectura|Arquitectura]] §6). El seguimiento operativo vive en Linear.
+**Estado:** **Activo — fase de reorganización de código, documentación, arquitectura / modelo de datos y preparación del Admin/CMS**. El proyecto **no está terminado**: el sitio público funciona, pero el trabajo actual es reorganizar el código y la documentación, consolidar la arquitectura y el modelo de datos (System Reset, [[07 — Proyectos/Proyecto Raíces/04 — Arquitectura|Arquitectura]] §6–§7) y preparar el Admin/CMS, que todavía debe implementarse sobre esa base. El seguimiento operativo vive en Linear.
+
+> Estado histórico: el 2026-09-28, Linear registró la "etapa funcional cerrada", con el foco puesto en UX/UI y dirección visual. Ese estado quedó superado.
 **Última actualización:** 2026-10-07 — migración de conocimiento desde Linear (auditoría 2026-10). Las secciones no tocadas en esa migración no se re-verificaron desde 2026-09-12.
 
 ---

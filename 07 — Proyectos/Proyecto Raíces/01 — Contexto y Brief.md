@@ -30,7 +30,7 @@ Proyecto Raíces busca ofrecer experiencias de viaje alejadas del modelo tradici
 
 ## 4. Contexto relevante
 
-Proyecto Raíces funciona también como proyecto de validación de la metodología WEB-BASE dentro de MACARIO (dato registrado en el documento original).
+Proyecto Raíces funcionó también como proyecto de validación de la metodología WEB-BASE dentro de MACARIO (Web-Base hoy está congelado como referencia histórica; sus aprendizajes se absorben en MACARIO) (dato registrado en el documento original).
 
 Preguntas pendientes de responder al cierre del proyecto (registradas en el documento original, sección "Aprendizajes para MACARIO"):
 

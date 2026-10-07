@@ -14,7 +14,7 @@
 
 - **ITS:** autoría personal.
 - **PRANA:** producción externa / marca.
-- **MACARIO:** sistema interno.
+- **MACARIO ESTUDIO:** estudio / estructura de trabajo, independiente de PRANA (jerarquía vigente desde 2026-10-07; PRANA no reemplaza a MACARIO ESTUDIO ni es su canal público definitivo).
 
 ---
 
@@ -71,7 +71,7 @@ Ningún proyecto tiene hoy resultados cuantitativos documentados.
   - Web publicada desde principios de agosto de 2026. [I]
   - El feedback disponible es positivo. [I]
   - No hay métricas de negocio, tráfico, conversiones ni reservas. [I]
-- **Estado:** activo. [I]
+- **Estado:** activo — reorganización técnica / documental y preparación del Admin/CMS (actualizado 2026-10-07). [R]
 - **Evidencia disponible:**
   - Sitio publicado: https://proyectoraices.com.ar [R]
   - Documentación del proyecto en `07 — Proyectos/Proyecto Raíces/`. [R]
@@ -102,7 +102,7 @@ Ningún proyecto tiene hoy resultados cuantitativos documentados.
 - **Decisiones / solución:** flujo de compra por WhatsApp, porque le resulta más sencillo al vendedor. [I]
 - **Audit técnico:** hay un audit técnico del proyecto, pero **no está en este vault**. Antes de incorporar datos suyos, marcarlos como [A] y separarlos de lo documentado en el repositorio del proyecto.
 - **Resultado:** el dueño vio el proyecto y le gusta. No hay resultados comerciales documentados. [I]
-- **Estado:** activo; en preview, todavía sin publicar. [I]
+- **Estado:** proyecto real pendiente, de menor prioridad; en preview, todavía sin publicar (actualizado 2026-10-07). [I]
 - **Evidencia disponible:** preview del proyecto (link pendiente de registrar).
 - **Permiso:** hay permiso para mostrarlo públicamente como proyecto de PRANA. [I]
 - **Qué podemos afirmar públicamente:**

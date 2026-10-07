@@ -1,5 +1,7 @@
 # WEB-BASE — Metodología y estándares
 
+> ⚠️ **Web-Base — HISTÓRICO / FUNDACIONAL / CONGELADO (decisión 2026-10-07).** Web-Base ya no es una línea activa de desarrollo ni un sistema obligatorio. MACARIO ESTUDIO absorbió sus aprendizajes útiles. El repositorio y esta documentación se conservan como referencia histórica. Lo que sigue describe Web-Base tal como estaba definido; no es metodología vigente. La metodología vigente está en [[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]].
+
 > WEB-BASE es una Foundation de MACARIO, dentro de Product Development: la base técnica reutilizable desde la que nace cada proyecto de website o web app, e implementa el ciclo general de MACARIO para diseñarlo, construirlo, validarlo y cerrarlo.
 
 ---
@@ -8,7 +10,7 @@
 
 **WEB-BASE es una Foundation de MACARIO: la base técnica reutilizable para websites y web apps, dentro del área de Product Development.**
 
-Su función es convertir una necesidad o idea en un proyecto digital terminado mediante un proceso repetible, verificable y adaptable. El ciclo general (las etapas y sus criterios) se define a nivel MACARIO en [[MACARIO — Flujo de trabajo]]; WEB-BASE es el punto de partida técnico reutilizable que lo implementa, con mayor granularidad, para websites y web apps.
+Su función es convertir una necesidad o idea en un proyecto digital terminado mediante un proceso repetible, verificable y adaptable. El ciclo general (las etapas y sus criterios) se define a nivel MACARIO en [[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]]; WEB-BASE es el punto de partida técnico reutilizable que lo implementa, con mayor granularidad, para websites y web apps.
 
 WEB-BASE no es:
 
@@ -37,7 +39,7 @@ WEB-BASE entra en juego en el momento en que una idea ya pasó (o está pasando,
 
 |WEB-BASE|Detalle|
 |---|---|
-|**Recibe**|una necesidad o idea con contexto suficiente para iniciar Intake (ver [[MACARIO — Flujo de trabajo]] §3), y la decisión de que se materializa como website o web app|
+|**Recibe**|una necesidad o idea con contexto suficiente para iniciar Intake (ver [[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]] §3), y la decisión de que se materializa como website o web app|
 |**Entrega**|un proyecto propio (repositorio independiente, base técnica implementada, documentación de cierre) que atravesó las doce etapas hasta Close, listo para pasar a Analytics/Operations|
 
 ## 1.3 Relación con un proyecto concreto
@@ -94,7 +96,7 @@ El objetivo es reducir:
 
 # 3. Las 12 etapas
 
-WEB-BASE traduce el ciclo general de MACARIO ([[MACARIO — Flujo de trabajo]]) en doce etapas específicas para websites y web apps:
+WEB-BASE traduce el ciclo general de MACARIO ([[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]]) en doce etapas específicas para websites y web apps:
 
 |Ciclo general MACARIO|Etapas WEB-BASE|
 |---|---|
@@ -107,7 +109,7 @@ WEB-BASE traduce el ciclo general de MACARIO ([[MACARIO — Flujo de trabajo]]) 
 |Development|Implementation|
 |QA|QA, Audit|
 |Release|Deploy|
-|Analytics / Operations|(fuera del alcance actual de WEB-BASE; ver [[MACARIO OS — Arquitectura y roadmap]])|
+|Analytics / Operations|(fuera del alcance actual de WEB-BASE; ver [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap.md|MACARIO OS — Arquitectura y roadmap]])|
 |Iteration|Documentation, Close alimentan la siguiente Idea|
 
 Las doce etapas:
@@ -1013,7 +1015,7 @@ Es la **Foundation técnica** dentro del área de Product Development de MACARIO
 
 > **Estado al 2026-10-07:** **Web-Base 2.0 cerrado** el 2026-09-18 (commit `6a518b4`): Forms, Feedback, Secondary Page, navegación activa, theming y tabla base, con QA de responsive, accesibilidad, funcional, código y alcance. En 2.0 se retiraron del repositorio la carpeta `metodologia/` y la skill metodológica, porque la metodología general vive en este vault; `/nuevo-proyecto` quedó reducido a scaffolding técnico mínimo.
 >
-> ⚠️ **Destino pendiente de definición:** Web-Base se trata como proyecto terminado. No está decidido si se mantiene como Foundation ni qué partes sobreviven dentro de MACARIO ESTUDIO (PRO-154 "Revisar destino de Web-Base"; PRO-123 propone desmantelarlo; ninguna de las dos está decidida). Hasta esa decisión, este documento describe Web-Base como estaba definido.
+> **Destino decidido (2026-10-07):** histórico / fundacional / congelado. MACARIO absorbe sus aprendizajes útiles; no se elimina el repositorio ni la documentación. Queda pendiente reflejar la decisión en Linear (PRO-154 y PRO-123).
 >
 > Fuente: descripción del proyecto Linear "Web-Base — Foundation / Starter Kit" y repositorio (2026-10-07).
 

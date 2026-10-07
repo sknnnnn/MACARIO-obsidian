@@ -90,7 +90,9 @@ No debemos convertir una herramienta en una copia de otra.
 
 ChatGPT, Gemini y Grok pueden usarse cuando corresponda, pero **no forman parte de las capas fundamentales** y no deben convertirse en dependencias estructurales del sistema.
 
-### WEB-BASE
+### WEB-BASE (histórico)
+
+> Web-Base está **congelado como referencia histórica / fundacional** (decisión 2026-10-07). Los principios de esta nota que lo nombran describen cómo se lo construyó; su aprendizaje útil quedó absorbido por MACARIO.
 
 **Foundation — base técnica reutilizable para websites y web apps, dentro de Product Development.** No es la única Foundation posible: MACARIO puede tener otras (Mobile-Base a futuro, otras según necesidad).
 
@@ -216,7 +218,9 @@ La conexión debe producirse mediante metodología, herramientas y referencias.
 
 ---
 
-# 5. WEB-BASE debe ser reutilizable
+# 5. WEB-BASE debe ser reutilizable (principio histórico)
+
+> Web-Base está congelado (2026-10-07). Este principio se conserva como criterio para cualquier base técnica futura y como registro de cómo se construyó Web-Base.
 
 WEB-BASE es una Foundation dentro de Product Development, no MACARIO completo. No debe absorber responsabilidades de Research, Visual/Assets, UX/UI o gestión que pertenecen a MACARIO en general.
 
@@ -799,7 +803,7 @@ Estas decisiones quedan abiertas hasta que exista una necesidad concreta:
 
 - superficie pública del trabajo de MACARIO ESTUDIO (ver §17);
     
-- destino de Web-Base (terminado; qué partes sobreviven dentro de MACARIO ESTUDIO).
+- si el concepto de *Foundation* se mantiene para bases técnicas futuras.
     
 
 Estas decisiones deben resolverse cuando aporten valor real, no por adelantado.
@@ -809,5 +813,6 @@ Estas decisiones deben resolverse cuando aporten valor real, no por adelantado.
 - **2026-10-07 — Figma obligatorio u opcional:** Figma es la fuente visual de verdad cuando existe una definición visual que preservar, explorar, aprobar o implementar sistemáticamente; los proyectos y cambios simples no necesitan pasar por Figma (§15).
 - **2026-10-07 — Fuente de verdad Obsidian vs Linear:** ver §3, "Reglas confirmadas".
 - **2026-10-07 — Jerarquía de identidad:** MACARIO ESTUDIO / PRANA / ITS, ver Arquitectura general §2.
+- **2026-10-07 — Web-Base:** histórico / fundacional / congelado; MACARIO absorbió sus aprendizajes útiles. No se elimina el repositorio ni su documentación.
 - **2026-10-07 — Repositorios:** *private by default, public only by explicit decision* (ver §14).
 

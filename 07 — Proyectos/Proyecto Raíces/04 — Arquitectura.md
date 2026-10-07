@@ -52,6 +52,9 @@ Patagonia no funciona como destino navegable independiente. Se usa como referenc
 
 **Destinos concretos reales confirmados en el código** (`assets/js/destinos-data.js`), 12 en total:
 
+> Nota 2026-10-07: `destinos-data.js` se eliminó el 2026-09-30 al migrar a Supabase. La lista siguiente refleja ese archivo y hay que re-verificarla contra Supabase.
+
+
 - **Argentina:** Bariloche, Ushuaia, San Martín de los Andes, Villa Pehuenia, Norte Neuquino (contenido real cargado); Norte Argentino (en preparación).
 - **Perú:** tarjeta general "Perú" (contenido real); Choquequirao, Paracas, Huacachina, Arequipa, Lima (en preparación — ver detalle de estado por destino en [[07 — Proyectos/Proyecto Raíces/06 — Contenido]]).
 

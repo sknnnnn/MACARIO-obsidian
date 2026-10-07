@@ -37,7 +37,7 @@ Busca tener:
 |Grok / Gemini|auxiliar|IA complementaria / segunda opinión cuando corresponda|Research|
 |Banana|generación/edición de imágenes con IA|Visual / Assets|
 |Artifact / Preview|revisión visual|Visual/Assets, UX/UI|
-|Web-Base|Foundation — base técnica reutilizable|Product Development|
+|Web-Base|histórico / fundacional / congelado|referencia|
 |Supabase|backend / datos|Product Development|
 |Playwright|QA automatizado|QA|
 |Sentry|monitoreo de errores|Analytics / Operations|
@@ -45,13 +45,13 @@ Busca tener:
 |Resend|email transaccional|Analytics / Operations|
 |n8n|automatizaciones|Analytics / Operations|
 |Cloudflare|infraestructura / deploy|Analytics / Operations (Release)|
-|MACARIO OS|orquestación|coordinación (ver [[MACARIO OS — Arquitectura y roadmap]])|
+|MACARIO OS|orquestación|coordinación (ver [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap.md|MACARIO OS — Arquitectura y roadmap]])|
 
 ---
 
 # 3. Capas fundamentales
 
-Obsidian, Linear, GitHub y Figma son **fuentes de verdad**, cada una para un tipo de información. Claude Design, Claude Code y Cowork son **motores**: trabajan sobre esas fuentes y no las reemplazan. Preview / QA valida el producto real. Ver [[MACARIO — Arquitectura general]] para la relación entre capas y áreas.
+Obsidian, Linear, GitHub y Figma son **fuentes de verdad**, cada una para un tipo de información. Claude Design, Claude Code y Cowork son **motores**: trabajan sobre esas fuentes y no las reemplazan. Preview / QA valida el producto real. Ver [[00 — Arquitectura - MACARIO — Arquitectura general.md|MACARIO — Arquitectura general]] para la relación entre capas y áreas.
 
 ## 3.1 Obsidian — Conocimiento
 
@@ -147,7 +147,7 @@ Cowork no reemplaza ninguna herramienta ni es fuente de verdad: lee y coordina l
 
 # 4. Herramientas especializadas por área
 
-Estas herramientas sirven principalmente a un área concreta del sistema (ver [[MACARIO — Arquitectura general]]) y son **opt-in**: se incorporan cuando el proyecto lo justifica, no por defecto.
+Estas herramientas sirven principalmente a un área concreta del sistema (ver [[00 — Arquitectura - MACARIO — Arquitectura general.md|MACARIO — Arquitectura general]]) y son **opt-in**: se incorporan cuando el proyecto lo justifica, no por defecto.
 
 ## 4.1 Research
 
@@ -189,7 +189,9 @@ Claude Design (exploración y prototipo), Figma (diseño aprobado) y Preview (ve
 
 ## 4.4 Product Development
 
-### Web-Base (Foundation)
+### Web-Base (Foundation — histórico, congelado)
+
+> ⚠️ **Web-Base — HISTÓRICO / FUNDACIONAL / CONGELADO (decisión 2026-10-07).** Web-Base ya no es una línea activa de desarrollo ni un sistema obligatorio. MACARIO ESTUDIO absorbió sus aprendizajes útiles. El repositorio y esta documentación se conservan como referencia histórica.
 
 Base técnica reutilizable de MACARIO para websites y web apps.
 
@@ -197,7 +199,7 @@ No es una herramienta externa: es el punto de partida técnico desde el que nace
 
 > **¿Desde qué base partimos?**
 
-Ver [[WEB-BASE — Metodología y estándares]].
+Ver [[04 — Web-Base - WEB-BASE — Metodología y estándares.md|WEB-BASE — Metodología y estándares]].
 
 ### Supabase
 
@@ -279,7 +281,7 @@ MACARIO OS no es una herramienta más: es la capa que conecta a todas las anteri
 
 > **¿Cómo hacemos que todo el sistema funcione coordinadamente?**
 
-Su arquitectura y roadmap completos viven en [[MACARIO OS — Arquitectura y roadmap]].
+Su arquitectura y roadmap completos viven en [[05 — MACARIO OS - MACARIO OS — Arquitectura y roadmap.md|MACARIO OS — Arquitectura y roadmap]].
 
 ---
 
@@ -336,7 +338,6 @@ La arquitectura ideal busca enlaces, no duplicaciones.
 
 ## Integraciones / herramientas disponibles según necesidad
 
-- Web-Base (destino pendiente de definición)
 - Playwright
 - Sentry
 - Resend
@@ -383,7 +384,7 @@ Claude Code
 Preview / QA
 ```
 
-Cuando el proyecto tiene una definición visual que preservar, explorar, aprobar o implementar sistemáticamente, se suman **Figma** (Visual Source) y **Claude Design** (exploración). Cowork se suma para auditoría y coordinación transversal. Web-Base u otra Foundation se usa cuando corresponda (destino de Web-Base pendiente de definición).
+Cuando el proyecto tiene una definición visual que preservar, explorar, aprobar o implementar sistemáticamente, se suman **Figma** (Visual Source) y **Claude Design** (exploración). Cowork se suma para auditoría y coordinación transversal. Web-Base ya no forma parte de la base: está congelado como referencia histórica.
 
 ### Según necesidad
 
@@ -407,7 +408,7 @@ La metodología no debe obligar a activar herramientas que el proyecto no necesi
 
 El stack no está cerrado para siempre. Puede cambiar. Una herramienta puede incorporarse, reemplazarse, eliminarse, quedar experimental o convertirse en estándar.
 
-Cada cambio importante debe documentarse en [[MACARIO — Principios y decisiones]] y reflejarse aquí.
+Cada cambio importante debe documentarse en [[01 — Principios y decisiones - MACARIO — Principios y decisiones.md|MACARIO — Principios y decisiones]] y reflejarse aquí.
 
 ---
 

@@ -18,6 +18,10 @@ Cada entrada nueva se agrega arriba, con fecha. No se borran entradas anteriores
 
 > Las entradas del 2026-09-07 al 2026-10-05 se migraron desde Linear el 2026-10-07 (doc "Roadmap — MACARIO STUDIO + WEB-BASE + RAÍCES", doc "PRO-40 — Contrato técnico maestro de experiencias" y la descripción del proyecto "Rediseño y lanzamiento Web"). Linear conserva los originales como referencia.
 
+### Fecha: 2026-10-07 — Estado del proyecto
+
+**Decisión:** Proyecto Raíces sigue **activo**. Su fase actual es reorganización de código, documentación, arquitectura / modelo de datos y preparación del Admin/CMS. Que el sitio público funcione no significa que el proyecto esté terminado.
+
 ### Pendiente de decisión — Destino de `comentarios.html`
 
 **Estado:** ⚠️ requiere decisión de Ignacio.
@@ -44,7 +48,9 @@ Cada entrada nueva se agrega arriba, con fecha. No se borran entradas anteriores
 
 Revisión de seguridad realizada, con deuda pendiente documentada. Ver [[07 — Proyectos/Proyecto Raíces/09 — QA|QA]] §4. (Fuente: PRO-153.)
 
-### Fecha: 2026-09-28 — Hito: etapa funcional cerrada
+### Fecha: 2026-09-28 — Hito: etapa funcional cerrada (estado histórico)
+
+> Estado vigente (2026-10-07): el proyecto sigue **activo**, en reorganización de código, documentación, arquitectura / modelo de datos y preparación del Admin/CMS. Esta entrada registra el estado del 2026-09-28.
 
 Arquitectura, funcionalidad, datos y QA se dan por cerrados. El proyecto sigue abierto para el cierre de UX/UI y dirección visual, trabajados con referencias dentro de Figma. La etapa funcional ya estaba mergeada a `main`.
 
@@ -69,7 +75,7 @@ Arquitectura, funcionalidad, datos y QA se dan por cerrados. El proyecto sigue a
 ### Fecha: 2026-09-08 — Secuencia de incorporación de herramientas
 
 **Decisión registrada en su momento:** Playwright y Sentry se implementan primero en Raíces y luego se generalizan en Web-Base; Archify se valida primero en Web-Base; PostHog y n8n no se incorporan sin una necesidad concreta; Resend se incorpora cuando los formularios reales estén definidos.
-**Estado al 2026-10-07:** Playwright y Resend están en uso; Sentry está integrado pero sin DSN; la generalización a Web-Base queda sujeta al destino de Web-Base, que está pendiente de definición.
+**Estado al 2026-10-07:** Playwright y Resend están en uso; Sentry está integrado pero sin DSN; la generalización a Web-Base ya no aplica: Web-Base quedó congelado como referencia histórica (2026-10-07).
 
 ### Fecha: 2026-09-07 — Supabase como fuente central de datos
 

@@ -1,9 +1,9 @@
 # [Nombre del proyecto] — Contexto y Brief
 
-> Salida de Discovery: contexto estable del proyecto — de dónde viene, para quién es, qué problema resuelve y qué se sabe con certeza antes de pasar a Product Definition. Ver el proceso de Discovery en [[MACARIO — Flujo de trabajo]].
+> Salida de Discovery: contexto estable del proyecto — de dónde viene, para quién es, qué problema resuelve y qué se sabe con certeza antes de pasar a Product Definition. Ver el proceso de Discovery en [[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]].
 > No incluye tareas ni estado operativo — eso vive en Linear.
 > Completar solo lo que aplique al proyecto: Discovery pregunta lo necesario, no todo siempre.
-> Antes de marcar algo como faltante, cruzar las fuentes del proyecto que correspondan (repo, README, PROJECT-CONTEXT o equivalente, documentación de marca). Si el dato existe ahí pero no acá, es `Confirmado en otra fuente`, no `Faltante` — ver los estados de Discovery en [[MACARIO — Flujo de trabajo]].
+> Antes de marcar algo como faltante, cruzar las fuentes del proyecto que correspondan (repo, README, PROJECT-CONTEXT o equivalente, documentación de marca). Si el dato existe ahí pero no acá, es `Confirmado en otra fuente`, no `Faltante` — ver los estados de Discovery en [[02 — Metodología - MACARIO — Flujo de trabajo.md|MACARIO — Flujo de trabajo]].
 > Regla transversal: una fuente por tipo de información — enlazar, no copiar. Ver [[00 — Índice]].
 
 ---

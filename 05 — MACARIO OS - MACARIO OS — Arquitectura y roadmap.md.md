@@ -144,7 +144,7 @@ MACARIO OS conoce cómo conectarlos.
                                 Cloudflare
 ```
 
-Las cinco capas transversales de MACARIO (Obsidian, Linear, Figma, GitHub, Claude Code — ver [[MACARIO — Arquitectura general]]) son las que MACARIO OS coordina de forma constante. El resto de las herramientas (Playwright, Sentry, PostHog, etc.) se conectan según la etapa y el proyecto.
+Las cinco capas transversales de MACARIO (Obsidian, Linear, Figma, GitHub, Claude Code — ver [[00 — Arquitectura - MACARIO — Arquitectura general.md|MACARIO — Arquitectura general]]) son las que MACARIO OS coordina de forma constante. El resto de las herramientas (Playwright, Sentry, PostHog, etc.) se conectan según la etapa y el proyecto.
 
 ---
 
@@ -417,9 +417,9 @@ Proyecto GXK
     ↓
 solo contexto GXK
 
-Web-Base
+Web-Base (histórico, congelado)
     ↓
-solo metodología
+solo referencia
 
 ITS
     ↓
@@ -792,7 +792,7 @@ MACARIO OS
      │
      ├── Proyecto Raíces
      ├── Proyecto GXK
-     ├── Web-Base
+     ├── Web-Base (histórico)
      └── ITS
 ```
 
@@ -1114,7 +1114,7 @@ Antes de construir una nueva capa preguntar:
     
 - relación MACARIO / WEB-BASE / PRANA / ITS / proyectos;
     
-- WEB-BASE v1 (Foundation) implementando la metodología;
+- WEB-BASE v1 (Foundation) implementando la metodología — hoy histórico / congelado;
     
 - Linear como sistema operativo;
     

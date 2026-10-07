@@ -13,7 +13,7 @@ E-commerce para un tercero que vende camisetas de fútbol (clubes, selecciones, 
 
 ## Estado general
 
-**Estado:** Pausado (Linear, 2026-09-29: "No avanzar hasta cerrar GXK12.2 y Proyecto Raíces").
+**Estado:** proyecto real **pendiente, de menor prioridad** (en Linear figura en pausa desde el 2026-09-29).
 Al 2026-09-22 la base técnica y el flujo funcional estaban avanzados; la etapa visual (Hero, sistema visual y assets reales de camisetas) quedó pendiente y se retoma según el flujo visual de MACARIO.
 
 > ⚠️ Contradicción abierta: [[PRANA/PRANA — Proyectos y Casos|PRANA — Proyectos y Casos]] lo describe como "activo; en preview, todavía sin publicar", mientras Linear lo marca en pausa. Registrada en la auditoría 2026-10.

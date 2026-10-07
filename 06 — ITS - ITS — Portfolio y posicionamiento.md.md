@@ -136,7 +136,7 @@ Portfolios separados, con perspectivas distintas:
 
 Pueden mostrar algunos de los mismos proyectos, pero no deben ser dos copias del mismo portfolio.
 
-Internamente, MACARIO coordina WEB-BASE y MACARIO OS para producir esos proyectos:
+Internamente, MACARIO coordinaba WEB-BASE (hoy histórico y congelado) y MACARIO OS (en pausa) para producir esos proyectos:
 
 ```
 MACARIO
@@ -435,6 +435,8 @@ La negociación ocurre fuera del portfolio.
 ---
 
 # 14. ITS y Web-Base
+
+> Web-Base está congelado como referencia histórica (2026-10-07). Esta sección describe la relación tal como estaba definida.
 
 WEB-BASE define cómo se construyen proyectos.
 
