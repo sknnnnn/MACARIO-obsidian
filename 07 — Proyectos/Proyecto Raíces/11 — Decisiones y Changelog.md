@@ -36,11 +36,28 @@ Cada entrada nueva se agrega arriba, con fecha. No se borran entradas anteriores
 
 **Decisión:** Raíces (junto con GXK12:2) adopta "simple por defecto → potente cuando hace falta". El motion se define como orgánico, editorial y cinematográfico. Ver [[07 — Proyectos/Proyecto Raíces/05 — UX-UI|UX-UI]] §7–§8.
 
+### Fecha: 2026-09-30 — Decisiones de contenido previas al rediseño
+
+**Decisión:** quitar el contenido de Covid / mascarilla; no mostrar Choquequirao como "Próximamente" cuando tiene una experiencia cargada; reemplazar las fotos solo a mano y con imágenes reales (las generadas, únicamente como preview). Ver [[07 — Proyectos/Proyecto Raíces/06 — Contenido|Contenido]] §1. (Fuente: PRO-115.)
+
+### Fecha: 2026-09-30 — Hito: revisión de seguridad
+
+Revisión de seguridad realizada, con deuda pendiente documentada. Ver [[07 — Proyectos/Proyecto Raíces/09 — QA|QA]] §4. (Fuente: PRO-153.)
+
 ### Fecha: 2026-09-28 — Hito: etapa funcional cerrada
 
 Arquitectura, funcionalidad, datos y QA se dan por cerrados. El proyecto sigue abierto para el cierre de UX/UI y dirección visual, trabajados con referencias dentro de Figma. La etapa funcional ya estaba mergeada a `main`.
 
 > Nota 2026-10-07: el cierre de QA convive con una contradicción abierta sobre Sentry ([[07 — Proyectos/Proyecto Raíces/10 — Deploy y Monitoring|Deploy y Monitoring]] §4).
+
+### Fecha: 2026-09 — CTA principal "Reserva ahora" y retiro de Guías
+
+**Decisión:** el CTA principal vigente es "Reserva ahora", con el código y `PROJECT-CONTEXT.md` sincronizados (PRO-85; commits `6c3fc16` / `9857f89`). `guias.html` y `guias-data.js` se retiraron como legacy (PRO-86). Las fechas exactas no quedaron registradas en las issues.
+
+### Fecha: 2026-09-10 — Salidas programadas como fuente del calendario
+
+**Decisión:** las fechas se modelan como salidas concretas en `experiencia_salidas`, que es la única fuente del Calendario de viajes, y el calendario es solo para Travesías. Ver [[07 — Proyectos/Proyecto Raíces/07 — Datos e Integraciones|Datos e Integraciones]] §1. (Fuente: PRO-42.)
+**Alternativas descartadas:** temporadas genéricas; usar `detalle.fechas` como fuente.
 
 ### Fecha: 2026-09-10 — Contrato técnico y de presentación de experiencias
 

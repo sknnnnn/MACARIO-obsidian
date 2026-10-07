@@ -16,7 +16,11 @@ Contrato del modelo de experiencias (definido el 2026-09-10, PRO-40):
 - **`experiencia_imagenes`:** galería independiente (`experiencia_id`, `url`, `orden`, `foco`, `alt`). La imagen principal puede seguir en `experiencias.imagen`.
 - **`actividades` + `experiencia_actividades`:** actividades normalizadas, relación many-to-many. Se conservan para filtros y automatizaciones.
 - **`paquete_experiencias`:** composición de paquetes en relación separada; no se inventan relaciones.
-- **Fechas y temporadas:** no se amplía `detalle` con un calendario arbitrario; se modelan como estructura reutilizable (temporada, fecha / rango, disponibilidad, vigencia, excepciones). Dirección vigente: `Experience → Occurrence / Date → Calendar` (ver [[07 — Proyectos/Proyecto Raíces/04 — Arquitectura|Arquitectura]] §7).
+- **Salidas programadas — `experiencia_salidas`** (decisión e implementación del 2026-09-10, PRO-42): el modelo se centra en **salidas concretas**, no en temporadas genéricas: `experiencia → muchas salidas → calendario`. Campos: `experiencia_id`, `fecha_inicio`, `fecha_fin`, `estado` (`programada` / `a_confirmar` / `completa` / `cancelada`), `tipo_salida`, `nota`, `activo`, `orden`. Tiene RLS con lectura pública solo de las salidas activas. Es la forma concreta de la dirección `Experience → Occurrence / Date → Calendar` ([[07 — Proyectos/Proyecto Raíces/04 — Arquitectura|Arquitectura]] §7).
+  - Una experiencia sin salida registrada **no está incompleta**: simplemente no tiene fecha programada.
+  - El Calendario de viajes se alimenta **exclusivamente** de `experiencia_salidas`. No se usa `detalle.fechas` como fuente, no se duplican fechas en HTML/JS y no se inventan fechas.
+  - El calendario es **solo para Travesías**. Los Tours quedan fuera por su reserva flexible y los Paquetes, por ahora.
+  - Transición: todavía pueden existir fechas históricas en `detalle.fechas` / `fechasNota`, pero la fuente de verdad de las salidas es `experiencia_salidas`.
 
 Conclusión de arquitectura (auditoría del esquema, 2026-09-10): no hace falta convertir todos los atributos en columnas; la estructura es núcleo común + `detalle` JSONB + tablas relacionales para imágenes, actividades y paquetes.
 

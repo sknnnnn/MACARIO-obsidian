@@ -33,13 +33,13 @@ La referencia general busca una estética de turismo de aventura con personalida
 Confirmado por `PROJECT-CONTEXT.md` del repositorio y por el código implementado.
 
 ### CTA
-- CTA principal implementado en la navegación: **"Reservá ahora"** (enlaza a Contacto).
+- **CTA principal vigente: "Reserva ahora"** (enlaza a Contacto). Es la decisión vigente; el código y `PROJECT-CONTEXT.md` están sincronizados (commits `6c3fc16` y `9857f89`; fuente: PRO-85).
 - En la home, CTAs del hero: "Ver experiencias" y "Reservá por WhatsApp".
 - En el detalle de Tours y Travesías: un único botón de CTA ("Consultar este Tour"/"Consultar esta Travesía") que enlaza directo a WhatsApp con el nombre de la experiencia — se eliminaron botones duplicados como "Consultar disponibilidad"/"Solicitar información" (confirmado por commits del repositorio).
 - Las consultas/reservas derivan a WhatsApp y, según el contexto, a Google Forms u otros mecanismos (`PROJECT-CONTEXT.md`).
 - El sitio no funciona como e-commerce (regla explícita de `PROJECT-CONTEXT.md`).
 
-**Nota de discrepancia:** `PROJECT-CONTEXT.md` describe el CTA principal como "Consultar" (con "Reservar ahora" como secundario). El código implementado usa "Reservá ahora" como CTA principal de navegación y "Consultar este Tour/esta Travesía" en el detalle. Se documenta acá el comportamiento real del código, confirmado por inspección directa; queda pendiente de decisión si `PROJECT-CONTEXT.md` debe actualizarse para reflejarlo.
+> Resuelto (2026-10-07): la discrepancia que se registraba acá entre `PROJECT-CONTEXT.md` ("Consultar") y el código ("Reserva ahora") quedó resuelta en PRO-85 a favor de **"Reserva ahora"**. "Consultar este Tour / esta Travesía" sigue siendo el CTA del detalle de cada experiencia.
 
 ### Reglas fotográficas
 Confirmado por `PROJECT-CONTEXT.md`:
@@ -63,6 +63,8 @@ Confirmado por `PROJECT-CONTEXT.md` y aplicado en el código:
 - Priorizar responsive y comportamiento natural del contenido antes que truncar texto agresivamente.
 
 Implementado: en `catalogo.html`, todas las cards de experiencias tienen el mismo alto exacto independientemente del destino, tipo o imagen.
+
+**Regla de sistema para las imágenes de cards** (PRO-91): las cards de Experiencias, Destinos, Tours, Travesías y Paquetes usan un **contenedor de imagen compartido con aspect ratio consistente**, sin deformar la imagen y respetando el foco de la fotografía cuando es posible. La inconsistencia se resuelve en el sistema compartido, **no imagen por imagen con ajustes individuales**. Se valida con fotos horizontales, verticales y cuadradas reales, en desktop, tablet y mobile.
 
 ---
 

@@ -94,7 +94,7 @@ Esto permite que Destinos funcione como puerta editorial hacia determinadas expe
 
 Confirmado por inspección directa del código.
 
-**Navegación principal (header):** Experiencias, Destinos, Nosotros, Galería, Contacto. CTA fijo "Reservá ahora" → Contacto.
+**Navegación principal (header):** Experiencias, Destinos, Nosotros, Galería, Contacto. CTA fijo "Reserva ahora" → Contacto (CTA principal vigente, PRO-85).
 
 **Páginas secundarias** (enlazadas desde el pie de página en todo el sitio): Tours, Travesías, Paquetes, Comentarios — cada una existe como página propia además de como filtro dentro de Experiencias.
 
@@ -102,7 +102,7 @@ Confirmado por inspección directa del código.
 - `catalogo.html?destino=slug` — plantilla única de página de destino, usada por los 12 destinos.
 - `propuesta.html` — plantilla de ficha de detalle de experiencia.
 
-**Página huérfana detectada:** `guias.html` existe en el repositorio pero no está enlazada desde ninguna otra página del sitio. Su función no está documentada ni en Obsidian ni en `PROJECT-CONTEXT.md` — pendiente de confirmar con Ignacio si sigue vigente.
+**Guías — retirada:** `guias.html` era una página legacy sin enlaces. Se retiró del repositorio junto con `assets/js/guias-data.js` y su CSS exclusivo, tras confirmar que no tenía dependencias vigentes. `PROJECT-CONTEXT.md` documenta la retirada. **Hoy no existe una sección pública de Guías.** (Fuente: PRO-86, migrada el 2026-10-07.)
 
 ---
 

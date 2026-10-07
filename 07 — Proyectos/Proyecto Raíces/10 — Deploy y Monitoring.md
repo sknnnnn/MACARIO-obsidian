@@ -32,6 +32,10 @@ Pendiente de documentar. No hay herramientas de analítica específicas de Proye
 
 ---
 
+## 3.1 Seguridad
+
+Estado de la última revisión de seguridad (2026-09-30) y deuda pendiente: ver [[07 — Proyectos/Proyecto Raíces/09 — QA|QA]] §4.
+
 ## 4. Monitoreo de errores
 
 **Sentry** — integración presente en el código (`assets/js/sentry-init.js`, commit `2800b63`, 2026-09-08).
