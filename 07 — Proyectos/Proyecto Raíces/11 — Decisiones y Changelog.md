@@ -16,6 +16,17 @@ Cada entrada nueva se agrega arriba, con fecha. No se borran entradas anteriores
 
 ## Decisiones
 
+### Fecha: 2026-10-14 — Estado del Admin: E0 validada, E1 sin autorizar
+
+**Estado:** E0 del Admin está validada funcionalmente: Inicio con tareas pendientes, editor de Experiencias por pasos y Traducciones ES/EN lado a lado. Admin Auth v4 fue aplicada en producción y verificada.
+
+**Referencia de código:** repositorio [proyecto-raices](https://github.com/sknnnnn/proyecto-raices), rama `feature/admin`, commit `d26219a` (`docs(admin): estado de E0 y próximos pasos (E1 sin autorizar)`). La especificación funcional vigente está en `docs/admin/especificacion-funcional.md`, §9.
+
+**Próxima fase propuesta — E1:** investigar y planificar la gestión de destinos, actividades, fechas de salida, equipo, contacto y contenido del sitio, galerías y paquetes. E1 está pendiente de investigación y planificación; **no está autorizada para implementar ni para aplicar migraciones remotas**. Antes de considerar la migración de permisos v5, probarla en PostgreSQL 17 local con verificador de seguridad y reversión comprobada. No desplegar ni modificar datos de producción sin autorización.
+
+**Decisión de proceso:** postergar la revisión visual integral hasta completar las funcionalidades. La experiencia de prueba que permanece en producción solo se eliminará con autorización explícita.
+
+
 > Las entradas del 2026-09-07 al 2026-10-05 se migraron desde Linear el 2026-10-07 (doc "Roadmap — MACARIO STUDIO + WEB-BASE + RAÍCES", doc "PRO-40 — Contrato técnico maestro de experiencias" y la descripción del proyecto "Rediseño y lanzamiento Web"). Linear conserva los originales como referencia.
 
 ### Fecha: 2026-10-07 — Estado del proyecto
