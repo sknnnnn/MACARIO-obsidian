@@ -116,3 +116,18 @@ Fuente §7–§8: doc Linear [Roadmap](https://linear.app/proyecto-raices/docume
 - [[07 — Proyectos/Proyecto Raíces/00 — Índice]]
 - [[07 — Proyectos/Proyecto Raíces/03 — Identidad y Referencias]]
 - [[07 — Proyectos/Proyecto Raíces/04 — Arquitectura]]
+
+
+## 9. Dirección visual del Admin — seguimiento 2026-10-15
+
+Existe una preview privada de Claude Design con 15 pantallas del Admin. La exploración se pausó al alcanzar el 95 % del límite diario y debe retomarse desde la preview existente, sin reiniciar la exploración.
+
+Preview: https://claude.ai/artifact/FcUCMgXa7z3dQzMNKBa5Hn
+
+Antes de implementar, validar:
+- estados vacíos, carga y error;
+- responsive y accesibilidad;
+- formularios, selector de fotos y estados de guardado;
+- consistencia visual entre módulos y patrones compartidos.
+
+La preview es una referencia de diseño, no una implementación aprobada ni un permiso de despliegue. La implementación debe preservar la lógica funcional existente y hacerse en `feature/admin`; luego se valida en Preview. Merge a `main` y despliegue requieren autorización específica.
