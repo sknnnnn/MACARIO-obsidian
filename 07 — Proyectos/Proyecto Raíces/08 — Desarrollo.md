@@ -68,3 +68,13 @@ Fuente: doc Linear [Roadmap](https://linear.app/proyecto-raices/document/roadmap
 - [[07 — Proyectos/Proyecto Raíces/00 — Índice]]
 - [[07 — Proyectos/Proyecto Raíces/07 — Datos e Integraciones]]
 - [[07 — Proyectos/Proyecto Raíces/12 — Enlaces (Linear y GitHub)]]
+
+
+## Seguimiento Admin E1 — 2026-10-15
+
+- Estado operativo registrado: E1 implementada y migración v5 aplicada/verificada en producción. Seguimiento: [PRO-160](https://linear.app/proyecto-raices/issue/PRO-160/raices-admin-de-contenidos-e0-validada-e1-en-planificacion), aún In Progress.
+- La preview de rediseño existe en Claude Design (15 pantallas): https://claude.ai/artifact/FcUCMgXa7z3dQzMNKBa5Hn. Retomar desde ella; no iniciar una exploración nueva.
+- Implementación visual pendiente: trabajar en `feature/admin`, conservar Supabase/DataAPI, modelo de datos, autenticación, permisos y lógica E1 ya existentes; no reemplazar el sistema funcional por una maqueta.
+- El calendario público existente está en `calendario.html`. Verificar su fuente de datos y definir la integración con las fechas administradas en `experiencia_salidas`; no afirmar sincronización hasta comprobarla. No crear un calendario paralelo; Tours quedan fuera.
+- La selección de una experiencia destacada para Home queda diferida. El campo `destacada` actual no debe interpretarse como control de la portada.
+- No ejecutar cambios nuevos en datos/migraciones de producción, merge a `main` ni despliegues sin autorización explícita.
