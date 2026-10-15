@@ -42,3 +42,11 @@ Nota: al momento de esta auditoría, el checkout local del repositorio tenía ac
 ## Documentos relacionados
 
 - [[07 — Proyectos/Proyecto Raíces/00 — Índice]]
+
+
+## Seguimiento operativo — 2026-10-15
+
+- **Admin E1 / estado actual:** [Linear PRO-160](https://linear.app/proyecto-raices/issue/PRO-160/raices-admin-de-contenidos-e0-validada-e1-en-planificacion) — In Progress.
+- **Especificación funcional del Admin:** [GitHub](https://github.com/sknnnnn/proyecto-raices/blob/feature/admin/docs/admin/especificacion-funcional.md).
+- **Guía operativa Admin v5:** [GitHub](https://github.com/sknnnnn/proyecto-raices/blob/feature/admin/docs/operacion/admin-v5-guia-operativa.md).
+- **Preview privada del rediseño (15 pantallas):** https://claude.ai/artifact/FcUCMgXa7z3dQzMNKBa5Hn. Retomar desde esta preview; no reiniciar exploración.
