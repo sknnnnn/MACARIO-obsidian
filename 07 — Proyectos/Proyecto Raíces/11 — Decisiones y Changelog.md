@@ -16,6 +16,21 @@ Cada entrada nueva se agrega arriba, con fecha. No se borran entradas anteriores
 
 ## Decisiones
 
+### Fecha: 2026-10-15 — Seguimiento Admin E1, rediseño y calendario
+
+**Estado:** E1 implementada; migración v5 aplicada y verificada en producción según el registro operativo. La issue [PRO-160](https://linear.app/proyecto-raices/issue/PRO-160/raices-admin-de-contenidos-e0-validada-e1-en-planificacion) continúa In Progress.
+
+**Dirección visual:** existe una preview privada de Claude Design con 15 pantallas: https://claude.ai/artifact/FcUCMgXa7z3dQzMNKBa5Hn. Se pausó el refinamiento por límite diario. Retomar desde esa preview, sin reiniciar la exploración. Antes de implementar, validar estados vacíos/carga/error, responsive, accesibilidad, formularios, selector de fotos y guardado.
+
+**Decisiones y límites:**
+- Implementar el rediseño sobre `feature/admin`, preservando la lógica existente; validar en Preview.
+- No hay autorización implícita para merge a `main`, despliegues, migraciones ni nuevas escrituras en producción.
+- Verificar la integración de las fechas de `experiencia_salidas` con el calendario público existente (`calendario.html`). No crear un calendario paralelo; Tours quedan excluidos.
+- La opción de seleccionar una experiencia destacada para Home se difiere a otra etapa. El campo `destacada` actual no implica selección de portada.
+- Siguen pendientes las escrituras reales de los módulos E1, las pruebas Deno de Edge Functions, la resolución autorizada de la experiencia E0 de prueba en producción y las decisiones D7–D18 que correspondan.
+
+---
+
 ### Fecha: 2026-10-14 — Estado del Admin: E0 validada, E1 sin autorizar
 
 **Estado:** E0 del Admin está validada funcionalmente: Inicio con tareas pendientes, editor de Experiencias por pasos y Traducciones ES/EN lado a lado. Admin Auth v4 fue aplicada en producción y verificada.
