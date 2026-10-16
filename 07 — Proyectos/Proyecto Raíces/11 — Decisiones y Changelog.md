@@ -16,6 +16,25 @@ Cada entrada nueva se agrega arriba, con fecha. No se borran entradas anteriores
 
 ## Decisiones
 
+### Fecha: 2026-10-16 — Aprobación del rediseño visual del Admin y orden de trabajo
+
+**Decisión:** se aprueba como base de trabajo el rediseño visual del Admin de Proyecto Raíces en la preview de Claude Design, versión 18, con 15 pantallas: https://claude.ai/artifact/FcUCMgXa7z3dQzMNKBa5Hn.
+
+**Alcance de la aprobación:** queda aprobada la dirección visual propuesta, no la implementación ni su publicación. La preview sigue siendo el punto de partida; no se reinicia la exploración ni se amplía el trabajo pausado.
+
+**Orden acordado:**
+1. Retomar el refinamiento visual pendiente sobre las mismas 15 pantallas de la preview existente.
+2. Revisar y aprobar la preview refinada, anotando los aspectos que requieran validación durante la implementación.
+3. Auditar la administrabilidad del sistema actual: metadata, imágenes, tarjeta (card), vista rápida, detalle, fechas, recorrido y campos innecesarios.
+4. Diseñar la propuesta de Admin espejo del frontend editable, combinando edición visual contextual con controles específicos para la gestión operativa.
+5. Implementar y validar los cambios antes de autorizar cualquier publicación.
+
+**Límites:** por ahora no se modifican el repositorio de aplicación, Supabase ni producción. La propuesta de Admin espejo es posterior al cierre del refinamiento visual y la auditoría. No hay autorización implícita para desplegar, publicar o aplicar cambios remotos.
+
+**Seguimiento operativo:** issue [PRO-160](https://linear.app/proyecto-raices/issue/PRO-160/raices-admin-de-contenidos-e0-validada-e1-en-planificacion).
+
+---
+
 ### Fecha: 2026-10-15 — Seguimiento Admin E1, rediseño y calendario
 
 **Estado:** E1 implementada; migración v5 aplicada y verificada en producción según el registro operativo. La issue [PRO-160](https://linear.app/proyecto-raices/issue/PRO-160/raices-admin-de-contenidos-e0-validada-e1-en-planificacion) continúa In Progress.
