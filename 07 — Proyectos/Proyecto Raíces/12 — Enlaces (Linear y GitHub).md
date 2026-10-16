@@ -44,6 +44,15 @@ Nota: al momento de esta auditoría, el checkout local del repositorio tenía ac
 - [[07 — Proyectos/Proyecto Raíces/00 — Índice]]
 
 
+## Seguimiento operativo — 2026-10-16
+
+- **Linear PRO-160:** [estado y continuidad](https://linear.app/proyecto-raices/issue/PRO-160/raices-admin-de-contenidos-e1-v5-aplicada-y-verificada-falta-publicar).
+- **Nota técnica de cierre:** [GitHub — cierre-sesion-2026-10-16.md](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/admin/cierre-sesion-2026-10-16.md).
+- **Rama de trabajo:** [claude/proyecto-raices-visual-language-q04g3y](https://github.com/sknnnnn/proyecto-raices/tree/claude/proyecto-raices-visual-language-q04g3y).
+- **Siguiente paso:** auditar D15 y el inventario §11.7; luego diagnosticar D19 (Home). Sin merge, publicación, despliegue o migraciones remotas sin autorización explícita.
+
+---
+
 ## Seguimiento operativo — 2026-10-15
 
 - **Admin E1 / estado actual:** [Linear PRO-160](https://linear.app/proyecto-raices/issue/PRO-160/raices-admin-de-contenidos-e0-validada-e1-en-planificacion) — In Progress.
