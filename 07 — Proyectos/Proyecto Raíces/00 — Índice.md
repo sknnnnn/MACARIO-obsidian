@@ -27,19 +27,19 @@ Proyecto Raíces es un proyecto de turismo de aventura y experiencias (tours, tr
 **Estado:** **Activo — fase de reorganización de código, documentación, arquitectura / modelo de datos y preparación del Admin/CMS**. El proyecto **no está terminado**: el sitio público funciona, pero el trabajo actual es reorganizar el código y la documentación, consolidar la arquitectura y el modelo de datos (System Reset, [[07 — Proyectos/Proyecto Raíces/04 — Arquitectura|Arquitectura]] §6–§7) y preparar el Admin/CMS, que todavía debe implementarse sobre esa base. El seguimiento operativo vive en Linear.
 
 > Estado histórico: el 2026-09-28, Linear registró la "etapa funcional cerrada", con el foco puesto en UX/UI y dirección visual. Ese estado quedó superado.
-**Última actualización:** 2026-10-15 — estado del Admin E1, dirección visual en exploración y próximos pasos operativos.
+**Última actualización:** 2026-10-16 — rediseño visual del Admin aprobado como base; refinamiento y auditoría de administrabilidad pendientes.
 
-### Estado operativo — 2026-10-15
+### Estado operativo — 2026-10-16
 
-- Admin E1: migración v5 aplicada y verificada en producción según el registro operativo. La issue **PRO-160** sigue **In Progress**.
-- Dirección visual: existe una preview privada de Claude Design con 15 pantallas. El refinamiento quedó pausado por límite diario; continuar desde la preview existente, sin reiniciar la exploración.
-- Próximo trabajo: validar la preview y después implementar en `feature/admin`, preservando la lógica existente. No hay autorización implícita para merge a `main` ni para desplegar.
+- Admin E1: la issue **PRO-160** continúa **In Progress**. La migración v5 figura aplicada y verificada en producción según el registro operativo.
+- **Dirección visual:** aprobado como base el rediseño de Claude Design, preview versión 18, con 15 pantallas: https://claude.ai/artifact/FcUCMgXa7z3dQzMNKBa5Hn. La aprobación no autoriza implementación ni publicación.
+- **Orden de trabajo:** (1) retomar el refinamiento sobre la misma preview, sin empezar de cero; (2) revisar y aprobar la preview refinada e identificar puntos a validar en código; (3) auditar la administrabilidad actual —metadata, imágenes, card, vista rápida, detalle, fechas, recorrido y campos innecesarios—; (4) diseñar el Admin espejo del frontend editable, combinando edición contextual y controles operativos; (5) implementar y validar antes de autorizar cualquier publicación.
+- **Límites:** no ampliar el trabajo pausado ni modificar ahora el repositorio de aplicación, Supabase o producción. El Admin espejo es posterior al refinamiento y a la auditoría. No hay autorización implícita para merge a `main`, despliegues ni escrituras remotas.
 - Fechas de Travesías: comprobar cómo conectar las fechas gestionadas desde Admin con el calendario público existente. No crear un calendario paralelo; Tours quedan excluidos.
 - Experiencia destacada en Home: diferida para otra etapa.
-- Pendientes de cierre: escrituras reales de E1, pruebas Deno de Edge Functions, resolver la experiencia E0 de prueba en producción con autorización y continuar decisiones D7–D18.
+- Otros pendientes operativos: escrituras reales de E1, pruebas Deno de Edge Functions, resolver la experiencia E0 de prueba en producción con autorización y continuar decisiones D7–D18.
 
 Seguimiento operativo: [PRO-160](https://linear.app/proyecto-raices/issue/PRO-160/raices-admin-de-contenidos-e0-validada-e1-en-planificacion).
-
 ---
 
 ## Documentación del proyecto
