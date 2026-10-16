@@ -16,6 +16,24 @@ Cada entrada nueva se agrega arriba, con fecha. No se borran entradas anteriores
 
 ## Decisiones
 
+### Fecha: 2026-10-16 — Cierre del refinamiento visual y continuidad funcional
+
+**Hito:** se cierra el tramo de refinamiento visual del Admin en la rama de trabajo `claude/proyecto-raices-visual-language-q04g3y`. La rama está publicada en GitHub; el registro técnico está en [la nota de cierre](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/admin/cierre-sesion-2026-10-16.md), commit documental `87ef3ff`.
+
+**Validación registrada:** Playwright 176/176 y `node --check` sin errores; responsive revisado en 390, 768, 1024 y 1280 px. D21 se resolvió respetando `CLAUDE.md §9`. Siguen pendientes las verificaciones con Supabase Auth/PostgREST reales, escrituras reales y lectores de pantalla.
+
+**Decisiones de continuidad:**
+1. Auditar D15 (seis claves `site_config` editables en Admin que no se usan en frontend), sin implementar todavía.
+2. Clasificar el inventario §11.7 por contenido ya editable/desconectado, nueva estructura necesaria, elemento que debe permanecer en código o decisión pendiente.
+3. Diagnosticar D19 usando el lienzo existente de Claude y la Home real, y revisar la propuesta antes de implementar.
+
+**Definición de Home para D19:** Portada (la foto ya es editable; verificar el resto), Momentos para vivir distinto (carrusel de 10 experiencias), Principales destinos, Tours, Travesías, Paquetes, Quiénes somos, Comentarios y comunidad, Cierre. Tours, Travesías y Paquetes son cards editoriales de acceso a sus secciones, no listados. Actualmente no existe “experiencia destacada” en Home; no se considera requisito.
+
+**Límites:** no se hizo merge a `feature/admin`, `main` o `master`; no se publicó ni desplegó a producción ni se ejecutaron migraciones remotas. No autorizar esos pasos implícitamente.
+
+---
+
+
 ### Fecha: 2026-10-16 — Aprobación del rediseño visual del Admin y orden de trabajo
 
 **Decisión:** se aprueba como base de trabajo el rediseño visual del Admin de Proyecto Raíces en la preview de Claude Design, versión 18, con 15 pantallas: https://claude.ai/artifact/FcUCMgXa7z3dQzMNKBa5Hn.
