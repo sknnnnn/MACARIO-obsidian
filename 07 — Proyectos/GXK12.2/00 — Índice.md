@@ -36,6 +36,17 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 - **Spacing & Layout Foundations V0.1:** aprobada y vigente como base estructural.
 - **Composición GXK:** CONTROL → TENSIÓN → RUPTURA → CONTROL.
 
+## Estado del Admin GXK — 2026-10-17
+
+- **Loop 1:** auditoría y propuesta visual disponibles como base; no equivalen a aprobación final.
+- **Estado:** pausado mientras Claude termina el trabajo pendiente de Proyecto Raíces.
+- **Próximo paso:** Loop 2: refinar la propuesta existente en Claude Design y consolidar las pantallas aprobables en Figma.
+- **Fuente visual definitiva:** Figma, una vez actualizados y revisados los frames. No se autoriza implementación hasta una aprobación explícita.
+- **Decisiones a validar:** navegación («Home y tienda» en Contenido; «Analíticas» en Operación), interfaz en español, aclaración de `is_featured`, aviso aproximado de posibles imágenes duplicadas, temas claro/oscuro, accesibilidad y revisión del riesgo de listados extensos.
+- **Fuera de alcance del Loop 2:** cambios de código/datos, migraciones, reglas comerciales, rutas/contratos y paginación.
+- **Registro permanente:** [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog]].
+- **Criterios UX:** [[07 — Proyectos/GXK12.2/10 — GXK12.2 — UX e interacción|UX e interacción]].
+
 ## Documentación del proyecto
 
 - [[07 — Proyectos/GXK12.2/01 — GXK12.2 — Requerimientos|Requerimientos]]
