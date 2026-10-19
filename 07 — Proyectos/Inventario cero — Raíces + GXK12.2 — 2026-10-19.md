@@ -172,3 +172,38 @@ Estos resultados describen relaciones de commits, no sustituyen la verificación
 - También hay previews READY de chore/gxk-local-staging-safe, feat/home-v04-cierre y feat/home-v04-approved. La eliminación de ramas no borra necesariamente los deployments ya creados; revisar URLs y referencias antes de limpiar.
 - Se detectó un deployment ERROR del 30/09 asociado a la rama v0/redesign-hero-text-04e7898e, que no aparece entre las ramas actuales. Es **candidato a limpieza en Vercel**, pero no se eliminó: no hay una acción de eliminación de deployments disponible en la conexión y falta verificar si alguien conserva la URL.
 - Los dominios configurados se preservan; no se modificó configuración de proyecto, aliases, dominios ni deployments.
+
+## Cierre de la pasada directa — 2026-10-19 (segunda revisión)
+
+### Revalidación de ramas en GitHub
+
+Consulta directa de ramas actuales:
+
+- **Raíces:** `main`, `master`, `dev`, `feature/admin`, `feature/i18n-es-en`, `reorg/base-tecnica`, `chore/technical-hardening`, `claude/proyecto-raices-visual-language-q04g3y`, `claude/proyecto-raices-content-functionality` y ramas de documentación.
+- **GXK:** `master`, `fix/home-v04-visual`, `feat/home-v04-approved`, `feat/home-v04-cierre`, `feat/home-v04-preview-safe`, `chore/gxk-local-staging-safe`.
+- **Obsidian:** `master`, ramas Claude históricas y ramas `docs/*` del barrido.
+
+No se eliminó ninguna rama. La conexión GitHub disponible permite consultar ramas y mover refs, pero no expone una acción de borrado de refs. No usar `update_ref` para simular un borrado. Además, no tengo acceso al inventario de worktrees ni referencias locales de tu PC, por lo que no puedo confirmar que una rama candidata no esté activa localmente.
+
+**Candidatas que siguen pendientes de borrado manual/verificación local:**
+- GXK: `feat/home-v04-approved`, `feat/home-v04-cierre`.
+- Raíces: `reorg/base-tecnica`, `feature/i18n-es-en`; `master` solo tras verificar que ningún deploy o referencia externa dependa de ella.
+- Obsidian: `claude/obsidian-content-cleanup-20261007` y ramas de PR ya integrados, únicamente tras comprobar referencias locales.
+
+**Preservar:** GXK `feat/home-v04-preview-safe`, `chore/gxk-local-staging-safe`, `fix/home-v04-visual`; Raíces `dev`, `chore/technical-hardening`, `feature/admin`, `claude/proyecto-raices-visual-language-q04g3y` y `claude/proyecto-raices-content-functionality` hasta revisar sus cambios únicos; Obsidian `master` y ramas con cambios únicos no reconciliados.
+
+### Vercel — revalidación
+
+La consulta actual sigue mostrando 36 deployments de `gx-k12-2`. Los previews READY asociados a `fix/home-v04-visual` y `feat/home-v04-preview-safe` continúan siendo útiles para QA. El deployment ERROR antiguo asociado a `v0/redesign-hero-text-04e7898e` sigue siendo candidato, no una eliminación autorizada: la conexión disponible no expone una acción de borrar deployments y no se verificó si alguien depende de su URL. No se modificó ningún deployment, alias, dominio ni configuración.
+
+### Límites de la pasada
+
+- La conexión no permite inspeccionar worktrees locales, por lo que las verificaciones locales quedan pendientes hasta usar la PC personal.
+- Figma no devolvió un inventario completo del archivo y no hay una lista completa de artefactos de Claude Design disponible en las herramientas conectadas. No se borró ni archivó nada de esas fuentes.
+- Supabase permanece en lectura: no se alteraron datos, migraciones, Storage ni ramas. El bloqueo de respaldo/restauración de Raíces sigue vigente; no aplicar v6–v11.
+- No se borraron drafts ni experiencias de Raíces. E0 sigue sin identificar y los cinco borradores quedan preservados.
+- La limpieza de documentación y conciliación de estados de Linear ya aplicada se conserva. PRO-161 sigue In Progress hasta resolver las eliminaciones que requieren acceso local o una acción de borrado no disponible, y hasta verificar los pendientes de código/sitio.
+
+### Resultado
+
+La documentación obsoleta o duplicada que podía consolidarse de forma segura ya se consolidó en las pasadas previas. Esta segunda revisión **no autoriza a declarar el barrido 100% terminado**: deja explícitos los pocos grupos que no se pueden borrar responsablemente desde las conexiones actuales. No se hicieron cambios destructivos en producción, ramas, deployments, Supabase, Figma ni Claude Design.
