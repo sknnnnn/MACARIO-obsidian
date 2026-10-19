@@ -14,6 +14,20 @@ Cada entrada nueva se agrega arriba, con fecha. No se borran entradas anteriores
 
 ---
 
+## Hito: 2026-10-19 — Cierre técnico preparado y pausa antes de producción
+
+**Estado:** se completa la preparación técnica previa a producción, pero se pausa la ejecución hasta la próxima sesión. No se aplicaron migraciones remotas, no se modificaron datos, no se borraron archivos ni registros, no hubo deploy ni merge a `main`.
+
+**Fuente técnica única:** [cierre técnico previo a producción](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/operacion/cierre-tecnico-produccion-2026-10-19.md). El detalle de hashes, validadores SQL, riesgos, inventario de imágenes y decisiones pendientes permanece allí para evitar duplicación.
+
+**Bloqueo para avanzar:** no está confirmada una copia restaurable de Supabase ni una restauración viable. Antes de autorizar v6–v11 hay que verificar Database → Backups o PITR, revisar el plan técnico y aplicar las migraciones de forma escalonada, una por una. Storage necesita recuperación aparte de la base de datos.
+
+**Estado relevante:** 436/436 tests Playwright Chromium en la última corrida completa; v6–v11 preparadas, ninguna aplicada; carga de imágenes Admin implementada localmente, depende de v10 y falta prueba real. Las notas de continuidad están enlazadas desde [[07 — Proyectos/Proyecto Raíces/00 — Índice]] y [[07 — Proyectos/Proyecto Raíces/13 — Continuidad previa a producción — 2026-10-19]].
+
+**Pendientes que no se resuelven hoy:** elegir una de las dos experiencias destacadas de Cusco; decidir D3/D9 y D14; modelo de experiencias internas de paquetes; autorización para unificar los dos grupos de referencias duplicadas y para limpiar borradores; obtener material real para las experiencias sin imagen/galería y completar alt; verificar entrega de correo, accesibilidad y otros navegadores.
+
+---
+
 ## Decisiones
 
 ### Fecha: 2026-10-16 — Cierre del refinamiento visual y continuidad funcional
