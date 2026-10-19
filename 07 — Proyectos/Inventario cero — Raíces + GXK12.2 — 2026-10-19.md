@@ -37,6 +37,8 @@ Una cosa vieja no es necesariamente obsoleta. Antes de borrar un archivo, rama, 
 | [PRO-129](https://linear.app/proyecto-raices/issue/PRO-129/gxk122-stock-automatizar-liberacion-de-reservas-vencidas) | Mantener en backlog | Automatización pendiente; no es duplicada del trabajo visual del Admin. |
 | [PRO-124](https://linear.app/proyecto-raices/issue/PRO-124/gxk122-mercado-pago-completar-configuracion-y-pruebas-reales) | Mantener en backlog | Depende de credenciales reales y pruebas autorizadas. |
 | [PRO-127](https://linear.app/proyecto-raices/issue/PRO-127/gxk122-shipping-agregar-peso-y-dimensiones-al-catalogo) | Mantener en backlog | Datos logísticos pendientes; no cerrar sin evidencia. |
+| [PRO-125](https://linear.app/proyecto-raices/issue/PRO-125/gxk122-shipping-completar-integracion-andreani) | Reabierta a Backlog por descripción/estado contradictorios | El adapter existe, pero credenciales/endpoints de Andreani no están verificados; no declarar integración real completada. Relacionada con PRO-128. |
+| [PRO-126](https://linear.app/proyecto-raices/issue/PRO-126/gxk122-shipping-completar-integracion-correo-argentino) | Reabierta a Backlog por descripción/estado contradictorios | Faltan credenciales, valores de contrato y validación real de Correo Argentino; relacionada con PRO-128. |
 
 ### Proyecto Raíces
 
@@ -155,3 +157,8 @@ El PR #5 contiene contexto útil, pero no debe mergearse íntegro porque el índ
 - Las ramas docs/* de PRs ya mergeados son candidatas a limpieza, pero la conexión actual no ofrece una acción de eliminación de referencias; se dejan identificadas para la limpieza final manual.
 
 Estos resultados describen relaciones de commits, no sustituyen la verificación de referencias locales, deploys externos o worktrees. Ninguna rama fue eliminada en este barrido.
+## Segunda pasada de Linear — contradicciones en tareas Done
+
+- **PRO-125 y PRO-126:** estaban en Done, pero su descripción decía que la integración real con Andreani/Correo Argentino seguía pendiente. La documentación técnica de GXK confirma que hay adapters, pero faltan credenciales/endpoints/valores de contrato verificados. Se reclasificaron a Backlog, se reescribió el alcance real y se relacionaron con PRO-128.
+- **PRO-138 y PRO-139:** estaban en Done, pero conservaban una descripción que empezaba con «Pendiente». Se conservaron como Done y se actualizó el texto para que el alcance original quede como referencia histórica, enlazado al cierre de PRO-144.
+- Este cambio evita tanto el falso cierre de integraciones externas como la falsa reapertura de módulos ya cerrados. No se cambió código ni configuración de proveedores.
