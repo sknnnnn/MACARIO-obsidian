@@ -17,6 +17,8 @@ actualizado: 2026-10-19
 
 ## Documentación técnica vigente
 
+- [[07 — Proyectos/Inventario cero — Raíces + GXK12.2 — 2026-10-19]] — clasificación transversal y candidatos de limpieza.
+
 - [Procedimiento de respaldo manual de Supabase](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/operacion/respaldo-manual-supabase.md)
 - [Cierre técnico de producción — 19/10/2026](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/operacion/cierre-tecnico-produccion-2026-10-19.md)
 - [Linear PRO-172 — Respaldar producción y probar restauración antes de migraciones v6–v11](https://linear.app/proyecto-raices/issue/PRO-172/raices-respaldar-produccion-y-probar-restauracion-antes-de-migraciones)
