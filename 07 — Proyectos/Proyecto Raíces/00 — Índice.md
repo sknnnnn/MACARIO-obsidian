@@ -1,3 +1,17 @@
+## Estado operativo actualizado — cierre técnico previo a producción (2026-10-19)
+
+**Estado actual: PAUSADO hasta la próxima sesión.** La nota histórica del 2026-10-16 que sigue más abajo ya no representa el estado operativo actual; para detalles, consultar las fuentes técnicas enlazadas aquí.
+
+- [Cierre técnico completo en el repositorio de Proyecto Raíces](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/operacion/cierre-tecnico-produccion-2026-10-19.md).
+- [[07 — Proyectos/Proyecto Raíces/13 — Continuidad previa a producción — 2026-10-19]] — resumen y orden para retomar.
+- [Continuidad operativa en el repositorio](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/operacion/continuidad-cierre-tecnico-2026-10-19.md).
+
+**Bloqueo principal:** no se confirmó un backup restaurable de Supabase. No aplicar v6–v11 hasta verificar respaldo/recuperación y revisar el plan técnico. Ninguna migración se aplicó; no se modificaron datos de producción, no hubo borrados, deploy ni merge a `main`.
+
+**Siguiente sesión:** (1) verificar Supabase → Database → Backups o PITR; (2) revisar el procedimiento §3.5 del cierre técnico; (3) solo con respaldo confirmado, autorizar y ejecutar migraciones por tramos, una por una; (4) después de v10 y con autorización específica, probar una subida real desde Admin. Los pendientes de contenido y decisiones se detallan en el documento técnico.
+
+---
+
 # Proyecto Raíces — Índice
 
 > Nota de entrada del proyecto dentro de MACARIO.
