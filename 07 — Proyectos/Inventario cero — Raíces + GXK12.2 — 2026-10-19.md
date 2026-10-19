@@ -136,7 +136,7 @@ El PR #5 contiene contexto útil, pero no debe mergearse íntegro porque el índ
 ### GXK12:2
 
 - fix/home-v04-visual está 18 commits adelante de master y no está detrás. Es la rama más completa entre las comparadas.
-- Las ramas feat/home-v04-approved (6 commits adelante), feat/home-v04-cierre (8) y feat/home-v04-preview-safe (11) forman una cadena de antecesores: approved → cierre (+2) → preview-safe (+3) → fix/home-v04-visual (+7). No muestran commits exclusivos frente a la rama sucesora; **candidatas a borrar después de comprobar referencias locales y documentación**.
+- Las ramas feat/home-v04-approved (6 commits adelante), feat/home-v04-cierre (8) y feat/home-v04-preview-safe (11) forman una cadena de antecesores: approved → cierre (+2) → preview-safe (+3) → fix/home-v04-visual (+7). Las ramas approved y cierre no muestran commits exclusivos frente a la rama sucesora y son **candidatas a borrar después de comprobar referencias locales**. Aunque preview-safe también es antecesora, se **conserva provisionalmente** hasta verificar que ningún deployment/QA depende de esa ruta segura.
 - chore/gxk-local-staging-safe diverge de preview-safe: tiene 2 commits exclusivos y queda 3 commits detrás, con docs/staging-local.md y supabase/seed.sql. **Conservar** hasta revisar y rescatar esos elementos.
 - No hay PRs abiertos en el repositorio GXK. PR #1 está mergeado; PR #2 está cerrado sin merge.
 
