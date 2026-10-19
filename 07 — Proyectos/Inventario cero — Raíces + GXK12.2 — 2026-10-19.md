@@ -22,7 +22,7 @@ Una cosa vieja no es necesariamente obsoleta. Antes de borrar un archivo, rama, 
 1. **Linear PRO-158 — Home V0.4:** pasó de In Progress a Backlog; se documentó la pausa hasta cerrar el Admin Lote 1 y se añadió dependencia de PRO-173. No se canceló.
 2. **Linear PRO-159 — Experiencia & Motion de Home:** se mantiene en Backlog, con pausa explícita y dependencia de PRO-173.
 3. **Linear PRO-161:** pasó a In Progress para reflejar que el inventario se está auditando.
-4. **Documentación:** se prepara la consolidación de dos notas de continuidad de Raíces y se corrige el criterio UX de GXK que proponía avisos de imágenes duplicadas sin soporte técnico.
+4. **Documentación:** la rama de limpieza consolida dos notas de continuidad de Raíces, corrige el estado del índice y agrega este inventario. La revisión de los criterios de duplicados se registra aquí porque la propuesta sin soporte técnico solo aparece en el PR #5 aún no integrado.
 
 ## Linear — clasificación inicial
 
@@ -116,3 +116,16 @@ Ramas detectadas: main, master, dev, feature/admin, feature/i18n-es-en, ramas cl
 - 2026-10-19: PRO-158 y PRO-159 pausadas y bloqueadas por PRO-173; PRO-161 pasa a In Progress.
 - 2026-10-19: se identifica el solapamiento de notas de continuidad de Raíces y la propuesta de duplicados sin soporte técnico en GXK.
 - 2026-10-19: barrido inicial de GitHub, Linear, Obsidian, Supabase, Vercel y fuentes visuales; los candidatos no verificados permanecen intactos.
+## Decisiones recuperadas del PR #5 de Obsidian — estado que debe conservarse
+
+El PR #5 contiene contexto útil, pero no debe mergearse íntegro porque el índice y algunas propuestas quedaron superados. Al cerrarlo, conservar explícitamente:
+
+- Mantener la Biblia GXK y la Dirección Visual aprobada como fuentes superiores; no convertir una propuesta de Admin en regla aprobada.
+- El Admin debe conservar la estructura y navegación existentes salvo decisión explícita; los cambios de organización visual no deben cambiar comportamiento ni contratos.
+- Mantener la interfaz del Admin en español, conservando nombres propios GXK.
+- Conservar is_featured y explicar que actualmente no tiene efecto en el storefront; no conectarlo al hero ni eliminarlo por intuición.
+- No implementar paginación en el Loop 2 salvo que la auditoría demuestre un bloqueo real y se apruebe el cambio.
+- Mantener Universo, Aventuras G&K y Eventos diferenciados.
+- Claude Design refina; Figma consolida las pantallas aprobadas como fuente visual; implementación y QA vienen después de aprobación explícita.
+- **Descartar la propuesta de alertas por posibles duplicados por nombre/tamaño:** el modelo actual no conserva nombre original ni hash/comparación visual. No se debe describir una detección que no existe.
+- Los tokens, tipografía, acentos naranjas, reglas de confirmación reforzada y nuevos patrones del Admin permanecen pendientes hasta revisión del artefacto v4; no se aprueban por estar escritos en el PR antiguo.
