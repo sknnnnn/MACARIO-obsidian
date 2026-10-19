@@ -163,3 +163,12 @@ Estos resultados describen relaciones de commits, no sustituyen la verificación
 - **PRO-125 y PRO-126:** estaban en Done, pero su descripción decía que la integración real con Andreani/Correo Argentino seguía pendiente. La documentación técnica de GXK confirma que hay adapters, pero faltan credenciales/endpoints/valores de contrato verificados. Se reclasificaron a Backlog, se reescribió el alcance real y se relacionaron con PRO-128.
 - **PRO-138 y PRO-139:** estaban en Done, pero conservaban una descripción que empezaba con «Pendiente». Se conservaron como Done y se actualizó el texto para que el alcance original quede como referencia histórica, enlazado al cierre de PRO-144.
 - Este cambio evita tanto el falso cierre de integraciones externas como la falsa reapertura de módulos ya cerrados. No se cambió código ni configuración de proveedores.
+## Vercel GXK — deployments revisados en modo lectura (2026-10-19)
+
+- El proyecto gx-k12-2 muestra **36 deployments**: 8 con target production y 28 preview/staging.
+- Los 8 production apuntan a la rama master; el más reciente listado es del 06/10/2026 en el SHA 950c566. Dos deployments antiguos aparecen como rollback candidates. **No borrar ni limpiar los deployments de producción** como parte de este barrido.
+- El staging visible más reciente revisado usa fix/home-v04-visual, SHA 761b2e6. La rama fix/home-v04-visual tiene previews READY hasta el SHA 6be7d02 (13/10); esto no implica que se hayan desplegado a producción.
+- feat/home-v04-preview-safe tiene tres previews READY (11/10); por eso se conserva la rama hasta confirmar que no haya enlaces de QA o dependencias en uso.
+- También hay previews READY de chore/gxk-local-staging-safe, feat/home-v04-cierre y feat/home-v04-approved. La eliminación de ramas no borra necesariamente los deployments ya creados; revisar URLs y referencias antes de limpiar.
+- Se detectó un deployment ERROR del 30/09 asociado a la rama v0/redesign-hero-text-04e7898e, que no aparece entre las ramas actuales. Es **candidato a limpieza en Vercel**, pero no se eliminó: no hay una acción de eliminación de deployments disponible en la conexión y falta verificar si alguien conserva la URL.
+- Los dominios configurados se preservan; no se modificó configuración de proyecto, aliases, dominios ni deployments.
