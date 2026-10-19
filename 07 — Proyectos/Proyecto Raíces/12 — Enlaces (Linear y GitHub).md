@@ -44,6 +44,17 @@ Nota: al momento de esta auditoría, el checkout local del repositorio tenía ac
 - [[07 — Proyectos/Proyecto Raíces/00 — Índice]]
 
 
+## Seguimiento operativo — 2026-10-19
+
+- **Cierre técnico previo a producción:** [documento completo en GitHub](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/operacion/cierre-tecnico-produccion-2026-10-19.md).
+- **Continuidad para la próxima sesión:** [plan y bloqueos](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/operacion/continuidad-cierre-tecnico-2026-10-19.md).
+- **Estado:** pausado. No se aplicaron migraciones, no hubo cambios de datos, borrados, deploy ni merge a `main`.
+- **Bloqueo principal:** backup/restauración de Supabase sin confirmar. No avanzar con v6–v11 hasta verificarlo.
+- **Próximo paso:** revisar Supabase → Database → Backups/PITR; después revisar el procedimiento técnico y autorizar por tramos, una migración por vez. Prueba real de Storage solo después de v10 y con autorización específica.
+- **Linear:** PRO-160 y PRO-166 comentadas con la evidencia del cierre; ninguna issue se cerró.
+
+---
+
 ## Seguimiento operativo — 2026-10-16
 
 - **Linear PRO-160:** [estado y continuidad](https://linear.app/proyecto-raices/issue/PRO-160/raices-admin-de-contenidos-e1-v5-aplicada-y-verificada-falta-publicar).
