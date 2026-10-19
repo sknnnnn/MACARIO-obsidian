@@ -52,6 +52,10 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 ---
 
+## Gobernanza y limpieza transversal
+
+- [[07 — Proyectos/Inventario cero — Raíces + GXK12.2 — 2026-10-19|Inventario cero — Raíces + GXK12.2]] — estado de limpieza, fuentes revisadas y candidatos pendientes. Seguimiento operativo en [Linear PRO-161](https://linear.app/proyecto-raices/issue/PRO-161/gobernanza-feature-freeze-y-limpieza-del-inventario-raices-gxk122).
+
 ## Enlaces externos
 
 **Sitio:** Pendiente de completar.
