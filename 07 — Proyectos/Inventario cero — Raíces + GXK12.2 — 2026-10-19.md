@@ -142,8 +142,9 @@ El PR #5 contiene contexto útil, pero no debe mergearse íntegro porque el índ
 
 ### Proyecto Raíces
 
-- main es la rama por defecto. master está 178 commits detrás de main y no tiene commits exclusivos según compare; **candidato**, pero no borrar hasta comprobar si algún deploy/configuración externa todavía lo referencia.
+- main es la rama por defecto. master está 178 commits detrás de main y no tiene commits exclusivos según compare; **candidato**, pero no borrar hasta comprobar referencias externas. La documentación de Cloudflare indica que main es la rama principal de trabajo, aunque los SHA reales de deploy siguen sin verificar.
 - reorg/base-tecnica está 5 commits detrás de main y no tiene commits exclusivos; PR #31 está mergeado. **Candidato a limpieza** tras confirmar que no quedan referencias externas.
+- feature/i18n-es-en está 13 commits detrás de main y no tiene commits exclusivos según compare; **candidato a limpieza** tras comprobar worktrees/referencias locales.
 - feature/admin está 25 commits adelante de main. claude/proyecto-raices-visual-language-q04g3y está 86 commits adelante de main y 61 adelante de feature/admin, sin commits detrás. **Conservar ambas** mientras PRO-160 y el cierre técnico sigan dependiendo de ese trabajo.
 - dev diverge de main (4 commits exclusivos y 20 detrás); **conservar** hasta revisar sus cambios exclusivos.
 - chore/technical-hardening diverge de main (11 commits exclusivos y 4 detrás) pese a PR #32 mergeado; **no borrar** sin revisar commits posteriores y diferencias.
