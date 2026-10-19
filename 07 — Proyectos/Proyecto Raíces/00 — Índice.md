@@ -3,7 +3,9 @@
 **Estado actual: PAUSADO hasta la próxima sesión.** La nota histórica del 2026-10-16 que sigue más abajo ya no representa el estado operativo actual; para detalles, consultar las fuentes técnicas enlazadas aquí.
 
 - [Cierre técnico completo en el repositorio de Proyecto Raíces](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/operacion/cierre-tecnico-produccion-2026-10-19.md).
-- [[07 — Proyectos/Proyecto Raíces/13 — Continuidad previa a producción — 2026-10-19]] — resumen y orden para retomar.
+- [[07 — Proyectos/Proyecto Raíces/Continuidad — Respaldo de producción y migraciones]] — fuente vigente para el bloqueo de respaldo y el orden seguro para retomar.
+- [[07 — Proyectos/Inventario cero — Raíces + GXK12.2 — 2026-10-19]] — inventario transversal, candidatos de limpieza y decisiones protegidas.
+- [[07 — Proyectos/Proyecto Raíces/13 — Continuidad previa a producción — 2026-10-19]] — nota histórica reducida a puntero; no usar sus conteos de imágenes como actuales.
 - [Continuidad operativa en el repositorio](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/operacion/continuidad-cierre-tecnico-2026-10-19.md).
 
 **Bloqueo principal:** no se confirmó un backup restaurable de Supabase. No aplicar v6–v11 hasta verificar respaldo/recuperación y revisar el plan técnico. Ninguna migración se aplicó; no se modificaron datos de producción, no hubo borrados, deploy ni merge a `main`.
@@ -38,12 +40,12 @@ Proyecto Raíces es un proyecto de turismo de aventura y experiencias (tours, tr
 
 ## Estado general
 
-**Estado:** **Activo — fase de reorganización de código, documentación, arquitectura / modelo de datos y preparación del Admin/CMS**. El proyecto **no está terminado**: el sitio público funciona, pero el trabajo actual es reorganizar el código y la documentación, consolidar la arquitectura y el modelo de datos (System Reset, [[07 — Proyectos/Proyecto Raíces/04 — Arquitectura|Arquitectura]] §6–§7) y preparar el Admin/CMS, que todavía debe implementarse sobre esa base. El seguimiento operativo vive en Linear.
+**Estado:** el sitio público está operativo; el Admin/CMS sigue en desarrollo y verificación. La sesión quedó **pausada preventivamente** hasta confirmar un respaldo restaurable de Supabase y revisar el procedimiento técnico antes de cualquier migración. La rama de trabajo de Claude contiene cambios y documentación que no deben darse por integrados o publicados en main sin comprobarlo. El seguimiento operativo vive en Linear.
 
 > Estado histórico: el 2026-09-28, Linear registró la "etapa funcional cerrada", con el foco puesto en UX/UI y dirección visual. Ese estado quedó superado.
-**Última actualización:** 2026-10-16 — refinamiento visual del Admin cerrado en la rama de trabajo; próxima etapa: auditoría D15 e inventario de contenidos, seguida por diagnóstico D19 de Home.
+**Última actualización:** 2026-10-19 — cierre técnico preparado; respaldo restaurable aún no confirmado. No aplicar v6–v11, no borrar registros y no desplegar hasta retomar con autorización explícita. Ver la nota de continuidad vigente y la auditoría transversal.
 
-### Estado operativo — 2026-10-16
+### Estado histórico — 2026-10-16 (superado por el checkpoint del 2026-10-19)
 
 - Admin E1: la issue **PRO-160** continúa **In Progress**. La migración v5 figura aplicada y verificada en producción según el registro operativo.
 - **Refinamiento visual del Admin:** tramo cerrado en la rama `claude/proyecto-raices-visual-language-q04g3y`, con 176/176 pruebas Playwright y `node --check` sin errores. D21 se resolvió respetando `CLAUDE.md §9`; responsive revisado en 390, 768, 1024 y 1280 px. Esto no equivale a validar escrituras reales, Supabase Auth/PostgREST o lectores de pantalla.
