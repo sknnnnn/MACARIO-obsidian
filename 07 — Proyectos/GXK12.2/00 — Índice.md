@@ -19,7 +19,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 **Checkpoint actual (2026-10-19):** Admin Lote 1 con artefacto independiente de correcciones publicado en Claude Design v4: https://claude.ai/artifact/43gURXgBPPjPrHrfPt1fZg. Estado: **pendiente de revisión; no aprobado**. Próximo paso: abrir el visor real, revisar escritorio/móvil y claro/oscuro, contrastar con Figma nodo `473:26`, resolver decisiones abiertas y recién entonces decidir si se corrige o aprueba. Seguimiento operativo: [Linear PRO-173](https://linear.app/proyecto-raices/issue/PRO-173/gxk122-admin-lote-1-revisar-correcciones-y-preparar-aprobacion).
 
-> ⚠️ **Contradicción de estado (2026-10-07) — Home V0.3: implementación presente en código; aprobación / QA visual pendiente.**
+> **Registro histórico — Home V0.3 (2026-10-07):** la implementación estaba presente en master, pero su presencia no equivalía a aprobación ni QA. El checkpoint operativo actual es el Admin Lote 1 descrito arriba; el diseño público permanece pausado.
 > - El código ya está en `master` del repositorio (commit `950c566`, 2026-10-06, "apply Home V0.3 visual direction from approved docs"), aplicado sin rama de implementación.
 > - Esta nota y Linear (PRO-158 "Implementación Home V0.3", *Backlog*) lo siguen mostrando como pendiente.
 > - **No se considera terminado** por la sola existencia del commit. Para resolverlo hace falta Preview / QA contra el diseño aprobado, según el flujo Figma → Claude Design → aprobación → Claude Code → producto → Preview / QA.
