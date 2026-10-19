@@ -129,3 +129,29 @@ El PR #5 contiene contexto útil, pero no debe mergearse íntegro porque el índ
 - Claude Design refina; Figma consolida las pantallas aprobadas como fuente visual; implementación y QA vienen después de aprobación explícita.
 - **Descartar la propuesta de alertas por posibles duplicados por nombre/tamaño:** el modelo actual no conserva nombre original ni hash/comparación visual. No se debe describir una detección que no existe.
 - Los tokens, tipografía, acentos naranjas, reglas de confirmación reforzada y nuevos patrones del Admin permanecen pendientes hasta revisión del artefacto v4; no se aprueban por estar escritos en el PR antiguo.
+## Comparación de ramas — evidencia del 2026-10-19
+
+### GXK12:2
+
+- fix/home-v04-visual está 18 commits adelante de master y no está detrás. Es la rama más completa entre las comparadas.
+- Las ramas feat/home-v04-approved (6 commits adelante), feat/home-v04-cierre (8) y feat/home-v04-preview-safe (11) forman una cadena de antecesores: approved → cierre (+2) → preview-safe (+3) → fix/home-v04-visual (+7). No muestran commits exclusivos frente a la rama sucesora; **candidatas a borrar después de comprobar referencias locales y documentación**.
+- chore/gxk-local-staging-safe diverge de preview-safe: tiene 2 commits exclusivos y queda 3 commits detrás, con docs/staging-local.md y supabase/seed.sql. **Conservar** hasta revisar y rescatar esos elementos.
+- No hay PRs abiertos en el repositorio GXK. PR #1 está mergeado; PR #2 está cerrado sin merge.
+
+### Proyecto Raíces
+
+- main es la rama por defecto. master está 178 commits detrás de main y no tiene commits exclusivos según compare; **candidato**, pero no borrar hasta comprobar si algún deploy/configuración externa todavía lo referencia.
+- reorg/base-tecnica está 5 commits detrás de main y no tiene commits exclusivos; PR #31 está mergeado. **Candidato a limpieza** tras confirmar que no quedan referencias externas.
+- feature/admin está 25 commits adelante de main. claude/proyecto-raices-visual-language-q04g3y está 86 commits adelante de main y 61 adelante de feature/admin, sin commits detrás. **Conservar ambas** mientras PRO-160 y el cierre técnico sigan dependiendo de ese trabajo.
+- dev diverge de main (4 commits exclusivos y 20 detrás); **conservar** hasta revisar sus cambios exclusivos.
+- chore/technical-hardening diverge de main (11 commits exclusivos y 4 detrás) pese a PR #32 mergeado; **no borrar** sin revisar commits posteriores y diferencias.
+- PRs #31–#35 están mergeados; las ramas docs/* asociadas son candidatas a limpieza tras verificar que el contenido quedó en main y que no existen referencias de deploy.
+
+### MACARIO-obsidian
+
+- claude/obsidian-content-cleanup-20261007 está 28 commits detrás de master y no tiene commits exclusivos; **candidato claro a borrar** tras confirmar que no hay PR o proceso local que lo necesite.
+- claude/obsidian-fix-broken-links-20261007 (9 commits exclusivos / 30 detrás), claude/obsidian-structural-cleanup-20261007 (5 exclusivos / 29 detrás) y claude/trusting-feynman-sm520n (10 exclusivos / 28 detrás) contienen cambios propios en documentación central; **no borrar** hasta revisar sus diffs y rescatar o descartar cada cambio.
+- docs/gxk-admin-loop2-decisions-2026-10-17 conserva 3 commits no integrados; PR #5 está cerrado sin merge. Las decisiones vigentes se registraron en el inventario, pero la rama aún no se eliminó.
+- Las ramas docs/* de PRs ya mergeados son candidatas a limpieza, pero la conexión actual no ofrece una acción de eliminación de referencias; se dejan identificadas para la limpieza final manual.
+
+Estos resultados describen relaciones de commits, no sustituyen la verificación de referencias locales, deploys externos o worktrees. Ninguna rama fue eliminada en este barrido.
