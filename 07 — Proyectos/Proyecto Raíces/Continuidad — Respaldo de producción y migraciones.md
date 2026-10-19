@@ -39,3 +39,15 @@ Si falla cualquier comprobación, detenerse y resolverla antes de avanzar.
 - No aplicar v6–v11 antes de completar el respaldo real, validar la restauración y recibir autorización explícita.
 - No guardar contraseñas, claves de servicio ni otros secretos en esta nota.
 - Esta nota registra continuidad y decisiones; el procedimiento técnico completo vive en el repositorio de Proyecto Raíces y el seguimiento operativo en Linear.
+
+## Pendientes heredados de la nota de continuidad anterior — revalidar antes de ejecutar
+
+La nota 13 contenía detalles que no deben perderse, pero sus conteos de imágenes quedaron obsoletos. Se preservan aquí como pendientes históricos sujetos a verificación, no como inventario vigente:
+
+- Revalidar si siguen pendientes dos reexportaciones manuales de imágenes.
+- Reconciliar los dos grupos de referencias duplicadas mencionados en el registro anterior con la auditoría actual de coincidencias por nombre; no asumir que son los mismos grupos.
+- Confirmar si sigue pendiente elegir una sola experiencia destacada de Cusco.
+- Revalidar las decisiones D3/D9, D14 y el modelo de experiencias internas de paquetes contra Linear y la documentación más reciente.
+- No reutilizar los conteos antiguos de 19 experiencias publicadas sin imagen principal y 26 sin galería: la auditoría posterior registró 12 publicadas sin imagen y 13 sin galería. Antes de cualquier acción, volver a consultar el inventario actual.
+
+La lista anterior se mantiene para trazabilidad; cualquier resolución debe registrarse en Linear y el detalle técnico en el repositorio de Proyecto Raíces.
