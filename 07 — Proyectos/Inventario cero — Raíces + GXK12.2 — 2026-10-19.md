@@ -277,3 +277,19 @@ Vercel volvió a devolver 36 deployments al consultar con el team ID explícito.
 4. Revisar una por una las ramas Obsidian con commits exclusivos; rescatar cambios útiles a una rama limpia antes de decidir si se archivan.
 5. Desde Vercel, comprobar el uso de la URL del deployment ERROR y eliminarlo solo si está confirmado como prescindible.
 6. Mantener PRO-161 abierta hasta verificar esos pasos y los pendientes de sitio/código. No cerrar por haber completado el inventario remoto.
+
+
+### Addendum de comparación de ramas Obsidian — 2026-10-20
+
+Se completó la comparación de más ramas contra `master`:
+
+| Rama | Resultado | Acción |
+|---|---|---|
+| `docs/cleanup-pointers-and-branch-audit-2026-10-19` | 3 commits exclusivos, 7 detrás; modifica índice GXK, inventario y enlaces de Raíces | **Conservar hasta reconciliar**; contiene cambios en tres notas. |
+| `claude/obsidian-fix-broken-links-20261007` | 9 commits exclusivos, 37 detrás; seis archivos estructurales/metodológicos y PRANA | **Conservar hasta auditar/rescatar**; no borrar por antigüedad. |
+| `claude/obsidian-structural-cleanup-20261007` | 5 commits exclusivos, 36 detrás; cinco archivos estructurales/auditoría | **Conservar hasta auditar/rescatar**. |
+| `claude/trusting-feynman-sm520n` | 10 commits exclusivos, 35 detrás; 32 archivos, incluidos índices, decisiones y fuentes de ambos proyectos | **Conservar obligatoriamente hasta comparar/rescatar**; no es candidata a borrado. |
+
+Se confirmó además que `docs/raices-cierre-tecnico-20261009` tiene un commit exclusivo aunque esté 28 detrás de `master`; la nota histórica contiene trazabilidad de Supabase/deploys, por lo que se debe revisar ese cambio antes de borrar. Las ramas de inventario/continuidad que tengan commits exclusivos se mantienen hasta demostrar que cada decisión o dato quedó preservado en la fuente canónica.
+
+**Corrección de criterio:** no considerar una rama documental obsoleta solo por tener muchos commits detrás. La eliminación requiere cero trabajo único sin reconciliar, sin dependencias locales y sin dependencias de automatización/deploy. En esta pasada no se borró ninguna rama porque la conexión no expone una acción de borrado y no se pueden inspeccionar worktrees locales.
