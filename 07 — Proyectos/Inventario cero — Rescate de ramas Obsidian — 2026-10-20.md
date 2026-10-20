@@ -24,13 +24,11 @@ No conservar una rama únicamente porque tenga commits exclusivos, ni borrarla p
 
 ### Mantener temporalmente para rescate selectivo
 
-- `docs/gxk-admin-loop2-decisions-2026-10-17`: su entrada del 17/10 no está en el encabezado del changelog de `master`. Revisar por decisión, no copiar la entrada completa:
-  - conservar como criterios a revisar la interfaz del Admin en español, la organización de navegación, la distinción entre Familia GXK y Members Only, accesibilidad/temas y el principio de Figma como fuente visual aprobada;
-  - mantener `is_featured` sin efecto operativo hasta una decisión explícita;
-  - no rescatar la supuesta detección de duplicados de imágenes por nombre/tamaño: el cierre del 19/10 la retiró porque el modelo no persiste el nombre original ni ofrece hashes/comparación visual;
-  - no mantener como estado actual que Loop 2 estaba pausado esperando a Raíces; es una fotografía histórica del 17/10 y fue superada por el cierre del Admin Lote 1 del 19/10.
-
-
+- `docs/gxk-admin-loop2-decisions-2026-10-17`: la entrada del 17/10 falta en el changelog de `master`, pero es un snapshot de planificación, no una lista de decisiones para copiar en bloque. La contrasté con el changelog y el cierre del 19/10:
+  - **No rescatar como estado actual:** Loop 2 pausado esperando a Raíces; Figma aún pendiente de aprobación; revisión de navegación presentada como futura; propuesta de aviso de duplicados; «ABC Favorit conserva prioridad documental» si contradice la jerarquía de fuentes vigente.
+  - **Conservar solo donde siga vigente y esté confirmado por las fuentes actuales:** `is_featured` no tiene efecto operativo y no debe conectarse al hero por inferencia; Figma sigue siendo la fuente visual aprobada y Claude Design un motor de exploración/validación; la interfaz debe priorizar español, accesibilidad y baja fricción. Estos principios ya están reflejados en documentos vigentes, por lo que no requieren copiar la entrada histórica entera al changelog.
+  - **No rescatar:** la detección de duplicados por nombre/tamaño; el cierre del 19/10 la retiró porque el modelo no persiste el nombre original ni ofrece hashes/comparación visual.
+  - **Conclusión:** no integrar el changelog de esa rama tal cual. Retenerla temporalmente solo hasta confirmar que los criterios vigentes están cubiertos en fuentes actuales y revisar referencias/worktrees locales.
 
 ### Otras ramas documentales
 
