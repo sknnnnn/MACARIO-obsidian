@@ -253,7 +253,7 @@ Vercel volvió a devolver 36 deployments al consultar con el team ID explícito.
 | `docs/vercel-deployment-inventory-2026-10-19` | 1 exclusivo, 3 detrás; inventario anterior | **Candidata tras verificación local** | Las líneas exclusivas están superadas por esta versión más reciente. |
 | `docs/raices-cierre-tecnico-20261009` | 1 exclusivo, 28 detrás; nota con blob idéntico en `master` | **Candidata tras verificación local** | No requiere rescate de contenido; revisar dependencias locales/externas. |
 | `docs/raices-respaldo-produccion-20261019` | 1 exclusivo, 11 detrás; `master` contiene una versión más completa | **Candidata tras verificación local** | El contenido útil está preservado; revisar dependencias locales/externas. |
-| `docs/gxk-admin-loop2-decisions-2026-10-17` | 3 exclusivos, 15 detrás; modifica índice/changelog/UX | **Conservar y rescatar** | Revisar sus tres commits y conservar decisiones vigentes; no borrar por antigüedad. |
+| `docs/gxk-admin-loop2-decisions-2026-10-17` | 3 exclusivos, 15 detrás; índice/changelog/UX revisados contra `master` y cierre del 19/10 | **Candidata tras verificación local** | No se encontró contenido vigente adicional que requiera rescate; no integrar los tres archivos en bloque. |
 | `docs/gxk-admin-lote1-cierre-2026-10-19` | 4 exclusivos, 10 detrás; cierre y changelog idénticos a `master`; índice antiguo | **Candidata tras verificación local** | No requiere rescate por el documento de cierre; revisar dependencias locales/externas. |
 | `docs/inventario-cero-raices-gxk-2026-10-19` | 8 exclusivos, 8 detrás; modifica cinco notas | **Conservar y reconciliar** | No borrar: hay cambios únicos y posibles conflictos con las correcciones posteriores. |
 | `docs/conciliacion-estado-2026-10-20` | 2 exclusivos, 1 detrás; archivos comparados idénticos a `master` | **Candidata tras verificación local** | No se encontró contenido vigente exclusivo en los archivos revisados. |
@@ -288,11 +288,11 @@ Se completó la comparación de más ramas contra `master`:
 
 | Rama | Resultado | Acción |
 |---|---|---|
-| `docs/cleanup-pointers-and-branch-audit-2026-10-19` | 3 commits exclusivos, 7 detrás; modifica índice GXK, inventario y enlaces de Raíces | **Conservar hasta reconciliar**; contiene cambios en tres notas. |
-| `claude/obsidian-fix-broken-links-20261007` | 9 commits exclusivos, 37 detrás; seis archivos estructurales/metodológicos y PRANA | **Conservar hasta auditar/rescatar**; no borrar por antigüedad. |
-| `claude/obsidian-structural-cleanup-20261007` | 5 commits exclusivos, 36 detrás; cinco archivos estructurales/auditoría | **Conservar hasta auditar/rescatar**. |
-| `claude/trusting-feynman-sm520n` | 10 commits exclusivos, 35 detrás; 32 archivos, incluidos índices, decisiones y fuentes de ambos proyectos | **Conservar obligatoriamente hasta comparar/rescatar**; no es candidata a borrado. |
+| `docs/cleanup-pointers-and-branch-audit-2026-10-19` | 3 exclusivos, 7 detrás; índice GXK y enlaces Raíces idénticos a `master`, inventario superado | **Candidata tras verificación local**; no se encontró contenido vigente adicional. |
+| `claude/obsidian-fix-broken-links-20261007` | 9 exclusivos, 37 detrás; archivos revisados son versiones antiguas | **Candidata tras verificación local**; no mergear la rama completa. |
+| `claude/obsidian-structural-cleanup-20261007` | 5 exclusivos, 36 detrás; archivos revisados superados por `master` | **Candidata tras verificación local**; la auditoría está en `master` en versión más completa. |
+| `claude/trusting-feynman-sm520n` | 10 exclusivos; 32 archivos comparados por blob SHA, 22 idénticos y 10 versiones antiguas | **Candidata tras verificación local**; no se encontró contenido vigente exclusivo. |
 
-Se confirmó además que `docs/raices-cierre-tecnico-20261009` tiene un commit exclusivo aunque esté 28 detrás de `master`; la nota histórica contiene trazabilidad de Supabase/deploys, por lo que se debe revisar ese cambio antes de borrar. Las ramas de inventario/continuidad que tengan commits exclusivos se mantienen hasta demostrar que cada decisión o dato quedó preservado en la fuente canónica.
+La revisión por contenido corrige el criterio inicial: `docs/raices-cierre-tecnico-20261009` tiene blob idéntico a `master`; las ramas de inventario enumeradas en la sección principal contienen versiones antiguas; y `docs/raices-respaldo-produccion-20261019` tiene una versión más completa en `master`. Son candidatas tras verificar dependencias locales/externas.
 
 **Corrección de criterio:** no considerar una rama documental obsoleta solo por tener muchos commits detrás. La eliminación requiere cero trabajo único sin reconciliar, sin dependencias locales y sin dependencias de automatización/deploy. En esta pasada no se borró ninguna rama porque la conexión no expone una acción de borrado y no se pueden inspeccionar worktrees locales.
