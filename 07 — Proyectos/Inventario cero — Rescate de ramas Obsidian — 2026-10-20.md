@@ -16,6 +16,9 @@ No conservar una rama únicamente porque tenga commits exclusivos, ni borrarla p
 - `docs/cleanup-pointers-and-branch-audit-2026-10-19`: el índice GXK y `Proyecto Raíces/12 — Enlaces (Linear y GitHub).md` coinciden por SHA con `master`. Su inventario es una versión anterior/superada frente al de `master`.
 - `docs/gxk-admin-lote1-cierre-2026-10-19`: la nota `12 — Admin Lote 1 — Cierre y continuidad 2026-10-19.md` y el changelog coinciden exactamente con `master`; el índice de la rama es anterior y no contiene la sección de gobernanza presente en `master`.
 - `claude/obsidian-content-cleanup-20261007`: el comparador informa cero commits exclusivos y la rama está muy atrasada. Candidata solo tras comprobar PRs, worktrees y referencias locales.
+- `claude/trusting-feynman-sm520n`: la revisión de los 32 archivos no encontró contenido vigente exclusivo; 22 blobs son idénticos a `master` y los 10 restantes son versiones antiguas. Candidata tras verificación local.
+- `claude/obsidian-structural-cleanup-20261007`: los cambios comparados están superados por `master`; la auditoría histórica ya está en `master` en una versión más completa, y la eliminación del antiguo archivo raíz de principios ya está reflejada. Candidata tras verificación local.
+- `claude/obsidian-fix-broken-links-20261007`: los seis archivos cambiados son versiones antiguas con enlaces/definiciones superados por `master`. Candidata tras verificación local.
 
 **Acción:** no borrar desde esta sesión. Confirmar primero desde la PC personal que no haya worktrees, ramas locales sin publicar, automatizaciones o URLs activas que dependan de ellas.
 
@@ -26,14 +29,12 @@ No conservar una rama únicamente porque tenga commits exclusivos, ni borrarla p
   - mantener `is_featured` sin efecto operativo hasta una decisión explícita;
   - no rescatar la supuesta detección de duplicados de imágenes por nombre/tamaño: el cierre del 19/10 la retiró porque el modelo no persiste el nombre original ni ofrece hashes/comparación visual;
   - no mantener como estado actual que Loop 2 estaba pausado esperando a Raíces; es una fotografía histórica del 17/10 y fue superada por el cierre del Admin Lote 1 del 19/10.
-- `claude/trusting-feynman-sm520n`: 10 commits exclusivos y 32 archivos en el diff contra `master`. Comparé los 32 archivos por blob SHA: 22 son idénticos a `master`; los 10 restantes son versiones anteriores en índices/roadmap/changelog/UX/QA y enlaces de Raíces. No se encontró una decisión operativa vigente que falte en `master`. El índice de Bresstore, los documentos raíz de MACARIO, los documentos revisados de PRANA y varias notas de arquitectura/datos son idénticos a `master`. La nota de enlaces de Raíces sí conserva punteros históricos (por ejemplo, una referencia Figma antigua y el contexto del checkout de septiembre), pero el índice vigente ya contiene los enlaces operativos actuales; no reponerlos sin una necesidad concreta. **Conclusión:** candidata a limpieza después de confirmar worktrees/referencias locales; no hacer merge global.
-- `claude/obsidian-structural-cleanup-20261007`: la auditoría del 07/10 ya existe en `master` como versión actualizada que la etiqueta como histórica/superada. Las versiones de arquitectura e ITS en la rama mantienen formulaciones antiguas sobre PRANA/MACARIO; no rescatar esos archivos completos.
-- `claude/obsidian-fix-broken-links-20261007`: las versiones revisadas de arquitectura, metodología, herramientas, Web-Base, MACARIO OS y PRANA son más antiguas que `master`, con wikilinks y formulaciones superadas. No integrar la rama completa.
+
+
 
 ### Otras ramas documentales
 
-- `docs/gxk-admin-lote1-cierre-2026-10-19`: la nota de cierre está integrada en `master` con blob SHA `7b9014bbe9c941bdbb579e23fba5e72358821f50`. La copia antigua de la rama de origen afirma que solo existía allí; ese dato de sincronización quedó obsoleto.
-- `docs/branch-audit-2026-10-20`: sigue siendo la rama de trabajo del PR #16. Antes del merge hay que reconciliar la contradicción interna sobre el estado del PR #5: las instrucciones antiguas hablan de cerrarlo en el futuro, mientras otra sección ya lo registra como cerrado sin merge. La identificación de E0 como `prueba` en PRO-164 no autoriza a borrar ninguno de los cinco borradores.
+- `docs/branch-audit-2026-10-20`: rama de trabajo del PR #16. La contradicción sobre el PR #5 fue corregida y verificada en el inventario (commit `a26ddc5d2411951b1ea4c0bdd95602dbffc86f49`); el PR #16 sigue abierto, no mergeado. La identificación de E0 como `prueba` en PRO-164 no autoriza a borrar ninguno de los cinco borradores.
 
 ## Estado de seguridad
 
