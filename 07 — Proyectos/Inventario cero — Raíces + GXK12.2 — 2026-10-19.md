@@ -247,17 +247,20 @@ Vercel volvió a devolver 36 deployments al consultar con el team ID explícito.
 |---|---|---|---|
 | `master` | Default branch; PR #15 integrado | **Conservar** | Fuente canónica. |
 | `claude/obsidian-content-cleanup-20261007` | 0 exclusivos; 35 detrás | **Candidata clara a borrar** | Confirmar worktrees y referencias locales. |
-| `docs/final-cleanup-pass-2026-10-19` | 1 commit exclusivo, 2 detrás; modifica el inventario | **Conservar hasta reconciliar** | Revisar su único cambio y rescatarlo si no está en master. |
-| `docs/finalize-branch-audit-2026-10-19` | 1 exclusivo, 4 detrás; modifica el inventario | **Conservar hasta reconciliar** | Revisar el único cambio antes de borrar. |
-| `docs/linear-reconciliation-shipping-2026-10-19` | 1 exclusivo, 6 detrás; modifica el inventario | **Conservar hasta reconciliar** | Revisar el único cambio antes de borrar. |
-| `docs/vercel-deployment-inventory-2026-10-19` | 1 exclusivo, 3 detrás; modifica el inventario | **Conservar hasta reconciliar** | Revisar el único cambio antes de borrar. |
-| `docs/raices-cierre-tecnico-20261009` | 1 exclusivo, 28 detrás; modifica una nota histórica de cierre técnico | **Conservar hasta verificar contenido** | La nota contiene trazabilidad técnica; comparar y rescatar el único cambio antes de borrar. |
-| `docs/raices-respaldo-produccion-20261019` | 1 exclusivo, 11 detrás; modifica continuidad de respaldo | **Conservar hasta reconciliar** | La continuidad de respaldo es crítica; no borrar hasta comprobar que el cambio está preservado. |
+| `docs/final-cleanup-pass-2026-10-19` | 1 exclusivo, 2 detrás; inventario anterior | **Candidata tras verificación local** | Las líneas exclusivas están superadas por esta versión más reciente. |
+| `docs/finalize-branch-audit-2026-10-19` | 1 exclusivo, 4 detrás; inventario anterior | **Candidata tras verificación local** | Las líneas exclusivas están superadas por esta versión más reciente. |
+| `docs/linear-reconciliation-shipping-2026-10-19` | 1 exclusivo, 6 detrás; inventario anterior | **Candidata tras verificación local** | Las líneas exclusivas están superadas por esta versión más reciente. |
+| `docs/vercel-deployment-inventory-2026-10-19` | 1 exclusivo, 3 detrás; inventario anterior | **Candidata tras verificación local** | Las líneas exclusivas están superadas por esta versión más reciente. |
+| `docs/raices-cierre-tecnico-20261009` | 1 exclusivo, 28 detrás; nota con blob idéntico en `master` | **Candidata tras verificación local** | No requiere rescate de contenido; revisar dependencias locales/externas. |
+| `docs/raices-respaldo-produccion-20261019` | 1 exclusivo, 11 detrás; `master` contiene una versión más completa | **Candidata tras verificación local** | El contenido útil está preservado; revisar dependencias locales/externas. |
 | `docs/gxk-admin-loop2-decisions-2026-10-17` | 3 exclusivos, 15 detrás; modifica índice/changelog/UX | **Conservar y rescatar** | Revisar sus tres commits y conservar decisiones vigentes; no borrar por antigüedad. |
-| `docs/gxk-admin-lote1-cierre-2026-10-19` | 4 exclusivos, 10 detrás; modifica índice/changelog/cierre | **Conservar y rescatar** | Comparar con la continuidad actual de PRO-173 y preservar información única. |
+| `docs/gxk-admin-lote1-cierre-2026-10-19` | 4 exclusivos, 10 detrás; cierre y changelog idénticos a `master`; índice antiguo | **Candidata tras verificación local** | No requiere rescate por el documento de cierre; revisar dependencias locales/externas. |
 | `docs/inventario-cero-raices-gxk-2026-10-19` | 8 exclusivos, 8 detrás; modifica cinco notas | **Conservar y reconciliar** | No borrar: hay cambios únicos y posibles conflictos con las correcciones posteriores. |
-| `docs/conciliacion-estado-2026-10-20` | 2 exclusivos, 1 detrás; modifica dos notas | **Conservar hasta confirmar publicación** | Comparar el contenido contra master; el PR #15 mergeado no basta para demostrar que todos los commits posteriores de esta rama están integrados. |
-| `docs/correct-branch-cleanup-candidates-2026-10-19` | 1 exclusivo, 5 detrás; modifica el inventario | **Conservar hasta reconciliar** | Revisar su único cambio. |
+| `docs/conciliacion-estado-2026-10-20` | 2 exclusivos, 1 detrás; archivos comparados idénticos a `master` | **Candidata tras verificación local** | No se encontró contenido vigente exclusivo en los archivos revisados. |
+| `docs/correct-branch-cleanup-candidates-2026-10-19` | 1 exclusivo, 5 detrás; inventario anterior | **Candidata tras verificación local** | Las líneas exclusivas están superadas por esta versión más reciente. |
+| `claude/trusting-feynman-sm520n` | 10 exclusivos; 32 archivos comparados (22 blobs idénticos, 10 versiones antiguas) | **Candidata tras verificación local** | No se encontró contenido vigente exclusivo; no mergear la rama completa. |
+| `claude/obsidian-structural-cleanup-20261007` | 5 exclusivos; cambios revisados superados por `master` | **Candidata tras verificación local** | La auditoría histórica está en `master` en versión más completa; no mergear la rama completa. |
+| `claude/obsidian-fix-broken-links-20261007` | 9 exclusivos; archivos revisados son versiones antiguas | **Candidata tras verificación local** | Los enlaces/definiciones revisados están superados por `master`; no mergear la rama completa. |
 | Otras ramas `docs/*` y `claude/*` | No todas comparadas individualmente en esta pasada | **No borrar en lote** | Comparar refs y rescatar contenido único antes de eliminar. |
 
 ### Resultado operativo
