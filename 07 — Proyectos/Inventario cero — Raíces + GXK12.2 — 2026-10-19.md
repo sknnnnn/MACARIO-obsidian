@@ -296,3 +296,33 @@ Se completó la comparación de más ramas contra `master`:
 La revisión por contenido corrige el criterio inicial: `docs/raices-cierre-tecnico-20261009` tiene blob idéntico a `master`; las ramas de inventario enumeradas en la sección principal contienen versiones antiguas; y `docs/raices-respaldo-produccion-20261019` tiene una versión más completa en `master`. Son candidatas tras verificar dependencias locales/externas.
 
 **Corrección de criterio:** no considerar una rama documental obsoleta solo por tener muchos commits detrás. La eliminación requiere cero trabajo único sin reconciliar, sin dependencias locales y sin dependencias de automatización/deploy. En esta pasada no se borró ninguna rama porque la conexión no expone una acción de borrado y no se pueden inspeccionar worktrees locales.
+
+
+## Metodología de ejecución acordada — 2026-10-20
+
+A partir de esta fecha, el trabajo transversal de Raíces y GXK12:2 se organiza en **loops ordenados de 4–5 tareas concretas como máximo**. Se completa y valida un loop antes de iniciar el siguiente; no se abren frentes paralelos entre proyectos por conveniencia.
+
+### Reglas de cada loop
+
+1. Definir entre 4 y 5 tareas —o menos si el objetivo no necesita más— ordenadas por dependencia, cada una con resultado verificable.
+2. Ejecutar de punta a punta todo lo que pueda resolverse con las herramientas y permisos disponibles.
+3. Validar con evidencia real; sincronizar documentación de Obsidian/GitHub y el estado/próxima acción en Linear.
+4. Cerrar el loop solo cuando sus tareas estén verificadas. Una tarea bloqueada no se declara hecha: se registra el bloqueo, la razón y la próxima acción.
+5. Los hallazgos fuera de alcance se anotan para una iteración posterior, salvo que sean un bloqueo real o impliquen riesgo de seguridad.
+6. No crear issues duplicadas para representar el loop: usar las issues existentes y mantener PRO-161 como eje de gobernanza/inventario.
+
+### Secuencia de trabajo propuesta
+
+| Loop | Objetivo de salida |
+|---|---|
+| **1 — PC personal: seguridad e inventario local** | Revisar worktrees/ramas locales y referencias remotas de GXK, Raíces y Obsidian; comprobar referencias de deployments/automatizaciones; identificar acciones seguras y bloqueos. No borrar por inferencia. |
+| **2 — Respaldo real y restauración** | Obtener un respaldo real de Raíces que cubra base de datos, Auth y Storage relevante; verificar integridad y restaurarlo en un entorno aislado antes de considerar migraciones. |
+| **3 — Raíces: migraciones y Admin** | Resolver prerequisitos y autorizaciones, ejecutar únicamente los pasos aprobados por tramos, validar Admin y registrar evidencia. Si no hay autorización o entorno seguro, el loop queda bloqueado; no se toca producción. |
+| **4 — GXK: Admin Lote 1** | Implementar el diseño ya aprobado, probar los flujos operativos y registrar brechas reales sin reabrir el refinamiento visual aprobado. |
+| **5 — GXK: pantallas públicas** | Retomar la experiencia pública mediante iteraciones de diseño e implementación priorizadas, con Claude Design para explorar/prototipar y Figma como fuente visual aprobada. |
+
+Esta secuencia es un roadmap de loops, no una autorización para borrar ramas, modificar producción, aplicar migraciones, integrar código o desplegar. Cada acción conserva sus permisos y prerequisitos específicos. El Loop 1 empieza cuando el usuario esté en su PC personal.
+
+### Registro
+
+- 2026-10-20: se adopta la metodología de loops ordenados de 4–5 tareas, con cierre basado en evidencia, sincronización documental/Linear y bloqueos explícitos.
