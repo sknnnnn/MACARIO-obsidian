@@ -99,7 +99,7 @@ Ramas detectadas: main, master, dev, feature/admin, feature/i18n-es-en, ramas cl
 
 ## Datos y entornos — no limpiar automáticamente
 
-- **Raíces:** no borrar E0 ni ninguno de los cinco borradores. E0 sigue sin identificar; hay dependencias y decisiones pendientes.
+- **Raíces:** no borrar E0 ni ninguno de los cinco borradores. E0 está identificada como `prueba` en Linear PRO-164; la identidad resuelta no autoriza su eliminación; hay dependencias y decisiones pendientes.
 - **Supabase:** no borrar filas, objetos Storage, migraciones ni ramas durante este barrido. La migración supabase/pendiente/20261009_endurecimiento.sql se conserva por trazabilidad, aunque esté aplicada.
 - **GXK Supabase:** no tocar catálogo de prueba ni migraciones pendientes; no ejecutar SQL de limpieza.
 - **Vercel / Cloudflare:** no borrar proyectos, deployments, dominios ni entornos por antigüedad.
@@ -207,3 +207,73 @@ La consulta actual sigue mostrando 36 deployments de `gx-k12-2`. Los previews RE
 ### Resultado
 
 La documentación obsoleta o duplicada que podía consolidarse de forma segura ya se consolidó en las pasadas previas. Esta segunda revisión **no autoriza a declarar el barrido 100% terminado**: deja explícitos los pocos grupos que no se pueden borrar responsablemente desde las conexiones actuales. No se hicieron cambios destructivos en producción, ramas, deployments, Supabase, Figma ni Claude Design.
+
+
+## Auditoría comparativa de ramas — 2026-10-20
+
+Esta sección reemplaza cualquier clasificación anterior que contradiga estos resultados más recientes. Se compararon refs contra la rama base usando el historial remoto de GitHub. **“Borrable candidato” no significa que ya se haya borrado:** faltan las referencias/worktrees locales y las conexiones disponibles no ofrecen una operación de borrado de ramas.
+
+### GXK12:2 — base `master`
+
+| Rama | Comparación remota | Clasificación | Acción |
+|---|---|---|---|
+| `master` | Base/default; producción sigue apuntando aquí | **Conservar** | No tocar. |
+| `fix/home-v04-visual` | 18 commits adelante, 0 detrás; rama de QA más completa | **Conservar** | Sigue siendo la referencia de staging/QA. Home V0.4 está pausada, no integrar a producción. |
+| `feat/home-v04-approved` | 6 adelante de master; no tiene commits exclusivos respecto de `fix/home-v04-visual` (es ancestro) | **Candidata a borrar** | Primero revisar referencias locales; conservar su preview mientras se confirma si alguien usa la URL. |
+| `feat/home-v04-cierre` | 8 adelante de master; no tiene commits exclusivos respecto de `fix/home-v04-visual` (es ancestro) | **Candidata a borrar** | Mismo criterio: revisar referencias locales y URLs antes del borrado. |
+| `feat/home-v04-preview-safe` | 11 adelante de master; antecede a la rama de QA y tiene previews READY | **Conservar temporalmente** | Mantener como preview aislado de referencia; documentar su URL antes de considerar su eliminación. |
+| `chore/gxk-local-staging-safe` | 10 adelante de master; diverge de `feat/home-v04-preview-safe` y conserva commits/contenido propios de staging | **Conservar** | Preservar `docs/staging-local.md` y `supabase/seed.sql`; revisar si conviene extraerlos más adelante. |
+
+Vercel volvió a devolver 36 deployments al consultar con el team ID explícito. Hay previews READY recientes de `fix/home-v04-visual`, `feat/home-v04-preview-safe`, `chore/gxk-local-staging-safe`, `feat/home-v04-cierre` y `feat/home-v04-approved`. Producción continúa en `master`, SHA `950c566d30f3332bafcb61ca76ed95338280a9a2`. El deployment ERROR de la rama desaparecida `v0/redesign-hero-text-04e7898e` (`dpl_DmvXhP4kgLFazpKJt52JJXH9o49J`) es candidato a eliminar en Vercel, pero no hay acción de borrado disponible en la conexión; revisar uso de URL antes de eliminar desde el panel. No se borró ningún deployment.
+
+### Proyecto Raíces — base `main`
+
+| Rama | Comparación remota | Clasificación | Acción |
+|---|---|---|---|
+| `main` | Default branch | **Conservar** | Rama canónica. |
+| `master` | 0 commits exclusivos; 178 detrás de `main` | **Candidata a borrar con precaución alta** | Antes, comprobar branch protection, configuración de Cloudflare, webhooks, scripts, links y referencias externas. No borrar desde esta sesión. |
+| `reorg/base-tecnica` | 0 exclusivos; 5 detrás de `main` | **Candidata a borrar** | PR #31 mergeado según registro; revisar worktrees y referencias externas primero. |
+| `feature/i18n-es-en` | 0 exclusivos; 13 detrás de `main` | **Candidata a borrar** | Verificar worktrees y referencias locales. |
+| `feature/admin` | 25 commits adelante, 0 detrás; 33 archivos en diff | **Conservar** | Rama con trabajo de Admin; conciliar con PRO-160 y `claude/proyecto-raices-visual-language-q04g3y` antes de decidir integración. |
+| `claude/proyecto-raices-visual-language-q04g3y` | 86 commits adelante de `main`, 0 detrás; 262 archivos en diff | **Conservar obligatoriamente por ahora** | Contiene el cierre técnico/documentación más reciente y es fuente citada por PRO-172. No sustituir ni borrar hasta integrar o preservar el trabajo único. |
+| `dev` | Diverge: 4 commits exclusivos, 20 detrás; 11 archivos en diff | **Conservar / rescatar** | Revisar y rescatar los 4 commits exclusivos; después decidir si se archiva o se alinea. |
+| `chore/technical-hardening` | Diverge: 11 exclusivos, 4 detrás; 35 archivos en diff | **Conservar / conciliar** | Aunque hay PR mergeado asociado, existen diferencias posteriores; comparar los 11 commits exclusivos antes de borrar. |
+| `claude/proyecto-raices-content-functionality` | 0 exclusivos; 20 detrás de `main` | **Candidata a borrar** | Solo después de revisar PR/links/worktrees locales. |
+| `docs/*` | Varias ramas de documentación; no todas comparadas individualmente en esta pasada | **No borrar en lote** | Para cada una, comprobar commits exclusivos, PR asociado y que el contenido esté en `main`; conservar las que tengan trabajo único. |
+
+### MACARIO-obsidian — base `master`
+
+| Rama | Comparación remota | Clasificación | Acción |
+|---|---|---|---|
+| `master` | Default branch; PR #15 integrado | **Conservar** | Fuente canónica. |
+| `claude/obsidian-content-cleanup-20261007` | 0 exclusivos; 35 detrás | **Candidata clara a borrar** | Confirmar worktrees y referencias locales. |
+| `docs/final-cleanup-pass-2026-10-19` | 1 commit exclusivo, 2 detrás; modifica el inventario | **Conservar hasta reconciliar** | Revisar su único cambio y rescatarlo si no está en master. |
+| `docs/finalize-branch-audit-2026-10-19` | 1 exclusivo, 4 detrás; modifica el inventario | **Conservar hasta reconciliar** | Revisar el único cambio antes de borrar. |
+| `docs/linear-reconciliation-shipping-2026-10-19` | 1 exclusivo, 6 detrás; modifica el inventario | **Conservar hasta reconciliar** | Revisar el único cambio antes de borrar. |
+| `docs/vercel-deployment-inventory-2026-10-19` | 1 exclusivo, 3 detrás; modifica el inventario | **Conservar hasta reconciliar** | Revisar el único cambio antes de borrar. |
+| `docs/raices-cierre-tecnico-20261009` | 1 exclusivo, 28 detrás; modifica una nota histórica de cierre técnico | **Conservar hasta verificar contenido** | La nota contiene trazabilidad técnica; comparar y rescatar el único cambio antes de borrar. |
+| `docs/raices-respaldo-produccion-20261019` | 1 exclusivo, 11 detrás; modifica continuidad de respaldo | **Conservar hasta reconciliar** | La continuidad de respaldo es crítica; no borrar hasta comprobar que el cambio está preservado. |
+| `docs/gxk-admin-loop2-decisions-2026-10-17` | 3 exclusivos, 15 detrás; modifica índice/changelog/UX | **Conservar y rescatar** | Revisar sus tres commits y conservar decisiones vigentes; no borrar por antigüedad. |
+| `docs/gxk-admin-lote1-cierre-2026-10-19` | 4 exclusivos, 10 detrás; modifica índice/changelog/cierre | **Conservar y rescatar** | Comparar con la continuidad actual de PRO-173 y preservar información única. |
+| `docs/inventario-cero-raices-gxk-2026-10-19` | 8 exclusivos, 8 detrás; modifica cinco notas | **Conservar y reconciliar** | No borrar: hay cambios únicos y posibles conflictos con las correcciones posteriores. |
+| `docs/conciliacion-estado-2026-10-20` | 2 exclusivos, 1 detrás; modifica dos notas | **Conservar hasta confirmar publicación** | Comparar el contenido contra master; el PR #15 mergeado no basta para demostrar que todos los commits posteriores de esta rama están integrados. |
+| `docs/correct-branch-cleanup-candidates-2026-10-19` | 1 exclusivo, 5 detrás; modifica el inventario | **Conservar hasta reconciliar** | Revisar su único cambio. |
+| Otras ramas `docs/*` y `claude/*` | No todas comparadas individualmente en esta pasada | **No borrar en lote** | Comparar refs y rescatar contenido único antes de eliminar. |
+
+### Resultado operativo
+
+- **Candidatas remotas para eliminación después de la verificación local:** GXK `feat/home-v04-approved`, `feat/home-v04-cierre`; Raíces `reorg/base-tecnica`, `feature/i18n-es-en`, `claude/proyecto-raices-content-functionality`; Obsidian `claude/obsidian-content-cleanup-20261007`.
+- **Candidata especial:** Raíces `master`, por estar 178 commits detrás y no tener commits exclusivos. Requiere verificar configuración de deploy/automatización/referencias externas antes de cualquier borrado.
+- **No borrar:** ramas principales, ramas con commits exclusivos no reconciliados, ramas con función de QA/preview vigente y cualquier rama cuyo cambio único aún no esté preservado.
+- **No mover refs para simular borrado.** Las herramientas GitHub disponibles permiten comparar y actualizar refs, pero no ofrecen una acción de eliminación de ramas; la revisión de worktrees tampoco está disponible sin la PC local. Por eso, la eliminación remota queda clasificada y preparada, no ejecutada.
+- **Vercel:** 36 deployments revisados. No se borró ninguno; la conexión no ofrece una acción de eliminación. El deployment ERROR antiguo se conserva como candidato hasta confirmar que su URL no se usa.
+- **Supabase / producción / datos:** sin cambios. E0 está identificada como `prueba`, pero no autorizada para borrar; preservar los cinco borradores. El respaldo/restauración de Raíces sigue pendiente desde la PC personal.
+
+### Próxima secuencia para terminar sin perder trabajo
+
+1. En la PC personal, inspeccionar `git worktree list`, ramas locales y refs remotas de los tres repositorios.
+2. Para cada rama candidata, comprobar que no esté activa localmente y que no sea target de un deployment/automatización/URL compartida.
+3. Eliminar únicamente las candidatas confirmadas; después volver a consultar GitHub y registrar el resultado.
+4. Revisar una por una las ramas Obsidian con commits exclusivos; rescatar cambios útiles a una rama limpia antes de decidir si se archivan.
+5. Desde Vercel, comprobar el uso de la URL del deployment ERROR y eliminarlo solo si está confirmado como prescindible.
+6. Mantener PRO-161 abierta hasta verificar esos pasos y los pendientes de sitio/código. No cerrar por haber completado el inventario remoto.
