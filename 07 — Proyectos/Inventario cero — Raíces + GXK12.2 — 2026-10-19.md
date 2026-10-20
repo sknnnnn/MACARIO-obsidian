@@ -22,7 +22,7 @@ Una cosa vieja no es necesariamente obsoleta. Antes de borrar un archivo, rama, 
 1. **Linear PRO-158 — Home V0.4:** pasó de In Progress a Backlog; se documentó la pausa hasta cerrar el Admin Lote 1 y se añadió dependencia de PRO-173. No se canceló.
 2. **Linear PRO-159 — Experiencia & Motion de Home:** se mantiene en Backlog, con pausa explícita y dependencia de PRO-173.
 3. **Linear PRO-161:** pasó a In Progress para reflejar que el inventario se está auditando.
-4. **Documentación:** la rama de limpieza consolida dos notas de continuidad de Raíces, corrige el estado del índice y agrega este inventario. La revisión de los criterios de duplicados se registra aquí porque la propuesta sin soporte técnico solo aparece en el PR #5 aún no integrado.
+4. **Documentación:** la rama de limpieza consolida dos notas de continuidad de Raíces, corrige el estado del índice y agrega este inventario. La revisión de los criterios de duplicados se registra aquí porque el PR #5 fue cerrado sin merge; el contenido útil se conserva de forma selectiva y la propuesta de avisos de duplicados se descarta por falta de soporte técnico.
 
 ## Linear — clasificación inicial
 
@@ -87,7 +87,7 @@ Ramas detectadas: main, master, dev, feature/admin, feature/i18n-es-en, ramas cl
 ### MACARIO-obsidian
 
 - PR #7 (cierre GXK) y PR #6 (continuidad Raíces) están mergeados.
-- PR #5 sigue abierto y no mergeable. Mezcla decisiones útiles del Loop 2 con estados superados y una propuesta de avisos de duplicados descartada por falta de soporte. Incorporar selectivamente lo vigente y después cerrar el PR como supersedido; no mergear el diff antiguo íntegro.
+- PR #5 está cerrado sin merge. Mezcla decisiones útiles del Loop 2 con estados superados y una propuesta de avisos de duplicados descartada por falta de soporte. La rama se conserva temporalmente para terminar la revisión selectiva; no reabrir ni mergear el diff antiguo íntegro.
 - Las ramas claude/obsidian-content-cleanup-20261007, claude/obsidian-fix-broken-links-20261007, claude/obsidian-structural-cleanup-20261007 y claude/trusting-feynman-sm520n requieren comparación de commits y contenido antes de decidir.
 
 ## Obsidian — limpieza documental
@@ -108,7 +108,7 @@ Ramas detectadas: main, master, dev, feature/admin, feature/i18n-es-en, ramas cl
 ## Próximas acciones
 
 1. Integrar esta clasificación y la consolidación documental mediante PR de Obsidian.
-2. Cerrar PR #5 como supersedido solo después de integrar las decisiones vigentes.
+2. Verificar que las decisiones vigentes recuperadas del PR #5 estén documentadas y mantenerlo cerrado; no reabrirlo ni mergear su diff antiguo.
 3. Comparar ramas candidatas contra sus bases y revisar cambios únicos; luego decidir cuáles se pueden eliminar.
 4. Conciliar las issues de backlog/In Progress con el código y su próxima acción; no cancelar por antigüedad.
 5. Limpiar código temporal solo tras demostrar que no está usado. Cualquier borrado de datos de producción requiere autorización separada.
@@ -120,7 +120,7 @@ Ramas detectadas: main, master, dev, feature/admin, feature/i18n-es-en, ramas cl
 - 2026-10-19: barrido inicial de GitHub, Linear, Obsidian, Supabase, Vercel y fuentes visuales; los candidatos no verificados permanecen intactos.
 ## Decisiones recuperadas del PR #5 de Obsidian — estado que debe conservarse
 
-El PR #5 contiene contexto útil, pero no debe mergearse íntegro porque el índice y algunas propuestas quedaron superados. Al cerrarlo, conservar explícitamente:
+El PR #5 está cerrado sin merge. Contiene contexto útil, pero no debe integrarse íntegro porque el índice y algunas propuestas quedaron superados. Al tratar el contenido recuperado, conservar explícitamente:
 
 - Mantener la Biblia GXK y la Dirección Visual aprobada como fuentes superiores; no convertir una propuesta de Admin en regla aprobada.
 - El Admin debe conservar la estructura y navegación existentes salvo decisión explícita; los cambios de organización visual no deben cambiar comportamiento ni contratos.
