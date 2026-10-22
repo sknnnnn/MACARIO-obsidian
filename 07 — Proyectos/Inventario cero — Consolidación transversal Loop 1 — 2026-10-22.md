@@ -62,3 +62,19 @@ La consolidación y publicación de los cambios autorizados en Raíces y MACARIO
 6. Documentar resultado y próxima acción en Obsidian y PRO-161.
 
 **Límites:** esta etapa es consolidación y trazabilidad, no implementación del Admin GXK, no continuación del storefront, no migraciones ni cambios en producción. La verificación local de GXK y su publicación siguen pendientes; no se deben considerar cerradas por la auditoría remota.
+
+
+## GXK12:2 — cierre de inspección local y publicación — 2026-10-22
+
+La inspección del clon local de GXK se completó en la PC personal, en modo de solo lectura. Resultado: **no había cambios locales que publicar**.
+
+- Rama activa: `chore/gxk-local-staging-safe`; working tree limpio, rama local y `origin/chore/gxk-local-staging-safe` sincronizadas en `7982038` (0 adelante / 0 atrás).
+- No hay stashes ni worktrees adicionales.
+- Los dos commits propios están preservados y publicados: `e066783` (`supabase/seed.sql`, seed intencionalmente vacío con comentarios) y `7982038` (`docs/staging-local.md`, procedimiento de staging local aislado).
+- `master` local está 18 commits detrás de `origin/master`; no se actualizó ni integró.
+- Las seis ramas remotas se inspeccionaron. `fix/home-v04-visual` (`6be7d02`) sigue siendo la sucesora visual conocida, 18 commits por delante de `master`. Las ramas `feat/home-v04-approved` (`bfca4b7`), `feat/home-v04-cierre` (`5490983`) y `feat/home-v04-preview-safe` (`ee75ff6`) son ancestros de esa sucesora según la inspección local.
+- **Divergencia documental/técnica que queda registrada, no corregida:** `chore/gxk-local-staging-safe` parte de `feat/home-v04-cierre`, no de `fix/home-v04-visual`. Por eso los dos commits de staging no están integrados en la sucesora visual. No es un push pendiente ni autoriza un merge; decidir más adelante si hace falta llevar esos archivos a otra rama.
+- `.env.local`, `supabase/.temp/` y artefactos de build permanecen ignorados/locales. No se expusieron secretos ni se publicaron archivos ignorados.
+- No se modificaron ramas, `master`, previews de Vercel, producción, Supabase ni migraciones. No hubo push porque no había commits locales pendientes.
+
+**Resultado de GXK para esta etapa:** inspección local cerrada; no hay publicación pendiente. La consolidación transversal todavía no cierra PRO-161: siguen pendientes la PC laboral, la conciliación final de ramas/referencias y los demás puntos de gobernanza ya listados. PRO-172 puede retomar su propio checklist de respaldo/restauración cuando corresponda; esta inspección no sustituye ni adelanta ese trabajo.
