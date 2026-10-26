@@ -131,3 +131,32 @@ Antes de implementar, validar:
 - consistencia visual entre módulos y patrones compartidos.
 
 La preview es una referencia de diseño, no una implementación aprobada ni un permiso de despliegue. La implementación debe preservar la lógica funcional existente y hacerse en `feature/admin`; luego se valida en Preview. Merge a `main` y despliegue requieren autorización específica.
+
+
+---
+
+## Revisión de dirección UX/UI — 2026-10-26 (brief estratégico, no implementación)
+
+La nueva dirección visual debe acompañar el cambio del modelo de negocio: Paquetes como oferta comercial principal y Guías como segundo eje estratégico de descubrimiento y visibilidad. Tours, Travesías y Destinos siguen siendo parte del sistema.
+
+### Objetivos de diseño
+
+- Elevar la calidad editorial y visual del sitio sin convertirlo en una plantilla genérica de agencia.
+- Dar a los paquetes jerarquía comercial y explicar con claridad su propuesta, contenido y forma de consulta.
+- Presentar a los guías como personas reales con conocimiento local, perfiles propios y experiencias asociadas; no como tarjetas genéricas de proveedores.
+- Mantener una experiencia integrada entre Paquetes, Guías, Tours, Travesías y Destinos.
+- Preservar fotografía auténtica, narrativa territorial, cercanía humana y personalidad visual.
+
+### Continuidad de identidad
+
+La dirección vigente orgánica, aventurera, humana, editorial y natural es el punto de partida. La nueva propuesta debe evaluarla y elevar su ejecución, no sustituir automáticamente la identidad ni cambiar la paleta o las tipografías sin una propuesta argumentada.
+
+### Criterios de trabajo
+
+- Revisar el inventario real de páginas, componentes, assets y tokens antes de diseñar.
+- Usar solo imágenes y datos reales para contenido final; no inventar guías, biografías, destinos, experiencias ni testimonios.
+- Separar en la propuesta qué se conserva, qué se evoluciona y qué se propone cambiar.
+- La dirección visual no define el modelo económico para guías ni implica pagos o reservas automáticas.
+- No comenzar la implementación ni reemplazar la Biblia de marca hasta aprobar la arquitectura y la propuesta visual.
+
+Este brief complementa los principios de UX/UI existentes; no los reemplaza ni representa una aprobación final de pantallas.
