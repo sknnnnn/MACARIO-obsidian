@@ -214,3 +214,16 @@ Las experiencias pueden enlazarse desde Destinos (registrado como consolidado en
 ## Documentos relacionados
 
 - [[07 — Proyectos/Proyecto Raíces/00 — Índice]]
+
+
+---
+
+## Hito: 2026-10-26 — Nueva orientación estratégica de Proyecto Raíces
+
+**Decisión confirmada por el usuario:** la propuesta comercial de Raíces pasa a priorizar paquetes de viaje. Tours y travesías permanecen en la oferta. Además, Raíces busca ofrecer a guías locales un servicio de visibilidad de sus destinos y propuestas, con perfiles propios y experiencias asociadas.
+
+**Consecuencia:** revisar la arquitectura histórica del sitio y elaborar una nueva dirección visual de mayor calidad, coordinada con este modelo. La identidad y la dirección visual existentes son base de trabajo, no se reemplazan automáticamente.
+
+**Pendiente:** aprobar el mapa de navegación, definir el alcance funcional de los perfiles de guía, comprobar el modelo de datos actual y decidir el modelo económico del servicio a guías. No se ha decidido suscripción, comisión ni mecanismo de cobro.
+
+**Alcance de este hito:** registra la orientación de negocio. No implica cambios en código, base de datos, despliegue, ni aprobación de pantallas o de una nueva Biblia. El detalle arquitectónico y el brief UX/UI se registran en las notas [[07 — Proyectos/Proyecto Raíces/04 — Arquitectura]] y [[07 — Proyectos/Proyecto Raíces/05 — UX-UI]].
