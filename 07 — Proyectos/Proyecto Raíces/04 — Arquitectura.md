@@ -181,3 +181,27 @@ Raíces también desarrollará una propuesta de visibilidad y comercialización 
 - No asumir pagos en línea, reserva automática ni cambios de datos sin definición y autorización.
 
 Esta revisión registra la nueva orientación y abre la revisión de la arquitectura anterior; no modifica por sí sola el código ni declara implementadas nuevas funcionalidades.
+
+
+---
+
+## Pausa y secuencia de reestructuración — 2026-10-26
+
+Raíces queda en pausa al cerrar esta sesión. La orientación estratégica ya está documentada arriba; no se crean documentos paralelos ni se considera aprobada una nueva arquitectura.
+
+### Próxima fase: avanzar sin mezclar diseño y operación
+
+1. **Inventario real del sitio:** páginas, componentes, assets, tokens, datos disponibles y relaciones existentes. Es el primer paso de la reestructuración y puede comenzar sin esperar a cerrar todos los pendientes operativos.
+2. **Propuesta de arquitectura:** jerarquía de navegación, relación entre Paquetes, Guías locales, Tours, Travesías y Destinos; qué se conserva, evoluciona o propone retirar. Destinos conecta editorialmente y no duplica el catálogo.
+3. **Propuesta de dirección visual:** parte de la identidad orgánica, aventurera, humana, editorial y natural vigente. No cambia automáticamente Brand Bible, paleta ni tipografías.
+4. **Aprobación explícita:** no implementar pantallas finales ni cambiar modelo de datos antes de aprobar arquitectura y dirección visual.
+5. **Implementación por etapas:** solo después de la aprobación, con pruebas y sin merge/deploy sin autorización.
+
+### Dependencias y límites
+
+- PRO-172 (respaldo real y restauración aislada) **no bloquea el inventario ni la propuesta conceptual**. Sí es requisito previo para cambios sensibles/destructivos en datos o producción, nuevas migraciones o pruebas reales que puedan alterar datos.
+- PRO-165 (calendario), PRO-166 (subida de imágenes) y PRO-162/163/164 (escrituras y datos de prueba) siguen pendientes de diagnóstico/evidencia; se pueden resolver en paralelo al inventario.
+- Reconciliar el Loop 2 del Admin (etapas B–F) según la nueva estrategia; la etapa A sigue cerrada en `ef6b175` y no se repite.
+- No inventar guías, biografías, destinos, experiencias, imágenes ni testimonios. El modelo económico para guías sigue sin decidirse; no presuponer pagos ni reservas automáticas.
+
+La pausa no cierra estos pendientes ni autoriza cambios en código, datos, producción o despliegue.
