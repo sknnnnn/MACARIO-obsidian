@@ -153,3 +153,31 @@ Fuente de §6–§7: doc Linear [Roadmap](https://linear.app/proyecto-raices/doc
 - [[07 — Proyectos/Proyecto Raíces/00 — Índice]]
 - [[07 — Proyectos/Proyecto Raíces/05 — UX-UI]]
 - [[07 — Proyectos/Proyecto Raíces/07 — Datos e Integraciones]]
+
+
+---
+
+## Revisión estratégica — 2026-10-26 (propuesta, pendiente de aprobación de arquitectura)
+
+### Cambio confirmado de orientación comercial
+
+Proyecto Raíces pasa a priorizar comercialmente los **paquetes de viaje**. Tours y travesías continúan formando parte de la oferta; no se eliminan ni se consideran productos obsoletos.
+
+Raíces también desarrollará una propuesta de visibilidad y comercialización para guías locales. La dirección deseada contempla perfiles propios de guías, con información real y experiencias asociadas a los destinos donde trabajan.
+
+### Implicaciones para la arquitectura
+
+- Evaluar Paquetes y Guías como ejes principales de descubrimiento y propuesta de valor.
+- Mantener Tours y Travesías como categorías vigentes dentro del sistema de experiencias.
+- Mantener Destinos como contenido editorial que conecta territorio, guías y propuestas.
+- Diseñar una experiencia integrada: no convertir cada categoría en un sitio separado.
+- Reemplazar la jerarquía histórica Experiencias → Tours/Travesías/Paquetes solo después de aprobar un mapa de navegación nuevo.
+
+### Límites y decisiones pendientes
+
+- La estructura exacta del menú y las rutas de navegación todavía no están aprobadas.
+- El modelo de datos actual contempla experiencias y composición de paquetes, pero la existencia de un modelo completo de perfiles de guías no está verificada.
+- No está definido el modelo económico del servicio a guías (suscripción, comisión, cobros u otro).
+- No asumir pagos en línea, reserva automática ni cambios de datos sin definición y autorización.
+
+Esta revisión registra la nueva orientación y abre la revisión de la arquitectura anterior; no modifica por sí sola el código ni declara implementadas nuevas funcionalidades.
