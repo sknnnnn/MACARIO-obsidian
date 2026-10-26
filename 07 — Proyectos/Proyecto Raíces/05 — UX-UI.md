@@ -160,3 +160,17 @@ La dirección vigente orgánica, aventurera, humana, editorial y natural es el p
 - No comenzar la implementación ni reemplazar la Biblia de marca hasta aprobar la arquitectura y la propuesta visual.
 
 Este brief complementa los principios de UX/UI existentes; no los reemplaza ni representa una aprobación final de pantallas.
+
+
+## 10. Pausa y método para la reestructuración — 2026-10-26
+
+La reestructuración queda pausada al cierre de la sesión. Al retomarla, el primer trabajo de diseño será **relevar la realidad existente**, no empezar directamente por mockups:
+
+1. Inventariar páginas, componentes, patrones, assets, tokens, datos y relaciones existentes.
+2. Proponer una arquitectura de navegación que priorice Paquetes y desarrolle Guías locales, manteniendo Tours y Travesías y conectando Destinos como capa editorial sin duplicar catálogo.
+3. Presentar una dirección visual que indique qué se conserva, qué se evoluciona y qué se propone cambiar.
+4. Esperar aprobación explícita antes de implementar.
+
+La identidad vigente orgánica, aventurera, humana, editorial y natural es el punto de partida. No reemplazar automáticamente Brand Bible, paleta o tipografías. Usar exclusivamente contenido real confirmado; los perfiles de guías requieren verificar datos y alcance.
+
+Los pendientes operativos pueden avanzar en paralelo al inventario y a las propuestas. El respaldo real (PRO-172) no bloquea el análisis de diseño, pero sí los cambios sensibles/destructivos en datos o producción y las nuevas migraciones. El calendario público (PRO-165), la carga real de imágenes (PRO-166), las escrituras/datos de prueba (PRO-162/163/164) y la revisión del Loop 2 Admin siguen abiertos y deben resolverse con evidencia, sin repetir la etapa A cerrada.
