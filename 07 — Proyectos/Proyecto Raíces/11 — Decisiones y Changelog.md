@@ -12,6 +12,17 @@
 
 Cada entrada nueva se agrega arriba, con fecha. No se borran entradas anteriores. Las entradas migradas desde el documento original no tenían fecha registrada; se marcan explícitamente como "Fecha: no registrada" en vez de inventar una.
 
+
+## Hito: 2026-10-26 — Pausa y orden de retoma de la reestructuración
+
+**Decisión de proceso:** pausar Raíces al cierre de la sesión y dejar documentados tanto los pendientes operativos como la reestructuración propuesta. No se crean documentos nuevos: se actualizan las notas canónicas existentes y el punto de continuidad del repositorio.
+
+**Próximo trabajo de reestructuración:** inventariar la aplicación real (páginas, componentes, assets, tokens y datos); proponer arquitectura de navegación; proponer dirección visual; obtener aprobación explícita antes de implementar. Esta fase de análisis puede comenzar sin haber cerrado todos los pendientes técnicos.
+
+**Pendientes que siguen abiertos:** PRO-172 (respaldo/restauración), PRO-165 (calendario público), PRO-166 (carga real de imágenes), PRO-162/163/164 (escrituras y datos de prueba), y reconciliación del Loop 2 Admin (B–F; etapa A cerrada). PRO-172 no bloquea inventario ni diseño conceptual, pero sí operaciones sensibles/destructivas sobre datos o producción y nuevas migraciones.
+
+**Límites:** no se modificó código funcional, Supabase, datos, producción, Linear ni despliegue como parte de esta pausa. No se considera aprobado el nuevo mapa de navegación ni la dirección visual. Se mantienen Paquetes como prioridad, Guías locales como eje a desarrollar y Tours/Travesías como oferta vigente; Destinos conecta editorialmente sin duplicar el catálogo.
+
 ---
 
 ## Hito: 2026-10-19 — Cierre técnico preparado y pausa antes de producción
