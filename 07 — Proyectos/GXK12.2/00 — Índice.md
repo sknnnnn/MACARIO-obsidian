@@ -13,9 +13,13 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 ## Estado general
 
-**Estado:** Proyecto activo. El Preview de la rama candidata `claude/bold-cerf-sj4d8y` volvió a funcionar tras corregir el alcance de las variables de entorno de Preview en Vercel. La siguiente etapa es completar QA y verificar el aislamiento de Supabase antes de preparar una integración; todavía no está autorizado hacer merge. La Brand & E-commerce Bible y la Dirección Visual aprobada siguen siendo obligatorias.
+**Estado:** Proyecto activo. Admin GXK Lote 1 integrado en `master`, migraciones de producción aplicadas y deployment de producción `READY`. Queda pendiente una verificación funcional posterior con sesión administrativa real (login y subida de imágenes); no bloquea el avance del storefront.
 
-**Última actualización:** 2026-10-28.
+**Última actualización:** 2026-10-30.
+
+**Cierre Admin Lote 1 (2026-10-30).** Implementación cerrada e integrada: PR #3 mergeado a `master` (merge commit `5ca8737d9149b4e439c68a60ae84ae890ca99e47`), migraciones `home_v04_content` y `admin_direct_uploads` aplicadas en Supabase producción y deployment Vercel `READY` en `https://gx-k12-2.vercel.app`. **Pendiente diferido:** smoke test con sesión administrativa real para confirmar login y subida de imágenes en producción. La verificación no se considera hecha y se retoma en una sesión posterior; no reabrir la implementación ni repetir el QA aislado ya realizado.
+
+**Siguiente etapa operativa — storefront público.** Relevar las pantallas existentes y clasificarlas en: (1) aprobadas que no requieren cambios; (2) existentes que necesitan refinamiento; (3) diseñadas/aprobadas pendientes de implementación; (4) todavía no diseñadas o con decisiones abiertas. Contrastar código, Obsidian, Claude Design/Figma y Linear antes de proponer un loop. No rehacer pantallas aprobadas ni depender de Figma MCP para el inventario inicial.
 
 **Checkpoint de continuidad (2026-10-30) — pausa de transferencia/motion y retorno al roadmap de producto.**
 
