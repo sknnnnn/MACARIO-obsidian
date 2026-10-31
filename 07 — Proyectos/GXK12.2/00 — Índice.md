@@ -1,5 +1,12 @@
 # GXK12:2 — Índice
 
+**Reconstrucción alineada a la Bible (01/11/2026), rama experimental sin integrar.**
+- Código en `experiment/gxk-bible-rebuild` (`docs/bible-rebuild.md`, con la matriz de las 39 secciones).
+- Resguardo en las ramas `backup/*`.
+- Registro en [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog, 2026-11-01]].
+- Preview de Vercel bloqueado: sin acceso al equipo y sin staging alojado.
+- Faltan las secciones 40–44 de la Bible.
+
 > Nota de entrada del proyecto dentro de MACARIO.
 > Fuentes: Linear = ejecución/tareas · GitHub = código · Obsidian = documentación · Brand & E-commerce Bible = verdad de marca/UX/contenido · Dirección Visual = traducción visual aprobada · Figma Pro = exploración y validación visual.
 
