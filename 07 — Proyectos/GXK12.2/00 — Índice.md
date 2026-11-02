@@ -1,5 +1,12 @@
 # GXK12:2 — Índice
 
+**Loop 1 de finalización (02/11/2026), en rama sin integrar.**
+- Base `7b5d236`, rama `claude/gxk-loop1-producto-early-access`.
+- Implementado: ficha D1b, NUEVO manual desde Admin, Early Access (Admin + teaser), CLS mobile y 404.
+- Migraciones solo locales.
+- Registro en [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog, 2026-11-02]].
+- Próximo loop: Outfits.
+
 **Reconstrucción alineada a la Bible (01/11/2026), rama experimental sin integrar.**
 - Código en `experiment/gxk-bible-rebuild` (`docs/bible-rebuild.md`, con la matriz de las 39 secciones).
 - Resguardo en las ramas `backup/*`.
@@ -22,7 +29,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 **Estado:** Proyecto activo. Admin GXK Lote 1 integrado en `master`, migraciones de producción aplicadas y deployment de producción `READY`. Queda pendiente una verificación funcional posterior con sesión administrativa real (login y subida de imágenes); no bloquea el avance del storefront.
 
-**Última actualización:** 2026-10-31 (cierre de sesión y continuidad del relevamiento visual).
+**Última actualización:** 2026-11-02 (loop 1 de finalización, en rama; ver arriba). Anterior: 2026-10-31 (cierre de sesión y continuidad del relevamiento visual).
 
 **Cierre de sesión — 2026-10-31 (continuidad 01/11).** Se consolidó el estado técnico y visual del storefront y se definió la continuación del relevamiento de pantallas. D1 está definido; D2 queda provisionalmente con paginación tradicional y se revisará con uso real, sin reabrirlo antes de probarlo. **Siguiente trabajo:** continuar el contraste documental de Universo, Eventos, Familia y Seguimiento leyendo Dirección Visual, Brand & E-commerce Bible §33 y las notas existentes de Loop 1/2; separar hechos verificados, decisiones vigentes, propuestas y vacíos. No diseñar ni implementar sobre supuestos. La renovación de la cuota de Figma se espera para el 01/11, pero no hay hora confirmada: comprobar disponibilidad al iniciar; no contratar un plan ni gastar llamadas en pruebas repetidas. El cierre detallado y el orden de continuidad están en el [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de producto|Roadmap]] y en [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog]].
 
