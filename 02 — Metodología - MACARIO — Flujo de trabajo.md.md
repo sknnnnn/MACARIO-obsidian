@@ -332,9 +332,62 @@ Cuando la decisión ya está tomada y documentada. Ejemplos: implementar un comp
 
 Cuando aparece: cambio importante de scope, nueva arquitectura, nueva dependencia significativa, cambio de identidad, migración destructiva, decisión comercial.
 
-### Ignacio aprueba siempre
+### Autorización de ejecución y aprobaciones
 
-Commit final, push, merge, deploy, decisiones comerciales, publicación definitiva.
+Cuando Ignacio delega explícitamente un resultado mediante un prompt de ejecución, esa delegación habilita al agente a trabajar en una rama aislada, implementar, ejecutar pruebas, corregir, documentar, crear commits y publicar esa rama / abrir un Pull Request dentro del alcance autorizado. No habilita a integrar cambios en la rama principal, hacer merge, desplegar a producción ni modificar servicios, datos o permisos productivos.
+
+Requieren autorización explícita y separada de Ignacio: merge o integración a la rama principal, deploy/publicación productiva, migraciones o cambios destructivos, operaciones sobre datos reales, cambios de permisos o seguridad, gastos/contrataciones, decisiones comerciales o de producto no documentadas y cualquier ampliación sustancial del alcance.
+
+La autorización para una tarea no se extiende a otras tareas, proyectos ni entornos. Si el pedido no delega claramente la ejecución o el destino es ambiguo, el agente prepara el trabajo y consulta antes de realizar la acción externa.
+
+### 8.1 Ejecución delegada por resultados
+
+El prompt de ejecución es el **disparador y la delegación de alcance**, no el lugar donde se reconstruye todo el conocimiento del proyecto. El contexto permanente vive en las fuentes de verdad: el agente debe consultarlas al comenzar y no depender de que el usuario copie grandes resúmenes en cada sesión.
+
+Cuando recibe un resultado claramente delegado, el agente trabaja de punta a punta dentro de ese alcance. Puede descomponerlo en subtareas, elegir el orden técnico, resolver detalles de implementación, ejecutar verificaciones y corregir fallos sin pedir aprobación por cada paso intermedio.
+
+La autonomía se limita a **cómo ejecutar lo aprobado**. No permite cambiar silenciosamente qué producto se construye, las reglas comerciales, la identidad o dirección visual aprobada, los criterios funcionales, la arquitectura de alto impacto ni el alcance comprometido.
+
+### 8.2 Protocolo operativo del agente
+
+Al iniciar una ejecución, el agente debe:
+
+1. **Orientarse:** leer este documento y el índice del proyecto; localizar las fuentes canónicas relevantes para el resultado solicitado.
+2. **Comprobar el estado real:** revisar repositorio, rama, cambios locales/remotos, commits y PRs relevantes; consultar Linear para el estado operativo cuando corresponda. No asumir que la documentación o el estado local están actualizados.
+3. **Reconciliar sin repetir:** reutilizar auditorías, decisiones y pruebas vigentes. Repetir una auditoría completa solo si cambió el código, el alcance, el entorno o la evidencia puede haber quedado obsoleta. Si una fuente contradice otra, identificar cuál gobierna ese tipo de información y documentar el conflicto relevante.
+4. **Separar certezas:** distinguir decisiones aprobadas, hechos verificados, hipótesis, propuestas y faltantes. No convertir una propuesta en decisión ni inventar datos ausentes.
+5. **Planificar internamente:** dividir el resultado en subtareas y avanzar en las que estén habilitadas. Preguntar solo cuando una decisión humana sea realmente bloqueante; mientras tanto, continuar con el trabajo independiente y seguro.
+6. **Ejecutar en aislamiento:** trabajar en una rama propia, preservar cambios ajenos, no sobrescribir trabajo existente y evitar tocar la rama principal. Implementar, probar y corregir dentro del alcance delegado.
+7. **Verificar el resultado:** ejecutar las pruebas pertinentes y revisar el resultado real. Diferenciar explícitamente pruebas unitarias, integración, E2E, mocks/simulaciones, Preview y producción. Una simulación no demuestra que una integración real funcione.
+8. **Sincronizar las fuentes:** actualizar documentación existente, estado de Linear y referencias de GitHub cuando corresponda. No duplicar tareas ni crear documentos si una nota existente puede actualizarse.
+9. **Cerrar con evidencia:** dejar commits en la rama de trabajo y, cuando la delegación lo permita, publicarla y abrir un PR. No hacer merge ni deploy productivo sin autorización separada.
+
+### 8.3 Contrato mínimo del prompt de ejecución
+
+Un prompt puede ser breve si identifica claramente:
+
+- **Resultado esperado:** qué debe quedar terminado.
+- **Alcance:** qué incluye y qué queda fuera.
+- **Fuentes:** índice del proyecto y decisiones/tareas/diseños que gobiernan el trabajo; el agente debe seguir los enlaces y consultar el contexto necesario.
+- **Restricciones:** límites técnicos, comerciales, visuales, de datos y de entorno.
+- **Criterios de aceptación:** cómo demostrar que el resultado está completo.
+- **Delegación:** qué acciones quedan autorizadas (por ejemplo, rama, commits, push y PR) y cuáles siguen requiriendo aprobación.
+
+No hace falta copiar en cada prompt las reglas permanentes, la historia completa ni cada subtarea. Si falta un dato no bloqueante, el agente lo registra y sigue; si falta una decisión que cambia el resultado, pregunta antes de asumir.
+
+### 8.4 Informe de cierre verificable
+
+Todo cierre de ejecución debe informar, de forma proporcional al trabajo:
+
+- resultado alcanzado y alcance no completado;
+- rama, commits, push y PR (si existen);
+- archivos y fuentes documentales modificadas;
+- pruebas ejecutadas, resultados y entorno exacto;
+- qué se verificó realmente y qué sigue simulado/no probado;
+- bloqueos, decisiones pendientes y riesgos;
+- estado actualizado en Linear / Obsidian.
+
+No declarar «terminado» por haber escrito código o porque el agente no detectó errores. El estado se determina por los criterios de aceptación y la evidencia disponible.
 
 ---
 

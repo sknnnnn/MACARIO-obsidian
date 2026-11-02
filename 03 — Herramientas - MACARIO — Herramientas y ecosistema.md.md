@@ -121,6 +121,8 @@ Claude Code no es una fuente de verdad: debe seguir las decisiones documentadas 
 
 Claude Code no debe tomar silenciosamente decisiones importantes de arquitectura, alcance o negocio, ni inventar la identidad visual en código: implementa diseño aprobado en Figma.
 
+Para la ejecución autónoma por resultados, Claude Code y cualquier agente que trabaje sobre el proyecto siguen el protocolo de [[02 — Metodología - MACARIO — Flujo de trabajo|MACARIO — Flujo de trabajo]] §8.1–8.4: consultan las fuentes del proyecto, verifican el estado real, trabajan dentro del alcance delegado y cierran con evidencia. La delegación permite commits y publicación en rama de trabajo cuando está explícita; nunca implica permiso de merge o deploy productivo.
+
 ## 3.6 Claude Design — Creative Engine
 
 Exploración visual, composición, prototipado, experimentación e iteración de conceptos antes de su aprobación.
