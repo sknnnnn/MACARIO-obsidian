@@ -391,8 +391,6 @@ No declarar «terminado» por haber escrito código o porque el agente no detect
 
 ---
 
----
-
 ## 9. Flujo visual y de revisión
 
 ### 9.1 Flujo visual (vigente desde 2026-10-07)
