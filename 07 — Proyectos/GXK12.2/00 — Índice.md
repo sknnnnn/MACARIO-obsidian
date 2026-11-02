@@ -185,3 +185,15 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 **Repositorio:** https://github.com/sknnnnn/GxK12-2
 **Proyecto en Linear:** [GxK12.2 — Construcción y lanzamiento de marca](https://linear.app/proyecto-raices/project/gxk122-construccion-y-lanzamiento-de-marca-ba4a28ef0c6a)
 **Figma:** PRANA STUDIOS — laboratorio y dirección visual GXK.
+
+
+## Continuidad operativa — LOOP 1 Producto / Early Access (2026-11-02)
+
+- Diagnóstico del Preview: deployment Vercel READY (`893667e`), pero rutas de producto fallan porque el schema de Supabase usado por Preview no contiene `products.is_new` ni `early_access_teaser(text)`.
+- Migraciones pendientes: `20261102100000_products_is_new` y `20261102110000_early_access_teaser`.
+- **Decisión de continuidad:** aplicar ambas migraciones mediante el procedimiento habitual ya utilizado en el proyecto. No introducir PGlite, Supabase local ni un proyecto de staging como requisito nuevo para este paso.
+- La ejecución queda para la próxima sesión. A fecha de este registro, las migraciones siguen sin aplicar; no se modificó producción ni se redeployó.
+- Después de aplicar: verificar columna, índice y función; revisar permisos/exposición del teaser; comprobar rutas afectadas y slug inexistente → 404; luego volver a validar el Preview. Preview sigue conectado a producción: no usarlo para registros, compras ni escrituras de prueba.
+- La falta de `SUPABASE_SERVICE_ROLE_KEY` en Preview es una deuda separada y no explica el error `42703`.
+
+Detalle y decisión fechada: [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog]].
