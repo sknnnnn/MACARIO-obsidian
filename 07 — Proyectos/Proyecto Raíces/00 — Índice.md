@@ -22,6 +22,8 @@
 > Las tareas operativas viven en Linear.
 > El código vive en GitHub.
 > Esta nota es el punto de partida para orientarse en el proyecto.
+>
+> **Ejecución con agentes:** aplicar [[02 — Metodología - MACARIO — Flujo de trabajo|MACARIO — Flujo de trabajo]] §8.1–8.4. La autonomía técnica no resuelve decisiones de negocio pendientes ni habilita cambios destructivos, migraciones o acciones sobre producción sin autorización específica.
 
 ---
 
