@@ -1,5 +1,24 @@
 # GXK12:2 — Índice
 
+## Estado consolidado — 2026-11-02 (vigente)
+
+Este bloque reemplaza como referencia operativa los estados anteriores que siguen debajo como historial. No usar los checkpoints fechados 31/10, 01/11 o anteriores como descripción del estado actual sin contrastarlos con esta sección.
+
+- **Código de referencia visual:** commit 7b5d236, rama claude/storefront-recorrido-compra. No está integrado en master y no implica aprobación automática de todos los diseños.
+- **Último loop implementado:** claude/gxk-loop1-producto-early-access, siete commits sobre 7b5d236: D1b, NUEVO manual desde Admin, Early Access Admin + teaser, CLS mobile y 404. Publicado en GitHub, sin merge ni despliegue. Sus dos migraciones existen solo en la base local.
+- **Fuente técnica integral:** experiment/gxk-bible-rebuild. Contiene recuperaciones adicionales (Outfits, B4/B5, stock/pagos, Camino, devoluciones, SEO, rendimiento, tokens y demo PGlite). No es base visual ni se integra automáticamente.
+- **Filtros automáticos:** ya implementados en claude/storefront-recorrido-compra y experiment; no quedaron en Loop 1. Deben conservarse al consolidar.
+- **Outfits:** la página /outfits existe en la fuente experimental. Al recuperarla, asegurar los cinco estilos siempre visibles y que todos los accesos «OUTFITS» lleven a /outfits.
+- **NUEVO:** se define manualmente desde Admin al crear/editar el producto; no hay criterio temporal ni por cantidad.
+- **Pendientes de revisión:** barra fija mobile de la ficha (no decidida); revisión conjunta de B5; aprobación visual de artboards 28/29. No asumir aprobación por estar implementados.
+- **Diseño:** si una pantalla/estado no existe en Figma ni en Claude Design, se considera no diseñado. Se puede diseñar en Claude Design y, tras aprobación, implementar.
+- **Seguridad/aislamiento:** diferido para después de completar la implementación. Mientras tanto, no usar previews conectados a producción para pruebas de escritura ni exponer datos reales; resolver aislamiento antes de cualquier Preview con escrituras o preparación de producción.
+- **Biblia y Dirección Visual:** congeladas; no modificar.
+- **Producción:** no aplicar migraciones, desplegar ni cambiar datos/credenciales sin autorización explícita.
+
+**Jerarquía de fuentes:** Bible (inmutable) → Dirección Visual / reglas aprobadas (inmutable en esta limpieza) → diseños existentes aprobados → decisiones posteriores del usuario → código. Linear registra tareas; GitHub conserva código; Obsidian conserva contexto y decisiones.
+
+
 **Loop 1 de finalización (02/11/2026), en rama sin integrar.**
 - Base `7b5d236`, rama `claude/gxk-loop1-producto-early-access`.
 - Implementado: ficha D1b, NUEVO manual desde Admin, Early Access (Admin + teaser), CLS mobile y 404.
