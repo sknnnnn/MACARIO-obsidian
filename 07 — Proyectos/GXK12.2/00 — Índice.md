@@ -1,3 +1,19 @@
+## Actualización de estado — diagnóstico Preview LOOP 1 (02/11/2026)
+
+Esta actualización prevalece sobre cualquier checkpoint anterior contradictorio de esta nota.
+
+- LOOP 1 está en `claude/gxk-loop1-producto-early-access`, comparada contra `master` (`5ca8737`): 15 commits por delante, 0 por detrás; no integrada.
+- Preview de Vercel `dpl_E2adJCH5WjBGuT6B8nAg1oAK4uag` (commit `893667e`) falla al consultar productos: PostgreSQL `42703`, falta `products.is_new`. El diagnóstico reporta 22 ocurrencias. También falta la función `early_access_teaser` y su índice/columna asociada en producción.
+- Rutas de lectura de productos afectadas: Home, fichas, catálogo/NUEVO, búsqueda con término, carrito/favoritos con productos, sección Outfits/Members Only y Admin Productos. Checkout y páginas sin consulta de productos no quedan alcanzadas por este error concreto.
+- La base de producción se verificó en solo lectura: 6 productos, 0 marcados en Early Access; no existen columna, índice ni función. Las dos migraciones siguen solo locales.
+- Preview continúa conectado al Supabase de producción. No usarlo para escrituras, compras, registros ni edición de Admin. El aislamiento sigue pendiente.
+- Falta `SUPABASE_SERVICE_ROLE_KEY` en variables de Preview; es una deuda previa que afecta analytics y acciones server-side, independiente del error `is_new`.
+- No se aplicaron migraciones en producción, no hubo redeploy y la rama no fue modificada por este diagnóstico. No existe autorización para hacerlo.
+
+**Decisión vigente:** mantener producción intacta. La corrección propuesta requiere autorización explícita y revisión previa de la exposición de la función `early_access_teaser`. La tarea de LOOP 1 no se considera cerrada ni lista para integrar hasta resolver la compatibilidad de esquema en un entorno seguro y verificar las rutas afectadas.
+
+---
+
 # GXK12:2 — Índice
 
 ## Estado consolidado — 2026-11-02 (vigente)
