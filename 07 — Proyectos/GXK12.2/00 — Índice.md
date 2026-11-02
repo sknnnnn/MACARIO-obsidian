@@ -197,3 +197,43 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 - La falta de `SUPABASE_SERVICE_ROLE_KEY` en Preview es una deuda separada y no explica el error `42703`.
 
 Detalle y decisión fechada: [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog]].
+
+---
+
+## Estado general y mapa de pendientes — cierre 2026-11-02
+
+Este checkpoint consolida el inventario general de GXK12:2 y prevalece sobre los resúmenes operativos anteriores que contradigan el estado aquí indicado. No reemplaza los detalles históricos ni declara cerrados los frentes sin QA.
+
+### Prioridades inmediatas
+1. LOOP 1 Producto/Early Access: aplicar por el procedimiento habitual las migraciones `20261102100000_products_is_new` y `20261102110000_early_access_teaser`; siguen pendientes de ejecución. Verificar columna, índice, función, permisos, rutas y 404.
+2. Seguridad de Preview: resolver el uso accidental de Supabase de producción y la variable `SUPABASE_SERVICE_ROLE_KEY` (incidencia separada). Hasta entonces, ningún registro, compra, escritura ni edición de Admin en Preview.
+3. Consolidación de código: elegir base canónica entre `7b5d236`, `e6e3533` y las ramas posteriores; recuperar cambios selectivamente, sin merge automático.
+4. Diseño de pantallas: retomar inventario y continuidad visual en Claude Design, sin depender de pagar Figma ni rehacer decisiones aprobadas.
+5. Integridad comercial y operación: pagos/stock, checkout/B5, envíos, emails, devoluciones, Camino y QA de Admin.
+
+### Frentes pendientes
+- **Storefront:** consolidar Tienda v22, Buscar, D2, filtros automáticos, D1b, B3 y disponibilidad; verificar sticky PDP aprobada, NUEVO manual y Early Access para visitantes (producto visible, compra bloqueada); QA visual y responsive.
+- **Diseño:** completar/revisar Home y pantallas de Tienda, Buscar, ficha, carrito, checkout y pedido; diseñar Outfits desde cero en Claude Design; inventariar y diseñar/rediseñar Universo, Eventos, Familia/Mi Casa, Favoritos, Seguimiento, Nosotros, Help y 404. Ver UX e interacción.
+- **Pagos y stock:** evaluar integración de `claude/stock-pagos-politica` (`b412c0f)); probar sandbox MP, webhooks, idempotencia, reembolsos, conciliación, cron, permisos y libro de movimientos; cerrar reglas comerciales que la Bible deja abiertas.
+- **Operación:** conectar proveedor de email y seis notificaciones; integrar APIs reales de Andreani y Correo Argentino; resolver tarifas, modalidades, tracking y Punto de encuentro; implementar cambios/devoluciones.
+- **Familia y Camino:** completar experiencia visual y QA; validar RLS, acceso anticipado, progreso, reintegros y condiciones de recompensas.
+- **Admin:** smoke test real de login y subida de imágenes; QA manual en navegador/dispositivo y revisión de pagos, inventario, permisos y Early Access.
+- **Calidad y lanzamiento:** accesibilidad, SEO, rendimiento, regresión, backup/restauración, variables/credenciales, contenido real y release plan.
+- **Gobierno documental:** conciliar ramas de Obsidian, alinear Linear con ramas y evidencia, preservar commits y trabajar en ramas feature.
+
+### Decisiones vigentes que no se reabren
+- Bible completa: 39 secciones; no crear §§40–44.
+- PDP mobile: sticky bar aprobada al superar el CTA principal.
+- Outfits: rediseño en Claude Design; cinco estilos siempre visibles; no adaptar automáticamente el layout experimental.
+- Early Access anónimo: mostrar producto y bloquear compra.
+- Artboards 28/29: aprobados visualmente; falta implementación/QA según corresponda.
+- Tienda D2: paginación tradicional, 12 productos por página.
+- D1b: panel desktop/hoja mobile, sin CTA de compra, con «Ver carrito».
+- B3: «Continuar con la compra» y «Seguir comprando».
+- Stock: carrito/checkout no reservan; gana el primer pago confirmado.
+- No merge, deploy, cambios en producción ni migraciones fuera del procedimiento acordado.
+
+### Próxima sesión
+Comenzar por las dos migraciones LOOP 1 y sus verificaciones; luego registrar el resultado y recién entonces continuar con aislamiento/base de integración. El frente de diseño queda como siguiente prioridad sustantiva, no cancelada ni sustituida por el trabajo técnico.
+
+Detalle operativo en Roadmap, Arquitectura técnica, UX e interacción y Decisiones y Changelog.
