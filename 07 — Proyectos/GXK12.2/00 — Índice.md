@@ -1,3 +1,19 @@
+## Actualización de estado — diagnóstico Preview LOOP 1 (02/11/2026)
+
+Esta actualización prevalece sobre cualquier checkpoint anterior contradictorio de esta nota.
+
+- LOOP 1 está en `claude/gxk-loop1-producto-early-access`, comparada contra `master` (`5ca8737`): 15 commits por delante, 0 por detrás; no integrada.
+- Preview de Vercel `dpl_E2adJCH5WjBGuT6B8nAg1oAK4uag` (commit `893667e`) falla al consultar productos: PostgreSQL `42703`, falta `products.is_new`. El diagnóstico reporta 22 ocurrencias. También falta la función `early_access_teaser` y su índice/columna asociada en producción.
+- Rutas de lectura de productos afectadas: Home, fichas, catálogo/NUEVO, búsqueda con término, carrito/favoritos con productos, sección Outfits/Members Only y Admin Productos. Checkout y páginas sin consulta de productos no quedan alcanzadas por este error concreto.
+- La base de producción se verificó en solo lectura: 6 productos, 0 marcados en Early Access; no existen columna, índice ni función. Las dos migraciones siguen solo locales.
+- Preview continúa conectado al Supabase de producción. No usarlo para escrituras, compras, registros ni edición de Admin. El aislamiento sigue pendiente.
+- Falta `SUPABASE_SERVICE_ROLE_KEY` en variables de Preview; es una deuda previa que afecta analytics y acciones server-side, independiente del error `is_new`.
+- No se aplicaron migraciones en producción, no hubo redeploy y la rama no fue modificada por este diagnóstico. No existe autorización para hacerlo.
+
+**Decisión vigente:** mantener producción intacta. La corrección propuesta requiere autorización explícita y revisión previa de la exposición de la función `early_access_teaser`. La tarea de LOOP 1 no se considera cerrada ni lista para integrar hasta resolver la compatibilidad de esquema en un entorno seguro y verificar las rutas afectadas.
+
+---
+
 # GXK12:2 — Índice
 
 ## Estado consolidado — 2026-11-02 (vigente)
@@ -169,3 +185,55 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 **Repositorio:** https://github.com/sknnnnn/GxK12-2
 **Proyecto en Linear:** [GxK12.2 — Construcción y lanzamiento de marca](https://linear.app/proyecto-raices/project/gxk122-construccion-y-lanzamiento-de-marca-ba4a28ef0c6a)
 **Figma:** PRANA STUDIOS — laboratorio y dirección visual GXK.
+
+
+## Continuidad operativa — LOOP 1 Producto / Early Access (2026-11-02)
+
+- Diagnóstico del Preview: deployment Vercel READY (`893667e`), pero rutas de producto fallan porque el schema de Supabase usado por Preview no contiene `products.is_new` ni `early_access_teaser(text)`.
+- Migraciones pendientes: `20261102100000_products_is_new` y `20261102110000_early_access_teaser`.
+- **Decisión de continuidad:** aplicar ambas migraciones mediante el procedimiento habitual ya utilizado en el proyecto. No introducir PGlite, Supabase local ni un proyecto de staging como requisito nuevo para este paso.
+- La ejecución queda para la próxima sesión. A fecha de este registro, las migraciones siguen sin aplicar; no se modificó producción ni se redeployó.
+- Después de aplicar: verificar columna, índice y función; revisar permisos/exposición del teaser; comprobar rutas afectadas y slug inexistente → 404; luego volver a validar el Preview. Preview sigue conectado a producción: no usarlo para registros, compras ni escrituras de prueba.
+- La falta de `SUPABASE_SERVICE_ROLE_KEY` en Preview es una deuda separada y no explica el error `42703`.
+
+Detalle y decisión fechada: [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog]].
+
+---
+
+## Estado general y mapa de pendientes — cierre 2026-11-02
+
+Este checkpoint consolida el inventario general de GXK12:2 y prevalece sobre los resúmenes operativos anteriores que contradigan el estado aquí indicado. No reemplaza los detalles históricos ni declara cerrados los frentes sin QA.
+
+### Prioridades inmediatas
+1. LOOP 1 Producto/Early Access: aplicar por el procedimiento habitual las migraciones `20261102100000_products_is_new` y `20261102110000_early_access_teaser`; siguen pendientes de ejecución. Verificar columna, índice, función, permisos, rutas y 404.
+2. Seguridad de Preview: resolver el uso accidental de Supabase de producción y la variable `SUPABASE_SERVICE_ROLE_KEY` (incidencia separada). Hasta entonces, ningún registro, compra, escritura ni edición de Admin en Preview.
+3. Consolidación de código: elegir base canónica entre `7b5d236`, `e6e3533` y las ramas posteriores; recuperar cambios selectivamente, sin merge automático.
+4. Diseño de pantallas: retomar inventario y continuidad visual en Claude Design, sin depender de pagar Figma ni rehacer decisiones aprobadas.
+5. Integridad comercial y operación: pagos/stock, checkout/B5, envíos, emails, devoluciones, Camino y QA de Admin.
+
+### Frentes pendientes
+- **Storefront:** consolidar Tienda v22, Buscar, D2, filtros automáticos, D1b, B3 y disponibilidad; verificar sticky PDP aprobada, NUEVO manual y Early Access para visitantes (producto visible, compra bloqueada); QA visual y responsive.
+- **Diseño:** completar/revisar Home y pantallas de Tienda, Buscar, ficha, carrito, checkout y pedido; diseñar Outfits desde cero en Claude Design; inventariar y diseñar/rediseñar Universo, Eventos, Familia/Mi Casa, Favoritos, Seguimiento, Nosotros, Help y 404. Ver UX e interacción.
+- **Pagos y stock:** evaluar integración de `claude/stock-pagos-politica` (`b412c0f)); probar sandbox MP, webhooks, idempotencia, reembolsos, conciliación, cron, permisos y libro de movimientos; cerrar reglas comerciales que la Bible deja abiertas.
+- **Operación:** conectar proveedor de email y seis notificaciones; integrar APIs reales de Andreani y Correo Argentino; resolver tarifas, modalidades, tracking y Punto de encuentro; implementar cambios/devoluciones.
+- **Familia y Camino:** completar experiencia visual y QA; validar RLS, acceso anticipado, progreso, reintegros y condiciones de recompensas.
+- **Admin:** smoke test real de login y subida de imágenes; QA manual en navegador/dispositivo y revisión de pagos, inventario, permisos y Early Access.
+- **Calidad y lanzamiento:** accesibilidad, SEO, rendimiento, regresión, backup/restauración, variables/credenciales, contenido real y release plan.
+- **Gobierno documental:** conciliar ramas de Obsidian, alinear Linear con ramas y evidencia, preservar commits y trabajar en ramas feature.
+
+### Decisiones vigentes que no se reabren
+- Bible completa: 39 secciones; no crear §§40–44.
+- PDP mobile: sticky bar aprobada al superar el CTA principal.
+- Outfits: rediseño en Claude Design; cinco estilos siempre visibles; no adaptar automáticamente el layout experimental.
+- Early Access anónimo: mostrar producto y bloquear compra.
+- Artboards 28/29: aprobados visualmente; falta implementación/QA según corresponda.
+- Tienda D2: paginación tradicional, 12 productos por página.
+- D1b: panel desktop/hoja mobile, sin CTA de compra, con «Ver carrito».
+- B3: «Continuar con la compra» y «Seguir comprando».
+- Stock: carrito/checkout no reservan; gana el primer pago confirmado.
+- No merge, deploy, cambios en producción ni migraciones fuera del procedimiento acordado.
+
+### Próxima sesión
+Comenzar por las dos migraciones LOOP 1 y sus verificaciones; luego registrar el resultado y recién entonces continuar con aislamiento/base de integración. El frente de diseño queda como siguiente prioridad sustantiva, no cancelada ni sustituida por el trabajo técnico.
+
+Detalle operativo en Roadmap, Arquitectura técnica, UX e interacción y Decisiones y Changelog.
