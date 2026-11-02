@@ -2,6 +2,7 @@
 
 > Nota de entrada del proyecto dentro de MACARIO.
 > Fuentes: Linear = ejecución/tareas · GitHub = código · Obsidian = documentación · Brand & E-commerce Bible = verdad de marca/UX/contenido · Dirección Visual = traducción visual aprobada · Figma Pro = exploración y validación visual.
+> **Ejecución con agentes:** aplicar [[02 — Metodología - MACARIO — Flujo de trabajo|MACARIO — Flujo de trabajo]] §8.1–8.4. Este protocolo regula autonomía, ramas, verificaciones y cierres; la Bible, las decisiones aprobadas y la Dirección Visual siguen gobernando el producto.
 
 ---
 
