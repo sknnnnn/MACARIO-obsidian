@@ -116,10 +116,10 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 
 ---
-## Estado operativo — 2026-11-03
+## Estado operativo — 2026-11-03 (actualizado)
 
-- **LOOP 1:** migraciones de products.is_new y teaser Early Access aplicadas y verificadas en Supabase producción. QA de rutas básico completado; cierre integral pendiente por aislamiento de Preview y ausencia de casos positivos NUEVO / Early Access. Detalle: [[07 — Proyectos/GXK12.2/03 — GXK12.2 — Arquitectura técnica|Arquitectura técnica]] §24.
-- **Preview:** la rama claude/gxk-loop1-producto-early-access todavía utiliza el proyecto Supabase de producción. No merge ni deploy nuevo. No se realizaron escrituras de prueba.
-- **Home:** criterio UX actualizado: las secciones estables no desaparecen cuando falta contenido; muestran estados editoriales diseñados. Outfits está ausente y Universo se contrae en la Preview actual. Ver [[07 — Proyectos/GXK12.2/10 — GXK12.2 — UX e interacción|UX e interacción]].
-
-- **Seguimiento QA:** [Linear PRO-174 — aislar Preview y completar QA de NUEVO / Early Access](https://linear.app/proyecto-raices/issue/PRO-174/gxk122-loop-1-aislar-preview-y-completar-qa-de-nuevo-early).
+- **LOOP 1:** migraciones de `products.is_new` y teaser Early Access aplicadas y verificadas en Supabase producción. Snapshot descriptivo de esquema/RLS guardado en [GXK12-2 — snapshot producción 2026-11-03](https://github.com/sknnnnn/GxK12-2/blob/master/supabase/snapshots/2026-11-03-production-schema.md). Es una referencia de consulta, no un backup restaurable ni contiene filas. Detalle técnico: [[07 — Proyectos/GXK12.2/03 — GXK12.2 — Arquitectura técnica|Arquitectura técnica]] §24.
+- **Preview:** se acepta continuar conectada a Supabase producción. No se creó un segundo proyecto ni se modificaron variables. QA de lectura permitido; sin compras, pagos, envíos, emails ni escrituras de prueba.
+- **Datos para QA:** reconsulta SQL read-only: 6 productos totales, 4 publicados, 0 NUEVO, 0 Early Access activo y 0 vencido. Los cuatro publicados son registros `test-*`; no existe un caso positivo real para probar NUEVO/Early Access. Los escenarios positivos quedan pendientes hasta disponer de datos de prueba autorizados.
+- **Home:** Outfits no se renderiza sin contenido y Universo contrae su cuerpo. El criterio de estados editoriales está aprobado; falta resolver visualmente esos dos estados antes de implementación. Ver [[07 — Proyectos/GXK12.2/10 — GXK12.2 — UX e interacción|UX e interacción]].
+- **Seguimiento:** [Linear PRO-174 — completar QA de NUEVO y Early Access en Preview](https://linear.app/proyecto-raices/issue/PRO-174/gxk122-loop-1-completar-qa-de-nuevo-y-early-access-en-preview).
