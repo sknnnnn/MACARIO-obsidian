@@ -13,6 +13,24 @@
 Cada entrada nueva se agrega arriba, con fecha. No se borran entradas anteriores. Las entradas migradas desde el documento original no tenían fecha registrada; se marcan explícitamente como "Fecha: no registrada" en vez de inventar una.
 
 
+## Hito: 2026-11-03 — Pausa de ejecución, nueva metodología y orientación estratégica
+
+**Decisión:** mantener Proyecto Raíces pausado. Hasta nueva indicación no se avanzan funcionalidades, arreglos, rediseño, cambios técnicos, migraciones, operaciones sobre datos ni despliegues. Se autoriza únicamente ordenar y reconciliar documentación.
+
+**Orientación estratégica acordada:** priorizar Paquetes como oferta comercial y dar mayor visibilidad a los perfiles de guías. Tours y Travesías existentes no se eliminan. El modelo de remuneración de guías queda pendiente; no se infieren comisiones ni condiciones económicas. Esta orientación requiere Discovery/definición de producto antes de traducirse a funcionalidades.
+
+**Metodología vigente:** se adopta para Raíces la metodología MACARIO definida en [[02 — Metodología - MACARIO — Flujo de trabajo]]. Obsidian contiene contexto y decisiones; Linear, tareas y estados; GitHub, código y PRs; Figma, diseños aprobados; Claude Design, exploración; Claude Code, implementación; Preview, QA previo. El trabajo se delega por resultado/loop (por ejemplo, «Resolve y cerrá el Loop N»), no mediante prompts que repiten toda la especificación. El agente consulta fuentes canónicas, reconcilia el estado, agrupa normalmente 4–5 tareas relacionadas, ejecuta lo habilitado de punta a punta, prueba y documenta. No repite auditorías vigentes ni crea documentos duplicados.
+
+**Autorizaciones:** los loops pueden habilitar implementación en ramas aisladas, pruebas, commits y PRs dentro del alcance. Merge, deploy productivo, migraciones, operaciones destructivas, cambios sobre datos reales, seguridad/permisos y decisiones comerciales no documentadas requieren autorización explícita y separada.
+
+**Reconciliación de estado técnico:** Linear registra que v6–v11 se ejecutaron el 2026-10-22; no repetir SQL. El backup real y la restauración aislada siguen pendientes (PRO-172). El orden de retoma queda: PRO-172 → PRO-165 → PRO-166 → PRO-162/PRO-163. La validación funcional no se considera resuelta por el registro de migraciones.
+
+**GitHub:** main es la rama por defecto. PR #23 fue mergeado; su rama conserva 115 commits adicionales frente a main. feature/admin conserva 26 commits adicionales. chore/technical-hardening y dev están divergentes. No se fusiona ni elimina ninguna rama sin revisar contenido, solapamientos y autorización.
+
+**Evidencia:** corte documental realizado contra GitHub, Linear y Obsidian el 2026-11-03. El detalle de ramas, issues y límites está en [estado y continuidad técnica](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-metodologia-pausa-20261103/docs/operacion/estado-y-continuidad-2026-11-03.md).
+
+---
+
 ## Hito: 2026-10-26 — Pausa y orden de retoma de la reestructuración
 
 **Decisión de proceso:** pausar Raíces al cierre de la sesión y dejar documentados tanto los pendientes operativos como la reestructuración propuesta. No se crean documentos nuevos: se actualizan las notas canónicas existentes y el punto de continuidad del repositorio.
