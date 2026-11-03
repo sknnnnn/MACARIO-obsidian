@@ -14,9 +14,9 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 ## Estado general
 
-**Estado:** Proyecto activo. El Preview de la rama candidata `claude/bold-cerf-sj4d8y` volvió a funcionar tras corregir el alcance de las variables de entorno de Preview en Vercel. La siguiente etapa es completar QA y verificar el aislamiento de Supabase antes de preparar una integración; todavía no está autorizado hacer merge. La Brand & E-commerce Bible y la Dirección Visual aprobada siguen siendo obligatorias.
+**Estado:** Proyecto activo. LOOP 1 Producto / NUEVO / Early Access en QA final parcial. Las migraciones de producción y los archivos de la rama `claude/gxk-loop1-producto-early-access` están reconciliados; la Preview más reciente está READY y el build/TypeScript finalizaron correctamente. Por decisión explícita, Preview continúa conectada a Supabase producción y el QA se limita a lectura. No hay registros positivos para probar NUEVO ni Early Access. Analytics no registra eventos en Preview porque no tiene `SUPABASE_SERVICE_ROLE_KEY`; se mantiene así para no habilitar escrituras privilegiadas desde Preview. No hay merge ni deploy a producción autorizados. La Brand & E-commerce Bible y la Dirección Visual aprobada siguen siendo obligatorias.
 
-**Última actualización:** 2026-10-28.
+**Última actualización:** 2026-11-03.
 
 **Checkpoint actual (2026-10-28) — cierre de la etapa de diseño del recorrido de compra, antes de la pasada de motion.** Fuente visual: Figma PRANA STUDIOS, página `GxK12.2` (índice del recorrido `526:1505`). Se distingue lo aprobado, lo no cerrado, lo implementado y lo pendiente:
 - **A. Diseño aprobado (no se reabre sin una nueva decisión):**
@@ -123,3 +123,4 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 - **Datos para QA:** reconsulta SQL read-only: 6 productos totales, 4 publicados, 0 NUEVO, 0 Early Access activo y 0 vencido. Los cuatro publicados son registros `test-*`; no existe un caso positivo real para probar NUEVO/Early Access. Los escenarios positivos quedan pendientes hasta disponer de datos de prueba autorizados.
 - **Home:** Outfits no se renderiza sin contenido y Universo contrae su cuerpo. El criterio de estados editoriales está aprobado; falta resolver visualmente esos dos estados antes de implementación. Ver [[07 — Proyectos/GXK12.2/10 — GXK12.2 — UX e interacción|UX e interacción]].
 - **Seguimiento:** [Linear PRO-174 — completar QA de NUEVO y Early Access en Preview](https://linear.app/proyecto-raices/issue/PRO-174/gxk122-loop-1-completar-qa-de-nuevo-y-early-access-en-preview).
+- **Reconciliación final de LOOP 1 (2026-11-03):** `supabase_migrations.schema_migrations` y `list_migrations` coinciden con los archivos `20261103152134_products_is_new.sql` y `20261103152140_early_access_teaser.sql` de la rama. La última Preview (`dpl_FhGp4ASB8TkHHGpa8kYNZVqDBkdr`, commit `8e4f251`) está READY; build y TypeScript correctos. La falta de `SUPABASE_SERVICE_ROLE_KEY` en Preview explica el descarte no bloqueante de analytics; no se agrega esa credencial. El QA positivo de NUEVO/Early Access sigue bloqueado por ausencia de datos elegibles y la comprobación HTTP de la última Preview queda pendiente por la protección SSO y la falta de una sesión de navegador conectada. PRO-174 permanece In Progress.
