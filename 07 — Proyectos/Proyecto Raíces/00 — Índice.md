@@ -1,16 +1,18 @@
-## Estado operativo actualizado — cierre técnico previo a producción (2026-10-19)
+## Estado operativo actualizado — 2026-11-03
 
-**Estado actual: PAUSADO hasta la próxima sesión.** La nota histórica del 2026-10-16 que sigue más abajo ya no representa el estado operativo actual; para detalles, consultar las fuentes técnicas enlazadas aquí.
+**Estado: PAUSADO.** Por decisión del usuario, no se retoman funcionalidades, arreglos, rediseño ni cambios técnicos. La intervención actual se limita a ordenar y reconciliar documentación.
 
-- [Cierre técnico completo en el repositorio de Proyecto Raíces](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/operacion/cierre-tecnico-produccion-2026-10-19.md).
-- [[07 — Proyectos/Proyecto Raíces/Continuidad — Respaldo de producción y migraciones]] — fuente vigente para el bloqueo de respaldo y el orden seguro para retomar.
-- [[07 — Proyectos/Inventario cero — Raíces + GXK12.2 — 2026-10-19]] — inventario transversal, candidatos de limpieza y decisiones protegidas.
-- [[07 — Proyectos/Proyecto Raíces/13 — Continuidad previa a producción — 2026-10-19]] — nota histórica reducida a puntero; no usar sus conteos de imágenes como actuales.
-- [Continuidad operativa en el repositorio](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/operacion/continuidad-cierre-tecnico-2026-10-19.md).
+- [Estado y continuidad técnica en el repositorio de aplicación](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-metodologia-pausa-20261103/docs/operacion/estado-y-continuidad-2026-11-03.md).
+- [[07 — Proyectos/Proyecto Raíces/Continuidad — Respaldo de producción y migraciones]] — respaldo real/restauración pendiente y orden de retoma.
+- [[07 — Proyectos/Proyecto Raíces/11 — Decisiones y Changelog]] — decisión estratégica y pausa del 2026-11-03.
+- [[02 — Metodología - MACARIO — Flujo de trabajo]] — metodología general vigente.
+- Linear: [Rediseño y lanzamiento Web](https://linear.app/proyecto-raices/project/rediseno-y-lanzamiento-web-2a37c58672be).
 
-**Bloqueo principal:** no se confirmó un backup restaurable de Supabase. No aplicar v6–v11 hasta verificar respaldo/recuperación y revisar el plan técnico. Ninguna migración se aplicó; no se modificaron datos de producción, no hubo borrados, deploy ni merge a `main`.
+**Orientación estratégica:** paquetes como oferta comercial prioritaria y mayor visibilidad para los perfiles de guías. El modelo de remuneración de guías permanece sin definir. Tours y Travesías existentes no se eliminan por esta decisión. No se deriva de esto autorización para implementar.
 
-**Siguiente sesión:** (1) verificar Supabase → Database → Backups o PITR; (2) revisar el procedimiento §3.5 del cierre técnico; (3) solo con respaldo confirmado, autorizar y ejecutar migraciones por tramos, una por una; (4) después de v10 y con autorización específica, probar una subida real desde Admin. Los pendientes de contenido y decisiones se detallan en el documento técnico.
+**Próxima secuencia cuando el usuario reactive el proyecto:** PRO-172 (preflight, backup real y restauración aislada) → PRO-165 (validación funcional del calendario/salidas) → PRO-166 (prueba real de subida) → PRO-162/PRO-163 (reconciliación de migraciones registradas y verificación autorizada de escrituras E1). Las migraciones v6–v11 figuran como ejecutadas el 2026-10-22 en Linear; no repetir SQL. La simulación local no sustituye al backup real.
+
+**GitHub:** rama por defecto main. PR #23 sí fue mergeado; la rama visual sigue con 115 commits adicionales frente a main. feature/admin tiene 26 commits adicionales. También existen ramas divergentes chore/technical-hardening y dev. No fusionar ni borrar ramas sin inventario y autorización.
 
 ---
 
@@ -42,10 +44,9 @@ Proyecto Raíces es un proyecto de turismo de aventura y experiencias (tours, tr
 
 ## Estado general
 
-**Estado:** el sitio público está operativo; el Admin/CMS sigue en desarrollo y verificación. La sesión quedó **pausada preventivamente** hasta confirmar un respaldo restaurable de Supabase y revisar el procedimiento técnico antes de cualquier migración. La rama de trabajo de Claude contiene cambios y documentación que no deben darse por integrados o publicados en main sin comprobarlo. El seguimiento operativo vive en Linear.
+**Estado:** PAUSADO por decisión del usuario al 2026-11-03. No avanzar con funcionalidades, arreglos, rediseño ni operaciones técnicas. El alcance actual es exclusivamente documental. El sitio público existe; el Admin y sus integraciones conservan validaciones pendientes. El seguimiento operativo vive en Linear.
 
-> Estado histórico: el 2026-09-28, Linear registró la "etapa funcional cerrada", con el foco puesto en UX/UI y dirección visual. Ese estado quedó superado.
-**Última actualización:** 2026-10-19 — cierre técnico preparado; respaldo restaurable aún no confirmado. No aplicar v6–v11, no borrar registros y no desplegar hasta retomar con autorización explícita. Ver la nota de continuidad vigente y la auditoría transversal.
+**Última actualización:** 2026-11-03. Las migraciones v6–v11 figuran como ejecutadas en Linear el 2026-10-22; no repetir SQL. El respaldo real de producción y la restauración aislada siguen pendientes. La orientación estratégica prioriza paquetes y visibilidad de guías; la remuneración de guías no está definida. Ver el bloque de estado al inicio de esta nota y la continuidad vigente.
 
 ### Estado histórico — 2026-10-16 (superado por el checkpoint del 2026-10-19)
 
