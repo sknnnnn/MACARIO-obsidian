@@ -189,3 +189,6 @@ El inventario debe cubrir storefront y compra (Home y todas sus secciones, Outfi
 **Criterio de cierre:** cada pantalla, recorrido, estado e interacción del inventario debe estar diseñado, revisado y aprobado o explícitamente fuera de alcance. No retomar la implementación visual integral mientras haya elementos sin resolver. La implementación técnica existente se conserva cuando sea aprovechable; solo se ajusta o reemplaza la presentación visual según los diseños aprobados. La contratación de Figma se reevaluará más adelante, sin asumir un gasto permanente.
 
 Detalle y reglas: [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de producto|Roadmap de producto]], [[07 — Proyectos/GXK12.2/06 — GXK12.2 — Dirección visual — Reglas aprobadas|Dirección Visual]] y [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog]].
+
+
+- [[07 — Proyectos/GXK12.2/13 — GXK12.2 — Plan de entrega, beta y lanzamiento|Plan de entrega, beta y lanzamiento]] — etapas desde diseño integral hasta beta del dueño, beta comercial y operación.
