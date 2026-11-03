@@ -1,7 +1,7 @@
 # GXK12:2 — Índice
 
 > Nota de entrada del proyecto dentro de MACARIO.
-> Fuentes: Linear = ejecución/tareas · GitHub = código · Obsidian = documentación · Brand & E-commerce Bible = verdad de marca/UX/contenido · Dirección Visual = traducción visual aprobada · Figma Pro = exploración y validación visual.
+> Fuentes: Linear = ejecución/tareas · GitHub = código · Obsidian = documentación · Brand & E-commerce Bible = verdad de marca/UX/contenido · Dirección Visual = traducción visual aprobada · Figma = exploración, diseño, aprobación y fuente visual oficial.
 > **Ejecución con agentes:** aplicar [[02 — Metodología - MACARIO — Flujo de trabajo|MACARIO — Flujo de trabajo]] §8.1–8.4. Este protocolo regula autonomía, ramas, verificaciones y cierres; la Bible, las decisiones aprobadas y la Dirección Visual siguen gobernando el producto.
 
 ---
@@ -18,7 +18,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 **Última actualización:** 2026-11-03.
 
-**Checkpoint actual (2026-10-28) — cierre de la etapa de diseño del recorrido de compra, antes de la pasada de motion.** Fuente visual: Figma PRANA STUDIOS, página `GxK12.2` (índice del recorrido `526:1505`). Se distingue lo aprobado, lo no cerrado, lo implementado y lo pendiente:
+**Checkpoint histórico (2026-10-28) — cierre de la etapa de diseño del recorrido de compra, antes de la pasada de motion.** Fuente visual: Figma PRANA STUDIOS, página `GxK12.2` (índice del recorrido `526:1505`). Se distingue lo aprobado, lo no cerrado, lo implementado y lo pendiente:
 - **A. Diseño aprobado (no se reabre sin una nueva decisión):**
   - **PDP** (desktop y mobile `501:1032`, `501:1151`, `505:1072`, `505:1172`): header del sistema y títulos en ABC Favorit Bold (la escala tipográfica sigue abierta).
   - **Confirmación al agregar** (`542:2410` panel desktop de 421 px con velo suave; `538:2435` hoja inferior mobile; vistas en la PDP B): es la confirmación principal y reemplaza a «Agregado ✓» y al aviso en línea. No se cierra sola, no se apila, muestra la cantidad real de la línea y el contador del header es solo un indicador persistente. Foco, Escape, anuncio accesible y `prefers-reduced-motion` están especificados. El estado de error del agregado es comportamiento futuro: hoy agregar es local y síncrono.
@@ -124,3 +124,71 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 - **Home:** Outfits no se renderiza sin contenido y Universo contrae su cuerpo. El criterio de estados editoriales está aprobado; falta resolver visualmente esos dos estados antes de implementación. Ver [[07 — Proyectos/GXK12.2/10 — GXK12.2 — UX e interacción|UX e interacción]].
 - **Seguimiento:** [Linear PRO-174 — completar QA de NUEVO y Early Access en Preview](https://linear.app/proyecto-raices/issue/PRO-174/gxk122-loop-1-completar-qa-de-nuevo-y-early-access-en-preview).
 - **Reconciliación final de LOOP 1 (2026-11-03):** `supabase_migrations.schema_migrations` y `list_migrations` coinciden con los archivos `20261103152134_products_is_new.sql` y `20261103152140_early_access_teaser.sql` de la rama. La última Preview (`dpl_FhGp4ASB8TkHHGpa8kYNZVqDBkdr`, commit `8e4f251`) está READY; build y TypeScript correctos. La falta de `SUPABASE_SERVICE_ROLE_KEY` en Preview explica el descarte no bloqueante de analytics; no se agrega esa credencial. El QA positivo de NUEVO/Early Access sigue bloqueado por ausencia de datos elegibles y la comprobación HTTP de la última Preview queda pendiente por la protección SSO y la falta de una sesión de navegador conectada. PRO-174 permanece In Progress. Las pruebas unitarias no se ejecutaron: el deployment de Vercel solo corrió `next build` (TypeScript y build), sin `npm test`. Los scripts de QA de navegador requieren una base local/de pruebas y `requireLocalDatabase()` rechaza explícitamente URLs `supabase.co`; no deben ejecutarse contra producción.
+
+
+---
+
+## Checkpoint de continuidad — 2026-11-03 (pausa solicitada)
+
+**Estado:** LOOP 2 en ejecución, pausado en un punto seguro por decisión del usuario. Este registro supersede cualquier checkpoint anterior que presente Outfits como único alcance o los artboards 30/31 como aprobados.
+
+### Código y ramas
+
+- **Repositorio:** [sknnnnn/GxK12-2](https://github.com/sknnnnn/GxK12-2).
+- **Rama de continuidad:** [`claude/gxk-loop2-completar`](https://github.com/sknnnnn/GxK12-2/tree/claude/gxk-loop2-completar).
+- **HEAD verificado:** `5afe01b49ac4bb9ec878d97d806c53ee9f8f7ffd` (`5afe01b`).
+- **Commits recientes:** `d714a3f` (Checkout B4 y Estado de tu pedido B5) y `5afe01b` (páginas de contenido/cuenta y ajustes de Checkout/PDP). La rama conserva como ancestros el trabajo previo de Outfits (`3b7e217`, `96375df`).
+- **Integración:** sin PR, sin merge; `master` intacto. No hubo escrituras en Supabase producción.
+- **Preview:** no existe todavía una Preview de `claude/gxk-loop2-completar`. La Preview anterior corresponde a la rama de Outfits y contiene la versión visual descartada; no usarla como validación del HEAD actual.
+
+### Trabajo implementado en la rama
+
+- Checkout (B4) y Estado de tu pedido (B5), con el diseño documentado en el artefacto de Claude Design v28 y las indicaciones registradas.
+- Páginas de contenido y cuenta: Nosotros, Eventos, Universo, Aventuras, Help, Seguimiento, Favoritos y Familia.
+- Ajustes de Checkout y ficha de producto contrastados con exportaciones de Figma aportadas el 03/11.
+- Se conserva el trabajo técnico previo de Outfits y navegación, pero su presentación visual y los estados vacíos de Home siguen pendientes de reemplazo por diseños aprobados.
+
+### Verificación reportada al pausar
+
+Según el último informe de ejecución de Claude, en base local Docker y sobre `5afe01b`:
+
+- Unitarias: 206/206.
+- TypeScript: sin errores.
+- ESLint: sin errores; quedaron 2 avisos por directivas sin uso.
+- 17 scripts de navegador completados sin fallos, incluidos Checkout (101), páginas de contenido (171), PDP (71), accesibilidad storefront (47) y recuperación de errores (30).
+
+Estos resultados se registran como **QA local reportado por el agente**, no como una nueva ejecución independiente de este cierre documental. No equivalen a QA de Preview ni a validación con outfits reales. La base local quedó en su estado original al pausar.
+
+### Diseño: estado y autoridad
+
+- Figma continúa siendo la fuente de verdad visual para las pantallas aprobadas.
+- Claude debe proponer conceptos, pantallas y estados directamente en Figma, consultando la Bible, la Dirección Visual, el inventario y las decisiones vigentes. El usuario revisa, corrige y aprueba o rechaza cada propuesta. Ningún diseño queda aprobado automáticamente.
+- Los artboards 30 y 31 del lienzo Claude Design (versión 70 al último reporte) son propuestas no aprobadas; las versiones anteriores de Outfits/estados vacíos implementadas en la rama se consideran visualmente descartadas.
+- Las exportaciones de Figma aportadas el 03/11 permitieron contrastar Checkout y ficha; no habilitan a afirmar que se inspeccionaron todos los frames del archivo. La cuota Starter sigue limitando la consulta directa de Figma.
+- La falta de acceso a Figma no invalida el trabajo ya implementado ni autoriza a inventar referencias visuales.
+
+### Próxima continuidad
+
+1. Completar el inventario visual integral de la A a la Z: todas las áreas, pantallas, recorridos, variantes responsive, estados, interacciones y componentes globales, incluido el Admin.
+2. Claude propone y desarrolla las pantallas directamente en Figma; el usuario revisa, corrige y aprueba o rechaza. Figma conserva la fuente visual oficial.
+3. Resolver también las pantallas que ya tienen diseños parciales, antiguos o no aprobados. En particular, **Outfits dentro de Home queda PARCIAL — rediseño pendiente**: la composición actual no es definitiva y debe reemplazarse por una nueva propuesta en Figma.
+4. Solo cuando cada elemento esté diseñado, revisado y aprobado o explícitamente fuera de alcance, retomar la implementación visual desde `claude/gxk-loop2-completar`, conservando la implementación técnica aprovechable y ajustando/reemplazando su presentación.
+5. Crear Preview de la rama vigente y ejecutar QA visual/funcional contra Figma en desktop y mobile, incluyendo estados e interacciones.
+
+**LOOP 2 no está cerrado.** La entrega queda en una rama publicada y con QA local reportado, pero faltan continuidad de diseño, implementación visual pendiente, Preview del HEAD actual y validación integral.
+
+
+## Prioridad vigente — cierre visual integral (2026-11-03)
+
+La prioridad inmediata y próximo gran objetivo de GXK12:2 es **diseñar absolutamente todo el producto, de la A a la Z**, antes de retomar la implementación visual. No alcanza con completar las páginas faltantes: hay que revisar y cerrar también lo que existe parcialmente, quedó desactualizado o nunca fue aprobado.
+
+El inventario debe cubrir storefront y compra (Home y todas sus secciones, Outfits como página, Tienda, búsqueda, filtros, PDP, variantes, favoritos, carrito, checkout, confirmación y pedidos); contenido y descubrimiento (Universo, Aventuras, capítulos, Eventos y Nosotros); comunidad y cuenta (Familia, Mi Casa, Members Only, Mi Camino y Favoritos); postventa (seguimiento, ayuda y soporte); y Admin completo (dashboard, productos, editor, variantes/stock, imágenes, pedidos, envíos, contenido, comunidad, configuración y analíticas). Para cada área: desktop, tablet y mobile cuando corresponda; recorridos completos; estados vacíos, loading, error, éxito, disponibilidad, validación, confirmación y demás variantes; interacciones, overlays, modales, drawers, navegación, foco, accesibilidad y motion.
+
+**Flujo obligatorio:** Claude propone y diseña directamente en Figma → el usuario revisa, corrige y aprueba/rechaza → Figma conserva los diseños aprobados como fuente visual oficial → Claude implementa lo aprobado → QA compara la implementación con Figma.
+
+**Criterio de cierre:** cada pantalla, recorrido, estado e interacción del inventario debe estar diseñado, revisado y aprobado o explícitamente fuera de alcance. No retomar la implementación visual integral mientras haya elementos sin resolver. La implementación técnica existente se conserva cuando sea aprovechable; solo se ajusta o reemplaza la presentación visual según los diseños aprobados. La contratación de Figma se reevaluará más adelante, sin asumir un gasto permanente.
+
+Detalle y reglas: [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de producto|Roadmap de producto]], [[07 — Proyectos/GXK12.2/06 — GXK12.2 — Dirección visual — Reglas aprobadas|Dirección Visual]] y [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog]].
+
+
+- [[07 — Proyectos/GXK12.2/13 — GXK12.2 — Plan de entrega, beta y lanzamiento|Plan de entrega, beta y lanzamiento]] — etapas desde diseño integral hasta beta del dueño, beta comercial y operación.
