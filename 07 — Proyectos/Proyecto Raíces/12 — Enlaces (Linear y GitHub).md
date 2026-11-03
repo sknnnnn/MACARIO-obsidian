@@ -6,7 +6,7 @@
 
 - **Continuidad y bloqueo actual:** [[07 — Proyectos/Proyecto Raíces/Continuidad — Respaldo de producción y migraciones]] y [estado técnico al 2026-11-03](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-metodologia-pausa-20261103/docs/operacion/estado-y-continuidad-2026-11-03.md).
 - **Inventario transversal y limpieza:** [[07 — Proyectos/Inventario cero — Raíces + GXK12.2 — 2026-10-19]] y [Linear PRO-161](https://linear.app/proyecto-raices/issue/PRO-161/gobernanza-feature-freeze-y-limpieza-del-inventario-raices-gxk122).
-- **Respaldo antes de migraciones:** [Linear PRO-172](https://linear.app/proyecto-raices/issue/PRO-172/raices-respaldar-produccion-y-probar-restauracion-antes-de-migraciones).
+- **Respaldo antes de migraciones:** [Linear PRO-172](https://linear.app/proyecto-raices/issue/PRO-172/raices-respaldar-produccion-y-probar-restauracion-aislada).
 - **Admin E1:** [Linear PRO-160](https://linear.app/proyecto-raices/issue/PRO-160/raices-admin-de-contenidos-e1-v5-aplicada-y-verificada-falta-publicar).
 - **Carga de imágenes y alt público:** [Linear PRO-166](https://linear.app/proyecto-raices/issue/PRO-166/admin-carga-de-imagenes-d8-y-alt-publico-d13-implementado-y-probado-en).
 - **Estado:** PAUSADO por decisión del usuario. Solo se permite trabajo documental. No avanzar funcionalidades/arreglos ni aplicar migraciones, borrar datos, desplegar o hacer merge.
