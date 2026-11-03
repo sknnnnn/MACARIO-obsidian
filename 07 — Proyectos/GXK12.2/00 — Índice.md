@@ -113,3 +113,11 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 **Repositorio:** https://github.com/sknnnnn/GxK12-2
 **Proyecto en Linear:** [GxK12.2 — Construcción y lanzamiento de marca](https://linear.app/proyecto-raices/project/gxk122-construccion-y-lanzamiento-de-marca-ba4a28ef0c6a)
 **Figma:** PRANA STUDIOS — laboratorio y dirección visual GXK.
+
+
+---
+## Estado operativo — 2026-11-03
+
+- **LOOP 1:** migraciones de products.is_new y teaser Early Access aplicadas y verificadas en Supabase producción. QA de rutas básico completado; cierre integral pendiente por aislamiento de Preview y ausencia de casos positivos NUEVO / Early Access. Detalle: [[07 — Proyectos/GXK12.2/03 — GXK12.2 — Arquitectura técnica|Arquitectura técnica]] §24.
+- **Preview:** la rama claude/gxk-loop1-producto-early-access todavía utiliza el proyecto Supabase de producción. No merge ni deploy nuevo. No se realizaron escrituras de prueba.
+- **Home:** criterio UX actualizado: las secciones estables no desaparecen cuando falta contenido; muestran estados editoriales diseñados. Outfits está ausente y Universo se contrae en la Preview actual. Ver [[07 — Proyectos/GXK12.2/10 — GXK12.2 — UX e interacción|UX e interacción]].
