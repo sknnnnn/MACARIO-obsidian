@@ -162,26 +162,30 @@ Estos resultados se registran como **QA local reportado por el agente**, no como
 ### Diseño: estado y autoridad
 
 - Figma continúa siendo la fuente de verdad visual para las pantallas aprobadas.
-- El usuario continuará personalmente con el diseño de pantallas. Hasta que comparta o apruebe esos diseños, no generar propuestas autónomas de dirección visual ni implementar los artboards 30/31 como si estuvieran aprobados.
+- Claude debe proponer conceptos, pantallas y estados directamente en Figma, consultando la Bible, la Dirección Visual, el inventario y las decisiones vigentes. El usuario revisa, corrige y aprueba o rechaza cada propuesta. Ningún diseño queda aprobado automáticamente.
 - Los artboards 30 y 31 del lienzo Claude Design (versión 70 al último reporte) son propuestas no aprobadas; las versiones anteriores de Outfits/estados vacíos implementadas en la rama se consideran visualmente descartadas.
 - Las exportaciones de Figma aportadas el 03/11 permitieron contrastar Checkout y ficha; no habilitan a afirmar que se inspeccionaron todos los frames del archivo. La cuota Starter sigue limitando la consulta directa de Figma.
 - La falta de acceso a Figma no invalida el trabajo ya implementado ni autoriza a inventar referencias visuales.
 
 ### Próxima continuidad
 
-1. Completar el inventario visual integral y diseñar todas las pantallas, recorridos y estados en Figma.
-2. Claude propone; el usuario revisa, corrige y aprueba cada diseño.
-3. Una vez cerrado el inventario visual, retomar implementación desde `claude/gxk-loop2-completar`, preservar el trabajo aprovechable y aplicar los diseños aprobados.
-4. Reemplazar Outfits y estados vacíos de Home según los diseños aprobados; no reutilizar las propuestas visuales descartadas.
-5. Crear Preview de la rama vigente, ejecutar QA visual/funcional, completar revisión técnica y documentar el cierre.
+1. Completar el inventario visual integral de la A a la Z: todas las áreas, pantallas, recorridos, variantes responsive, estados, interacciones y componentes globales, incluido el Admin.
+2. Claude propone y desarrolla las pantallas directamente en Figma; el usuario revisa, corrige y aprueba o rechaza. Figma conserva la fuente visual oficial.
+3. Resolver también las pantallas que ya tienen diseños parciales, antiguos o no aprobados. En particular, **Outfits dentro de Home queda PARCIAL — rediseño pendiente**: la composición actual no es definitiva y debe reemplazarse por una nueva propuesta en Figma.
+4. Solo cuando cada elemento esté diseñado, revisado y aprobado o explícitamente fuera de alcance, retomar la implementación visual desde `claude/gxk-loop2-completar`, conservando la implementación técnica aprovechable y ajustando/reemplazando su presentación.
+5. Crear Preview de la rama vigente y ejecutar QA visual/funcional contra Figma en desktop y mobile, incluyendo estados e interacciones.
 
 **LOOP 2 no está cerrado.** La entrega queda en una rama publicada y con QA local reportado, pero faltan continuidad de diseño, implementación visual pendiente, Preview del HEAD actual y validación integral.
 
 
 ## Prioridad vigente — cierre visual integral (2026-11-03)
 
-La prioridad inmediata es completar el diseño visual de **todo GXK12:2** antes de retomar la implementación visual. Claude propone conceptos y pantallas en Figma; el usuario revisa, corrige y aprueba; Figma es la fuente visual oficial; Claude implementa lo aprobado y se valida contra Figma.
+La prioridad inmediata y próximo gran objetivo de GXK12:2 es **diseñar absolutamente todo el producto, de la A a la Z**, antes de retomar la implementación visual. No alcanza con completar las páginas faltantes: hay que revisar y cerrar también lo que existe parcialmente, quedó desactualizado o nunca fue aprobado.
 
-El inventario debe cubrir todas las áreas, pantallas, recorridos, variantes desktop/mobile y estados relevantes. **La etapa visual solo cierra cuando cada elemento está diseñado, revisado y aprobado o marcado explícitamente fuera de alcance.** La implementación técnica existente se conserva cuando sea aprovechable. La contratación de Figma se reevaluará más adelante, sin asumir un gasto permanente.
+El inventario debe cubrir storefront y compra (Home y todas sus secciones, Outfits como página, Tienda, búsqueda, filtros, PDP, variantes, favoritos, carrito, checkout, confirmación y pedidos); contenido y descubrimiento (Universo, Aventuras, capítulos, Eventos y Nosotros); comunidad y cuenta (Familia, Mi Casa, Members Only, Mi Camino y Favoritos); postventa (seguimiento, ayuda y soporte); y Admin completo (dashboard, productos, editor, variantes/stock, imágenes, pedidos, envíos, contenido, comunidad, configuración y analíticas). Para cada área: desktop, tablet y mobile cuando corresponda; recorridos completos; estados vacíos, loading, error, éxito, disponibilidad, validación, confirmación y demás variantes; interacciones, overlays, modales, drawers, navegación, foco, accesibilidad y motion.
+
+**Flujo obligatorio:** Claude propone y diseña directamente en Figma → el usuario revisa, corrige y aprueba/rechaza → Figma conserva los diseños aprobados como fuente visual oficial → Claude implementa lo aprobado → QA compara la implementación con Figma.
+
+**Criterio de cierre:** cada pantalla, recorrido, estado e interacción del inventario debe estar diseñado, revisado y aprobado o explícitamente fuera de alcance. No retomar la implementación visual integral mientras haya elementos sin resolver. La implementación técnica existente se conserva cuando sea aprovechable; solo se ajusta o reemplaza la presentación visual según los diseños aprobados. La contratación de Figma se reevaluará más adelante, sin asumir un gasto permanente.
 
 Detalle y reglas: [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de producto|Roadmap de producto]], [[07 — Proyectos/GXK12.2/06 — GXK12.2 — Dirección visual — Reglas aprobadas|Dirección Visual]] y [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog]].
