@@ -18,7 +18,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 **Última actualización:** 2026-11-03.
 
-**Checkpoint actual (2026-10-28) — cierre de la etapa de diseño del recorrido de compra, antes de la pasada de motion.** Fuente visual: Figma PRANA STUDIOS, página `GxK12.2` (índice del recorrido `526:1505`). Se distingue lo aprobado, lo no cerrado, lo implementado y lo pendiente:
+**Checkpoint histórico (2026-10-28) — cierre de la etapa de diseño del recorrido de compra, antes de la pasada de motion.** Fuente visual: Figma PRANA STUDIOS, página `GxK12.2` (índice del recorrido `526:1505`). Se distingue lo aprobado, lo no cerrado, lo implementado y lo pendiente:
 - **A. Diseño aprobado (no se reabre sin una nueva decisión):**
   - **PDP** (desktop y mobile `501:1032`, `501:1151`, `505:1072`, `505:1172`): header del sistema y títulos en ABC Favorit Bold (la escala tipográfica sigue abierta).
   - **Confirmación al agregar** (`542:2410` panel desktop de 421 px con velo suave; `538:2435` hoja inferior mobile; vistas en la PDP B): es la confirmación principal y reemplaza a «Agregado ✓» y al aviso en línea. No se cierra sola, no se apila, muestra la cantidad real de la línea y el contador del header es solo un indicador persistente. Foco, Escape, anuncio accesible y `prefers-reduced-motion` están especificados. El estado de error del agregado es comportamiento futuro: hoy agregar es local y síncrono.
