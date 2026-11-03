@@ -15,7 +15,7 @@ La dirección estratégica acordada para la próxima etapa prioriza:
 
 **Pendiente de definición:** el modelo de remuneración de los guías. No asumir comisiones, porcentajes, contratación ni condiciones económicas.
 
-Esta orientación todavía debe convertirse en un brief de producto/negocio más detallado cuando se reactive el proyecto. No define por sí sola nuevas pantallas, campos, navegación, funcionalidades ni cambios de datos. La ejecución queda pausada al 2026-11-03.
+Esta orientación todavía debe convertirse en un brief de producto/negocio más detallado cuando se reactive el proyecto. No define por sí sola nuevas pantallas, campos, navegación, funcionalidades ni cambios de datos. La antigua página pública guias.html fue retirada; no reintroducirla ni crear una sección pública de perfiles sin definir primero el alcance. La ejecución queda pausada al 2026-11-03.
 
 ---
 
