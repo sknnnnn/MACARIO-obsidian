@@ -2,7 +2,7 @@
 tipo: proyecto
 proyecto: Proyecto Raíces
 estado: pausa preventiva
-actualizado: 2026-10-19
+actualizado: 2026-11-03
 ---
 
 # Continuidad — respaldo de producción y migraciones
