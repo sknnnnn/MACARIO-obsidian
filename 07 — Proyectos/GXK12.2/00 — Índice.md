@@ -124,3 +124,55 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 - **Home:** Outfits no se renderiza sin contenido y Universo contrae su cuerpo. El criterio de estados editoriales está aprobado; falta resolver visualmente esos dos estados antes de implementación. Ver [[07 — Proyectos/GXK12.2/10 — GXK12.2 — UX e interacción|UX e interacción]].
 - **Seguimiento:** [Linear PRO-174 — completar QA de NUEVO y Early Access en Preview](https://linear.app/proyecto-raices/issue/PRO-174/gxk122-loop-1-completar-qa-de-nuevo-y-early-access-en-preview).
 - **Reconciliación final de LOOP 1 (2026-11-03):** `supabase_migrations.schema_migrations` y `list_migrations` coinciden con los archivos `20261103152134_products_is_new.sql` y `20261103152140_early_access_teaser.sql` de la rama. La última Preview (`dpl_FhGp4ASB8TkHHGpa8kYNZVqDBkdr`, commit `8e4f251`) está READY; build y TypeScript correctos. La falta de `SUPABASE_SERVICE_ROLE_KEY` en Preview explica el descarte no bloqueante de analytics; no se agrega esa credencial. El QA positivo de NUEVO/Early Access sigue bloqueado por ausencia de datos elegibles y la comprobación HTTP de la última Preview queda pendiente por la protección SSO y la falta de una sesión de navegador conectada. PRO-174 permanece In Progress. Las pruebas unitarias no se ejecutaron: el deployment de Vercel solo corrió `next build` (TypeScript y build), sin `npm test`. Los scripts de QA de navegador requieren una base local/de pruebas y `requireLocalDatabase()` rechaza explícitamente URLs `supabase.co`; no deben ejecutarse contra producción.
+
+
+---
+
+## Checkpoint de continuidad — 2026-11-03 (pausa solicitada)
+
+**Estado:** LOOP 2 en ejecución, pausado en un punto seguro por decisión del usuario. Este registro supersede cualquier checkpoint anterior que presente Outfits como único alcance o los artboards 30/31 como aprobados.
+
+### Código y ramas
+
+- **Repositorio:** [sknnnnn/GxK12-2](https://github.com/sknnnnn/GxK12-2).
+- **Rama de continuidad:** [`claude/gxk-loop2-completar`](https://github.com/sknnnnn/GxK12-2/tree/claude/gxk-loop2-completar).
+- **HEAD verificado:** `5afe01b49ac4bb9ec878d97d806c53ee9f8f7ffd` (`5afe01b`).
+- **Commits recientes:** `d714a3f` (Checkout B4 y Estado de tu pedido B5) y `5afe01b` (páginas de contenido/cuenta y ajustes de Checkout/PDP). La rama conserva como ancestros el trabajo previo de Outfits (`3b7e217`, `96375df`).
+- **Integración:** sin PR, sin merge; `master` intacto. No hubo escrituras en Supabase producción.
+- **Preview:** no existe todavía una Preview de `claude/gxk-loop2-completar`. La Preview anterior corresponde a la rama de Outfits y contiene la versión visual descartada; no usarla como validación del HEAD actual.
+
+### Trabajo implementado en la rama
+
+- Checkout (B4) y Estado de tu pedido (B5), con el diseño documentado en el artefacto de Claude Design v28 y las indicaciones registradas.
+- Páginas de contenido y cuenta: Nosotros, Eventos, Universo, Aventuras, Help, Seguimiento, Favoritos y Familia.
+- Ajustes de Checkout y ficha de producto contrastados con exportaciones de Figma aportadas el 03/11.
+- Se conserva el trabajo técnico previo de Outfits y navegación, pero su presentación visual y los estados vacíos de Home siguen pendientes de reemplazo por diseños aprobados.
+
+### Verificación reportada al pausar
+
+Según el último informe de ejecución de Claude, en base local Docker y sobre `5afe01b`:
+
+- Unitarias: 206/206.
+- TypeScript: sin errores.
+- ESLint: sin errores; quedaron 2 avisos por directivas sin uso.
+- 17 scripts de navegador completados sin fallos, incluidos Checkout (101), páginas de contenido (171), PDP (71), accesibilidad storefront (47) y recuperación de errores (30).
+
+Estos resultados se registran como **QA local reportado por el agente**, no como una nueva ejecución independiente de este cierre documental. No equivalen a QA de Preview ni a validación con outfits reales. La base local quedó en su estado original al pausar.
+
+### Diseño: estado y autoridad
+
+- Figma continúa siendo la fuente de verdad visual para las pantallas aprobadas.
+- El usuario continuará personalmente con el diseño de pantallas. Hasta que comparta o apruebe esos diseños, no generar propuestas autónomas de dirección visual ni implementar los artboards 30/31 como si estuvieran aprobados.
+- Los artboards 30 y 31 del lienzo Claude Design (versión 70 al último reporte) son propuestas no aprobadas; las versiones anteriores de Outfits/estados vacíos implementadas en la rama se consideran visualmente descartadas.
+- Las exportaciones de Figma aportadas el 03/11 permitieron contrastar Checkout y ficha; no habilitan a afirmar que se inspeccionaron todos los frames del archivo. La cuota Starter sigue limitando la consulta directa de Figma.
+- La falta de acceso a Figma no invalida el trabajo ya implementado ni autoriza a inventar referencias visuales.
+
+### Próxima continuidad
+
+1. El usuario continúa diseñando las pantallas y estados pendientes en Figma.
+2. Al retomar implementación, partir de `claude/gxk-loop2-completar` en HEAD `5afe01b`, preservar el trabajo aprovechable y aplicar los diseños que el usuario deje disponibles/aprobados.
+3. Completar las pantallas existentes en Figma que sigan pendientes de implementación y los diseños faltantes, sin reinterpretar los aprobados.
+4. Resolver Outfits y estados vacíos de Home a partir del diseño que defina el usuario; no reutilizar las propuestas visuales descartadas.
+5. Crear Preview de la rama vigente, ejecutar QA visual/funcional, completar revisión técnica y documentar el cierre.
+
+**LOOP 2 no está cerrado.** La entrega queda en una rama publicada y con QA local reportado, pero faltan continuidad de diseño, implementación visual pendiente, Preview del HEAD actual y validación integral.
