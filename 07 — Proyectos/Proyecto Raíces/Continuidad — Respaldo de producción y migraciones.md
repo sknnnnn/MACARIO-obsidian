@@ -7,13 +7,15 @@ actualizado: 2026-10-19
 
 # Continuidad — respaldo de producción y migraciones
 
-## Estado al 19/10/2026
+## Estado al 03/11/2026
 
+- **Estado del proyecto:** pausado por decisión del usuario. Esta nota conserva la continuidad técnica; no autoriza ejecutar tareas.
 - **Respaldo real de producción:** pendiente.
-- **Prueba simulada local:** completada con resultado `TODO OK`. Validó el procedimiento sobre una copia simulada, pero no prueba la restauración real de Supabase Auth ni de los archivos de Storage.
-- **Migraciones v6–v11:** pendientes; no se aplicaron en producción.
-- **Decisión:** pausar hasta retomar desde la PC personal. No modificar BitLocker, políticas ni permisos de la PC laboral.
-- **PostgreSQL local:** no desinstalarlo hasta completar y verificar el respaldo real y la prueba de restauración.
+- **Prueba simulada local:** completada con resultado TODO OK; no demuestra restauración real de Supabase Auth ni Storage.
+- **Migraciones v6–v11:** Linear registra que fueron ejecutadas el 2026-10-22. No volver a ejecutar SQL. La validación funcional posterior es una tarea separada.
+- **Decisión:** no avanzar con funcionalidades, arreglos, migraciones, cambios de datos ni despliegues hasta nueva indicación.
+- **Próximo punto técnico cuando se reactive:** PRO-172, preflight de solo lectura desde la PC personal, seguido por respaldo real y prueba de restauración aislada.
+- **No modificar BitLocker, permisos ni políticas de la PC laboral.** No desinstalar PostgreSQL local antes de completar el respaldo y la restauración reales.
 
 ## Documentación técnica vigente
 
@@ -23,17 +25,16 @@ actualizado: 2026-10-19
 - [Cierre técnico de producción — 19/10/2026](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/operacion/cierre-tecnico-produccion-2026-10-19.md)
 - [Linear PRO-172 — Respaldar producción y probar restauración antes de migraciones v6–v11](https://linear.app/proyecto-raices/issue/PRO-172/raices-respaldar-produccion-y-probar-restauracion-antes-de-migraciones)
 
-## Próxima secuencia de trabajo
+## Próxima secuencia cuando se reactive
 
-1. Desde la PC personal, definir un destino seguro y una segunda copia en un medio separado.
-2. Seguir el procedimiento documentado para generar respaldos reales de esquema/datos, Auth, metadatos de Storage e inventarios.
-3. Descargar y verificar los archivos reales de Storage; el último inventario registrado tenía 17 archivos en `envios-fotos`, con 5.573.691 bytes. Confirmar nuevamente antes de aceptar el respaldo.
-4. Verificar hashes, inventarios y consistencia de integridad antes/después.
-5. Probar la restauración en una instancia local aislada; nunca restaurar sobre producción.
-6. Confirmar todos los criterios de aceptación y que existan dos copias protegidas.
-7. Revisar v6–v11 y solicitar autorización explícita antes de aplicar cualquier migración en producción.
+Esta secuencia es documental; **no se ejecuta durante la pausa**.
 
-Si falla cualquier comprobación, detenerse y resolverla antes de avanzar.
+1. **PRO-172 — preflight, respaldo real y restauración aislada.** Desde la PC personal, verificar herramientas y destino seguro sin conectar/exportar datos hasta revisar el preflight. Luego realizar respaldo real de base de datos, Auth, metadatos y archivos de Storage; verificar hashes/integridad y probar restauración aislada. La simulación previa no sustituye este proceso.
+2. **PRO-165 — calendario y salidas.** Validar con evidencia funcional la fuente única experiencia_salidas, calendario público y semántica de estados. No crear un calendario paralelo.
+3. **PRO-166 — carga real de imágenes.** La v10 figura como ejecutada; queda pendiente una prueba real de subida desde Admin, en entorno autorizado.
+4. **PRO-162 / PRO-163 — migraciones y escrituras E1.** Las v6/v7 figuran como ejecutadas; no repetir SQL. Reconciliar efectos y ejecutar el protocolo de escrituras reales con datos descartables solo con autorización expresa y prerequisitos satisfechos.
+
+El orden es secuencial. Si el respaldo/restauración falla, detenerse antes de avanzar. PRO-165/166/162/163 no se ejecutan antes de que el usuario reactive el proyecto y se cumplan sus autorizaciones específicas.
 
 ## Límites y decisiones
 
