@@ -176,3 +176,12 @@ Estos resultados se registran como **QA local reportado por el agente**, no como
 5. Crear Preview de la rama vigente, ejecutar QA visual/funcional, completar revisión técnica y documentar el cierre.
 
 **LOOP 2 no está cerrado.** La entrega queda en una rama publicada y con QA local reportado, pero faltan continuidad de diseño, implementación visual pendiente, Preview del HEAD actual y validación integral.
+
+
+## Prioridad vigente — cierre visual integral (2026-11-03)
+
+La prioridad inmediata es completar el diseño visual de **todo GXK12:2** antes de retomar la implementación visual. Claude propone conceptos y pantallas en Figma; el usuario revisa, corrige y aprueba; Figma es la fuente visual oficial; Claude implementa lo aprobado y se valida contra Figma.
+
+El inventario debe cubrir todas las áreas, pantallas, recorridos, variantes desktop/mobile y estados relevantes. **La etapa visual solo cierra cuando cada elemento está diseñado, revisado y aprobado o marcado explícitamente fuera de alcance.** La implementación técnica existente se conserva cuando sea aprovechable. La contratación de Figma se reevaluará más adelante, sin asumir un gasto permanente.
+
+Detalle y reglas: [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de producto|Roadmap de producto]], [[07 — Proyectos/GXK12.2/06 — GXK12.2 — Dirección visual — Reglas aprobadas|Dirección Visual]] y [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog]].
