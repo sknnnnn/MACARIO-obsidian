@@ -4,12 +4,12 @@
 
 ## Estado operativo vigente
 
-- **Continuidad y bloqueo actual:** [[07 — Proyectos/Proyecto Raíces/Continuidad — Respaldo de producción y migraciones]].
+- **Continuidad y bloqueo actual:** [[07 — Proyectos/Proyecto Raíces/Continuidad — Respaldo de producción y migraciones]] y [estado técnico al 2026-11-03](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-metodologia-pausa-20261103/docs/operacion/estado-y-continuidad-2026-11-03.md).
 - **Inventario transversal y limpieza:** [[07 — Proyectos/Inventario cero — Raíces + GXK12.2 — 2026-10-19]] y [Linear PRO-161](https://linear.app/proyecto-raices/issue/PRO-161/gobernanza-feature-freeze-y-limpieza-del-inventario-raices-gxk122).
-- **Respaldo antes de migraciones:** [Linear PRO-172](https://linear.app/proyecto-raices/issue/PRO-172/raices-respaldar-produccion-y-probar-restauracion-antes-de-migraciones).
+- **Respaldo antes de migraciones:** [Linear PRO-172](https://linear.app/proyecto-raices/issue/PRO-172/raices-respaldar-produccion-y-probar-restauracion-aislada).
 - **Admin E1:** [Linear PRO-160](https://linear.app/proyecto-raices/issue/PRO-160/raices-admin-de-contenidos-e1-v5-aplicada-y-verificada-falta-publicar).
 - **Carga de imágenes y alt público:** [Linear PRO-166](https://linear.app/proyecto-raices/issue/PRO-166/admin-carga-de-imagenes-d8-y-alt-publico-d13-implementado-y-probado-en).
-- **Estado:** pausado hasta verificar respaldo/restauración. No aplicar migraciones, borrar datos, desplegar ni hacer merge a main sin las autorizaciones requeridas.
+- **Estado:** PAUSADO por decisión del usuario. Solo se permite trabajo documental. No avanzar funcionalidades/arreglos ni aplicar migraciones, borrar datos, desplegar o hacer merge.
 
 ## Linear
 
@@ -20,7 +20,7 @@
 ## GitHub
 
 - **Repositorio:** [sknnnnn/proyecto-raices](https://github.com/sknnnnn/proyecto-raices).
-- **Rama por defecto:** main. Las ramas feature/admin y claude/proyecto-raices-visual-language-q04g3y contienen trabajo adicional no integrado; consultar la comparación de ramas en el inventario antes de borrar o fusionar.
+- **Rama por defecto:** main. PR #23 fue mergeado. claude/proyecto-raices-visual-language-q04g3y tiene 115 commits adicionales y feature/admin 26 commits adicionales frente a main; chore/technical-hardening (11 ahead / 4 behind) y dev (4 ahead / 20 behind) están divergentes. master está 178 commits detrás. No fusionar ni borrar ramas sin revisión específica.
 - **Cierre técnico previo a producción:** [documentación técnica de continuidad](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/operacion/cierre-tecnico-produccion-2026-10-19.md).
 - **Procedimiento de respaldo:** [respaldo manual de Supabase](https://github.com/sknnnnn/proyecto-raices/blob/claude/proyecto-raices-visual-language-q04g3y/docs/operacion/respaldo-manual-supabase.md).
 - **Despliegues:** [docs/operacion/despliegues-cloudflare.md](https://github.com/sknnnnn/proyecto-raices/blob/main/docs/operacion/despliegues-cloudflare.md).
@@ -31,6 +31,10 @@
 - **Figma:** [PRANA STUDIOS — tablero de referencias y dirección visual](https://www.figma.com/design/RqXlNyOZPYDsJFtX9Kk6dj/PRANA-STUDIOS?node-id=54-26). El nombre del archivo no implica relación de identidad con PRANA.
 - **Google Drive:** carpeta «Proyecto Raíces» (branding, minutas, banco de imágenes y fuente real de descripciones de destinos).
 - **Preview Admin V18:** https://claude.ai/artifact/FcUCMgXa7z3dQzMNKBa5Hn. Referencia visual aprobada; no equivale a aprobación de implementación ni publicación.
+
+## Metodología de trabajo vigente
+
+Aplicar [[02 — Metodología - MACARIO — Flujo de trabajo]]. El agente recibe delegaciones por resultado/loop, consulta Obsidian + Linear + GitHub, reutiliza evidencia vigente, agrupa normalmente 4–5 tareas relacionadas, ejecuta y verifica dentro del alcance, y cierra actualizando las fuentes canónicas. Figma es la fuente de diseño aprobado; Claude Design explora; Claude Code implementa; Cloudflare Preview/Dev permite QA. Merge y producción requieren autorización separada.
 
 ## Historial conservado
 

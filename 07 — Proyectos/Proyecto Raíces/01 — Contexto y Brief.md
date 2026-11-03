@@ -6,6 +6,19 @@
 
 ---
 
+## Orientación estratégica vigente — 2026-11-03
+
+La dirección estratégica acordada para la próxima etapa prioriza:
+- **Paquetes** como oferta comercial prioritaria.
+- Mayor visibilidad de los **perfiles de guías** y de su papel en la experiencia y la confianza de la propuesta.
+- Mantener Tours y Travesías existentes; la nueva prioridad no implica eliminarlos.
+
+**Pendiente de definición:** el modelo de remuneración de los guías. No asumir comisiones, porcentajes, contratación ni condiciones económicas.
+
+Esta orientación todavía debe convertirse en un brief de producto/negocio más detallado cuando se reactive el proyecto. No define por sí sola nuevas pantallas, campos, navegación, funcionalidades ni cambios de datos. La antigua página pública guias.html fue retirada; no reintroducirla ni crear una sección pública de perfiles sin definir primero el alcance. La ejecución queda pausada al 2026-11-03.
+
+---
+
 ## 1. Origen del proyecto
 
 Pendiente de documentar. El documento original no describe explícitamente cómo o por qué surge el proyecto.
