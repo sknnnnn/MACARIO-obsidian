@@ -1,7 +1,7 @@
 # GXK12:2 — Índice
 
 > Nota de entrada del proyecto dentro de MACARIO.
-> Fuentes: Linear = ejecución/tareas · GitHub = código · Obsidian = documentación · Brand & E-commerce Bible = verdad de marca/UX/contenido · Dirección Visual = traducción visual aprobada · Figma Pro = exploración y validación visual.
+> Fuentes: Linear = ejecución/tareas · GitHub = código · Obsidian = documentación · Brand & E-commerce Bible = verdad de marca/UX/contenido · Dirección Visual = traducción visual aprobada · Figma = exploración, diseño, aprobación y fuente visual oficial.
 > **Ejecución con agentes:** aplicar [[02 — Metodología - MACARIO — Flujo de trabajo|MACARIO — Flujo de trabajo]] §8.1–8.4. Este protocolo regula autonomía, ramas, verificaciones y cierres; la Bible, las decisiones aprobadas y la Dirección Visual siguen gobernando el producto.
 
 ---
@@ -169,10 +169,10 @@ Estos resultados se registran como **QA local reportado por el agente**, no como
 
 ### Próxima continuidad
 
-1. El usuario continúa diseñando las pantallas y estados pendientes en Figma.
-2. Al retomar implementación, partir de `claude/gxk-loop2-completar` en HEAD `5afe01b`, preservar el trabajo aprovechable y aplicar los diseños que el usuario deje disponibles/aprobados.
-3. Completar las pantallas existentes en Figma que sigan pendientes de implementación y los diseños faltantes, sin reinterpretar los aprobados.
-4. Resolver Outfits y estados vacíos de Home a partir del diseño que defina el usuario; no reutilizar las propuestas visuales descartadas.
+1. Completar el inventario visual integral y diseñar todas las pantallas, recorridos y estados en Figma.
+2. Claude propone; el usuario revisa, corrige y aprueba cada diseño.
+3. Una vez cerrado el inventario visual, retomar implementación desde `claude/gxk-loop2-completar`, preservar el trabajo aprovechable y aplicar los diseños aprobados.
+4. Reemplazar Outfits y estados vacíos de Home según los diseños aprobados; no reutilizar las propuestas visuales descartadas.
 5. Crear Preview de la rama vigente, ejecutar QA visual/funcional, completar revisión técnica y documentar el cierre.
 
 **LOOP 2 no está cerrado.** La entrega queda en una rama publicada y con QA local reportado, pero faltan continuidad de diseño, implementación visual pendiente, Preview del HEAD actual y validación integral.
