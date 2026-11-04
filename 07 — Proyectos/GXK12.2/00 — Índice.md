@@ -107,6 +107,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 - [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog]] — hitos y decisiones permanentes fechadas
 - [[07 — Proyectos/GXK12.2/10 — GXK12.2 — UX e interacción|UX e interacción]] — criterios de UX / interacción y auditoría post-funcional
 - [[07 — Proyectos/GXK12.2/12 — GXK12.2 — Admin Lote 1 — Cierre y continuidad 2026-10-19|Admin Lote 1 — cierre y continuidad (2026-10-19)]] — estado del artefacto corregido, validación pendiente y próximo paso
+- [[07 — Proyectos/GXK12.2/13 — GXK12.2 — Unificación UX-UI — Propuesta|Unificación UX-UI — Propuesta]] — sistema propuesto, auditoría integral de aplicación cerrada y matriz en Figma; aprobación A1–A4 pendiente.
 
 ---
 
