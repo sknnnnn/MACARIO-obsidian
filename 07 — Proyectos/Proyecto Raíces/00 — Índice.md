@@ -44,9 +44,9 @@ Proyecto Raíces es un proyecto de turismo de aventura y experiencias (tours, tr
 
 ## Estado general
 
-**Estado:** PAUSADO por decisión del usuario al 2026-11-03. No avanzar con funcionalidades, arreglos, rediseño ni operaciones técnicas. El alcance actual es exclusivamente documental. El sitio público existe; el Admin y sus integraciones conservan validaciones pendientes. El seguimiento operativo vive en Linear.
+**Estado:** plan maestro de rediseño integral adoptado el 2026-11-05. Próxima secuencia: Etapa 0 — Preparación y continuidad → Etapa 1 — Discovery y auditoría integral (PRO-191). No se inicia implementación ni se autorizan operaciones sensibles por la aprobación del plan. El sitio público existe; el Admin y sus integraciones conservan validaciones pendientes. El seguimiento operativo vive en Linear.
 
-**Última actualización:** 2026-11-03. Las migraciones v6–v11 figuran como ejecutadas en Linear el 2026-10-22; no repetir SQL. El respaldo real de producción y la restauración aislada siguen pendientes. La orientación estratégica prioriza paquetes y visibilidad de guías; la remuneración de guías no está definida. Ver el bloque de estado al inicio de esta nota y la continuidad vigente.
+**Última actualización:** 2026-11-05. Plan maestro de ocho etapas adoptado y registrado en Linear. Las migraciones v6–v11 figuran como ejecutadas en Linear el 2026-10-22; no repetir SQL. El respaldo real de producción y la restauración aislada siguen pendientes. La orientación estratégica prioriza paquetes y visibilidad de guías; la remuneración de guías no está definida. Ver el plan maestro y la continuidad vigente.
 
 ### Estado histórico — 2026-10-16 (superado por el checkpoint del 2026-10-19)
 
@@ -108,6 +108,12 @@ El rediseño visual no se limita a una nueva Home. La auditoría cubre web públ
 La aprobación del plan no autoriza migraciones, borrados, escrituras destructivas, cambios de permisos, operaciones sobre datos reales, merge a ramas principales, deploy ni publicación. Cada operación sensible requiere preflight, respaldo/restauración cuando corresponda, estrategia reversible, pruebas y autorización explícita.
 
 ---
+
+## Plan y seguimiento operativo
+
+- [Linear — Plan maestro de rediseño integral](https://linear.app/proyecto-raices/document/proyecto-raices-plan-maestro-de-rediseno-integral-ac57209593ba)
+- [Linear — Etapa 1: Discovery y auditoría integral (PRO-191)](https://linear.app/proyecto-raices/issue/PRO-191/etapa-1-raices-discovery-y-auditoria-integral)
+- Proyecto Linear: [Rediseño y lanzamiento Web](https://linear.app/proyecto-raices/project/rediseno-y-lanzamiento-web-2a37c58672be)
 
 ## Documentación del proyecto
 
