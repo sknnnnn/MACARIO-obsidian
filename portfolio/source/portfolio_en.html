@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Ignacio Sconza — Portfolio (EN)</title>
+<meta name="author" content="Ignacio Sconza">
+<style>@font-face {
+  font-family: 'Familjen Grotesk';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/a65455b8ea.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Familjen Grotesk';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/5dba616926.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Familjen Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/2fa3e7d2dd.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Familjen Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/9035d5d658.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Familjen Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/2fa3e7d2dd.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Familjen Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/9035d5d658.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Familjen Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/2fa3e7d2dd.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Familjen Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(fonts/9035d5d658.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Familjen Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/2fa3e7d2dd.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Familjen Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/9035d5d658.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/fd6f40d144.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/52a6c245b9.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/28cfb3cb62.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Instrument Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/2d243d02e5.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/ba16536d41.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/480c062501.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/ba16536d41.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(fonts/480c062501.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/ba16536d41.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(fonts/480c062501.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}</style><link rel="stylesheet" href="styles.css"></head>
+<body>
+<section class="page wine">
+  <div class="hdr"><div>Portfolio 2026</div><div class="c">Design · Development · Creativity</div><div class="r">English</div></div>
+  <svg class="abs" style="left:0;top:0;width:297mm;height:210mm" viewBox="0 0 297 210">
+    <g stroke="rgba(255,231,206,.35)" stroke-width=".25" fill="none">
+      <path d="M196 46 L262 92 L214 150 Z"/>
+      <path d="M196 46 L150 0 M262 92 L297 84 M214 150 L232 210"/>
+    </g>
+    <g fill="#FED3A8"><circle cx="196" cy="46" r="2.2"/><circle cx="262" cy="92" r="2.2"/><circle cx="214" cy="150" r="2.2"/></g>
+    <g fill="none" stroke="#FED3A8" stroke-width=".35"><circle cx="196" cy="46" r="6"/><circle cx="262" cy="92" r="6"/><circle cx="214" cy="150" r="6"/></g>
+    <g font-family="JetBrains Mono" font-size="3.1" letter-spacing=".5" style="fill:#FFE7CE">
+      <text x="204" y="44">01 — DESIGN</text>
+      <text x="238" y="104">02 — DEVELOPMENT</text>
+      <text x="222" y="152">03 — CREATIVITY</text>
+    </g>
+    <g font-family="JetBrains Mono" font-size="2.3" letter-spacing=".4" style="fill:rgba(255,231,206,.62)">
+      <text x="204" y="49.5">X 196 · Y 046</text><text x="238" y="108.5">X 262 · Y 092</text><text x="222" y="156.5">X 214 · Y 150</text>
+    </g>
+  </svg>
+  <div class="abs" style="left:14mm;top:52mm;width:170mm">
+    <div class="kicker" style="color:#FED3A8">Professional portfolio</div>
+    <h1 class="h-xxl mt2" style="font-size:96pt">Ignacio<br>Sconza</h1>
+  </div>
+  <div class="abs" style="left:14mm;bottom:14mm;width:150mm">
+    <div class="lead-ser" style="font-size:21pt;color:#FFE7CE">Design, development and creativity applied to digital solutions.</div>
+    <div class="rule mt3 mb2"></div>
+    <div class="row between small" style="color:rgba(255,231,206,.85)">
+      <a href="mailto:ignaciotsconza@gmail.com">ignaciotsconza@gmail.com</a><a href="tel:+5491165211354">+54 9 11 6521-1354</a><a href="https://www.instagram.com/nachosconza">instagram.com/nachosconza</a>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">Contents</div><div class="r"><b>02</b> / 23</div></div>
+  <div class="body grid">
+    <div style="grid-column:1/6" class="col between">
+      <div>
+        <div class="kicker">Contents</div>
+        <h2 class="h-xl mt2">What you’ll <span class='ser'>find here</span></h2>
+      </div>
+      <p class="lead muted" style="max-width:95mm">This document brings together how I think, how I work, and two projects that show how I connect strategy, design and technology from start to finish.</p>
+    </div>
+    <div style="grid-column:7/13" class="col end">
+      
+      <div class="row" style="align-items:baseline;border-top:1px solid var(--line);padding:2.6mm 0">
+        <div class="mono wine-t" style="width:12mm;font-size:7pt">01</div>
+        <div class="h-s" style="width:62mm;font-size:13pt">Introduction</div>
+        <div class="muted small flex1">Who I am and how I think</div>
+        <div class="mono small">03</div>
+      </div>
+      <div class="row" style="align-items:baseline;border-top:1px solid var(--line);padding:2.6mm 0">
+        <div class="mono wine-t" style="width:12mm;font-size:7pt">02</div>
+        <div class="h-s" style="width:62mm;font-size:13pt">Capabilities</div>
+        <div class="muted small flex1">An ecosystem of disciplines</div>
+        <div class="mono small">04</div>
+      </div>
+      <div class="row" style="align-items:baseline;border-top:1px solid var(--line);padding:2.6mm 0">
+        <div class="mono wine-t" style="width:12mm;font-size:7pt">03</div>
+        <div class="h-s" style="width:62mm;font-size:13pt">How I work</div>
+        <div class="muted small flex1">Five stages that loop</div>
+        <div class="mono small">06</div>
+      </div>
+      <div class="row" style="align-items:baseline;border-top:1px solid var(--line);padding:2.6mm 0">
+        <div class="mono wine-t" style="width:12mm;font-size:7pt">04</div>
+        <div class="h-s" style="width:62mm;font-size:13pt">GXK12:2</div>
+        <div class="muted small flex1">Case · e-commerce and digital experience</div>
+        <div class="mono small">07</div>
+      </div>
+      <div class="row" style="align-items:baseline;border-top:1px solid var(--line);padding:2.6mm 0">
+        <div class="mono wine-t" style="width:12mm;font-size:7pt">05</div>
+        <div class="h-s" style="width:62mm;font-size:13pt">Proyecto Raíces</div>
+        <div class="muted small flex1">Case · digital travel platform</div>
+        <div class="mono small">15</div>
+      </div>
+      <div class="row" style="align-items:baseline;border-top:1px solid var(--line);padding:2.6mm 0">
+        <div class="mono wine-t" style="width:12mm;font-size:7pt">06</div>
+        <div class="h-s" style="width:62mm;font-size:13pt">Lab</div>
+        <div class="muted small flex1">Exploration, systems and AI</div>
+        <div class="mono small">20</div>
+      </div>
+      <div class="row" style="align-items:baseline;border-top:1px solid var(--line);padding:2.6mm 0">
+        <div class="mono wine-t" style="width:12mm;font-size:7pt">07</div>
+        <div class="h-s" style="width:62mm;font-size:13pt">Education and tools</div>
+        <div class="muted small flex1">Foundation and toolkit</div>
+        <div class="mono small">21</div>
+      </div>
+      <div class="row" style="align-items:baseline;border-top:1px solid var(--line);padding:2.6mm 0">
+        <div class="mono wine-t" style="width:12mm;font-size:7pt">08</div>
+        <div class="h-s" style="width:62mm;font-size:13pt">Contact</div>
+        <div class="muted small flex1">Let’s talk</div>
+        <div class="mono small">23</div>
+      </div>
+      <div style="border-top:1px solid var(--line)"></div>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">01 · Introduction</div><div class="r"><b>03</b> / 23</div></div>
+  <div class="body grid">
+    <div style="grid-column:1/8" class="col between">
+      <div>
+        <div class="kicker"><span class="n">01</span>Introduction</div>
+        <h2 class="h-l mt3" style="font-size:46pt">I connect design, technology and creativity to turn <span class='ser wine-t'>ideas</span> into <span class='ser wine-t'>real</span> projects.</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:5mm"><div class="col gap1" style="border-top:1.5px solid var(--ink);padding-top:3mm">
+        <div class="mono wine-t" style="font-size:6.6pt">01</div><div class="h-s">Integrate</div><div class="small muted">I connect disciplines that usually work apart: strategy, design, development and content.</div></div><div class="col gap1" style="border-top:1.5px solid var(--ink);padding-top:3mm">
+        <div class="mono wine-t" style="font-size:6.6pt">02</div><div class="h-s">Understand</div><div class="small muted">Before designing, I understand the problem, the context and the real constraints.</div></div><div class="col gap1" style="border-top:1.5px solid var(--ink);padding-top:3mm">
+        <div class="mono wine-t" style="font-size:6.6pt">03</div><div class="h-s">Build</div><div class="small muted">I turn ideas into concrete products that are documented and verifiable.</div></div><div class="col gap1" style="border-top:1.5px solid var(--ink);padding-top:3mm">
+        <div class="mono wine-t" style="font-size:6.6pt">04</div><div class="h-s">Explore</div><div class="small muted">I test tools, visual languages and new ways of working —AI included— with judgement.</div></div></div>
+    </div>
+    <div style="grid-column:9/13" class="col between">
+      <div class="col gap2" style="padding-top:12mm">
+        <p class="lead" style="font-size:11.5pt">I’m a multidisciplinary professional. I like being involved in every stage of a project: from concept and planning to design, development and final production.</p>
+        <p class="muted">My profile combines creative thinking, visual sensitivity and technical understanding. It isn’t about doing a little of everything; it’s about understanding how the parts of a digital product fit together and helping build it end to end.</p>
+      </div>
+      <div class="panel">
+        <div class="kicker mb1">Open to</div>
+        <div class="small">Full-time roles · Freelance projects · Creative collaborations</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page sand">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">02 · Capabilities</div><div class="r"><b>04</b> / 23</div></div>
+  <div class="body grid">
+    <div style="grid-column:1/5" class="col between">
+      <div>
+        <div class="kicker"><span class="n">02</span>Capabilities</div>
+        <h2 class="h-l mt3">An ecosystem, <span class='ser wine-t'>not a list.</span></h2>
+      </div>
+      <div class="col gap2">
+        <p>Each discipline brings a different lens to the same goal: building a digital product that works, communicates and can grow.</p>
+        <p class="muted small">The value isn’t in each area on its own but in the connections: an architecture decision changes an interface; a brand decision changes a flow; a new tool changes how things get made.</p>
+      </div>
+    </div>
+    <div style="grid-column:5/13;position:relative;padding:2mm 0 0 0"><svg class="eco" viewBox="-44 0 232 140" style="width:100%;height:100%;overflow:visible">
+      <style>.eco text{font-family:'Familjen Grotesk';font-size:4.3px;font-weight:600;fill:#1B1517} .eco .nn{font-family:'JetBrains Mono';font-size:2.8px;fill:#9E1F32;font-weight:500}</style>
+      <g stroke="rgba(27,21,23,.35)" stroke-width=".3"><line x1="70" y1="72" x2="70.0" y2="20.0"/><line x1="70.0" y1="20.0" x2="110.7" y2="39.6" stroke-dasharray="1 1.5"/><line x1="70" y1="72" x2="110.7" y2="39.6"/><line x1="110.7" y1="39.6" x2="120.7" y2="83.6" stroke-dasharray="1 1.5"/><line x1="70" y1="72" x2="120.7" y2="83.6"/><line x1="120.7" y1="83.6" x2="92.6" y2="118.9" stroke-dasharray="1 1.5"/><line x1="70" y1="72" x2="92.6" y2="118.9"/><line x1="92.6" y1="118.9" x2="47.4" y2="118.9" stroke-dasharray="1 1.5"/><line x1="70" y1="72" x2="47.4" y2="118.9"/><line x1="47.4" y1="118.9" x2="19.3" y2="83.6" stroke-dasharray="1 1.5"/><line x1="70" y1="72" x2="19.3" y2="83.6"/><line x1="19.3" y1="83.6" x2="29.3" y2="39.6" stroke-dasharray="1 1.5"/><line x1="70" y1="72" x2="29.3" y2="39.6"/><line x1="29.3" y1="39.6" x2="70.0" y2="20.0" stroke-dasharray="1 1.5"/></g>
+      <circle cx="70" cy="72" r="17" fill="#1B5956"/>
+      <text x="70" y="70.5" text-anchor="middle" style="fill:#FFE7CE;font-size:4.4px">Digital</text>
+      <text x="70" y="75.6" text-anchor="middle" style="fill:#FFE7CE;font-size:4.4px">product</text>
+      <circle cx="70.0" cy="20.0" r="2.6" fill="#9E1F32"/><circle cx="70.0" cy="20.0" r="5.5" fill="none" stroke="#9E1F32" stroke-width=".3"/><circle cx="110.7" cy="39.6" r="2.6" fill="#9E1F32"/><circle cx="110.7" cy="39.6" r="5.5" fill="none" stroke="#9E1F32" stroke-width=".3"/><circle cx="120.7" cy="83.6" r="2.6" fill="#9E1F32"/><circle cx="120.7" cy="83.6" r="5.5" fill="none" stroke="#9E1F32" stroke-width=".3"/><circle cx="92.6" cy="118.9" r="2.6" fill="#9E1F32"/><circle cx="92.6" cy="118.9" r="5.5" fill="none" stroke="#9E1F32" stroke-width=".3"/><circle cx="47.4" cy="118.9" r="2.6" fill="#9E1F32"/><circle cx="47.4" cy="118.9" r="5.5" fill="none" stroke="#9E1F32" stroke-width=".3"/><circle cx="19.3" cy="83.6" r="2.6" fill="#9E1F32"/><circle cx="19.3" cy="83.6" r="5.5" fill="none" stroke="#9E1F32" stroke-width=".3"/><circle cx="29.3" cy="39.6" r="2.6" fill="#9E1F32"/><circle cx="29.3" cy="39.6" r="5.5" fill="none" stroke="#9E1F32" stroke-width=".3"/><text x="70.0" y="12.0" text-anchor="middle"><tspan class="nn">01</tspan> Digital development</text><text x="118.7" y="40.8" text-anchor="start"><tspan class="nn">02</tspan> Design and digital experience</text><text x="128.7" y="84.8" text-anchor="start"><tspan class="nn">03</tspan> Branding and creative direction</text><text x="100.6" y="128.4" text-anchor="start"><tspan class="nn">04</tspan> Audiovisual production</text><text x="39.4" y="128.4" text-anchor="end"><tspan class="nn">05</tspan> Technology and innovation</text><text x="11.3" y="84.8" text-anchor="end"><tspan class="nn">06</tspan> Management and organisation</text><text x="21.3" y="40.8" text-anchor="end"><tspan class="nn">07</tspan> Analysis and systems</text></svg></div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">02 · Capabilities</div><div class="r"><b>05</b> / 23</div></div>
+  <div class="body col">
+    <div class="row between" style="align-items:flex-end">
+      <h2 class="h-m" style="max-width:150mm">Seven areas that intersect in every project</h2>
+      <div class="cap" style="max-width:85mm;text-align:right">Capabilities as I practise them. No levels or certifications are implied.</div>
+    </div>
+    <div class="flex1 mt3" style="display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:1fr 1fr;column-gap:6mm;row-gap:6mm">
+      <div class="col gap1" style="border-top:1.5px solid var(--ink);padding-top:3mm">
+          <div class="row between" style="align-items:flex-start"><div class="mono wine-t" style="font-size:6.6pt">01</div><div class="petrol-t"><svg class="ico" viewBox="0 0 24 24"><path d="M8 6 3 12l5 6"/><path d="M16 6l5 6-5 6"/><path d="M13.5 4 10.5 20"/></svg></div></div>
+          <div class="h-s" style="min-height:11mm;font-size:13pt">Digital development</div>
+          <ul class="l" style="font-size:9.2pt"><li>Websites and platforms</li><li>E-commerce and digital products</li><li>Digital product architecture</li><li>Structures and features</li><li>Technology build processes</li></ul></div><div class="col gap1" style="border-top:1.5px solid var(--ink);padding-top:3mm">
+          <div class="row between" style="align-items:flex-start"><div class="mono wine-t" style="font-size:6.6pt">02</div><div class="petrol-t"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="15" height="14"/><path d="M3 9h15"/><circle class="f" cx="19.5" cy="4.5" r="2.3"/></svg></div></div>
+          <div class="h-s" style="min-height:11mm;font-size:13pt">Design and digital experience</div>
+          <ul class="l" style="font-size:9.2pt"><li>UI/UX and interface design</li><li>Digital experiences and interactive products</li><li>Graphic design and visual communication</li><li>Information architecture</li><li>Flows and journeys</li></ul></div><div class="col gap1" style="border-top:1.5px solid var(--ink);padding-top:3mm">
+          <div class="row between" style="align-items:flex-start"><div class="mono wine-t" style="font-size:6.6pt">03</div><div class="petrol-t"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle class="f" cx="12" cy="12" r="3"/></svg></div></div>
+          <div class="h-s" style="min-height:11mm;font-size:13pt">Branding and creative direction</div>
+          <ul class="l" style="font-size:9.2pt"><li>Training in branding and visual identity</li><li>Concepts and visual languages</li><li>Graphic system exploration</li><li>Visual communication</li></ul></div><div class="col gap1" style="border-top:1.5px solid var(--ink);padding-top:3mm">
+          <div class="row between" style="align-items:flex-start"><div class="mono wine-t" style="font-size:6.6pt">04</div><div class="petrol-t"><svg class="ico" viewBox="0 0 24 24"><path d="M6 4v12l10-6z"/><path d="M3 20h18"/><path d="M9 18v4"/></svg></div></div>
+          <div class="h-s" style="min-height:11mm;font-size:13pt">Audiovisual production</div>
+          <ul class="l" style="font-size:9.2pt"><li>Video editing</li><li>Image editing and treatment</li><li>Visual content experimentation</li><li>Audiovisual production and exploration</li></ul></div><div class="col gap1" style="border-top:1.5px solid var(--ink);padding-top:3mm">
+          <div class="row between" style="align-items:flex-start"><div class="mono wine-t" style="font-size:6.6pt">05</div><div class="petrol-t"><svg class="ico" viewBox="0 0 24 24"><path d="M12 3l9 9-9 9-9-9z"/><path d="M12 8v8M8 12h8"/></svg></div></div>
+          <div class="h-s" style="min-height:11mm;font-size:13pt">Technology and innovation</div>
+          <ul class="l" style="font-size:9.2pt"><li>AI applied to creative processes</li><li>Automation and digital tools</li><li>Technology experimentation</li><li>New design and development possibilities</li></ul></div><div class="col gap1" style="border-top:1.5px solid var(--ink);padding-top:3mm">
+          <div class="row between" style="align-items:flex-start"><div class="mono wine-t" style="font-size:6.6pt">06</div><div class="petrol-t"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h10M3 12h15M3 18h8"/><circle class="f" cx="18" cy="6" r="1.8"/><circle class="f" cx="15" cy="18" r="1.8"/></svg></div></div>
+          <div class="h-s" style="min-height:11mm;font-size:13pt">Management and organisation</div>
+          <ul class="l" style="font-size:9.2pt"><li>Project and task planning</li><li>Workflow coordination</li><li>Documentation and communication</li><li>Collaborative work</li></ul></div><div class="col gap1" style="border-top:1.5px solid var(--ink);padding-top:3mm">
+          <div class="row between" style="align-items:flex-start"><div class="mono wine-t" style="font-size:6.6pt">07</div><div class="petrol-t"><svg class="ico" viewBox="0 0 24 24"><circle cx="5" cy="18" r="2.3"/><circle cx="12" cy="6" r="2.3"/><circle cx="19" cy="15" r="2.3"/><path d="M6.3 16 10.8 8M13.8 7.3l3.8 6M7.3 17.7l9.4-2.2"/></svg></div></div>
+          <div class="h-s" style="min-height:11mm;font-size:13pt">Analysis and systems</div>
+          <ul class="l" style="font-size:9.2pt"><li>Data analysis and visualisation</li><li>System design and modelling</li><li>Structures, relationships and behaviours</li></ul></div>
+      <div class="panel-pet col between" style="padding:4.5mm">
+        <div class="kicker">In the cases</div>
+        <div class="lead-ser" style="font-size:15pt">GXK12:2 and Proyecto Raíces show these areas working together, from strategy to code.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page petrol">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">03 · How I work</div><div class="r"><b>06</b> / 23</div></div>
+  <div class="body grid">
+    <div style="grid-column:1/5" class="col between">
+      <div>
+        <div class="kicker"><span class="n">03</span>How I work</div>
+        <h2 class="h-l mt3">Five stages that <span class='ser peach-t'>start over.</span></h2>
+        <p class="muted mt2">It isn’t a straight line. Experimenting can send a project back to design; evolving opens a new round of exploration. Each loop leaves the product clearer and sturdier.</p>
+      </div>
+      <div class="box">
+        <div class="kicker mb1">In practice</div>
+        <div class="small"><b>Raíces</b> — after the functional stage closed, the project went back to design: a “System Reset” reorganised the base into Foundation → Components → Patterns → Pages → Content without rebuilding what worked.</div>
+        <div class="small mt1"><b>GXK12:2</b> — the cart’s availability logic was designed, implemented, tested and sent back to Figma to align the interface with the decisions made.</div>
+      </div>
+    </div>
+    <div style="grid-column:5/9;display:flex;align-items:center;justify-content:center"><div style="width:100%;aspect-ratio:1"><svg viewBox="0 0 120 120" style="width:100%;height:100%">
+      <defs><marker id="ar" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L6 3L0 6z" fill="#FED3A8"/></marker></defs>
+      <g fill="none" stroke="#FED3A8" stroke-width=".45"><path d="M68.7 16.9 A44 44 0 0 1 98.3 38.4" marker-end="url(#ar)"/><path d="M103.7 55.0 A44 44 0 0 1 92.4 89.7" marker-end="url(#ar)"/><path d="M78.3 100.0 A44 44 0 0 1 41.7 100.0" marker-end="url(#ar)"/><path d="M27.6 89.7 A44 44 0 0 1 16.3 55.0" marker-end="url(#ar)"/><path d="M21.7 38.4 A44 44 0 0 1 51.3 16.9" marker-end="url(#ar)"/></g>
+      <g fill="none" stroke="rgba(255,231,206,.45)" stroke-width=".35"><path d="M34.1 95.6 Q60 60 101.8 46.4" stroke-dasharray="1.2 1.6"/><path d="M18.2 46.4 Q54 56 60.0 16.0" stroke-dasharray="1.2 1.6"/></g>
+      <g font-family="JetBrains Mono" font-size="4.6" font-weight="700" fill="#1B5956"><circle cx="60.0" cy="16.0" r="7.5" fill="#FED3A8"/><text x="60.0" y="17.6" text-anchor="middle">01</text><circle cx="101.8" cy="46.4" r="7.5" fill="#FED3A8"/><text x="101.8" y="48.0" text-anchor="middle">02</text><circle cx="85.9" cy="95.6" r="7.5" fill="#FED3A8"/><text x="85.9" y="97.2" text-anchor="middle">03</text><circle cx="34.1" cy="95.6" r="7.5" fill="#FED3A8"/><text x="34.1" y="97.2" text-anchor="middle">04</text><circle cx="18.2" cy="46.4" r="7.5" fill="#FED3A8"/><text x="18.2" y="48.0" text-anchor="middle">05</text></g>
+      <text x="60" y="61" text-anchor="middle" font-family="Instrument Serif" font-style="italic" font-size="7" fill="#FFE7CE">it loops</text>
+    </svg></div></div>
+    <div style="grid-column:9/13" class="col" style="justify-content:center">
+      <div class="col flex1" style="justify-content:center"><div class="col gap1" style="border-top:1px solid var(--line-inv);padding:3.2mm 0">
+      <div class="row gap2" style="align-items:baseline"><div class="mono peach-t" style="width:7mm;font-size:7pt">01</div><div class="h-s" style="font-size:15pt">Explore</div></div>
+      <div class="small muted" style="padding-left:11mm">Research, understand the problem, uncover opportunities and shape a concept.</div></div><div class="col gap1" style="border-top:1px solid var(--line-inv);padding:3.2mm 0">
+      <div class="row gap2" style="align-items:baseline"><div class="mono peach-t" style="width:7mm;font-size:7pt">02</div><div class="h-s" style="font-size:15pt">Design</div></div>
+      <div class="small muted" style="padding-left:11mm">Define experiences, structures, systems and visual identities.</div></div><div class="col gap1" style="border-top:1px solid var(--line-inv);padding:3.2mm 0">
+      <div class="row gap2" style="align-items:baseline"><div class="mono peach-t" style="width:7mm;font-size:7pt">03</div><div class="h-s" style="font-size:15pt">Build</div></div>
+      <div class="small muted" style="padding-left:11mm">Develop solutions and turn ideas into concrete products.</div></div><div class="col gap1" style="border-top:1px solid var(--line-inv);padding:3.2mm 0">
+      <div class="row gap2" style="align-items:baseline"><div class="mono peach-t" style="width:7mm;font-size:7pt">04</div><div class="h-s" style="font-size:15pt">Experiment</div></div>
+      <div class="small muted" style="padding-left:11mm">Test technologies, tools, concepts and possibilities.</div></div><div class="col gap1" style="border-top:1px solid var(--line-inv);padding:3.2mm 0">
+      <div class="row gap2" style="align-items:baseline"><div class="mono peach-t" style="width:7mm;font-size:7pt">05</div><div class="h-s" style="font-size:15pt">Evolve</div></div>
+      <div class="small muted" style="padding-left:11mm">Evaluate, learn, iterate and improve.</div></div><div style="border-top:1px solid var(--line-inv)"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="page dark">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">04 · Case study</div><div class="r"><b>07</b> / 23</div></div>
+  <img src="img/gxk/gk-ilustracion.png" class="abs" style="right:18mm;top:30mm;height:128mm" alt="">
+  <div class="abs cap" style="right:18mm;top:160mm;width:70mm;text-align:right">G & K, the brand’s host characters. Asset used on the implemented Home page.</div>
+  <div class="abs" style="left:14mm;top:30mm;width:160mm">
+    <div class="kicker"><span class="n">04</span>Case 01</div>
+    <h2 class="h-xxl mt3" style="font-size:108pt">GXK12:2</h2>
+    <p class="lead mt3" style="max-width:130mm;color:#FFE7CE">How a complete digital product gets built: from a brand with a strong identity to a store, a purchase journey and a management panel, with each discipline feeding the next.</p>
+  </div>
+  <div class="abs" style="left:14mm;bottom:13mm;width:175mm;display:grid;grid-template-columns:repeat(4,1fr);gap:5mm"><div class="col gap1" style="border-top:1px solid var(--line-inv);padding-top:2mm"><div class="kicker">Type</div><div class="small">E-commerce ecosystem and digital experience</div></div><div class="col gap1" style="border-top:1px solid var(--line-inv);padding-top:2mm"><div class="kicker">Role</div><div class="small">End-to-end: strategy, UX/UI, identity, development and documentation</div></div><div class="col gap1" style="border-top:1px solid var(--line-inv);padding-top:2mm"><div class="kicker">Status</div><div class="small">In development · 2026</div></div><div class="col gap1" style="border-top:1px solid var(--line-inv);padding-top:2mm"><div class="kicker">Stack</div><div class="small">Next.js · TypeScript · Supabase</div></div></div>
+</section>
+
+<section class="page">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">GXK12:2 · Context</div><div class="r"><b>08</b> / 23</div></div>
+  <div class="body grid" style="grid-template-rows:auto minmax(0,1fr);row-gap:6mm">
+    <div style="grid-column:1/5;grid-row:1/3" class="col gap3">
+      <div>
+        <div class="kicker mb1">01 — Overview and context</div>
+        <p class="lead" style="font-size:11.5pt">GXK is a clothing brand with a wide catalogue, high turnover and small stock: around 2–3 units per variant. Today it sells mainly through Instagram.</p>
+        <p class="muted small">Its essence fits in one line: “a space for exploration and transformation through clothing”. Slogan: <b>NO TE CONFORMES. TRANSFORMATE.</b> (“Don’t settle. Transform.”)</p>
+      </div>
+      <div>
+        <div class="kicker mb1">02 — Goal and opportunity</div>
+        <p>Centralise operations in an owned store and give the team a private panel to manage catalogue, stock, photos and orders without technical knowledge.</p>
+        <p class="muted small">The opportunity: a store that doesn’t feel like generic e-commerce, but like “the door to the GXK house”.</p>
+      </div>
+      <div class="flex1"></div>
+      <div class="cap">Sources: Brand & E-commerce Bible, Requirements and Methodology (Obsidian); GxK12-2 repository; Figma file.</div>
+    </div>
+    <div style="grid-column:6/9;grid-row:1" class="col gap2">
+      <div class="kicker">03 — My role</div>
+      <ul class="l tight small" style="columns:1"><li>Concept</li><li>Product strategy and architecture</li><li>Experience design</li><li>Interface design</li><li>Identity and visual direction</li><li>Technical development</li><li>Organisation and documentation</li><li>Tool and process integration</li></ul>
+    </div>
+    <div style="grid-column:9/13;grid-row:1" class="panel-ink col gap2">
+      <div class="kicker">How it’s built</div>
+      <p class="small">I define product, scope, architecture and visual direction, and approve every design. Implementation is carried out with AI agents (Claude Code) on decisions that are already approved, in isolated branches, with tests and review before anything is merged.</p>
+      <p class="small" style="color:var(--peach)">Figma → approval → implementation → QA</p>
+    </div>
+    <div style="grid-column:6/13;grid-row:2;display:flex;align-items:flex-end">
+      <figure class="nf" style="width:100%"><img class="shot nat" src="img/gxk/fig-indice-etapa1.jpg" style="width:100%" alt=""><figcaption class="cap">10 — Visual material · Index of approved designs in Figma: 14 areas, from store to Admin, each with its source of truth. The Home uses the validated implementation as its source.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">GXK12:2 · Concept</div><div class="r"><b>09</b> / 23</div></div>
+  <div class="body grid">
+    <div style="grid-column:1/6" class="col between">
+      <div>
+        <div class="kicker mb1">04 — Concept</div>
+        <h2 class="h-m">From a brand with personality to a <span class='ser wine-t'>system</span> that can be built.</h2>
+        <p class="mt2 small">First came the <b>Brand & E-commerce Bible</b>: essence, voice, product rules, stock, payments, delivery and returns. Then the <b>Visual Direction</b> translated that identity into rules. The hierarchy is explicit: the Bible defines what GXK is; the visual direction defines how it looks.</p>
+      </div>
+      <div>
+        <div class="kicker mb1">Personality in tension</div>
+        <div class="small" style="columns:2;column-gap:5mm">elegant + urban<br>minimal + exaggerated<br>serious + absurd<br>classic + experimental<br>premium + approachable</div>
+        <div class="small mt1"><span class="ser" style="font-size:12pt">Common trait: curiosity.</span></div>
+      </div>
+      <div class="panel">
+        <div class="kicker mb1">Master rule</div>
+        <div class="lead-ser" style="font-size:16pt">“GXK doesn’t break rules for the sake of it. It decides when to stop following them.”</div>
+      </div>
+    </div>
+    <div style="grid-column:7/13" class="col gap3">
+      <div>
+        <div class="kicker mb1">05 — Design process</div>
+        <div class="row gap1"><div class="col" style="flex:1;border-top:2px solid var(--ink);padding-top:2mm"><div class="mono" style="font-size:6.2pt">01</div><div class="h-s" style="font-size:10.5pt">Structure</div></div><div class="col" style="flex:1;border-top:2px solid var(--ink);padding-top:2mm"><div class="mono" style="font-size:6.2pt">02</div><div class="h-s" style="font-size:10.5pt">Tension</div></div><div class="col" style="flex:1;border-top:2px solid var(--wine);padding-top:2mm"><div class="mono" style="font-size:6.2pt">03</div><div class="h-s" style="font-size:10.5pt">Rupture</div></div><div class="col" style="flex:1;border-top:2px solid var(--ink);padding-top:2mm"><div class="mono" style="font-size:6.2pt">04</div><div class="h-s" style="font-size:10.5pt">Resolution</div></div></div>
+        <div class="small muted mt1">Compositional cycle from V0.2. Decision hierarchy: <b>clarity → identity → exploration → visual effect</b>. If an effect hurts clarity, it goes.</div>
+      </div>
+      <figure class="nf" style="width:100%"><img class="shot nat" src="img/gxk/fig-superficies.jpg" style="width:100%" alt=""><figcaption class="cap">Surface system measured in Figma: exact values, grain texture and text contrast (9.8:1 for body text). Approved design.</figcaption></figure>
+      <div class="flex1"></div>
+      <div>
+        <div class="kicker mb2">System base rules</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:3mm">
+          <div class="box"><div class="h-s">12 · 8 · 4</div><div class="small muted">columns desktop · tablet · mobile</div></div>
+          <div class="box"><div class="h-s">0 radius</div><div class="small muted">no shadows, glass or blur</div></div>
+          <div class="box"><div class="h-s" style="color:#C4430A">Orange = signal</div><div class="small muted">never a structural colour</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">GXK12:2 · UX</div><div class="r"><b>10</b> / 23</div></div>
+  <div class="body grid">
+    <div style="grid-column:1/7" class="col gap3">
+      <div>
+        <div class="kicker mb1">06 — UX/UI decisions</div>
+        <h2 class="h-m">“Find what you came for fast, so you have more time to discover what you didn’t know you wanted.”</h2>
+      </div>
+      <div class="row gap2">
+        <div class="panel-ink flex1" style="padding:4mm"><div class="kicker">I want to buy</div><div class="small mt1">find → choose → pay → done</div></div>
+        <div class="panel flex1" style="padding:4mm"><div class="kicker">I want to explore</div><div class="small mt1">outfits → campaigns → stories → G/K → adventures → universe → family → events</div></div>
+      </div>
+      <div class="small muted">Two speeds in one product: buying can’t lose clarity because of exploration, and exploration can’t feel like a catalogue.</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4mm 5mm"><div style="border-top:1px solid var(--line);padding-top:2mm"><div class="h-s" style="font-size:10pt">Add-to-cart confirmation</div><div class="small muted">A panel (bottom sheet on mobile) replaces “Added ✓”. It doesn’t auto-close or stack; focus, Escape and screen-reader announcement are specified.</div></div><div style="border-top:1px solid var(--line);padding-top:2mm"><div class="h-s" style="font-size:10pt">Honest availability</div><div class="small muted">A failed check is not the same as “out of stock”. “Start checkout” stays locked while verifying, and “Retry” is offered.</div></div><div style="border-top:1px solid var(--line);padding-top:2mm"><div class="h-s" style="font-size:10pt">Selectors, not chips</div><div class="small muted">In the cart, size and colour are edited with dropdowns; chips were tested and dropped.</div></div><div style="border-top:1px solid var(--line);padding-top:2mm"><div class="h-s" style="font-size:10pt">Visible business rule</div><div class="small muted">The cart doesn’t hold stock: the first confirmed payment wins. The interface says so, calmly.</div></div></div>
+    </div>
+    <div style="grid-column:8/13" class="col gap3">
+      <figure class="nf" style="width:100%"><img class="shot nat" src="img/gxk/fig-carrito-confirmacion.jpg" style="width:100%" alt=""><figcaption class="cap">Add-to-cart confirmation · desktop. Approved design in Figma (Stage 1). Product images are placeholders.</figcaption></figure>
+      <div class="flex1"></div>
+      <div>
+        <div class="kicker mb2">Designed purchase journey</div>
+        <div class="row gap1"><div class="col" style="flex:1"><div style="height:2.4mm;background:var(--ink)"></div><div class="mono mt1" style="font-size:5.8pt">01</div><div class="small" style="font-weight:600;font-size:7.6pt">Store</div></div><div class="col" style="flex:1"><div style="height:2.4mm;background:var(--ink)"></div><div class="mono mt1" style="font-size:5.8pt">02</div><div class="small" style="font-weight:600;font-size:7.6pt">Product</div></div><div class="col" style="flex:1"><div style="height:2.4mm;background:var(--wine)"></div><div class="mono mt1" style="font-size:5.8pt">03</div><div class="small" style="font-weight:600;font-size:7.6pt">Confirmation</div></div><div class="col" style="flex:1"><div style="height:2.4mm;background:var(--wine)"></div><div class="mono mt1" style="font-size:5.8pt">04</div><div class="small" style="font-weight:600;font-size:7.6pt">Cart</div></div><div class="col" style="flex:1"><div style="height:2.4mm;background:var(--ink)"></div><div class="mono mt1" style="font-size:5.8pt">05</div><div class="small" style="font-weight:600;font-size:7.6pt">Details</div></div><div class="col" style="flex:1"><div style="height:2.4mm;background:var(--ink)"></div><div class="mono mt1" style="font-size:5.8pt">06</div><div class="small" style="font-weight:600;font-size:7.6pt">Delivery</div></div><div class="col" style="flex:1"><div style="height:2.4mm;background:var(--ink)"></div><div class="mono mt1" style="font-size:5.8pt">07</div><div class="small" style="font-weight:600;font-size:7.6pt">Payment</div></div><div class="col" style="flex:1"><div style="height:2.4mm;background:var(--ink)"></div><div class="mono mt1" style="font-size:5.8pt">08</div><div class="small" style="font-weight:600;font-size:7.6pt">Order status</div></div></div>
+        <div class="small muted mt2">Each step has its states: empty, loading, error, out of stock and confirmation, on desktop and mobile.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page sand">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">GXK12:2 · Interfaces</div><div class="r"><b>11</b> / 23</div></div>
+  <div class="body col">
+    <div class="grid" style="align-items:end">
+      <div style="grid-column:1/6">
+        <div class="kicker mb1">07 — Interface design</div>
+        <h2 class="h-m" style="font-size:22pt">Store and product page: <span class='ser wine-t'>type-led,</span> information without noise.</h2>
+      </div>
+      <div style="grid-column:7/10" class="small">The product page follows the Bible: large photos, name, type, price, size, colour, size guide, composition, shipping, returns and a WhatsApp query with the product already filled in.</div>
+      <div style="grid-column:10/13" class="small muted">On mobile, the buy action stays pinned and says what’s still missing. Photos are placeholders: the system is validated before the photo shoot.</div>
+    </div>
+    <div class="flex1"></div>
+    <div class="row between" style="align-items:flex-start">
+      <figure class="nf" style="width:min-content"><img class="shot byh" src="img/gxk/fig-tienda-desktop-crop.jpg" style="height:92mm" alt=""><figcaption class="cap">Store · desktop · filters open</figcaption></figure>
+      <figure class="nf" style="width:min-content"><img class="shot byh" src="img/gxk/fig-pdp-desktop-crop.jpg" style="height:92mm" alt=""><figcaption class="cap">Product page · desktop</figcaption></figure>
+      <figure class="nf" style="width:min-content"><img class="shot byh" src="img/gxk/fig-pdp-mobile-crop.jpg" style="height:92mm" alt=""><figcaption class="cap">Product · mobile</figcaption></figure>
+    </div>
+    <div class="cap mt2">Approved Stage 1 designs · Figma.</div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">GXK12:2 · Interfaces</div><div class="r"><b>12</b> / 23</div></div>
+  <div class="body row gap3">
+    <div class="row gap2" style="align-items:flex-start">
+      <figure class="nf" style="width:min-content"><img class="shot byh" src="img/gxk/fig-checkout-pago.jpg" style="height:96mm" alt=""><figcaption class="cap">Checkout · step 3, payment and review · desktop. Methods set by the Bible: Mercado Pago, 50/50 deposit and cash on delivery.</figcaption></figure>
+      <figure class="nf" style="width:min-content"><img class="shot byh" src="img/gxk/fig-checkout-mobile.jpg" style="height:96mm" alt=""><figcaption class="cap">Checkout · mobile</figcaption></figure>
+    </div>
+    <div class="col gap3 flex1">
+      <figure class="nf" style="width:100%"><img class="shot nat" src="img/gxk/fig-admin-inicio.jpg" style="width:100%" alt=""><figcaption class="cap">Admin · Home. Figures are <b>sample data</b>, labelled as such in the design itself.</figcaption></figure>
+      <div class="flex1"></div>
+      <div class="panel col gap1">
+        <div class="kicker">Management panel</div>
+        <div class="h-s">“What needs action comes first.”</div>
+        <div class="small muted">A single initial admin with no technical background: orders to prepare, incidents and low stock (≤ 3 units) on top; the general overview after. A principle shared with Raíces: <i>lots of logic behind, little friction in front.</i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">GXK12:2 · Architecture and development</div><div class="r"><b>13</b> / 23</div></div>
+  <div class="roomy body grid">
+    <div style="grid-column:1/7" class="col gap2">
+      <div class="kicker">08 — Architecture</div>
+      <div class="panel-ink col" style="padding:6mm;flex:1;justify-content:space-around">
+        <div class="row gap1">
+          <div class="box flex1" style="padding:2.6mm"><div class="kicker">Storefront</div><div class="small">public store</div></div>
+          <div class="box flex1" style="padding:2.6mm"><div class="kicker">Admin</div><div class="small">private panel</div></div>
+          <div class="box flex1" style="padding:2.6mm;border-style:dashed"><div class="kicker">Desktop</div><div class="small">future</div></div>
+        </div>
+        <div class="mono" style="text-align:center;font-size:16pt;color:var(--peach);line-height:1">↓</div>
+        <div class="box" style="padding:3mm;border-color:var(--peach)">
+          <div class="row between"><div class="h-s" style="font-size:10.5pt">GXK Core</div><div class="cap">Next.js · TypeScript · server-side business logic</div></div>
+          <div class="mt1"><span class="mono" style="font-size:6.2pt;border:1px solid var(--line-inv);padding:1mm 1.6mm;margin:0 1mm 1.2mm 0;display:inline-block">catalog</span><span class="mono" style="font-size:6.2pt;border:1px solid var(--line-inv);padding:1mm 1.6mm;margin:0 1mm 1.2mm 0;display:inline-block">cart</span><span class="mono" style="font-size:6.2pt;border:1px solid var(--line-inv);padding:1mm 1.6mm;margin:0 1mm 1.2mm 0;display:inline-block">checkout</span><span class="mono" style="font-size:6.2pt;border:1px solid var(--line-inv);padding:1mm 1.6mm;margin:0 1mm 1.2mm 0;display:inline-block">orders</span><span class="mono" style="font-size:6.2pt;border:1px solid var(--line-inv);padding:1mm 1.6mm;margin:0 1mm 1.2mm 0;display:inline-block">payments</span><span class="mono" style="font-size:6.2pt;border:1px solid var(--line-inv);padding:1mm 1.6mm;margin:0 1mm 1.2mm 0;display:inline-block">inventory</span><span class="mono" style="font-size:6.2pt;border:1px solid var(--line-inv);padding:1mm 1.6mm;margin:0 1mm 1.2mm 0;display:inline-block">shipping</span><span class="mono" style="font-size:6.2pt;border:1px solid var(--line-inv);padding:1mm 1.6mm;margin:0 1mm 1.2mm 0;display:inline-block">emails</span><span class="mono" style="font-size:6.2pt;border:1px solid var(--line-inv);padding:1mm 1.6mm;margin:0 1mm 1.2mm 0;display:inline-block">familia</span><span class="mono" style="font-size:6.2pt;border:1px solid var(--line-inv);padding:1mm 1.6mm;margin:0 1mm 1.2mm 0;display:inline-block">outfits</span><span class="mono" style="font-size:6.2pt;border:1px solid var(--line-inv);padding:1mm 1.6mm;margin:0 1mm 1.2mm 0;display:inline-block">universe</span><span class="mono" style="font-size:6.2pt;border:1px solid var(--line-inv);padding:1mm 1.6mm;margin:0 1mm 1.2mm 0;display:inline-block">analytics</span></div>
+        </div>
+        <div class="mono" style="text-align:center;font-size:16pt;color:var(--peach);line-height:1">↓</div>
+        <div class="row gap1">
+          <div class="box flex1" style="padding:2.6mm"><div class="kicker">Supabase</div><div class="small">PostgreSQL · Auth · Storage · RLS</div></div>
+          <div class="box flex1" style="padding:2.6mm"><div class="kicker">Mercado Pago</div><div class="small">payments · webhook</div></div>
+          <div class="box flex1" style="padding:2.6mm"><div class="kicker">Logistics</div><div class="small">Andreani · Correo Arg.</div></div>
+        </div>
+      </div>
+      <div class="cap">Three surfaces on one backend and one set of business logic. Verified in the repository (README, ARCHITECTURE.md and src/ structure).</div>
+    </div>
+    <div style="grid-column:8/13" class="col gap2">
+      <div class="kicker">09 — Technical decisions</div>
+      <table class="t" style="font-size:8.8pt"><tbody><tr><td>Stock per variant</td><td class="muted">Product + size + colour with a uniqueness constraint. The product holds no total stock.</td></tr><tr><td>Orders as snapshots</td><td class="muted">Each item stores name, variant, SKU and price at the moment of purchase.</td></tr><tr><td>Tracking without an account</td><td class="muted">Order access via an unpredictable token; only its hash is stored.</td></tr><tr><td>Server-confirmed payment</td><td class="muted">Status depends on Mercado Pago’s webhook, not on the browser redirect.</td></tr><tr><td>Decoupled providers</td><td class="muted">Andreani and Correo Argentino sit behind adapters: they can be added or swapped without touching the core.</td></tr></tbody></table>
+      <div class="kicker mt2">10 — Tools confirmed in the project</div>
+      <div class="small">Figma · Claude Design · Claude Code · GitHub · Linear · Obsidian · Supabase · Vercel (Preview)</div>
+      <div class="small muted">Quality: unit tests, TypeScript, ESLint and browser tests as a gate before merging.</div>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">GXK12:2 · Status and learnings</div><div class="r"><b>14</b> / 23</div></div>
+  <div class="roomy body grid">
+    <div style="grid-column:1/8" class="col gap2">
+      <div class="kicker">11 — Current status · November 2026</div>
+      <h2 class="h-m">What’s approved, what’s built <span class='ser wine-t'>and what’s left.</span></h2>
+      <table class="t mt1" style="font-size:9pt"><tbody><tr><td style="width:30mm"><span class="st ok">Approved</span></td><td style="width:36mm">Design · Stage 1</td><td class="muted" style="font-weight:400">Approved designs consolidated in Figma: 14 areas on desktop and mobile, from store to Admin, including error and loading states.</td></tr><tr><td style="width:30mm"><span class="st ok">Implemented</span></td><td style="width:36mm">Home</td><td class="muted" style="font-weight:400">On the repository’s main branch; the implementation is the Home’s source of truth.</td></tr><tr><td style="width:30mm"><span class="st wip">On branch</span></td><td style="width:36mm">Purchase and content</td><td class="muted" style="font-weight:400">Checkout, order status, content and account pages, and cart availability logic: implemented on working branches, not yet merged or published.</td></tr><tr><td style="width:30mm"><span class="st pend">Pending</span></td><td style="width:36mm">Live integrations</td><td class="muted" style="font-weight:400">Mercado Pago and shipping in production; the Andreani and Correo Argentino adapters don’t make live calls yet. Email provider to be defined.</td></tr><tr><td style="width:30mm"><span class="st pend">Next</span></td><td style="width:36mm">Beta</td><td class="muted" style="font-weight:400">Full QA and a presentation beta for GXK’s owner (target: 30 Nov 2026); then a commercial beta and launch.</td></tr></tbody></table>
+    </div>
+    <div style="grid-column:9/13" class="panel-pet col gap3">
+      <div class="kicker">12 — Conclusions and learnings</div>
+      <div style="border-top:1.5px solid var(--sand);padding-top:2.4mm"><div class="h-s" style="font-size:10.5pt">Design before implementing.</div><div class="small muted">An AI agent works best as an implementer once the visual direction is decided.</div></div><div style="border-top:1.5px solid var(--sand);padding-top:2.4mm"><div class="h-s" style="font-size:10.5pt">A simulation isn’t an integration.</div><div class="small muted">What’s tested against mocked data is reported as such, never as a finished feature.</div></div><div style="border-top:1.5px solid var(--sand);padding-top:2.4mm"><div class="h-s" style="font-size:10.5pt">Approved ≠ implemented ≠ published.</div><div class="small muted">Keeping these states apart avoids confusing progress with delivery.</div></div>
+      <div class="flex1"></div>
+      <div class="cap">No commercial metrics: the product hasn’t launched yet.</div>
+    </div>
+  </div>
+</section>
+
+<section class="page petrol" style="background:#0f2d2b">
+  <img src="img/raices/web-home-hero.jpg" class="abs" style="left:0;top:0;width:297mm;height:132mm;object-fit:cover;object-position:center 72%" alt="">
+  <div class="abs" style="left:0;top:0;width:297mm;height:132mm;background:linear-gradient(180deg,rgba(15,45,43,.55) 0%,rgba(15,45,43,0) 22%)"></div>
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">05 · Case study</div><div class="r"><b>15</b> / 23</div></div>
+  <div class="abs cap" style="right:14mm;top:126mm;color:#FFE7CE">Public site home — screenshot of proyectoraices.com.ar</div>
+  <div class="abs" style="left:14mm;top:137mm;right:14mm" >
+    <div class="grid" style="height:auto">
+      <div style="grid-column:1/7">
+        <div class="kicker"><span class="n">05</span>Case 02</div>
+        <h2 class="h-xl mt1" style="font-size:52pt">Proyecto <span class='ser peach-t'>Raíces</span></h2>
+        <p class="small mt1" style="color:#FFE7CE">“Journeys to connect with every place.” The evolution of a digital platform: from a working site to a system ready to grow. <a class="u" href="https://proyectoraices.com.ar">proyectoraices.com.ar</a></p>
+      </div>
+      <div style="grid-column:7/13;display:grid;grid-template-columns:1fr 1fr;gap:3mm 5mm;align-content:start"><div class="col gap1" style="border-top:1px solid var(--line-inv);padding-top:2mm"><div class="kicker">Type</div><div class="small">Digital platform for adventure travel</div></div><div class="col gap1" style="border-top:1px solid var(--line-inv);padding-top:2mm"><div class="kicker">Role</div><div class="small">Strategy, architecture, UX/UI, design, development and documentation</div></div><div class="col gap1" style="border-top:1px solid var(--line-inv);padding-top:2mm"><div class="kicker">Status</div><div class="small">Public site live · Admin in development</div></div><div class="col gap1" style="border-top:1px solid var(--line-inv);padding-top:2mm"><div class="kicker">Stack</div><div class="small">HTML · CSS · JavaScript · Supabase</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">Proyecto Raíces · Context and architecture</div><div class="r"><b>16</b> / 23</div></div>
+  <div class="roomy body grid">
+    <div style="grid-column:1/5" class="col gap3">
+      <div>
+        <div class="kicker mb1">01 — Overview and context</div>
+        <p>Proyecto Raíces offers tours, treks and packages in Argentina and Peru that combine nature, adventure, culture and encounters, far from the traditional agency model.</p>
+      </div>
+      <div>
+        <div class="kicker mb1">02 — Goal and opportunity</div>
+        <p class="small">A website that feels like a proposal of experiences rather than a generic agency: photography and storytelling working together, clear navigation and a simple path to ask and book.</p>
+        <p class="small muted">It was also the project where I validated my working method.</p>
+      </div>
+      <div>
+        <div class="kicker mb1">03 — My role</div>
+        <ul class="l tight small" style="columns:2;column-gap:4mm"><li>Product strategy</li><li>Concept</li><li>Architecture</li><li>User experience</li><li>Design</li><li>Development</li><li>Organisation and documentation</li></ul>
+      </div>
+    </div>
+    <div style="grid-column:6/13" class="col gap2">
+      <div class="kicker">07 — Information architecture</div>
+      <h2 class="h-m">Two doors, one catalogue. <span class='ser wine-t'>The split is deliberate.</span></h2>
+      <div class="row gap2 mt1">
+        <div class="flex1 col" style="border:1px solid var(--line);padding:4mm">
+        <div class="row between"><div class="h-s">Experiences</div><div class="kicker" style="color:#9E1F32">Catalogue</div></div>
+        <div class="col mt2" style="gap:0"><div class="row" style="align-items:center"><div class="mono" style="width:4mm;color:#9E1F32;font-size:7pt;text-align:right;padding-right:1.5mm">●</div><div class="small">All experiences</div></div><div class="row" style="align-items:center"><div class="mono" style="width:8mm;color:#9E1F32;font-size:7pt;text-align:right;padding-right:1.5mm">└</div><div class="small">Tours · Treks · Packages</div></div><div class="row" style="align-items:center"><div class="mono" style="width:12mm;color:#9E1F32;font-size:7pt;text-align:right;padding-right:1.5mm">└</div><div class="small">Filter by destination</div></div><div class="row" style="align-items:center"><div class="mono" style="width:16mm;color:#9E1F32;font-size:7pt;text-align:right;padding-right:1.5mm">└</div><div class="small">Experience page</div></div></div></div>
+        <div class="flex1 col" style="border:1px solid var(--line);padding:4mm">
+        <div class="row between"><div class="h-s">Destinations</div><div class="kicker" style="color:#1B5956">Editorial</div></div>
+        <div class="col mt2" style="gap:0"><div class="row" style="align-items:center"><div class="mono" style="width:4mm;color:#1B5956;font-size:7pt;text-align:right;padding-right:1.5mm">●</div><div class="small">Country</div></div><div class="row" style="align-items:center"><div class="mono" style="width:8mm;color:#1B5956;font-size:7pt;text-align:right;padding-right:1.5mm">└</div><div class="small">Specific destination</div></div><div class="row" style="align-items:center"><div class="mono" style="width:12mm;color:#1B5956;font-size:7pt;text-align:right;padding-right:1.5mm">└</div><div class="small">Story and place information</div></div><div class="row" style="align-items:center"><div class="mono" style="width:16mm;color:#1B5956;font-size:7pt;text-align:right;padding-right:1.5mm">└</div><div class="small">Related experiences</div></div></div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5mm" class="mt1">
+        <div class="small"><b>No duplication.</b> <span class="muted">Destinations is an editorial door into the catalogue, not a second catalogue. Patagonia works as geographic context, not as a navigable destination.</span></div>
+        <div class="small"><b>One template, many destinations.</b> <span class="muted">A single destination page reused through a URL parameter, fed by the same data source as the catalogue.</span></div>
+      </div>
+      <div class="flex1"></div>
+      <figure class="nf" style="width:125mm"><img class="shot nat" src="img/raices/web-experiencias.jpg" style="width:100%" alt=""><figcaption class="cap">Implemented Experiences catalogue: filters by type and destination. Public site, desktop.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">Proyecto Raíces · Design process</div><div class="r"><b>17</b> / 23</div></div>
+  <div class="body grid">
+    <div style="grid-column:1/5" class="col gap3">
+      <div>
+        <div class="kicker mb1">04 — Concept · 05 — Design process</div>
+        <h2 class="h-m">“The site shouldn’t look like a travel website. <span class='ser wine-t'>It should look like Raíces.</span>”</h2>
+      </div>
+      <p class="small">A <b>visual DNA</b> was distilled from a reference library: colour, type, photography, composition, navigation, graphic resources and motion. It isn’t a page: it’s a set of rules for building a Raíces of its own.</p>
+      <div>
+        <div class="kicker mb1">Current identity</div>
+        <div class="row gap1"><div class="col" style="flex:1"><div style="height:9mm;background:#8ba6b7"></div><div class="cap mt1">Blue<br>#8ba6b7</div></div><div class="col" style="flex:1"><div style="height:9mm;background:#8d4b12"></div><div class="cap mt1">Brown<br>#8d4b12</div></div><div class="col" style="flex:1"><div style="height:9mm;background:#ff5b28"></div><div class="cap mt1">Orange<br>#ff5b28</div></div><div class="col" style="flex:1"><div style="height:9mm;background:#e9e073"></div><div class="cap mt1">Yellow<br>#e9e073</div></div><div class="col" style="flex:1"><div style="height:9mm;background:#43612f"></div><div class="cap mt1">Green<br>#43612f</div></div><div class="col" style="flex:1"><div style="height:9mm;background:#6a7133"></div><div class="cap mt1">Olive<br>#6a7133</div></div></div>
+        <div class="small muted mt1">Alte Haas Grotesk · Cascadia Mono · Arial Rounded</div>
+      </div>
+      <div class="box">
+        <div class="kicker mb1">Six directions explored for the Home</div>
+        <div class="small">Territorio monumental · Cartografía viva · Atlas humano · Secuencia de expedición · Periódico de montaña · Señal abierta</div>
+        <div class="mt1"><span class="st exp">Explorations · not approved</span></div>
+      </div>
+    </div>
+    <div style="grid-column:5/9" class="col gap1">
+      <figure class="nf" style="width:100%"><img class="shot nat" src="img/raices/fig-visual-dna.jpg" style="width:100%" alt=""><figcaption class="cap">Raíces / Visual DNA — Figma board.</figcaption></figure>
+    </div>
+    <div style="grid-column:9/13" class="col gap1">
+      <div class="flex1"></div><figure class="nf" style="width:100%"><img class="shot nat" src="img/raices/fig-exploracion-periodico.jpg" style="width:100%" alt=""><figcaption class="cap">“Mountain newspaper” direction — Figma exploration, not implemented. Mock copy and dates are placeholders.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="page sand">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">Proyecto Raíces · Implemented UX/UI</div><div class="r"><b>18</b> / 23</div></div>
+  <div class="body grid" style="grid-template-rows:auto auto;row-gap:6mm;align-content:space-between">
+    <div style="grid-column:1/5;grid-row:1/3" class="col gap2">
+      <div class="kicker">06 — UX/UI decisions</div>
+      <h2 class="h-m">A clear, editorial travel experience, <span class='ser wine-t'>not a spec sheet.</span></h2>
+      <div class="col gap2 mt1"><div style="border-top:1px solid var(--line);padding-top:2mm"><div class="h-s" style="font-size:10pt">Experience page contract</div><div class="small muted">Details = what you need to decide. Itinerary = what helps you imagine the trip. Fields without real data are hidden, never filled by inference.</div></div><div style="border-top:1px solid var(--line);padding-top:2mm"><div class="h-s" style="font-size:10pt">Card system</div><div class="small muted">A shared image container with a constant ratio. Inconsistencies are fixed in the system, not photo by photo.</div></div><div style="border-top:1px solid var(--line);padding-top:2mm"><div class="h-s" style="font-size:10pt">Photography leads</div><div class="small muted">Real landscapes and people; no overlays hiding the image or crops that lose the focal point.</div></div><div style="border-top:1px solid var(--line);padding-top:2mm"><div class="h-s" style="font-size:10pt">One path to enquiry</div><div class="small muted">Main CTA “Book now”; enquiries go to WhatsApp with the experience already named. It isn’t an e-commerce site.</div></div></div>
+      <div class="flex1"></div>
+      <div><span class="st ok">Implemented · public site</span></div>
+    </div>
+    <div style="grid-column:5/13;grid-row:1" class="row gap3">
+      <div style="flex:1.4"><figure class="nf" style="width:100%"><img class="shot nat" src="img/raices/web-home-experiencias.jpg" style="width:100%" alt=""><figcaption class="cap">Home · “Moments to live differently”: experience carousel filtered by type.</figcaption></figure></div>
+      <div class="col between" style="flex:.6"><div class="lead-ser" style="font-size:16pt">“Lots of logic behind, little friction in front.”</div><div class="small muted">Interface principle shared with GXK12:2: the model’s complexity is solved on the inside.</div></div>
+    </div>
+    <div style="grid-column:5/13;grid-row:2" class="row gap2">
+      <div style="flex:1.4"><figure class="nf" style="width:100%"><img class="shot nat" src="img/raices/web-ficha.jpg" style="width:100%" alt=""><figcaption class="cap">Experience page · Salkantay Trek: essential details, private-option note and a single CTA.</figcaption></figure></div>
+      <div class="col end" style="flex:.6">
+        <div class="cap">Screenshots of the public site proyectoraices.com.ar (desktop), provided by Ignacio.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">Proyecto Raíces · Development and evolution</div><div class="r"><b>19</b> / 23</div></div>
+  <div class="body grid">
+    <div style="grid-column:1/8" class="panel-pet col gap2" style="">
+      <div class="kicker">08 — Technical development and evolution</div>
+      <div class="small" style="color:#FFE7CE">HTML, CSS and framework-free JavaScript · Supabase · ES/EN i18n · Playwright. A single layer (<span class='mono'>data-api.js</span>) knows the database; the rest of the site doesn’t.</div>
+      <div class="col flex1" style="justify-content:space-evenly"><div class="row gap2" style="border-top:1px solid var(--line-inv);padding:2mm 0">
+        <div class="mono peach-t" style="width:15mm;font-size:6.6pt;padding-top:.6mm">Sep 2026</div>
+        <div style="width:36mm;font-size:12pt" class="h-s" >Data moves to Supabase</div><div class="muted flex1" style="font-size:8.8pt">Content leaves flat JS files for a database with a single access layer.</div></div><div class="row gap2" style="border-top:1px solid var(--line-inv);padding:2mm 0">
+        <div class="mono peach-t" style="width:15mm;font-size:6.6pt;padding-top:.6mm">Sep 2026</div>
+        <div style="width:36mm;font-size:12pt" class="h-s" >Bilingual and QA</div><div class="muted flex1" style="font-size:8.8pt">ES/EN copy and end-to-end tests with Playwright.</div></div><div class="row gap2" style="border-top:1px solid var(--line-inv);padding:2mm 0">
+        <div class="mono peach-t" style="width:15mm;font-size:6.6pt;padding-top:.6mm">28.09</div>
+        <div style="width:36mm;font-size:12pt" class="h-s" >Functional stage closed</div><div class="muted flex1" style="font-size:8.8pt">With a stable base, focus shifts to UX/UI and visual direction.</div></div><div class="row gap2" style="border-top:1px solid var(--line-inv);padding:2mm 0">
+        <div class="mono peach-t" style="width:15mm;font-size:6.6pt;padding-top:.6mm">05.10</div>
+        <div style="width:36mm;font-size:12pt" class="h-s" >System Reset</div><div class="muted flex1" style="font-size:8.8pt">Foundation → Components → Patterns → Pages → Content. Migrate progressively; don’t rebuild.</div></div><div class="row gap2" style="border-top:1px solid var(--line-inv);padding:2mm 0">
+        <div class="mono peach-t" style="width:15mm;font-size:6.6pt;padding-top:.6mm">Oct 2026</div>
+        <div style="width:36mm;font-size:12pt" class="h-s" >Admin / CMS</div><div class="muted flex1" style="font-size:8.8pt">Admin → content model → Supabase → DataAPI → pages. The Admin manages entities, not presentation.</div></div><div class="row gap2" style="border-top:1px solid var(--line-inv);padding:2mm 0">
+        <div class="mono peach-t" style="width:15mm;font-size:6.6pt;padding-top:.6mm">26.10</div>
+        <div style="width:36mm;font-size:12pt" class="h-s" >Strategic review</div><div class="muted flex1" style="font-size:8.8pt">Packages as the commercial priority and local guides as a new axis. Recorded; new architecture not yet approved.</div></div></div>
+    </div>
+    <div style="grid-column:8/13" class="col gap2">
+      <div class="kicker">11 — Current status · November 2026</div>
+      <div class="col"><div class="col gap1" style="padding:1.6mm 0;border-top:1px solid var(--line)"><div><span class="st ok">Live</span></div><div class="small">Public site</div></div><div class="col gap1" style="padding:1.6mm 0;border-top:1px solid var(--line)"><div><span class="st wip">In development</span></div><div class="small">Content Admin / CMS, under verification</div></div><div class="col gap1" style="padding:1.6mm 0;border-top:1px solid var(--line)"><div><span class="st pend">Paused</span></div><div class="small">New migrations, until a restorable database backup is confirmed</div></div><div class="col gap1" style="padding:1.6mm 0;border-top:1px solid var(--line)"><div><span class="st pend">To approve</span></div><div class="small">Restructure: packages and local guides</div></div></div>
+      <div class="kicker mt2">12 — Learnings</div>
+      <ul class="l small"><li>Model and system first; Admin second.</li><li>Preserve what works and migrate layer by layer.</li><li>With real data, backups come first.</li></ul>
+      <div class="flex1"></div>
+      <div class="cap">Sources: project documentation (Obsidian), proyecto-raices repository and Figma file. Confirmed tools: Figma, Claude Design, Claude Code, GitHub, Linear, Supabase, Playwright, Cloudflare.</div>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">06 · Lab</div><div class="r"><b>20</b> / 23</div></div>
+  <div class="body grid">
+    <div style="grid-column:1/5" class="col between">
+      <div>
+        <div class="kicker"><span class="n">06</span>Creative lab</div>
+        <h2 class="h-l mt3">Curiosity <span class='ser wine-t'>with a method.</span></h2>
+        <p class="mt2">Experimentation doesn’t live apart: it shows up inside the projects —six directions for one Home, a visual-rules lab, interaction prototypes— and in the way I work.</p>
+      </div>
+      <div class="small muted">Explorations documented in the cases: Raíces (Visual DNA and Home directions) and GXK12:2 (Visual Rules Lab V0.2, motion prototypes in Figma).</div>
+    </div>
+    <div style="grid-column:5/9" class="panel-ink col gap2">
+      <div class="kicker">Ongoing experiment · MACARIO</div>
+      <div class="h-m" style="font-size:17pt">My own system for building digital products with AI.</div>
+      <div class="small muted">It organises the cycle idea → research → product → visual → UX/UI → architecture → development → QA → release → iteration, and defines what a person decides and what an agent executes. Agent autonomy covers <i>how</i> to execute what’s approved, never <i>what</i> gets built; merging, publishing or touching real data needs explicit authorisation.</div>
+      <div class="col flex1" style="justify-content:flex-end"><div class="row between" style="border-top:1px solid var(--line-inv);padding:1.6mm 0"><span class="small"><b>Obsidian</b></span><span class="mono" style="font-size:6.4pt;color:var(--peach)">knowledge</span></div><div class="row between" style="border-top:1px solid var(--line-inv);padding:1.6mm 0"><span class="small"><b>Linear</b></span><span class="mono" style="font-size:6.4pt;color:var(--peach)">work</span></div><div class="row between" style="border-top:1px solid var(--line-inv);padding:1.6mm 0"><span class="small"><b>Figma</b></span><span class="mono" style="font-size:6.4pt;color:var(--peach)">visual source</span></div><div class="row between" style="border-top:1px solid var(--line-inv);padding:1.6mm 0"><span class="small"><b>GitHub</b></span><span class="mono" style="font-size:6.4pt;color:var(--peach)">code</span></div><div class="row between" style="border-top:1px solid var(--line-inv);padding:1.6mm 0"><span class="small"><b>Claude Design</b></span><span class="mono" style="font-size:6.4pt;color:var(--peach)">exploration</span></div><div class="row between" style="border-top:1px solid var(--line-inv);padding:1.6mm 0"><span class="small"><b>Claude Code</b></span><span class="mono" style="font-size:6.4pt;color:var(--peach)">execution</span></div></div>
+    </div>
+    <div style="grid-column:9/13" class="col gap2">
+      <div class="kicker">Upcoming explorations</div>
+      <div class="small muted">This space is ready to hold new work as it happens. It contains no pieces yet.</div>
+      <div class="col gap2 flex1"><div class="col between" style="border:1px dashed var(--ink2);padding:3mm;flex:1;min-height:30mm"><div class="kicker" style="color:var(--ink2)">Reserved space</div><div class="h-s" style="color:var(--ink2)">3D exploration</div></div><div class="col between" style="border:1px dashed var(--ink2);padding:3mm;flex:1;min-height:30mm"><div class="kicker" style="color:var(--ink2)">Reserved space</div><div class="h-s" style="color:var(--ink2)">Audiovisual exploration</div></div><div class="col between" style="border:1px dashed var(--ink2);padding:3mm;flex:1;min-height:30mm"><div class="kicker" style="color:var(--ink2)">Reserved space</div><div class="h-s" style="color:var(--ink2)">AI experiments</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="page">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">07 · Education</div><div class="r"><b>21</b> / 23</div></div>
+  <div class="roomy body grid">
+    <div style="grid-column:1/4" class="col between">
+      <div>
+        <div class="kicker"><span class="n">07</span>Education</div>
+        <h2 class="h-l mt3">Designing <span class='ser wine-t'>experiences</span> before screens.</h2>
+      </div>
+      <div class="num">07</div>
+    </div>
+    <div style="grid-column:5/10" class="col gap2">
+      <div class="coord">Image Campus · Buenos Aires, Monserrat</div>
+      <div class="h-m">Technical Degree in Video Game Production and Concept Design</div>
+      <div class="kicker">Game Design</div>
+      <div class="rule mt1 mb1"></div>
+      <ul class="l"><li>Game development and concept design</li><li>Interactive experience design, including UX/UI</li><li>Documentation to support team communication</li><li>Collaboration in multidisciplinary teams</li><li>Iterative processes driven by team and client feedback</li><li>Task organisation and planning in group projects</li><li>Focus on customer experience and product interaction</li></ul>
+    </div>
+    <div style="grid-column:10/13" class="col gap3">
+      <div class="panel col gap1">
+        <div class="coord">Additional training</div>
+        <div class="h-s">Branding</div>
+        <div class="small muted">Brand identity and disciplines related to design and visual communication.</div>
+      </div>
+      <div class="box col gap1">
+        <div class="coord">Languages</div>
+        <div class="h-s">Spanish · English</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page petrol">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">07 · Tools</div><div class="r"><b>22</b> / 23</div></div>
+  <div class="body grid">
+    <div style="grid-column:1/5" class="col between">
+      <div>
+        <div class="kicker">Tools</div>
+        <h2 class="h-l mt3">Tools by <span class='ser peach-t'>function,</span> not by logo.</h2>
+        <p class="muted mt2">Each group covers part of the work: imagining and producing, organising, understanding data, modelling systems and extending the process with AI. They’re combined as each project requires.</p>
+      </div>
+      <div class="cap">Tools I use, with no levels or certifications implied. Each project’s technologies are listed in its case.</div>
+    </div>
+    <div style="grid-column:6/13;display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto;gap:9mm 6mm;align-content:center">
+      <div class="col gap1" style="grid-column:1;grid-row:1;border-top:1.5px solid var(--sand);padding-top:3mm">
+            <div class="row between"><div class="h-s">Design and visual production</div><div style="color:var(--peach)"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="15" height="14"/><path d="M3 9h15"/><circle class="f" cx="19.5" cy="4.5" r="2.3"/></svg></div></div><div class="mt1"><span class="chip">Figma</span><span class="chip">Adobe Photoshop</span><span class="chip">Adobe Premiere</span></div></div><div class="col gap1" style="grid-column:2;grid-row:1;border-top:1.5px solid var(--sand);padding-top:3mm">
+            <div class="row between"><div class="h-s">Project management</div><div style="color:var(--peach)"><svg class="ico" viewBox="0 0 24 24"><path d="M3 6h10M3 12h15M3 18h8"/><circle class="f" cx="18" cy="6" r="1.8"/><circle class="f" cx="15" cy="18" r="1.8"/></svg></div></div><div class="mt1"><span class="chip">ClickUp</span><span class="chip">Trello</span></div></div><div class="col gap1" style="grid-column:3;grid-row:1;border-top:1.5px solid var(--sand);padding-top:3mm">
+            <div class="row between"><div class="h-s">Data analysis and visualisation</div><div style="color:var(--peach)"><svg class="ico" viewBox="0 0 24 24"><circle cx="5" cy="18" r="2.3"/><circle cx="12" cy="6" r="2.3"/><circle cx="19" cy="15" r="2.3"/><path d="M6.3 16 10.8 8M13.8 7.3l3.8 6M7.3 17.7l9.4-2.2"/></svg></div></div><div class="mt1"><span class="chip">Tableau</span></div></div><div class="col gap1" style="grid-column:1;grid-row:2;border-top:1.5px solid var(--sand);padding-top:3mm">
+            <div class="row between"><div class="h-s">System design and modelling</div><div style="color:var(--peach)"><svg class="ico" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><circle class="f" cx="12" cy="12" r="3"/></svg></div></div><div class="mt1"><span class="chip">Machinations</span></div></div><div class="col gap1" style="grid-column:2;grid-row:2;border-top:1.5px solid var(--sand);padding-top:3mm">
+            <div class="row between"><div class="h-s">Artificial intelligence</div><div style="color:var(--peach)"><svg class="ico" viewBox="0 0 24 24"><path d="M12 3l9 9-9 9-9-9z"/><path d="M12 8v8M8 12h8"/></svg></div></div><div class="mt1"><span class="chip">Claude</span><span class="chip">AI tools for design, development, research and creative work</span></div></div>
+      <div class="col" style="grid-column:3;grid-row:2;justify-content:center"><div class="lead-ser" style="color:var(--peach);font-size:16pt">Tools change; the judgement to combine them stays.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="page wine">
+  <div class="hdr"><div>Ignacio Sconza — Portfolio 2026</div><div class="c">08 · Contact</div><div class="r"><b>23</b> / 23</div></div>
+  <div class="body grid">
+    <div style="grid-column:1/7" class="col between">
+      <div>
+        <div class="kicker"><span class="n">08</span>Contact</div>
+        <h2 class="h-xxl mt3" style="font-size:80pt">Let’s<br>talk.</h2>
+      </div>
+      <p class="lead" style="max-width:115mm;color:#FFE7CE">I’m open to full-time roles, freelance projects and creative collaborations. If you have a project where design and technology need to speak the same language, I’d love to hear about it.</p>
+    </div>
+    <div style="grid-column:8/13" class="col end">
+      <div class="h-s mb2" style="color:#FFE7CE">Ignacio Sconza</div>
+      <a href="mailto:ignaciotsconza@gmail.com" class="row between" style="border-top:1px solid var(--line-inv);padding:3.4mm 0;align-items:baseline"><span class="kicker">Email</span><span class="h-m" style="font-size:17pt">ignaciotsconza@gmail.com <span class="peach-t">↗</span></span></a><a href="tel:+5491165211354" class="row between" style="border-top:1px solid var(--line-inv);padding:3.4mm 0;align-items:baseline"><span class="kicker">Phone</span><span class="h-m" style="font-size:17pt">+54 9 11 6521-1354 <span class="peach-t">↗</span></span></a><a href="https://www.instagram.com/nachosconza" class="row between" style="border-top:1px solid var(--line-inv);padding:3.4mm 0;align-items:baseline"><span class="kicker">Instagram</span><span class="h-m" style="font-size:17pt">instagram.com/nachosconza <span class="peach-t">↗</span></span></a>
+      <div style="border-top:1px solid var(--line-inv)"></div>
+      <div class="cap mt3" style="color:rgba(255,231,206,.75)">Design · Development · Creativity — Portfolio 2026</div>
+    </div>
+  </div>
+</section></body></html>
