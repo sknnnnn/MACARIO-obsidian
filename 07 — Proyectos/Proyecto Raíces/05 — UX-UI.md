@@ -5,6 +5,22 @@
 
 ---
 
+## Rediseño visual integral — marco aprobado 2026-11-05
+
+El rediseño visual forma parte del plan maestro, no es una mejora aislada ni una etapa que se resuelve diseñando primero la Home.
+
+- **Etapa 1:** auditar visualmente todas las superficies públicas y el Admin, junto con estados, responsive, contenido, fotografía, consistencia de componentes y deuda de accesibilidad. Reutilizar evidencia de auditorías vigentes; no repetirlas sin motivo.
+- **Etapa 3:** definir y aprobar una dirección visual integral. La identidad existente y sus activos son punto de partida para evaluar, no una obligación de conservar cada decisión visual sin revisión.
+- **Etapa 4:** traducir la dirección a flujos, wireframes, pantallas desktop/mobile, componentes y estados completos en Figma. Figma será la fuente visual definitiva y aprobada.
+- **Etapa 6:** implementar por bloques comparables con Figma; no considerar una pantalla terminada por existir en código.
+- **Etapa 7:** QA visual y funcional de todas las superficies y estados relevantes.
+
+La auditoría y el diseño consideran Home, páginas de paquetes/experiencias, destinos, guías, calendario, consultas, páginas institucionales y Admin, según el inventario real. No presuponer pantallas, contenidos o capacidades no confirmados.
+
+Ver el plan completo en [[07 — Proyectos/Proyecto Raíces/00 — Índice]] → «Plan maestro de rediseño integral».
+
+---
+
 ## 1. Dirección de producto
 
 El sitio debe sentirse como una propuesta de experiencias y aventura, no como una agencia de turismo tradicional genérica. La experiencia debe priorizar: descubrimiento, inspiración, claridad, fotografía, narrativa, confianza y acceso sencillo a las experiencias. El contenido y las imágenes deben trabajar juntos.
