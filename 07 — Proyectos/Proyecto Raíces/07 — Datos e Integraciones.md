@@ -57,3 +57,31 @@ Confirmado en el repositorio (2026-10-07):
 - [[07 — Proyectos/Proyecto Raíces/00 — Índice]]
 - [[07 — Proyectos/Proyecto Raíces/04 — Arquitectura]]
 - [[07 — Proyectos/Proyecto Raíces/08 — Desarrollo]]
+
+
+---
+
+## Implicaciones del nuevo modelo de producto — 2026-11-05 (decisión aprobada; implementación pendiente)
+
+### Destinos
+- Ushuaia, Cusco y Ubatuba son los tres destinos principales de esta etapa.
+- País deja de ser entidad jerárquica de navegación/alta y permanece como atributo del destino.
+- Choquequirao debe convertirse en lugar/área/punto de interés asociado a Cusco. Antes de fusionar, inventariar referencias, experiencias, imágenes, slugs y enlaces; preservar datos y preparar redirecciones. No borrar registros sin plan reversible.
+
+### Guías
+- Se necesita una entidad/perfil público de guía, con relaciones hacia destinos y paquetes/experiencias.
+- La gestión es exclusiva del Admin; no existe publicación autónoma por parte de los guías.
+- El esquema actual no debe asumirse suficiente: auditar tablas y relaciones existentes antes de proponer migración.
+- El modelo económico de guías permanece sin definir y no debe codificarse por inferencia.
+
+### Calendario
+- La decisión de producto pasa a ser calendario general + disponibilidad individual por propuesta.
+- Auditar `experiencia_salidas` como fuente existente y única de fechas programadas. Su alcance histórico exclusivo para Travesías debe revisarse para incluir Paquetes y los tipos que realmente tengan salidas.
+- Calendario general y fichas individuales deben consumir la misma fuente; no crear listas paralelas ni duplicar fechas en JSONB/HTML/JS.
+- Mantener modalidades de consulta flexible cuando una propuesta no tenga una salida programada. No inventar fechas ni cupos.
+- Cualquier ampliación del esquema requiere inventario, plan de migración y pruebas; no aplicar SQL ni modificar producción como parte de esta decisión.
+
+### Consultas
+- Formulario contextual y WhatsApp deben coexistir como vías de consulta.
+- La consulta debe identificar la propuesta y el destino de origen cuando sea posible.
+- No implica checkout, cobro online ni reserva confirmada.
