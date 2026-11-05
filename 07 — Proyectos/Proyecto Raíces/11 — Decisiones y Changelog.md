@@ -256,3 +256,19 @@ Las experiencias pueden enlazarse desde Destinos (registrado como consolidado en
 **Pendiente:** aprobar el mapa de navegación, definir el alcance funcional de los perfiles de guía, comprobar el modelo de datos actual y decidir el modelo económico del servicio a guías. No se ha decidido suscripción, comisión ni mecanismo de cobro.
 
 **Alcance de este hito:** registra la orientación de negocio. No implica cambios en código, base de datos, despliegue, ni aprobación de pantallas o de una nueva Biblia. El detalle arquitectónico y el brief UX/UI se registran en las notas [[07 — Proyectos/Proyecto Raíces/04 — Arquitectura]] y [[07 — Proyectos/Proyecto Raíces/05 — UX-UI]].
+
+
+## Hito: 2026-11-05 — Aprobación de arquitectura de producto para la reestructuración
+
+**Decisiones aprobadas por Ignacio:**
+1. Paquetes son el producto principal y tienen protagonismo principal en Inicio.
+2. Guías tendrán perfiles públicos propios, pero solo el Admin podrá crear, editar y publicar contenido; no habrá publicación autónoma de guías.
+3. Habrá calendario general y disponibilidad individual dentro de cada propuesta, alimentados por una única fuente de datos.
+4. Las consultas combinarán formulario contextual y WhatsApp.
+5. Tours y Travesías permanecen en la oferta, aunque pasan a segundo plano frente a Paquetes.
+6. Los destinos principales de esta etapa son Ushuaia, Cusco y Ubatuba. País deja de ser nivel jerárquico y pasa a ser atributo.
+7. Choquequirao se integra como lugar/área asociada a Cusco; la fusión debe preservar relaciones, slugs y contenido válido.
+
+**Consecuencias:** revisar arquitectura de navegación, modelo de contenido, entidades/relaciones de Supabase, Admin, calendario, consultas y rediseño integral de la web. El Admin debe controlar el contenido público: los campos que se editan y guardan deben reflejarse en producción.
+
+**Límites:** esto aprueba la dirección funcional, no pantallas finales ni implementación. No autoriza migraciones, borrados, escrituras destructivas, cambios en producción ni deploy. Antes de intervenir datos, realizar inventario y plan reversible. El modelo económico de guías sigue pendiente; no asumir comisiones, suscripciones ni pagos. La arquitectura vigente está en [[07 — Proyectos/Proyecto Raíces/04 — Arquitectura]] § «Arquitectura de producto aprobada — 2026-11-05».
