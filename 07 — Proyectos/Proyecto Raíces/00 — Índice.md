@@ -62,6 +62,53 @@ Proyecto Raíces es un proyecto de turismo de aventura y experiencias (tours, tr
 Seguimiento operativo: [PRO-160](https://linear.app/proyecto-raices/issue/PRO-160/raices-admin-de-contenidos-e1-v5-aplicada-y-verificada-falta-publicar).
 ---
 
+## Plan maestro de rediseño integral — aprobado 2026-11-05
+
+**Estado:** plan adoptado. La ejecución se organiza en ocho etapas secuenciales. Amplía el alcance para incluir un rediseño visual integral. No implica que las etapas estén ejecutadas ni autoriza cambios en producción.
+
+| Etapa | Nombre | Resultado esperado |
+|---|---|---|
+| 0 | Preparación y continuidad | Estado real reconciliado, fuentes canónicas, dependencias, entorno seguro y reglas de trabajo definidos. |
+| 1 | Discovery y auditoría integral | Inventario funcional, técnico, editorial y visual de web, Admin, datos, contenido, responsive e integraciones, con evidencia y brechas priorizadas. |
+| 2 | Arquitectura del producto | Navegación, sitemap, entidades, relaciones, recorridos y reglas funcionales aprobados. |
+| 3 | Dirección visual | Concepto visual integral aprobado: identidad digital, referencias, fotografía, tipografía, color, composición, componentes, motion, responsive y accesibilidad. |
+| 4 | UX/UI y diseño en Figma | Flujos, wireframes, pantallas finales, componentes y estados diseñados y aprobados en Figma como fuente visual definitiva. |
+| 5 | Arquitectura técnica y preparación | Modelo de datos, Admin, integraciones, estrategia de migración reversible, seguridad, entornos y pruebas preparados. |
+| 6 | Implementación | Desarrollo por bloques aprobados, en ramas aisladas, con QA continuo y sin cambios directos no autorizados en producción. |
+| 7 | QA, migración y lanzamiento | Validación funcional/visual, responsive, accesibilidad, contenido, SEO, rendimiento, integridad de datos, migración y lanzamiento controlado. |
+
+### Orden y dependencias
+
+- Etapa 0 ordena el contexto y las condiciones de trabajo; no bloquea el análisis de solo lectura.
+- Etapa 1 audita en paralelo las dimensiones funcional, técnica, editorial y visual. No se diseña una Home aislada antes de comprender el sistema completo.
+- Etapa 2 define la arquitectura de producto a partir de la auditoría. Las decisiones funcionales aprobadas el 2026-11-05 son restricciones de partida.
+- Etapa 3 define la dirección visual; Etapa 4 la traduce a flujos y pantallas completas en Figma.
+- Etapa 5 prepara la base técnica y los cambios de datos antes de implementar. PRO-172 (backup real y restauración aislada) es prerequisito para operaciones sensibles sobre datos reales.
+- Etapa 6 implementa en bloques coherentes. Etapa 7 valida el conjunto y controla migración/publicación.
+
+### Método de ejecución y cierre
+
+- Obsidian + GitHub: contexto, documentación canónica, decisiones y continuidad.
+- Linear: etapas, subfases, tareas, dependencias, criterios de aceptación y estados.
+- GitHub: código, ramas, commits y PRs.
+- Claude Design: exploración visual y prototipos; Figma conserva la fuente visual aprobada y editable.
+- Claude Code: implementación.
+- Preview/staging: validación antes de producción.
+- Trabajar en loops de aproximadamente 4–5 tareas relacionadas. Cada loop cierra con evidencia, pruebas, pendientes explícitos y actualización documental.
+- Diferenciar propuesta, decisión aprobada, diseño, implementación, preview y producción.
+- No duplicar auditorías ya cerradas: recuperar evidencia vigente y auditar solo brechas o aspectos afectados por el nuevo alcance.
+- No avanzar de etapa sin criterios de cierre cumplidos o bloqueos documentados y aceptados.
+
+### Alcance visual transversal
+
+El rediseño visual no se limita a una nueva Home. La auditoría cubre web pública y Admin; la dirección visual abarca lenguaje de marca, fotografía, tipografía, color, composición, navegación, componentes, responsive, accesibilidad y estados. Figma contiene las pantallas y estados aprobados antes de su implementación.
+
+### Límites de seguridad
+
+La aprobación del plan no autoriza migraciones, borrados, escrituras destructivas, cambios de permisos, operaciones sobre datos reales, merge a ramas principales, deploy ni publicación. Cada operación sensible requiere preflight, respaldo/restauración cuando corresponda, estrategia reversible, pruebas y autorización explícita.
+
+---
+
 ## Documentación del proyecto
 
 - [[07 — Proyectos/Proyecto Raíces/01 — Contexto y Brief]]
