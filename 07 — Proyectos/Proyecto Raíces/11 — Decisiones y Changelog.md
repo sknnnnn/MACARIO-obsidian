@@ -272,3 +272,18 @@ Las experiencias pueden enlazarse desde Destinos (registrado como consolidado en
 **Consecuencias:** revisar arquitectura de navegación, modelo de contenido, entidades/relaciones de Supabase, Admin, calendario, consultas y rediseño integral de la web. El Admin debe controlar el contenido público: los campos que se editan y guardan deben reflejarse en producción.
 
 **Límites:** esto aprueba la dirección funcional, no pantallas finales ni implementación. No autoriza migraciones, borrados, escrituras destructivas, cambios en producción ni deploy. Antes de intervenir datos, realizar inventario y plan reversible. El modelo económico de guías sigue pendiente; no asumir comisiones, suscripciones ni pagos. La arquitectura vigente está en [[07 — Proyectos/Proyecto Raíces/04 — Arquitectura]] § «Arquitectura de producto aprobada — 2026-11-05».
+
+
+## Hito: 2026-11-05 — Adopción del plan maestro de rediseño integral
+
+Se adopta como plan oficial de Proyecto Raíces una estructura de ocho etapas: **0 Preparación y continuidad; 1 Discovery y auditoría integral; 2 Arquitectura del producto; 3 Dirección visual; 4 UX/UI y diseño en Figma; 5 Arquitectura técnica y preparación; 6 Implementación; 7 QA, migración y lanzamiento.**
+
+La decisión incorpora un rediseño visual integral de la web pública y el Admin. La auditoría visual comienza en Etapa 1, la dirección visual se define en Etapa 3 y se materializa en pantallas y estados aprobados en Figma durante Etapa 4. No se comienza por una Home aislada.
+
+Se adopta la metodología de GXK12:2 adaptada a Raíces: fuentes canónicas en Obsidian/GitHub, tareas y dependencias en Linear, código en GitHub, Figma como fuente visual aprobada, exploración en Claude Design, implementación con Claude Code y QA en Preview; loops de aproximadamente 4–5 tareas con evidencia y cierre documental.
+
+**Primera secuencia:** Etapa 0 → Etapa 1. La issue PRO-191 se reutiliza como punto de partida de Etapa 1 y amplía su alcance para incluir auditoría visual integral; no se crea una auditoría duplicada.
+
+**Límites:** adoptar el plan no autoriza migraciones, borrados, escrituras destructivas, operaciones sobre datos reales, merge, deploy ni publicación. PRO-172 y los controles de respaldo/restauración siguen siendo prerequisitos para operaciones sensibles. No se repiten auditorías previas sin revisar su evidencia y vigencia.
+
+Fuente canónica: [[07 — Proyectos/Proyecto Raíces/00 — Índice]] → «Plan maestro de rediseño integral». UX/UI: [[07 — Proyectos/Proyecto Raíces/05 — UX-UI]].
