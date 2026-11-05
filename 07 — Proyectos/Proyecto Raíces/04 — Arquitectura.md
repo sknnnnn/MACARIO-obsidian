@@ -205,3 +205,56 @@ Raíces queda en pausa al cerrar esta sesión. La orientación estratégica ya e
 - No inventar guías, biografías, destinos, experiencias, imágenes ni testimonios. El modelo económico para guías sigue sin decidirse; no presuponer pagos ni reservas automáticas.
 
 La pausa no cierra estos pendientes ni autoriza cambios en código, datos, producción o despliegue.
+
+
+---
+
+## Arquitectura de producto aprobada — 2026-11-05
+
+Esta sección registra las decisiones aprobadas por Ignacio el 2026-11-05. **Prevalece sobre las definiciones históricas incompatibles de esta nota y de los documentos anteriores.** No implica implementación ni autorización para modificar producción.
+
+### 1. Dirección del producto
+- **Paquetes:** producto comercial principal y protagonista de Inicio.
+- **Guías:** perfiles públicos propios, administrados y publicados exclusivamente por el Admin.
+- **Tours y Travesías:** continúan vigentes; no se eliminan. Pasan a segundo plano comercial respecto de Paquetes.
+- **Destinos:** capa de descubrimiento y contexto territorial que conecta paquetes, experiencias y guías.
+- El modelo económico/remuneración de guías sigue pendiente. Esta dirección no implica e-commerce, pagos online ni reservas automáticas.
+
+### 2. Destinos y jerarquía geográfica
+La jerarquía País → Destino desaparece de la navegación y del flujo de alta/edición del Admin. Los destinos se presentan como entidades del mismo nivel; el país queda como atributo informativo.
+
+Destinos principales de esta etapa:
+- Ushuaia — Argentina.
+- Cusco — Perú.
+- Ubatuba — Brasil.
+
+La estructura debe poder ampliarse en el futuro sin reinstalar una jerarquía obligatoria por país. **Choquequirao deja de ser destino independiente** y pasa a representarse como lugar/área/punto de interés asociado a Cusco. La fusión debe preservar experiencias, imágenes, enlaces, slugs y referencias válidas; definir redirecciones antes de retirar cualquier registro. No borrar datos por equivalencia nominal.
+
+### 3. Navegación y descubrimiento
+Dirección propuesta para el rediseño: **Paquetes → Destinos → Experiencias → Guías → Nosotros**, con Paquetes como entrada comercial prioritaria. El orden definitivo del menú y la ubicación del Calendario en desktop/mobile quedan sujetos a UX.
+
+Inicio prioriza paquetes y mantiene caminos alternativos de exploración por destino, experiencia y guía. Las páginas de destino conectan contenido editorial con propuestas y guías asociados, sin duplicar catálogos.
+
+### 4. Calendario y disponibilidad
+Decisión aprobada: **calendario general + disponibilidad individual dentro de cada propuesta**.
+- El calendario general permite descubrir salidas/fechas de paquetes y experiencias que tengan fechas programadas.
+- Cada ficha muestra sus fechas y disponibilidad contextual.
+- Ambas vistas leen una única fuente de verdad; no crear calendarios ni listas duplicadas.
+- Auditar primero `experiencia_salidas`: su alcance documentado como exclusivo de Travesías debe revisarse para soportar el nuevo alcance.
+- Mantener consulta flexible cuando una propuesta no tenga salida programada. No prometer cupos, confirmación ni reserva automática sin soporte real.
+
+### 5. Consultas
+Decisión aprobada: combinar **formulario contextual + WhatsApp**. El formulario captura una consulta estructurada; WhatsApp sigue disponible como vía directa y debe incluir el contexto de la propuesta cuando sea posible. La consulta no equivale a reserva confirmada ni pago. La jerarquía y microcopy de ambas vías se definirán en UX.
+
+### 6. Guías y gobierno editorial
+Cada guía puede tener perfil público vinculado a destinos y paquetes/experiencias donde participa. Solo el Admin crea, edita, publica, oculta y mantiene perfiles y propuestas; no hay publicación autónoma ni acceso editorial de guías en esta etapa. Publicar solo información real confirmada.
+
+### 7. Admin y publicación
+El Admin debe administrar Paquetes, Destinos/lugares, Experiencias (Tours y Travesías), Guías, Fechas/Salidas, Inicio y contenido público, textos ES/EN, imágenes/galerías, contacto y datos legales.
+
+Regla de integridad editorial: **todo contenido que se pueda guardar/publicar desde el Admin debe reflejarse en la superficie pública correspondiente**. Un campo que solo cambia dentro del Admin, pero no en producción, no está funcionalmente conectado. Distinguir borrador/publicado/oculto y permitir verificar el resultado público.
+
+### 8. Límites
+Antes de modificar código o datos: inventariar páginas, componentes, tablas, relaciones, formularios y campos; mapear el modelo actual; identificar migraciones, fusiones, slugs y riesgos de pérdida; proponer una estrategia reversible y pruebas; aprobar UX/UI y alcance.
+
+No ejecutar migraciones, escrituras destructivas, cambios de producción ni deploys por consecuencia automática de esta aprobación. PRO-172 y los controles de respaldo/restauración siguen siendo prerequisitos para operaciones sensibles sobre datos reales.
