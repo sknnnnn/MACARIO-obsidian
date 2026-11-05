@@ -174,3 +174,29 @@ La reestructuración queda pausada al cierre de la sesión. Al retomarla, el pri
 La identidad vigente orgánica, aventurera, humana, editorial y natural es el punto de partida. No reemplazar automáticamente Brand Bible, paleta o tipografías. Usar exclusivamente contenido real confirmado; los perfiles de guías requieren verificar datos y alcance.
 
 Los pendientes operativos pueden avanzar en paralelo al inventario y a las propuestas. El respaldo real (PRO-172) no bloquea el análisis de diseño, pero sí los cambios sensibles/destructivos en datos o producción y las nuevas migraciones. El calendario público (PRO-165), la carga real de imágenes (PRO-166), las escrituras/datos de prueba (PRO-162/163/164) y la revisión del Loop 2 Admin siguen abiertos y deben resolverse con evidencia, sin repetir la etapa A cerrada.
+
+
+---
+
+## Dirección UX aprobada para la nueva arquitectura — 2026-11-05
+
+Decisiones de producto aprobadas:
+- Paquetes tienen protagonismo principal en Inicio.
+- Guías tienen perfiles públicos, pero solo el Admin puede crear, editar y publicar.
+- Calendario general + disponibilidad individual en cada propuesta.
+- Consultas combinan formulario contextual y WhatsApp.
+- Tours y Travesías permanecen, con menor jerarquía comercial que Paquetes.
+- Destinos principales de esta etapa: Ushuaia, Cusco y Ubatuba.
+
+### Implicaciones de experiencia
+
+- Inicio debe presentar primero la propuesta de Paquetes y ofrecer accesos secundarios claros a Destinos, Experiencias y Guías.
+- El descubrimiento por destino debe funcionar sin niveles de país: Ushuaia, Cusco y Ubatuba se presentan en igualdad jerárquica.
+- Las páginas de destino conectan información editorial con paquetes, experiencias y guías asociados; no duplican catálogos completos.
+- El catálogo de Experiencias conserva Tours y Travesías, y puede dar acceso a Paquetes sin convertirlos en una sección desconectada.
+- El perfil de guía aporta identidad, confianza y contexto; muestra solo información confirmada y propuestas realmente asociadas.
+- El calendario general facilita explorar fechas; la ficha individual mantiene la disponibilidad contextual. Ambas superficies deben reflejar la misma fuente de datos.
+- Formulario y WhatsApp son dos caminos complementarios de consulta. El contexto (paquete/experiencia, destino y URL) debe conservarse para evitar que el visitante repita información.
+- La consulta no debe presentarse como reserva confirmada ni como pago.
+
+La jerarquía visual final, el orden del menú, los patrones de filtros y la prioridad relativa entre Destinos/Experiencias/Guías requieren diseño y validación en Figma. Esta nota no aprueba pantallas ni dirección visual final.
