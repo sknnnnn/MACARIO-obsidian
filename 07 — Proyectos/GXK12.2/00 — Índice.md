@@ -155,3 +155,13 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 - **Figma:** referencia aprobada única GXK12.2 — Etapa 1 — Diseños aprobados (89 pantallas y variantes). La Home se conserva desde producción (master, 30a1054); su incorporación a Figma es una tarea manual del responsable, no un bloqueo.
 - **Límites:** sin merge/deploy a producción, sin escrituras de QA contra Supabase producción, sin rediseño de Home ni adelantar PRO-184, PRO-180 o PRO-182. No reabrir decisiones aprobadas sin evidencia y justificación.
 - **Método:** ciclos pequeños de 4–5 tareas; cada lote se implementa en rama feature, se valida en Preview y se documenta antes de ampliar el alcance.
+
+
+### Resolución de PRO-186 — 2026-11-05
+
+- Preflight y matriz de 89 pantallas revisados y aprobados por el responsable; PRO-186 cerrada.
+- Base de trabajo aprobada: `claude/gxk-loop2-completar`; recuperación selectiva desde `experiment` según nota 13 §11.3, commit por commit.
+- Migraciones de stock/pagos postergadas en producción. Staging Supabase independiente + pagos de prueba es el entorno objetivo; Preview actual sigue siendo solo lectura contra producción.
+- ABC Favorit no está disponible con licencia verificada: Archivo queda como sustituto provisional.
+- Primer lote aprobado: fundamentos visuales → recorrido de compra → Outfit comercial. PRO-187 preparada, todavía no iniciada.
+- Sin creación de infraestructura, migraciones, cambios de código, integración de ramas ni deploys en esta preparación. Detalle y límites: nota 13 §11.11; Linear PRO-186/187.
