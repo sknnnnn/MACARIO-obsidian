@@ -17,7 +17,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 ### Plan global por etapas (marco vigente)
 
 - **Etapa 1 — Diseño integral en Figma: CERRADA el 05/11/2026.** Referencia visual central: página de Figma `GXK12.2 — Etapa 1 — Diseños aprobados`. Cierre documental: nota 13, sección 10. (Texto original del marco:) Fue la etapa en curso. Incluye completar y revisar los diseños, aprobarlos, consolidar el sistema visual y preparar el traspaso ordenado a implementación. El Periodo 1 (04/11–09/11) es un tramo de trabajo dentro de esta etapa, no una etapa independiente.
-- **Etapa 2 — Implementación integral: en curso (PRO-186 cerrada; PRO-187 implementada y aprobada el 06/11/2026, sin integrar; PRO-188 no iniciada).** Preflight y mapa Figma → código en nota 13, sección 11; cierre de PRO-187 en §11.13 (rama `claude/pro-187-fundamentos-visuales`, commit final `ec7a9d0`). El responsable indicó comenzarla el 06/11/2026 (el plan original la preveía desde el 10/11). Entregables de entrada: nota 13, sección 10.7. El Periodo 2 está previsto desde el 10/11 y se apoya en los diseños y decisiones cerrados de la Etapa 1. No se inicia por haber cerrado una subfase o una auditoría.
+- **Etapa 2 — Implementación integral: en curso, pausada temporalmente el 06/11/2026 por límite de uso de Claude.** PRO-186 cerrada; PRO-187 implementada y aprobada, sin integrar (`claude/pro-187-fundamentos-visuales`, `ec7a9d0`); PRO-188 abierta. Dentro de PRO-188: Pago B4 aprobado (`96c552c`), Confirmación B5 aprobada y completada (`4d7a64c`), Outfit B6 implementado pero pendiente de revisión/aprobación visual (`90e7a39`, corrección fail-closed `8d93f97`), estados vacíos implementados funcionalmente (`2e7a5f1`) pero pendientes de diseño visual general. Sin merge, PR ni deploy. Detalle y corte: nota 13 §11.12–11.14 y Linear PRO-188/192.
 - **Hito objetivo:** beta el 30/11/2026.
 
 **Fuente de verdad de Home:** la Home ya está implementada y validada en producción (`master`, commit `30a1054`). Las propuestas anteriores de Home en Figma son historial, no la referencia vigente. El usuario incorporará manualmente la Home implementada a la página consolidada para reunir todo en un único lugar; esa tarea de organización visual no es un pendiente de implementación ni condiciona el cierre de Etapa 1. Ver nota 13, §10.4 y §10.9.
@@ -26,7 +26,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 **Estado:** Proyecto activo. LOOP 1 Producto / NUEVO / Early Access en QA final parcial. Las migraciones de producción y los archivos de la rama `claude/gxk-loop1-producto-early-access` están reconciliados; la Preview más reciente está READY y el build/TypeScript finalizaron correctamente. Por decisión explícita, Preview continúa conectada a Supabase producción y el QA se limita a lectura. No hay registros positivos para probar NUEVO ni Early Access. Analytics no registra eventos en Preview porque no tiene `SUPABASE_SERVICE_ROLE_KEY`; se mantiene así para no habilitar escrituras privilegiadas desde Preview. No hay merge ni deploy a producción autorizados. La Brand & E-commerce Bible y la Dirección Visual aprobada siguen siendo obligatorias.
 
-**Última actualización:** 2026-11-05.
+**Última actualización:** 2026-11-06.
 
 **Estructura del archivo de Figma (reorganizado el 04/11/2026, Periodo 1 · Etapa 1 · Subfase 1).** Archivo PRANA STUDIOS (`RqXlNyOZPYDsJFtX9Kk6dj`). Las referencias anteriores a «página `GxK12.2`» siguen siendo válidas por **ID de nodo** (no cambió ninguno); el contenido de esa página se distribuyó por área y lo que no es diseño de producto quedó en el archivo histórico, sin eliminar nada. Índice navegable con vínculos y estado de cada diseño: página `00 · Índice general`, frame `703:70` (regenerado en cada loop; versiones anteriores `684:70` y `691:2141`).
 
@@ -146,15 +146,15 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 **Etapa 1 · CERRADA (05/11/2026).** Referencia única: página de Figma `GXK12.2 — Etapa 1 — Diseños aprobados` (89 pantallas y variantes + Home implementada). Las páginas 16–20 quedan como historial del proceso. **Antecedente — Dirección visual consolidada (05/11/2026).** Página de Figma `18 · Etapa 1 — Presentación integral consolidada (propuesta)` (84 pantallas D/M, comparación con Figma AI, superficies medidas, QA y cierre). Fue la presentación de trabajo que recibió aprobación del responsable el 05/11; la referencia visual operativa final es la página `GXK12.2 — Etapa 1 — Diseños aprobados`. Nota 13, secciones 9–10.
 
 
-## Preparación de Etapa 2 — 2026-11-05
+## Etapa 2 — Implementación integral y estado al 06/11/2026
 
-- **Etapa 1:** cerrada. PRO-175, PRO-176 y PRO-177 quedan cerradas; las listas de aprobación pendientes conservadas en sus descripciones son historial, no bloqueos vigentes.
-- **Etapa 2:** preparada en Linear, todavía no iniciada. Punto de entrada: [PRO-185](https://linear.app/proyecto-raices/issue/PRO-185/gxk122-etapa-2-implementacion-integral-0611-2911-beta-3011). Inicio acordado: 06/11/2026. Beta objetivo: 30/11/2026.
-- **Primer ciclo:** preflight y mapa de cobertura (PRO-186) → fundamentos visuales en código (PRO-187) → primer lote priorizado (PRO-188) → QA Preview (PRO-189) → cierre y siguiente ciclo (PRO-190).
-- **Código:** repositorio sknnnnn/GxK12-2; master no se modifica directamente. El primer paso es inspeccionar ramas, commits y trabajo no integrado antes de elegir la base de implementación.
-- **Figma:** referencia aprobada única GXK12.2 — Etapa 1 — Diseños aprobados (89 pantallas y variantes). La Home se conserva desde producción (master, 30a1054); su incorporación a Figma es una tarea manual del responsable, no un bloqueo.
-- **Límites:** sin merge/deploy a producción, sin escrituras de QA contra Supabase producción, sin rediseño de Home ni adelantar PRO-184, PRO-180 o PRO-182. No reabrir decisiones aprobadas sin evidencia y justificación.
-- **Método:** ciclos pequeños de 4–5 tareas; cada lote se implementa en rama feature, se valida en Preview y se documenta antes de ampliar el alcance.
+- **Etapa 1:** cerrada. PRO-175, PRO-176, PRO-177 y PRO-179 documentan el cierre; las listas históricas de aprobación no son bloqueos vigentes.
+- **Etapa 2:** iniciada según PRO-185. Beta presentable objetivo: 30/11/2026.
+- **Primer ciclo:** PRO-186 preflight cerrado → PRO-187 fundamentos visuales aprobados (sin integrar) → PRO-188 primer lote en curso y temporalmente pausado → PRO-189 QA Preview → PRO-190 cierre y siguiente ciclo.
+- **Estado de PRO-188:** Pago B4 aprobado (`96c552c`); Confirmación B5 aprobada y completada (`4d7a64c`); Outfit B6 implementado y corregido técnicamente (`90e7a39`, `8d93f97`), pendiente de revisión visual/copy/datos reales/QA staging; regla de estados vacíos implementada (`2e7a5f1`), pendiente de diseño visual general para todas las secciones.
+- **Código:** repositorio `sknnnnn/GxK12-2`; mantener ramas feature y `master` intacta. No integrar ni desplegar sin autorización explícita.
+- **Entorno:** Preview no habilita QA transaccional contra producción; staging Supabase independiente y pagos de prueba para compras/escrituras. Migraciones de stock/pagos postergadas en producción.
+- **Método:** ciclos pequeños de 4–5 tareas; registrar pendientes no bloqueantes en PRO-192 y nota 13 §11.14 sin duplicar tareas ni reabrir trabajo aprobado.
 
 
 ### Resolución de PRO-186 — 2026-11-05
@@ -163,5 +163,5 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 - Base de trabajo aprobada: `claude/gxk-loop2-completar`; recuperación selectiva desde `experiment` según nota 13 §11.3, commit por commit.
 - Migraciones de stock/pagos postergadas en producción. Staging Supabase independiente + pagos de prueba es el entorno objetivo; Preview actual sigue siendo solo lectura contra producción.
 - ABC Favorit no está disponible con licencia verificada: Archivo queda como sustituto provisional.
-- Primer lote aprobado: fundamentos visuales → recorrido de compra → Outfit comercial. PRO-187 implementada y aprobada (06/11/2026), sin integrar; PRO-188 no iniciada.
+- Primer lote aprobado: fundamentos visuales → recorrido de compra → Outfit comercial. PRO-187 implementada y aprobada (06/11/2026), sin integrar. PRO-188 abierta: Pago y Confirmación aprobados; Outfit y estados vacíos implementados pero con aprobación visual pendiente según el alcance descrito arriba.
 - Sin creación de infraestructura, migraciones, cambios de código, integración de ramas ni deploys en esta preparación. Detalle y límites: nota 13 §11.11; Linear PRO-186/187.
