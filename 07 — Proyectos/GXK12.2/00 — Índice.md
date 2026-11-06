@@ -148,14 +148,17 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 ## Etapa 2 — Implementación integral y estado al 06/11/2026
 
-- **Etapa 1:** cerrada. PRO-175, PRO-176, PRO-177 y PRO-179 documentan el cierre; las listas históricas de aprobación no son bloqueos vigentes.
-- **Etapa 2:** iniciada según PRO-185. Beta presentable objetivo: 30/11/2026.
-- **Primer ciclo:** PRO-186 preflight cerrado → PRO-187 fundamentos visuales aprobados (sin integrar) → PRO-188 primer lote en curso y temporalmente pausado → PRO-189 QA Preview → PRO-190 cierre y siguiente ciclo.
-- **Estado de PRO-188:** Pago B4 aprobado (`96c552c`); Confirmación B5 aprobada y completada (`4d7a64c`); Outfit B6 implementado y corregido técnicamente (`90e7a39`, `8d93f97`), pendiente de revisión visual/copy/datos reales/QA staging; regla de estados vacíos implementada (`2e7a5f1`), pendiente de diseño visual general para todas las secciones.
-- **Código:** repositorio `sknnnnn/GxK12-2`; mantener ramas feature y `master` intacta. No integrar ni desplegar sin autorización explícita.
-- **Entorno:** Preview no habilita QA transaccional contra producción; staging Supabase independiente y pagos de prueba para compras/escrituras. Migraciones de stock/pagos postergadas en producción.
-- **Método:** ciclos pequeños de 4–5 tareas; registrar pendientes no bloqueantes en PRO-192 y nota 13 §11.14 sin duplicar tareas ni reabrir trabajo aprobado.
+- **Etapa 1:** Diseño integral en Figma, cerrada el 05/11/2026. La referencia vigente son las 89 pantallas/variantes aprobadas; Home conserva su implementación validada en producción.
+- **Etapa 2:** iniciada el 06/11/2026 y temporalmente pausada por límite de uso de Claude. Sigue abierta; no es cierre de ciclo ni habilita Etapa 3.
+- **Primer ciclo:** PRO-186 preflight cerrado → PRO-187 fundamentos visuales aprobados (sin integrar) → PRO-188 primer lote abierto y pausado → PRO-189 QA Preview → PRO-190 cierre/siguiente ciclo.
+- **PRO-188:** Pago B4 aprobado (`96c552c`); Confirmación B5 aprobada y completada (`4d7a64c`); Outfit B6 implementado (`90e7a39`, corrección `8d93f97`) pero pendiente de aprobación visual, copy, datos reales y QA staging; estados vacíos implementados funcionalmente (`2e7a5f1`) pero pendientes de diseño visual general.
+- **Checkpoint actual:** código `sknnnnn/GxK12-2`, rama `claude/gxk-etapa1-integracion`, commit `ed26be3`; registro operativo `docs/etapa1-loop-progreso.md`, commit `663e6d1`. La palabra «etapa1» en el nombre de la rama es histórica y no cambia la etapa global.
+- **Verificación:** 391/391 tests; lint y typecheck limpios; build pendiente. Navegación, Tienda, Buscar y Ficha verificadas en 1440/390 px. Familia Ingresar/Registro/Recuperar implementada, pendiente de QA visual en navegador.
+- **Reanudación exacta:** QA visual de Familia contra Figma 764:1005, 1023, 1041, 1055, 1069 y 1078 en desktop/mobile; revisar también Nueva contraseña, Mi Casa → Mis datos y «Sumarme». Después continuar con Figma 764:1108–1503 y el inventario aprobado restante, sin repetir auditorías cerradas.
+- **Guardas:** Home excluida; PRO-192 fuera del alcance de esta reanudación; Legales no se implementa sin textos aprobados; `418c85a` permanece fuera hasta disponer de migraciones. No integrar ramas, PR, merge a `master`, deploy ni cambios de producción.
+- **Método:** loops pequeños de 4–5 tareas; cada bloque se contrasta con Figma, se implementa solo en sus brechas, se vuelve a verificar y se registra. Registrar pendientes transversales en PRO-192 solo cuando correspondan, sin duplicar ni ampliar alcance.
 
+Detalle: nota 13 §11.15 y [registro operativo de checkpoint](https://github.com/sknnnnn/GxK12-2/blob/claude/gxk-etapa1-integracion/docs/etapa1-loop-progreso.md).
 
 ### Resolución de PRO-186 — 2026-11-05
 
