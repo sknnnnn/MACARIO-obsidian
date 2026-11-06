@@ -133,7 +133,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 
 ---
-## Estado operativo — 2026-11-03 (actualizado)
+## Registro operativo histórico — 2026-11-03 (no representa el estado vigente)
 
 - **LOOP 1:** migraciones de `products.is_new` y teaser Early Access aplicadas y verificadas en Supabase producción. Snapshot descriptivo de esquema/RLS guardado en [GXK12-2 — snapshot producción 2026-11-03](https://github.com/sknnnnn/GxK12-2/blob/master/supabase/snapshots/2026-11-03-production-schema.md). Es una referencia de consulta, no un backup restaurable ni contiene filas. Detalle técnico: [[07 — Proyectos/GXK12.2/03 — GXK12.2 — Arquitectura técnica|Arquitectura técnica]] §24.
 - **Preview:** se acepta continuar conectada a Supabase producción. No se creó un segundo proyecto ni se modificaron variables. QA de lectura permitido; sin compras, pagos, envíos, emails ni escrituras de prueba.
