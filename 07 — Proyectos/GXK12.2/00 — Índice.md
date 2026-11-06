@@ -116,7 +116,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 - [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog]] — hitos y decisiones permanentes fechadas
 - [[07 — Proyectos/GXK12.2/10 — GXK12.2 — UX e interacción|UX e interacción]] — criterios de UX / interacción y auditoría post-funcional
 - [[07 — Proyectos/GXK12.2/12 — GXK12.2 — Admin Lote 1 — Cierre y continuidad 2026-10-19|Admin Lote 1 — cierre y continuidad (2026-10-19)]] — estado del artefacto corregido, validación pendiente y próximo paso
-- [[07 — Proyectos/GXK12.2/13 — GXK12.2 — Unificación UX-UI — Propuesta|Unificación UX/UI y cierre de Etapa 1]] — historial de propuesta y auditoría; §10 registra el cierre aprobado del 05/11/2026, el inventario consolidado y las fuentes de verdad.
+- [[07 — Proyectos/GXK12.2/13 — GXK12.2 — Unificación UX-UI — Propuesta|Unificación UX/UI y cierre de Etapa 1]] — historial y fuente de continuidad; §10 registra el cierre de Etapa 1 (05/11/2026) y §11.15 el estado vigente y la reanudación de Etapa 2 (06/11/2026).
 
 ---
 
