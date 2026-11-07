@@ -153,6 +153,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 - **Etapa 1:** cerrada el 05/11/2026.
 - **Etapa 2:** en curso; no se declara cerrada. PRO-188 está In Review; PRO-189 sigue Todo y requiere QA integrado en Preview; PRO-190 sigue Todo y depende de PRO-189. PRO-185 permanece In Progress.
 - **Implementación:** rama `claude/gxk-etapa1-integracion`, commit `371487c`; inventario Figma 764:70 recorrido según `docs/etapa1-loop-progreso.md`. Resultado reportado: 418/418 tests, lint/typecheck/build OK y QA local del demo.
+- **Preview:** deployment Vercel READY para el commit exacto `371487c`: https://gx-k12-2-9umrwje5f-proyecto-travesia.vercel.app. Falta QA visual/funcional en navegador, capturas y recorridos.
 - **GitHub:** 19 commits desde checkpoint `ed26be3`; frente a `master` `30a1054`, rama 75 commits adelante y 1 detrás. El único commit que falta es el snapshot documental de esquema. No hay PR abierto; no sincronizar ni integrar sin autorización.
 - **Backlog:** PRO-192 es el único backlog de correcciones para Etapas 1–4. Los pendientes no bloqueantes se consolidan allí; las excepciones de migraciones, legales, galería y SMTP quedan explícitas.
 - **Próximo gate:** PRO-189, QA de Preview con evidencia desktop/mobile y estados críticos. Después PRO-190. Etapa 3 solo empieza tras el cierre de implementación y QA.
