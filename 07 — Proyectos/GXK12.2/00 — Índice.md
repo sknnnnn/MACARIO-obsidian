@@ -17,7 +17,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 ### Plan global por etapas (marco vigente)
 
 - **Etapa 1 — Diseño integral en Figma: CERRADA el 05/11/2026.** Referencia visual central: página de Figma `GXK12.2 — Etapa 1 — Diseños aprobados`. Cierre documental: nota 13, sección 10. (Texto original del marco:) Fue la etapa en curso. Incluye completar y revisar los diseños, aprobarlos, consolidar el sistema visual y preparar el traspaso ordenado a implementación. El Periodo 1 (04/11–09/11) es un tramo de trabajo dentro de esta etapa, no una etapa independiente.
-- **Etapa 2 — Implementación integral: en curso, pausada temporalmente el 06/11/2026 por límite de uso de Claude.** PRO-186 cerrada; PRO-187 implementada y aprobada, sin integrar (`claude/pro-187-fundamentos-visuales`, `ec7a9d0`); PRO-188 abierta. Dentro de PRO-188: Pago B4 aprobado (`96c552c`), Confirmación B5 aprobada y completada (`4d7a64c`), Outfit B6 implementado pero pendiente de revisión/aprobación visual (`90e7a39`, corrección fail-closed `8d93f97`), estados vacíos implementados funcionalmente (`2e7a5f1`) pero pendientes de diseño visual general. Sin merge, PR ni deploy. Detalle y corte: nota 13 §11.12–11.14 y Linear PRO-188/192.
+- **Etapa 2 — Implementación integral: EN CURSO (07/11/2026).** PRO-186 cerrada; PRO-187 implementada y aprobada; PRO-188 pasa a In Review tras recorrer el inventario Figma 764:70. El informe reporta 418/418 tests, lint/typecheck/build OK y QA en demo. PRO-189 (QA integrado en Preview) sigue Todo y es el próximo gate; PRO-190 sigue Todo y depende de PRO-189. PRO-185 permanece In Progress. Etapa 2 no está cerrada y Etapa 3 todavía no comienza. PRO-192 concentra los pendientes no bloqueantes y correcciones de Etapas 1–4. Detalle: nota 13 §11.14.2 y §11.16; Linear PRO-185/188/189/190/192.
 - **Hito objetivo:** beta el 30/11/2026.
 
 **Fuente de verdad de Home:** la Home ya está implementada y validada en producción (`master`, commit `30a1054`). Las propuestas anteriores de Home en Figma son historial, no la referencia vigente. El usuario incorporará manualmente la Home implementada a la página consolidada para reunir todo en un único lugar; esa tarea de organización visual no es un pendiente de implementación ni condiciona el cierre de Etapa 1. Ver nota 13, §10.4 y §10.9.
@@ -26,7 +26,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 **Estado:** Proyecto activo. LOOP 1 Producto / NUEVO / Early Access en QA final parcial. Las migraciones de producción y los archivos de la rama `claude/gxk-loop1-producto-early-access` están reconciliados; la Preview más reciente está READY y el build/TypeScript finalizaron correctamente. Por decisión explícita, Preview continúa conectada a Supabase producción y el QA se limita a lectura. No hay registros positivos para probar NUEVO ni Early Access. Analytics no registra eventos en Preview porque no tiene `SUPABASE_SERVICE_ROLE_KEY`; se mantiene así para no habilitar escrituras privilegiadas desde Preview. No hay merge ni deploy a producción autorizados. La Brand & E-commerce Bible y la Dirección Visual aprobada siguen siendo obligatorias.
 
-**Última actualización:** 2026-11-06.
+**Última actualización:** 2026-11-07.
 
 **Estructura del archivo de Figma (reorganizado el 04/11/2026, Periodo 1 · Etapa 1 · Subfase 1).** Archivo PRANA STUDIOS (`RqXlNyOZPYDsJFtX9Kk6dj`). Las referencias anteriores a «página `GxK12.2`» siguen siendo válidas por **ID de nodo** (no cambió ninguno); el contenido de esa página se distribuyó por área y lo que no es diseño de producto quedó en el archivo histórico, sin eliminar nada. Índice navegable con vínculos y estado de cada diseño: página `00 · Índice general`, frame `703:70` (regenerado en cada loop; versiones anteriores `684:70` y `691:2141`).
 
@@ -146,7 +146,20 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 **Etapa 1 · CERRADA (05/11/2026).** Referencia única: página de Figma `GXK12.2 — Etapa 1 — Diseños aprobados` (89 pantallas y variantes + Home implementada). Las páginas 16–20 quedan como historial del proceso. **Antecedente — Dirección visual consolidada (05/11/2026).** Página de Figma `18 · Etapa 1 — Presentación integral consolidada (propuesta)` (84 pantallas D/M, comparación con Figma AI, superficies medidas, QA y cierre). Fue la presentación de trabajo que recibió aprobación del responsable el 05/11; la referencia visual operativa final es la página `GXK12.2 — Etapa 1 — Diseños aprobados`. Nota 13, secciones 9–10.
 
 
-## Etapa 2 — Implementación integral y estado al 06/11/2026
+
+
+## Etapa 2 — Estado vigente al 07/11/2026
+
+- **Etapa 1:** cerrada el 05/11/2026.
+- **Etapa 2:** en curso; no se declara cerrada. PRO-188 está In Review; PRO-189 sigue Todo y requiere QA integrado en Preview; PRO-190 sigue Todo y depende de PRO-189. PRO-185 permanece In Progress.
+- **Implementación:** rama `claude/gxk-etapa1-integracion`, commit `371487c`; inventario Figma 764:70 recorrido según `docs/etapa1-loop-progreso.md`. Resultado reportado: 418/418 tests, lint/typecheck/build OK y QA local del demo.
+- **GitHub:** 19 commits desde checkpoint `ed26be3`; frente a `master` `30a1054`, rama 75 commits adelante y 1 detrás. El único commit que falta es el snapshot documental de esquema. No hay PR abierto; no sincronizar ni integrar sin autorización.
+- **Backlog:** PRO-192 es el único backlog de correcciones para Etapas 1–4. Los pendientes no bloqueantes se consolidan allí; las excepciones de migraciones, legales, galería y SMTP quedan explícitas.
+- **Próximo gate:** PRO-189, QA de Preview con evidencia desktop/mobile y estados críticos. Después PRO-190. Etapa 3 solo empieza tras el cierre de implementación y QA.
+- **Guardas:** sin PR, merge, deploy ni cambios en producción.
+
+Detalle: [[07 — Proyectos/GXK12.2/13 — GXK12.2 — Unificación UX-UI — Propuesta|nota 13]] §11.16 y [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de producto|Roadmap]] §Auditoría de implementación 07/11/2026.
+## Etapa 2 — Implementación integral y estado al 06/11/2026 (histórico; superado por el corte 07/11/2026) (histórico; superado por el corte 07/11/2026)
 
 - **Etapa 1:** Diseño integral en Figma, cerrada el 05/11/2026. La referencia vigente son las 89 pantallas/variantes aprobadas; Home conserva su implementación validada en producción.
 - **Etapa 2:** iniciada el 06/11/2026 y temporalmente pausada por límite de uso de Claude. Sigue abierta; no es cierre de ciclo ni habilita Etapa 3.
