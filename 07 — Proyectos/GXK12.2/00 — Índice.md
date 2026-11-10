@@ -192,3 +192,15 @@ Detalle y reglas: [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de produ
 
 
 - [[07 — Proyectos/GXK12.2/13 — GXK12.2 — Plan de entrega, beta y lanzamiento|Plan de entrega, beta y lanzamiento]] — etapas desde diseño integral hasta beta del dueño, beta comercial y operación.
+ 
+
+---
+
+## Estado operativo vigente — 2026-11-10 (laboratorio Windows validado)
+
+- **Etapas:** Etapa 1 cerrada · Etapa 2 cerrada · Etapa 3 completada · **Etapa 4 en curso**.
+- **Laboratorio local Windows + WSL2 + Docker:** VALIDADO FUNCIONALMENTE por el responsable el 10/11. Cinco servicios activos (auth, db healthy, gateway, rest, storage), 21/21 migraciones, app en `127.0.0.1:3600` y registro de usuario externo funcional.
+- **Alcance:** valida el laboratorio local. No valida staging alojado, Preview aislado, transacciones externas ni producción.
+- **Siguiente punto:** preparar Supabase staging alojado y aislado de producción para conectar Preview y validar Admin/sesión y publicación.
+- Detalle y límites: [[07 — Proyectos/GXK12.2/14 — GXK12.2 — Laboratorio local Windows y continuidad Etapa 4|Laboratorio local Windows y continuidad Etapa 4]].
+- Seguimiento: [Linear PRO-193](https://linear.app/proyecto-raices/issue/PRO-193/gxk122-etapa-4-beta-presentable-al-dueno-de-gxk-inicio-1011-beta-3011) y [PRO-192](https://linear.app/proyecto-raices/issue/PRO-192/gxk122-backlog-unico-de-correcciones-y-pendientes-etapas-1-4).
