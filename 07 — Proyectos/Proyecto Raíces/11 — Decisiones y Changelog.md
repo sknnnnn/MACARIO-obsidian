@@ -465,3 +465,16 @@ Una pasada visual live actual, en desktop y mobile, de web pública y Admin: Hom
 
 ### Criterio de cierre de hoy
 Cierre documental integral realizado. Etapa 0 queda cerrada; Etapa 1 queda casi cerrada, con un único gate visual live concreto. El proyecto no queda terminado, no se declara aprobada la arquitectura propuesta en Loop 6 para implementación y no se autoriza iniciar Etapa 2, desarrollo, migraciones o publicación por inferencia.
+
+
+## Cierre de jornada — 11/11/2026 — Etapa 0 y Etapa 1
+
+- **Etapa 0:** cerrada al 100% el 11/11/2026. La continuidad queda registrada en Linear, Obsidian y GitHub.
+- **Etapa 1:** Loops 1–6 completados y documentados. Estado **casi cerrada**, no Done: PRO-191 permanece In Progress exclusivamente por la verificación visual live actual de la web pública y el Admin en desktop/mobile, con sesión de navegador controlable y acceso autorizado.
+- El hallazgo que motivó la revisión —Ubatuba faltante en la presentación actual— quedó integrado en la auditoría: Home en `main` omite Ubatuba; Loop 4 además detectó texto residual «¿Te gusta esta personalidad?» en `naturaleza_cultura_en` y saltos de línea innecesarios. No se corrigió contenido ni código en esta etapa.
+- Resumen de loops: Loop 1 inventario público/Admin (7 brechas); Loop 2 modelo Supabase y trazabilidad (sin paquetes ni perfiles de Guías; calendario actual limitado a Travesías; hallazgos de seguridad/rendimiento); Loop 3 publicación y recorridos (interruptor de calendario apagado, 9 salidas en borrador y 4 Travesías publicadas sin salidas estructuradas); Loop 4 editorial (40 imágenes sin alt y otras brechas de contenido); Loop 5 auditoría visual estática (contrastes públicos 3.10:1, 1.98:1 y 1.10:1; responsive sin certificación live); Loop 6 consolidación, sitemap, modelo conceptual y dependencias.
+- La evidencia histórica del Admin (176/176 Playwright, referencia 05e153b, responsive 390/768/1024 y capturas 1280 px en 12 vistas) corresponde a servidor estático local del 16/10; no reemplaza la inspección live actual.
+- **Sin implementación:** no se modificaron código, contenido, datos, Supabase, permisos, migraciones, producción ni despliegues; no hubo PR ni merge. Las propuestas conceptuales/sitemap siguen pendientes de aprobación antes de implementación.
+- Documentación actualizada en la rama `docs/raices-nueva-arquitectura-20261105`: informes Loops 5/6, índice/Changelog, `PROJECT-CONTEXT.md` y Linear PRO-191. No integrar la rama sin revisión.
+
+**Único pendiente para cerrar Etapa 1:** inspección visual live de Home/navegación, catálogo/filtros/fichas, calendario, contacto/galerías y Admin (login, dashboard, formularios, paquetes, salidas e imágenes), en desktop y mobile. No se requieren capturas preparadas por el usuario; la verificación necesita control real del navegador y acceso al Admin sin compartir credenciales.
