@@ -1,6 +1,6 @@
 ## Estado operativo actualizado — 2026-11-11
 
-**Etapa 0 cerrada documentalmente.** Registro: [PRO-194](https://linear.app/proyecto-raices/issue/PRO-194/etapa-0-preparacion-y-continuidad-cierre-2026-11-11). Próxima etapa: [Etapa 1 — Discovery y auditoría integral (PRO-191)](https://linear.app/proyecto-raices/issue/PRO-191/etapa-1-raices-discovery-y-auditoria-integral).
+**Etapa 0 cerrada documentalmente.** Registro: [PRO-194](https://linear.app/proyecto-raices/issue/PRO-194/etapa-0-preparacion-y-continuidad-cierre-2026-11-11). Etapa 1 en curso: [PRO-191 — Discovery y auditoría integral](https://linear.app/proyecto-raices/issue/PRO-191/etapa-1-raices-discovery-y-auditoria-integral). **Loop 1 cerrado:** [inventario funcional de web pública y Admin](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-nueva-arquitectura-20261105/docs/auditorias/etapa-1-loop-1-inventario-publico-admin.md).
 
 **Fuentes canónicas:** Obsidian = contexto y decisiones; Linear = etapas, tareas, estados y dependencias; GitHub = código, ramas y PRs; Figma = diseño aprobado; Claude Design = exploración; Claude Code = implementación; Cloudflare Preview/Dev = QA previo.
 
@@ -9,7 +9,7 @@
 - Obsidian `sknnnnn/MACARIO-obsidian`: la rama `docs/raices-nueva-arquitectura-20261105` está divergida respecto de `master`. Se conserva sin merge ni actualización forzada hasta reconciliar el historial.
 - Aplicación: `feature/admin` tiene 26 commits adicionales; `claude/proyecto-raices-visual-language-q04g3y` tiene 115; `chore/technical-hardening` y `dev` están divergentes. PR #23 fue mergeado, pero no integró todo el trabajo posterior de la rama visual. No borrar ni fusionar ramas por antigüedad.
 
-**Estado Linear:** PRO-194 = Etapa 0 Done; PRO-191 = Etapa 1 en Backlog y preparada; PRO-172 y PRO-160 siguen In Progress; PRO-161 continúa como inventario transversal.
+**Estado Linear:** PRO-194 = Etapa 0 Done; PRO-191 = Etapa 1 In Progress; Loop 1 de inventario funcional cerrado; PRO-172 y PRO-160 siguen In Progress; PRO-161 continúa como inventario transversal.
 
 **Dependencias y límites:** PRO-172 conserva pendiente el backup real de Supabase y la restauración aislada. La simulación local no los reemplaza. Las migraciones v6–v11 figuran como ejecutadas el 2026-10-22; no repetir SQL. PRO-172 no bloquea la auditoría de solo lectura de Etapa 1, pero sí operaciones sensibles sobre datos reales. No se modificaron código, datos, Supabase, producción, permisos, ramas, deploys ni merges.
 
@@ -50,9 +50,9 @@ Proyecto Raíces es un proyecto de turismo de aventura y experiencias (tours, tr
 
 ## Estado general
 
-**Estado:** plan maestro de rediseño integral adoptado el 2026-11-05. Próxima secuencia: Etapa 0 — Preparación y continuidad → Etapa 1 — Discovery y auditoría integral (PRO-191). No se inicia implementación ni se autorizan operaciones sensibles por la aprobación del plan. El sitio público existe; el Admin y sus integraciones conservan validaciones pendientes. El seguimiento operativo vive en Linear.
+**Estado:** Etapa 0 — Preparación y continuidad cerrada el 2026-11-11 (PRO-194). Etapa 1 — Discovery y auditoría integral en curso (PRO-191); Loop 1 de inventario funcional cerrado y documentado. No se inicia implementación ni se autorizan operaciones sensibles por la aprobación del plan. El sitio público existe; el Admin y sus integraciones conservan validaciones pendientes. El seguimiento operativo vive en Linear.
 
-**Última actualización:** 2026-11-05. Plan maestro de ocho etapas adoptado y registrado en Linear. Las migraciones v6–v11 figuran como ejecutadas en Linear el 2026-10-22; no repetir SQL. El respaldo real de producción y la restauración aislada siguen pendientes. La orientación estratégica prioriza paquetes y visibilidad de guías; la remuneración de guías no está definida. Ver el plan maestro y la continuidad vigente.
+**Última actualización:** 2026-11-11. Etapa 0 cerrada; Etapa 1 iniciada y Loop 1 de inventario funcional cerrado. Las migraciones v6–v11 figuran como ejecutadas en Linear el 2026-10-22; no repetir SQL. El respaldo real de producción y la restauración aislada siguen pendientes. La orientación estratégica prioriza paquetes y visibilidad de guías; la remuneración de guías no está definida. Ver el plan maestro y la continuidad vigente.
 
 ### Estado histórico — 2026-10-16 (superado por el checkpoint del 2026-10-19)
 
