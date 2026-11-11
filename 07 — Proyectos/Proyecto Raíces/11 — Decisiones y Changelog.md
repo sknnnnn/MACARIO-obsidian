@@ -317,3 +317,16 @@ Se adopta la metodología de GXK12:2 adaptada a Raíces: fuentes canónicas en O
 **Límites:** adoptar el plan no autoriza migraciones, borrados, escrituras destructivas, operaciones sobre datos reales, merge, deploy ni publicación. PRO-172 y los controles de respaldo/restauración siguen siendo prerequisitos para operaciones sensibles. No se repiten auditorías previas sin revisar su evidencia y vigencia.
 
 Fuente canónica: [[07 — Proyectos/Proyecto Raíces/00 — Índice]] → «Plan maestro de rediseño integral». UX/UI: [[07 — Proyectos/Proyecto Raíces/05 — UX-UI]].
+
+
+## Hito: 2026-11-11 — Etapa 1, Loop 2: modelo de datos y trazabilidad
+
+Se completó en solo lectura la auditoría directa del proyecto Supabase activo y la correspondencia entre Admin, datos y web pública.
+
+**Hallazgos principales:** 54 experiencias (32 Tours y 4 Travesías publicadas; 4 Tours y 14 Travesías en borrador); no hay Paquetes ni asociaciones en `paquete_experiencias`; no existe entidad de perfiles de Guías; las 9 salidas están asociadas a Travesías y la vista `salidas_publicas` filtra solo ese tipo; Choquequirao sigue como destino independiente con una experiencia publicada; 8 experiencias publicadas no tienen imagen principal. RLS está habilitado en las tablas relevadas. Supabase Advisors marca la vista pública como SECURITY DEFINER y registra otras observaciones de seguridad y rendimiento.
+
+Se verificó la existencia de los buckets `envios-fotos` (privado) y `contenido` (público), y las Edge Functions `contact-form` y `submit-photos` activas. No se probaron escrituras, login, envíos ni cargas reales. No se hicieron cambios en datos, migraciones, permisos, buckets, funciones o producción.
+
+**Informe:** [Etapa 1 — Loop 2: modelo de datos y trazabilidad](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-nueva-arquitectura-20261105/docs/auditorias/etapa-1-loop-2-modelo-datos-trazabilidad.md).
+
+**Continuidad:** PRO-191 vuelve a estar In Progress por indicación del usuario. Loop 1 y Loop 2 cerrados; siguiente: Loop 3 — auditoría funcional.
