@@ -391,3 +391,77 @@ Se consolidaron los hallazgos de Loops 1–5 y se documentaron propuestas concep
 Dependencias revisadas: PRO-160 y PRO-172 siguen pausadas; PRO-165 y PRO-166 están en Backlog; migraciones v6–v11 no deben repetirse. No se hicieron cambios de código, datos, migraciones, permisos, producción, PR, merge ni deploy.
 
 **Informe:** [Etapa 1 — Loop 6: consolidación y criterio de cierre](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-nueva-arquitectura-20261105/docs/auditorias/etapa-1-loop-6-consolidacion-y-criterio-de-cierre.md).
+
+
+## Cierre documental integral — Proyecto Raíces — 2026-11-11
+
+### Estado general
+- Etapa 0 — Preparación y continuidad: **Done**, cerrada documentalmente mediante PRO-194.
+- Etapa 1 — Discovery y auditoría integral: **casi cerrada**. Loops 1–6 completados y documentados. PRO-191 permanece **In Progress** únicamente por una pasada visual live actual de la web pública y el Admin, en desktop y mobile.
+- No se inicia Etapa 2 ni implementación por inferencia. El plan maestro conserva ocho etapas: 0 Preparación; 1 Discovery/auditoría; 2 Arquitectura del producto; 3 Dirección visual; 4 UX/UI en Figma; 5 Arquitectura técnica; 6 Implementación; 7 QA, migración y lanzamiento.
+- La arquitectura funcional aprobada el 2026-11-05 es dirección de producto; las propuestas de sitemap/modelo de Loop 6 todavía deben pasar por su instancia de aprobación correspondiente antes de convertirse en especificación de implementación.
+
+### Dirección de producto confirmada
+1. **Paquetes** son el producto principal y deben tener protagonismo en Inicio.
+2. **Tours y Travesías** permanecen en la oferta, en segundo plano comercial.
+3. **Guías** tendrán perfiles públicos; solo Admin crea, edita, publica, oculta y mantiene perfiles y asociaciones. No hay publicación autónoma de guías. El modelo económico/remuneración sigue sin definirse.
+4. **Destinos principales:** Ushuaia (Argentina), Cusco (Perú) y Ubatuba (Brasil), al mismo nivel; país como atributo, no como nivel jerárquico.
+5. **Choquequirao** deja de ser destino independiente y pasa a ser lugar/área/punto de interés asociado a Cusco. Toda transición debe preservar experiencias, imágenes, galerías, slugs, enlaces y relaciones, con estrategia reversible; no borrar por inferencia.
+6. **Calendario general + disponibilidad individual** dentro de cada paquete/experiencia, con una única fuente de verdad. No inventar fechas, cupos ni reservas automáticas.
+7. **Consultas:** formulario contextual + WhatsApp, ambos con contexto de propuesta/destino cuando sea posible. Consulta no significa reserva confirmada ni pago.
+8. El Admin debe ser fuente operativa del contenido público: todo contenido editable/guardado/publicado desde Admin debe reflejarse en el sitio; distinguir borrador, publicado y oculto y verificar el resultado público.
+
+### Resultado de Etapa 1 — Loops
+- Loop 1: inventario de web pública y Admin — cerrado.
+- Loop 2: modelo de datos y trazabilidad Admin → Supabase → web — cerrado, solo lectura.
+- Loop 3: auditoría funcional de catálogo, fichas, destinos, calendario, disponibilidad, consultas, WhatsApp, Home y módulos Admin — cerrado.
+- Loop 4: auditoría editorial, traducciones, imágenes, metadatos y renderizado — cerrado.
+- Loop 5: auditoría visual estática, responsive y accesibilidad — cerrado como auditoría estática; **no equivale a inspección visual live**.
+- Loop 6: consolidación, prioridades, propuesta conceptual y criterio de cierre — cerrado.
+
+### Hallazgos consolidados que deben preservarse
+- Supabase relevado: 54 experiencias; no hay Paquetes reales cargados ni asociaciones en `paquete_experiencias`; no existe entidad/módulo de perfiles de Guías.
+- Hay nueve salidas estructuradas asociadas a Travesías; la vista `salidas_publicas` estaba limitada a Travesías. El interruptor `salidas_publicas_activas` está en 0; no hay evidencia de calendario general funcional en producción.
+- La disponibilidad estructurada pública se limita a Travesías; Tours y Paquetes conservan fechas en `detalle`.
+- Home en `main` mantiene Tours → Travesías → Paquetes; destaca Cusco, Ushuaia y Choquequirao, y omite Ubatuba.
+- Los CTAs no unifican formulario contextual + WhatsApp; el contexto de propuesta se transmite como texto y no como referencia estructurada uniforme.
+- No existe flujo de perfiles de Guías ni bandeja Admin para moderar fotos enviadas por visitantes.
+- Auditoría editorial: Ubatuba conserva texto residual en `naturaleza_cultura_en`; Choquequirao carece de tres traducciones inglesas; ocho experiencias publicadas no tienen imagen principal ni fotos de galería; 40 fotos de galería carecen de alt específico y el frontend usa un alt genérico; cinco descripciones y una nota importante incluyen HTML `<p>` anidado por el template.
+- Comentarios no tiene reseñas reales, aunque la página/footer/SEO todavía promete testimonios.
+- El CTA «Reserva ahora» / «Book now» puede sugerir una reserva confirmada aunque el flujo real es de consulta.
+- Auditoría visual estática: contraste público insuficiente en blanco/naranja (3.10:1), blanco/verde WhatsApp (1.98:1) y amarillo/crema (1.10:1). El Admin presenta mejores valores documentados, pero faltan pruebas actuales de navegación, teclado y controles táctiles.
+- Responsive está definido en CSS, pero no está certificado en dispositivos reales ni con capturas actuales del sitio live.
+- La evidencia histórica Admin de 2026-10-16 (176/176 Playwright; 390/768/1024 px y capturas 1280 px sobre 12 vistas; HEAD 05e153b) corre contra servidor estático local y no certifica HEAD actual, Supabase/Auth/PostgREST ni producción. La preview Claude Design de 15 pantallas es exploratoria, no aprobada.
+
+### Propuestas de Loop 6 — todavía no son especificaciones aprobadas
+- Destinos planos + entidad/relación de lugares para áreas como Choquequirao.
+- Paquetes como entidad comercial con composición por relaciones; validar el recorrido con un paquete de prueba en entorno aislado, usando contenido autorizado.
+- Entidad conceptual de Guías con relaciones explícitas a destinos y experiencias; definir campos con información real, sin copiar automáticamente los registros de Equipo.
+- Ampliar el modelo de salidas a Paquetes y otras propuestas programadas sin duplicar fuentes. Revisar seguridad de `salidas_publicas` (Supabase Advisor señaló SECURITY DEFINER) antes de ampliar exposición.
+- Unificar contexto estructurado de formulario y WhatsApp; decidir por separado si se necesita bandeja Admin o si email es suficiente.
+- Validar sitemap, jerarquía del menú, rutas canónicas y redirects en UX/UI; no tomar la propuesta de Loop 6 como aprobación de pantallas finales.
+- Transición Choquequirao → Cusco con inventario, alias/redirect, preservación de IDs/referencias y rollback; no ejecutar ahora.
+
+### Pendiente único para cerrar Etapa 1
+Una pasada visual live actual, en desktop y mobile, de web pública y Admin: Home, catálogo/Paquetes, ficha, destinos, calendario, contacto, galería y módulos principales del Admin. Debe realizarse con navegador controlable y acceso autenticado al Admin (el usuario puede iniciar sesión sin compartir credenciales). No hace falta que el usuario prepare ni envíe capturas. El navegador de solo lectura y la falta de acceso al sitio live no permiten certificar este punto. No reabrir Loops 1–4 ni repetir auditorías.
+
+### Dependencias, tareas y restricciones
+- PRO-191: In Progress; única razón pendiente: validación visual live actual.
+- PRO-160: In Progress y pausada; Admin avanzado no debe retomarse/publicarse durante la pausa.
+- PRO-172: In Progress y pausada; respaldo real de producción y restauración aislada siguen pendientes. La simulación local no sustituye ese respaldo.
+- PRO-165: Backlog; v9 y v11 registradas como ejecutadas el 2026-10-22. Su decisión histórica de calendario limitada a Travesías debe reconciliarse con la dirección aprobada de calendario general antes de implementar.
+- PRO-166: Backlog; v10 registrada como ejecutada el 2026-10-22. Falta prueba real de subida en entorno correspondiente y validación pública de alt.
+- PRO-161: inventario transversal independiente; no confundirlo con el cierre de Etapa 1.
+- Migraciones v6–v11 figuran ejecutadas el 2026-10-22: **no repetir SQL**.
+- PRO-172 no bloquea auditorías de solo lectura; sí bloquea operaciones sensibles sobre datos reales, migraciones nuevas, cambios destructivos y escrituras sensibles.
+- No modificar producción, Supabase, datos, permisos, buckets o Edge Functions; no ejecutar migraciones; no borrar ramas; no hacer PR/merge/deploy/publicación sin autorización específica.
+
+### Repositorios y fuentes
+- Fuentes canónicas: Obsidian = contexto/decisiones/changelog; Linear = etapas/tareas/estados/dependencias; GitHub = código/ramas/PRs; Figma = diseño aprobado; Claude Design = exploración; Claude Code = implementación; Cloudflare Preview/Dev = QA previo.
+- Repositorio de aplicación: `sknnnnn/proyecto-raices`, rama por defecto `main`. La rama documental `docs/raices-nueva-arquitectura-20261105` mantiene el trabajo de documentación sin integrar. No abrir PR ni merge como parte de este cierre.
+- Obsidian: `sknnnnn/MACARIO-obsidian`, misma rama documental divergida respecto de `master`. No forzar integración, resetear ni descartar cambios.
+- Ramas de aplicación previamente identificadas con trabajo propio: `feature/admin`, `claude/proyecto-raices-visual-language-q04g3y`, `chore/technical-hardening` y `dev`. No borrar ni fusionar por antigüedad; comparar antes de cualquier integración.
+- Estado de worktrees locales y servicios live no se verificó en este cierre. No presumir árbol local limpio ni disponibilidad de entornos.
+
+### Criterio de cierre de hoy
+Cierre documental integral realizado. Etapa 0 queda cerrada; Etapa 1 queda casi cerrada, con un único gate visual live concreto. El proyecto no queda terminado, no se declara aprobada la arquitectura propuesta en Loop 6 para implementación y no se autoriza iniciar Etapa 2, desarrollo, migraciones o publicación por inferencia.
