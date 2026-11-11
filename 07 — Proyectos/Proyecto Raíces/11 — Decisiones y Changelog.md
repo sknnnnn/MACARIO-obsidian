@@ -1,5 +1,18 @@
 # Proyecto Raíces — Decisiones y Changelog
 
+## Hito: 2026-11-11 — Etapa 1 casi cerrada; resta validación visual live
+
+**Resultado:** los Loops 1–6 están completados y documentados. Etapa 1 queda **casi cerrada**; PRO-191 permanece **In Progress** exclusivamente por una pasada visual live actual de la web pública y el Admin. No se reabren loops anteriores.
+
+**Pendiente único:** revisar en desktop y mobile Home, catálogo/Paquetes, fichas, Destinos, Calendario, Contacto, Galería y las pantallas principales del Admin. No hace falta que Ignacio prepare ni envíe capturas. La revisión debe realizarse desde una sesión de navegador con control efectivo y acceso al sitio y al Admin; el usuario puede iniciar sesión sin compartir credenciales. Mientras no exista ese acceso, no se certifica la apariencia visual real.
+
+**Documentación:** [PRO-191](https://linear.app/proyecto-raices/issue/PRO-191/etapa-1-raices-discovery-y-auditoria-integral) · [Consolidación Loop 6](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-nueva-arquitectura-20261105/docs/auditorias/etapa-1-loop-6-consolidacion-y-criterio-de-cierre.md) · [Auditoría visual Loop 5](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-nueva-arquitectura-20261105/docs/auditorias/etapa-1-loop-5-auditoria-visual-estatica-responsive.md).
+
+**Límites:** no se hicieron cambios de código, datos, Supabase, permisos, migraciones, producción, ramas de aplicación, PR, merge ni deploy. No se cambia PRO-191 a Done hasta completar esa revisión.
+
+---
+
+
 > Registro permanente de decisiones importantes e hitos del proyecto.
 > Esta nota registra únicamente decisiones permanentes y hitos importantes.
 > No registrar cambios menores, tareas, sprints ni actividad cotidiana — eso vive en Linear/GitHub.
