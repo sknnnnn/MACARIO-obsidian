@@ -8,7 +8,7 @@
 
 ## 1. Objetivo principal
 
-Pendiente de definir. El documento original no declara un objetivo de negocio explícito.
+La siguiente etapa debe reorientar Proyecto Raíces para priorizar la comercialización de paquetes y mejorar la visibilidad de los perfiles de guías, preservando la propuesta de conexión entre personas, guías y territorios. La definición cuantitativa del objetivo (volumen, conversión, ingresos u otras métricas) sigue pendiente de Discovery.
 
 ---
 
@@ -20,11 +20,9 @@ Pendiente de definir.
 
 ## 3. Alcance
 
-Incluye, según los tipos de experiencias definidos en el documento original (ver detalle en [[07 — Proyectos/Proyecto Raíces/06 — Contenido]]):
+La oferta existente contempla Tours, Travesías y Paquetes. La orientación estratégica acordada para la siguiente etapa prioriza **Paquetes** y mayor visibilidad para los **perfiles de guías**.
 
-- Tours
-- Travesías
-- Paquetes
+Esto no autoriza por sí mismo la creación o modificación de funcionalidades, perfiles, campos, navegación, pagos ni procesos operativos. El modelo de remuneración de guías sigue sin definirse. La traducción de esta dirección a alcance funcional y modelo comercial queda pendiente de Discovery.
 
 ---
 

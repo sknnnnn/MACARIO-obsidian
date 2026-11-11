@@ -78,3 +78,12 @@ Fuente: doc Linear [Roadmap](https://linear.app/proyecto-raices/document/roadmap
 - El calendario público existente está en `calendario.html`. Verificar su fuente de datos y definir la integración con las fechas administradas en `experiencia_salidas`; no afirmar sincronización hasta comprobarla. No crear un calendario paralelo; Tours quedan fuera.
 - La selección de una experiencia destacada para Home queda diferida. El campo `destacada` actual no debe interpretarse como control de la portada.
 - No ejecutar cambios nuevos en datos/migraciones de producción, merge a `main` ni despliegues sin autorización explícita.
+
+
+## Estado y límites de continuidad — 2026-11-03
+
+Proyecto pausado por decisión del usuario. No ejecutar funcionalidades, arreglos, refactors, rediseño, cambios de datos, migraciones ni despliegues. Esta actualización es documental.
+
+La metodología vigente ya no se basa en tandas manuales de cambios. Aplicar [[02 — Metodología - MACARIO — Flujo de trabajo]]: delegación por resultado/loop, lectura de fuentes canónicas, reconciliación de estado, ejecución en grupos pequeños (normalmente 4–5 tareas relacionadas), QA con evidencia y cierre documental. Obsidian = contexto/decisiones; Linear = trabajo; GitHub = código y PRs; Figma = diseño aprobado; Claude Design = exploración; Claude Code = implementación; Cloudflare Preview/Dev = QA previo.
+
+Para el estado técnico, las ramas y la secuencia pendiente, consultar el documento de continuidad en el repositorio y la nota [[07 — Proyectos/Proyecto Raíces/00 — Índice]]. No asumir que ramas con commits adicionales están integradas en main.
