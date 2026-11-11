@@ -365,3 +365,16 @@ Se revisaron tokens, hojas CSS, breakpoints, foco visible, movimiento reducido y
 **Informe:** [Etapa 1 — Loop 5: auditoría visual estática y responsive](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-nueva-arquitectura-20261105/docs/auditorias/etapa-1-loop-5-auditoria-visual-estatica-responsive.md).
 
 No se modificaron CSS, HTML, tokens ni componentes. **Continuidad:** PRO-191 In Progress; Loops 1–5 documentados; Loop 5 requiere inspección visual live. Siguiente: Loop 6 — consolidación y criterio de cierre.
+
+
+## Hito: 2026-11-11 — Etapa 1, Loop 6: consolidación
+
+Se consolidaron los hallazgos de Loops 1–5 y se documentaron propuestas conceptuales para modelo de destinos/lugares, Guías, Paquetes, calendario/disponibilidad, consultas, sitemap, jerarquía de navegación, transición reversible Choquequirao → Cusco y prioridades.
+
+**Resultado:** Loop 6 cerrado. Los Loops 1–4 están cerrados; Loop 5 está cerrado como auditoría estática, pero falta inspección visual live actual de web pública y Admin. Se recuperó evidencia histórica del Admin (176/176 Playwright, 390/768/1024 y capturas 1280 px en 12 vistas, HEAD de referencia 05e153b, 2026-10-16), pero corre contra servidor estático local y no valida el estado live ni el HEAD actual. La preview Claude Design de 15 pantallas es exploratoria, no aprobada.
+
+**Etapa 1 permanece In Progress.** El criterio de cierre exige evidencia visual actual. No se marca Done ni se fuerza el cierre. Las propuestas conceptuales y de sitemap no autorizan implementación.
+
+Dependencias revisadas: PRO-160 y PRO-172 siguen pausadas; PRO-165 y PRO-166 están en Backlog; migraciones v6–v11 no deben repetirse. No se hicieron cambios de código, datos, migraciones, permisos, producción, PR, merge ni deploy.
+
+**Informe:** [Etapa 1 — Loop 6: consolidación y criterio de cierre](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-nueva-arquitectura-20261105/docs/auditorias/etapa-1-loop-6-consolidacion-y-criterio-de-cierre.md).
