@@ -16,7 +16,7 @@ Cada entrada nueva se agrega arriba, con fecha. No se borran entradas anteriores
 
 **Resultado:** Etapa 0 cerrada documentalmente y registrada como Done en Linear [PRO-194](https://linear.app/proyecto-raices/issue/PRO-194/etapa-0-preparacion-y-continuidad-cierre-2026-11-11). El primer loop de Etapa 1 queda preparado en [PRO-191](https://linear.app/proyecto-raices/issue/PRO-191/etapa-1-raices-discovery-y-auditoria-integral).
 
-**Reconciliación:** se confirmaron las fuentes canónicas y el plan maestro de ocho etapas; repositorio de aplicación y rama por defecto; rama documental de aplicación (2 commits ahead de main); rama documental de Obsidian (21 ahead / 8 behind de master); ramas de trabajo no integradas (feature/admin 26 ahead, rama visual 115 ahead y ramas divergentes chore/technical-hardening y dev); y estados de Linear de PRO-191, PRO-172, PRO-160 y PRO-161.
+**Reconciliación:** se confirmaron las fuentes canónicas y el plan maestro de ocho etapas; repositorio de aplicación y rama por defecto; rama documental de aplicación (3 commits ahead de main); rama documental de Obsidian (23 ahead / 8 behind de master); ramas de trabajo no integradas (feature/admin 26 ahead, rama visual 115 ahead y ramas divergentes chore/technical-hardening y dev); y estados de Linear de PRO-191, PRO-172, PRO-160 y PRO-161.
 
 **Dependencias:** PRO-172 mantiene pendiente el backup real de Supabase y la restauración aislada. El ensayo simulado no sustituye esos controles. Las migraciones v6–v11 figuran como ejecutadas el 2026-10-22; no repetir SQL. PRO-172 no impide iniciar la auditoría de solo lectura de Etapa 1, pero sí operaciones sensibles sobre datos reales, migraciones nuevas y acciones destructivas.
 
