@@ -12,6 +12,20 @@
 
 Cada entrada nueva se agrega arriba, con fecha. No se borran entradas anteriores. Las entradas migradas desde el documento original no tenían fecha registrada; se marcan explícitamente como "Fecha: no registrada" en vez de inventar una.
 
+## Hito: 2026-11-11 — Etapa 1, Loop 1: inventario funcional de web pública y Admin
+
+**Resultado:** primer loop de auditoría cerrado y registrado en [PRO-191](https://linear.app/proyecto-raices/issue/PRO-191/etapa-1-raices-discovery-y-auditoria-integral). El informe técnico y la matriz inicial están en [GitHub — Etapa 1 / Loop 1](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-nueva-arquitectura-20261105/docs/auditorias/etapa-1-loop-1-inventario-publico-admin.md).
+
+**Hallazgos principales:** Home todavía prioriza Tours/Travesías sobre Paquetes; destinos se agrupan por país; Choquequirao sigue como destino independiente; el calendario de `main` permanece vacío y la rama avanzada limita la vista pública a Travesías; no existe entidad ni módulo Admin de Guías; el formulario no captura contexto estructurado uniforme; Comentarios no tiene reseñas reales ni modelo administrable. El Admin más completo permanece fuera de `main`, en la rama visual con 115 commits por delante.
+
+**Límites:** auditoría estática de código y documentación. No se consultó Supabase directamente ni se hizo inspección visual live; no se modificaron código, datos, migraciones, producción, ramas de aplicación ni despliegues. PRO-172 continúa pendiente para operaciones sensibles.
+
+**Siguiente loop propuesto:** modelo de datos y trazabilidad Admin → Supabase → web pública, en solo lectura.
+
+---
+
+
+
 ## Hito: 2026-11-11 — Cierre de Etapa 0: preparación y continuidad
 
 **Resultado:** Etapa 0 cerrada documentalmente y registrada como Done en Linear [PRO-194](https://linear.app/proyecto-raices/issue/PRO-194/etapa-0-preparacion-y-continuidad-cierre-2026-11-11). El primer loop de Etapa 1 queda preparado en [PRO-191](https://linear.app/proyecto-raices/issue/PRO-191/etapa-1-raices-discovery-y-auditoria-integral).
