@@ -5,8 +5,8 @@
 **Fuentes canónicas:** Obsidian = contexto y decisiones; Linear = etapas, tareas, estados y dependencias; GitHub = código, ramas y PRs; Figma = diseño aprobado; Claude Design = exploración; Claude Code = implementación; Cloudflare Preview/Dev = QA previo.
 
 **Estado de repositorios y ramas:**
-- Aplicación `sknnnnn/proyecto-raices`: rama por defecto `main`. La rama `docs/raices-nueva-arquitectura-20261105` está 2 commits por delante de `main`; contiene actualización documental aún no integrada.
-- Obsidian `sknnnnn/MACARIO-obsidian`: la rama `docs/raices-nueva-arquitectura-20261105` está 21 commits por delante y 8 detrás de `master`. Se conserva sin merge ni actualización forzada hasta reconciliar el historial.
+- Aplicación `sknnnnn/proyecto-raices`: rama por defecto `main`. La rama `docs/raices-nueva-arquitectura-20261105` está 3 commits por delante de `main`; contiene actualización documental aún no integrada.
+- Obsidian `sknnnnn/MACARIO-obsidian`: la rama `docs/raices-nueva-arquitectura-20261105` está 23 commits por delante y 8 detrás de `master`. Se conserva sin merge ni actualización forzada hasta reconciliar el historial.
 - Aplicación: `feature/admin` tiene 26 commits adicionales; `claude/proyecto-raices-visual-language-q04g3y` tiene 115; `chore/technical-hardening` y `dev` están divergentes. PR #23 fue mergeado, pero no integró todo el trabajo posterior de la rama visual. No borrar ni fusionar ramas por antigüedad.
 
 **Estado Linear:** PRO-194 = Etapa 0 Done; PRO-191 = Etapa 1 en Backlog y preparada; PRO-172 y PRO-160 siguen In Progress; PRO-161 continúa como inventario transversal.
