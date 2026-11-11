@@ -352,3 +352,16 @@ Se revisó la completitud de contenido, traducciones, imágenes, textos estátic
 **Informe:** [Etapa 1 — Loop 4: auditoría editorial](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-nueva-arquitectura-20261105/docs/auditorias/etapa-1-loop-4-auditoria-editorial.md).
 
 No se editaron textos, traducciones, imágenes, alt, código ni sitemap. **Continuidad:** PRO-191 In Progress; Loops 1–4 cerrados; siguiente: Loop 5 — auditoría visual, navegación, responsive y accesibilidad visual.
+
+
+## Hito: 2026-11-11 — Etapa 1, Loop 5: auditoría visual estática y responsive
+
+Se revisaron tokens, hojas CSS, breakpoints, foco visible, movimiento reducido y reglas responsive de la web pública y del Admin avanzado.
+
+**Hallazgos principales:** arquitectura CSS compartida y responsive definido; contraste público insuficiente en tres variantes de CTA (blanco/naranja 3.10:1, blanco/verde WhatsApp 1.98:1, amarillo/crema 1.10:1). El Admin tiene mejor contraste documentado (verde/naranja 4.69:1), foco visible de 3 px y campos de 44 px. Quedan pendientes de validar el manejo de teclado del menú público, la navegación horizontal del Admin en mobile y algunos controles compactos.
+
+**Bloqueo de evidencia:** no se pudo acceder al sitio publicado ni a una pestaña del navegador conectada. No se obtuvieron capturas reales de desktop/mobile ni del Admin; no se certifica la apariencia final, los recortes, clipping o comportamiento en dispositivos.
+
+**Informe:** [Etapa 1 — Loop 5: auditoría visual estática y responsive](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-nueva-arquitectura-20261105/docs/auditorias/etapa-1-loop-5-auditoria-visual-estatica-responsive.md).
+
+No se modificaron CSS, HTML, tokens ni componentes. **Continuidad:** PRO-191 In Progress; Loops 1–5 documentados; Loop 5 requiere inspección visual live. Siguiente: Loop 6 — consolidación y criterio de cierre.
