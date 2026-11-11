@@ -330,3 +330,14 @@ Se verificó la existencia de los buckets `envios-fotos` (privado) y `contenido`
 **Informe:** [Etapa 1 — Loop 2: modelo de datos y trazabilidad](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-nueva-arquitectura-20261105/docs/auditorias/etapa-1-loop-2-modelo-datos-trazabilidad.md).
 
 **Continuidad:** PRO-191 vuelve a estar In Progress por indicación del usuario. Loop 1 y Loop 2 cerrados; siguiente: Loop 3 — auditoría funcional.
+
+
+## Hito: 2026-11-11 — Etapa 1, Loop 3: auditoría funcional
+
+Se revisaron los recorridos de catálogo, fichas, destinos, calendario, disponibilidad, consultas, WhatsApp, Home y módulos del Admin avanzado, contrastando `main`, la rama Admin y el estado agregado de Supabase.
+
+**Hallazgos principales:** el catálogo soporta filtros por tipo/destino y las fichas por tipo, pero no hay paquetes reales para validar el recorrido. En `main`, Calendario está deliberadamente vacío. La rama avanzada consulta la vista pública solo con el interruptor `salidas_publicas_activas` activo; hoy está en `0`, las nueve salidas cargadas pertenecen a Travesías en borrador y las cuatro Travesías publicadas no tienen salidas estructuradas. La disponibilidad pública estructurada se limita a Travesías; Tours y Paquetes mantienen fechas en el detalle. Los CTAs no ofrecen de manera uniforme formulario contextual + WhatsApp. Home conserva el orden Tours → Travesías → Paquetes. No existe flujo de Guías ni bandeja Admin para moderar fotos de visitantes.
+
+**Informe:** [Etapa 1 — Loop 3: auditoría funcional](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-nueva-arquitectura-20261105/docs/auditorias/etapa-1-loop-3-auditoria-funcional.md).
+
+No se hicieron pruebas live, login Admin, envíos, cargas, escrituras, migraciones ni cambios de producción. PRO-160 continúa como seguimiento de integración/validación del Admin. **Continuidad:** PRO-191 In Progress; Loops 1–3 cerrados; siguiente: Loop 4 — auditoría editorial.
