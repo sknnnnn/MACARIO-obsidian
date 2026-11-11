@@ -1,18 +1,24 @@
-## Estado operativo actualizado — 2026-11-03
+## Estado operativo actualizado — 2026-11-11
 
-**Estado: PAUSADO.** Por decisión del usuario, no se retoman funcionalidades, arreglos, rediseño ni cambios técnicos. La intervención actual se limita a ordenar y reconciliar documentación.
+**Etapa 0 cerrada documentalmente.** Registro: [PRO-194](https://linear.app/proyecto-raices/issue/PRO-194/etapa-0-preparacion-y-continuidad-cierre-2026-11-11). Próxima etapa: [Etapa 1 — Discovery y auditoría integral (PRO-191)](https://linear.app/proyecto-raices/issue/PRO-191/etapa-1-raices-discovery-y-auditoria-integral).
 
-- [Estado y continuidad técnica en el repositorio de aplicación](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-metodologia-pausa-20261103/docs/operacion/estado-y-continuidad-2026-11-03.md).
-- [[07 — Proyectos/Proyecto Raíces/Continuidad — Respaldo de producción y migraciones]] — respaldo real/restauración pendiente y orden de retoma.
-- [[07 — Proyectos/Proyecto Raíces/11 — Decisiones y Changelog]] — decisión estratégica y pausa del 2026-11-03.
-- [[02 — Metodología - MACARIO — Flujo de trabajo]] — metodología general vigente.
-- Linear: [Rediseño y lanzamiento Web](https://linear.app/proyecto-raices/project/rediseno-y-lanzamiento-web-2a37c58672be).
+**Fuentes canónicas:** Obsidian = contexto y decisiones; Linear = etapas, tareas, estados y dependencias; GitHub = código, ramas y PRs; Figma = diseño aprobado; Claude Design = exploración; Claude Code = implementación; Cloudflare Preview/Dev = QA previo.
 
-**Orientación estratégica:** paquetes como oferta comercial prioritaria y mayor visibilidad para los perfiles de guías. El modelo de remuneración de guías permanece sin definir. Tours y Travesías existentes no se eliminan por esta decisión. No se deriva de esto autorización para implementar.
+**Estado de repositorios y ramas:**
+- Aplicación `sknnnnn/proyecto-raices`: rama por defecto `main`. La rama `docs/raices-nueva-arquitectura-20261105` está 2 commits por delante de `main`; contiene actualización documental aún no integrada.
+- Obsidian `sknnnnn/MACARIO-obsidian`: la rama `docs/raices-nueva-arquitectura-20261105` está 21 commits por delante y 8 detrás de `master`. Se conserva sin merge ni actualización forzada hasta reconciliar el historial.
+- Aplicación: `feature/admin` tiene 26 commits adicionales; `claude/proyecto-raices-visual-language-q04g3y` tiene 115; `chore/technical-hardening` y `dev` están divergentes. PR #23 fue mergeado, pero no integró todo el trabajo posterior de la rama visual. No borrar ni fusionar ramas por antigüedad.
 
-**Próxima secuencia cuando el usuario reactive el proyecto:** PRO-172 (preflight, backup real y restauración aislada) → PRO-165 (validación funcional del calendario/salidas) → PRO-166 (prueba real de subida) → PRO-162/PRO-163 (reconciliación de migraciones registradas y verificación autorizada de escrituras E1). Las migraciones v6–v11 figuran como ejecutadas el 2026-10-22 en Linear; no repetir SQL. La simulación local no sustituye al backup real.
+**Estado Linear:** PRO-194 = Etapa 0 Done; PRO-191 = Etapa 1 en Backlog y preparada; PRO-172 y PRO-160 siguen In Progress; PRO-161 continúa como inventario transversal.
 
-**GitHub:** rama por defecto main. PR #23 sí fue mergeado; la rama visual sigue con 115 commits adicionales frente a main. feature/admin tiene 26 commits adicionales. También existen ramas divergentes chore/technical-hardening y dev. No fusionar ni borrar ramas sin inventario y autorización.
+**Dependencias y límites:** PRO-172 conserva pendiente el backup real de Supabase y la restauración aislada. La simulación local no los reemplaza. Las migraciones v6–v11 figuran como ejecutadas el 2026-10-22; no repetir SQL. PRO-172 no bloquea la auditoría de solo lectura de Etapa 1, pero sí operaciones sensibles sobre datos reales. No se modificaron código, datos, Supabase, producción, permisos, ramas, deploys ni merges.
+
+**Verificaciones no disponibles en este checkpoint:** worktrees y ramas locales de la PC; estado live de servicios y entornos productivos. La documentación registra el sitio público y el flujo `GitHub main → Cloudflare Dev`, pero no se afirma una comprobación live de Admin o integraciones.
+
+- [Cierre Etapa 0 — Linear PRO-194](https://linear.app/proyecto-raices/issue/PRO-194/etapa-0-preparacion-y-continuidad-cierre-2026-11-11).
+- [Etapa 1 — Linear PRO-191](https://linear.app/proyecto-raices/issue/PRO-191/etapa-1-raices-discovery-y-auditoria-integral).
+- [Plan maestro — Linear](https://linear.app/proyecto-raices/document/proyecto-raices-plan-maestro-de-rediseno-integral-ac57209593ba).
+- [Estado y continuidad técnica — corte 2026-11-03](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-metodologia-pausa-20261103/docs/operacion/estado-y-continuidad-2026-11-03.md).
 
 ---
 
