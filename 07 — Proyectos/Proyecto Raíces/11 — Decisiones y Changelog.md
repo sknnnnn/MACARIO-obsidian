@@ -341,3 +341,14 @@ Se revisaron los recorridos de catálogo, fichas, destinos, calendario, disponib
 **Informe:** [Etapa 1 — Loop 3: auditoría funcional](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-nueva-arquitectura-20261105/docs/auditorias/etapa-1-loop-3-auditoria-funcional.md).
 
 No se hicieron pruebas live, login Admin, envíos, cargas, escrituras, migraciones ni cambios de producción. PRO-160 continúa como seguimiento de integración/validación del Admin. **Continuidad:** PRO-191 In Progress; Loops 1–3 cerrados; siguiente: Loop 4 — auditoría editorial.
+
+
+## Hito: 2026-11-11 — Etapa 1, Loop 4: auditoría editorial
+
+Se revisó la completitud de contenido, traducciones, imágenes, textos estáticos, metadatos SEO y forma de renderizado.
+
+**Hallazgos principales:** las 36 experiencias publicadas tienen nombre, resumen, descripción, duración y modalidad, y sus traducciones inglesas de esos campos principales están completas. Ubatuba tiene texto residual «¿Te gusta esta personalidad?» en su traducción inglesa; Choquequirao carece de tres bloques traducidos. Ocho experiencias publicadas no tienen imagen principal ni galería. Las 40 imágenes de galería carecen de alt y el frontend usa el título de la experiencia como alt genérico. Cinco descripciones y una nota importante contienen HTML `<p>` que el template vuelve a envolver en `<p>`. Home destaca Cusco, Ushuaia y Choquequirao, omite Ubatuba y conserva el orden Tours → Travesías → Paquetes. Comentarios no tiene reseñas reales, aunque la página/SEO sigue prometiéndolas. «Reserva ahora»/«Book now» no refleja con precisión un flujo de consulta sin reserva confirmada.
+
+**Informe:** [Etapa 1 — Loop 4: auditoría editorial](https://github.com/sknnnnn/proyecto-raices/blob/docs/raices-nueva-arquitectura-20261105/docs/auditorias/etapa-1-loop-4-auditoria-editorial.md).
+
+No se editaron textos, traducciones, imágenes, alt, código ni sitemap. **Continuidad:** PRO-191 In Progress; Loops 1–4 cerrados; siguiente: Loop 5 — auditoría visual, navegación, responsive y accesibilidad visual.
