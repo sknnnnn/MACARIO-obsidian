@@ -1,0 +1,529 @@
+<title>Bloque UX/UI GXK12:2</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Anybody:wdth,wght@150,900&family=Baskervville:ital@0;1&display=swap">
+<style>
+/* Lámina de propuestas sobre papel GXK: columnas de lectura + artboards con los tokens reales del Storefront (theme.css). Un solo look, deliberado. */
+:root {
+  --paper: #ddd8cc;       /* --surface-paper */
+  --chalk: #faf7f0;       /* --color-chalk */
+  --black: #0a0a0a;       /* --color-black */
+  --ink: #141414;         /* --color-ink */
+  --muted: #3f3d3a;       /* --color-ink-muted-paper */
+  --beige: #c7bfad;       /* --color-beige */
+  --line-soft: #c9c2b4;
+  --line-control: #6b665c;
+  --orange: #f2570d;      /* --color-signal */
+  --ok: #1f6b3a;
+  --f-display: "Archivo", Arial, Helvetica, sans-serif;
+  --f-wide: "Anybody", "Archivo", Arial, sans-serif;
+  --f-serif: "Baskervville", Georgia, serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.55 var(--f-display); }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 96px; }
+a { color: inherit; }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+.wide { font-family: var(--f-wide); font-weight: 900; font-stretch: 150%; text-transform: uppercase; letter-spacing: .02em; line-height: .95; }
+.eyebrow { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+.muted { color: var(--muted); }
+header.top { border-bottom: 1px solid var(--ink); padding-bottom: 28px; display: grid; gap: 18px; }
+header.top h1 { font-size: clamp(34px, 6vw, 68px); }
+header.top p { max-width: 70ch; margin: 0; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 12px; }
+.tag { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 3px 8px; border: 1px solid currentColor; white-space: nowrap; }
+.t-ok { color: var(--ok); } .t-prop { color: var(--orange); } .t-fix { color: var(--ink); background: var(--chalk); } .t-dep { color: var(--muted); border-style: dashed; } .t-later { color: var(--muted); }
+nav.toc { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 13px; font-weight: 600; }
+nav.toc a { text-decoration: none; border-bottom: 1px solid var(--line-control); }
+section.block { padding-top: 56px; display: grid; gap: 22px; }
+.block-head { display: grid; grid-template-columns: auto 1fr; gap: 6px 18px; align-items: baseline; border-top: 1px solid var(--ink); padding-top: 14px; }
+.block-head .code { font-family: var(--f-wide); font-weight: 900; font-stretch: 150%; font-size: 28px; }
+.block-head h2 { font-size: 24px; font-weight: 800; }
+.block-head .sub { grid-column: 2; max-width: 75ch; margin: 0; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.cols > * { min-width: 0; }
+.note { background: var(--chalk); border: 1px solid var(--ink); padding: 16px 18px; }
+.note h3 { font-size: 14px; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 8px; }
+.note ul, .note ol { margin: 0; padding-left: 18px; } .note li + li { margin-top: 4px; }
+.note p { margin: 0 0 8px; } .note p:last-child { margin: 0; }
+.board > * { max-width: 100%; }
+.board { background: #e8e3d8; border: 1px dashed var(--line-control); padding: 22px; display: grid; gap: 14px; justify-items: start; min-width: 0; }
+.board .cap { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.board.dark { background: var(--black); color: var(--chalk); border-color: #3a3a3a; }
+.board.dark .cap { color: var(--beige); }
+table { border-collapse: collapse; width: 100%; font-size: 13.5px; background: var(--chalk); }
+th, td { border: 1px solid var(--ink); padding: 8px 10px; text-align: left; vertical-align: top; }
+th { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; background: var(--paper); }
+.scroll { overflow-x: auto; }
+.q { border-left: 4px solid var(--orange); background: var(--chalk); padding: 12px 16px; }
+.q b { display: block; margin-bottom: 4px; }
+
+/* ---------- Componentes de muestra ---------- */
+.qa { width: min(340px, 100%); background: var(--chalk); border: 1px solid var(--ink); }
+.qa-photo { aspect-ratio: 4/2.2; background: linear-gradient(160deg, #3b3c55, #262739); }
+.qa-body { padding: 16px; display: grid; gap: 14px; }
+.qa-head { display: flex; justify-content: space-between; gap: 12px; }
+.qa-name { font-weight: 700; font-size: 15px; } .qa-price { font-family: var(--f-serif); font-size: 15px; }
+.x { width: 44px; height: 44px; margin: -12px -12px 0 0; border: 0; background: none; font-size: 22px; }
+.grp { display: grid; gap: 8px; }
+.grp + .grp { border-top: 1px solid var(--line-soft); padding-top: 14px; }
+.lg { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; display: flex; gap: 8px; align-items: baseline; }
+.lg span { font-weight: 500; letter-spacing: .02em; text-transform: none; font-size: 13px; color: var(--muted); }
+.lg a { margin-left: auto; font-weight: 600; letter-spacing: .02em; text-transform: none; font-size: 12px; }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.sz { min-width: 48px; height: 44px; padding: 0 12px; border: 1px solid var(--line-control); background: transparent; font: 600 14px var(--f-display); color: var(--ink); }
+.sz.on { background: var(--black); border-color: var(--black); color: var(--chalk); }
+.sz.off { color: #9a958b; border-color: var(--line-soft); background: linear-gradient(to top right, transparent calc(50% - .5px), #9a958b calc(50% - .5px), #9a958b calc(50% + .5px), transparent calc(50% + .5px)); }
+.status { font-size: 13px; display: flex; align-items: center; gap: 8px; margin: 0; }
+.status::before { content: ""; width: 8px; height: 8px; background: var(--muted); flex: none; }
+.status.ok::before { background: var(--ok); }
+.btn-add { height: 48px; width: 100%; border: 0; background: var(--black); color: var(--chalk); font: 700 13px var(--f-display); letter-spacing: .1em; text-transform: uppercase; }
+.btn-add[disabled] { background: #b9b2a3; color: #6b665c; }
+/* Muestras de color */
+.sw { position: relative; width: 32px; height: 32px; border-radius: 50%; border: 0; padding: 0; background: transparent; display: inline-grid; place-items: center; }
+.sw i { width: 24px; height: 24px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgb(20 20 20 / 22%); display: block; }
+.sw.on { box-shadow: 0 0 0 1.5px var(--ink); }
+.sw.off i { opacity: .45; }
+.sw.off::after { content: ""; position: absolute; width: 30px; height: 1.5px; background: var(--ink); transform: rotate(-45deg); }
+.dark .sw.on { box-shadow: 0 0 0 1.5px var(--chalk); }
+.dark .sw i { box-shadow: inset 0 0 0 1px rgb(250 247 240 / 35%); }
+.sw.sm { width: 14px; height: 14px; } .sw.sm i { width: 12px; height: 12px; }
+.split i { background: linear-gradient(135deg, var(--a) 50%, var(--b) 50%); }
+.print i { background:
+  radial-gradient(circle at 30% 30%, #f2570d 0 2.5px, transparent 3px),
+  radial-gradient(circle at 70% 60%, #141414 0 2px, transparent 2.5px),
+  radial-gradient(circle at 40% 75%, #2f5f8f 0 2px, transparent 2.5px),
+  radial-gradient(circle at 75% 25%, #2f5f8f 0 1.5px, transparent 2px), #efe6cf; }
+.sw-row { display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; }
+.sw-demo { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; width: 100%; }
+.sw-demo figure { margin: 0; display: grid; gap: 6px; justify-items: start; font-size: 12px; }
+/* Card */
+.card { width: min(230px, 100%); display: grid; gap: 6px; }
+.card .ph { aspect-ratio: 4/5; background: linear-gradient(170deg, #cfc6b3, #a99f8a); position: relative; }
+.card .chip { position: absolute; right: 8px; bottom: 8px; background: var(--chalk); border: 1px solid var(--ink); font: 700 11px var(--f-display); letter-spacing: .08em; padding: 6px 10px; text-transform: uppercase; }
+.card .nm { font-weight: 700; font-size: 14px; } .card .pr { font-size: 14px; }
+.card .dots { display: flex; gap: 4px; align-items: center; font-size: 12px; color: var(--muted); }
+/* Toast */
+.toast { width: min(380px, 100%); display: grid; grid-template-columns: 56px 1fr auto; gap: 14px; padding: 14px 14px 14px 16px; align-items: start; }
+.toast > * { min-width: 0; }
+.toast .th { width: 56px; aspect-ratio: 4/5; background: var(--beige); }
+.toast .lb { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; display: flex; gap: 6px; align-items: center; margin: 0 0 4px; }
+.toast .nm { font-weight: 700; margin: 0; font-size: 14px; } .toast .dt { margin: 2px 0 0; font-size: 13px; }
+.toast .ac { display: grid; justify-items: end; gap: 6px; }
+.toast .vc { font-weight: 700; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; min-height: 44px; display: inline-flex; align-items: center; }
+.toast .cl { width: 32px; height: 32px; border: 0; background: none; font-size: 18px; color: inherit; }
+.t-old { background: var(--chalk); border: 1px solid var(--ink); color: var(--ink); }
+.t-old .lb::before { content: ""; width: 8px; height: 8px; background: var(--orange); }
+.t-new { background: var(--black); color: var(--chalk); border-left: 4px solid var(--orange); box-shadow: 0 12px 32px rgb(10 10 10 / 28%); }
+.t-new .lb { color: var(--orange); }
+.t-new .dt { color: var(--beige); }
+.t-new .vc { color: var(--chalk); text-decoration: underline; text-underline-offset: 4px; }
+.bgdemo { width: 100%; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 0; }
+.bgdemo > div { padding: 22px; display: grid; gap: 10px; justify-items: start; min-width: 0; }
+.bg-paper { background: var(--paper); } .bg-chalk { background: var(--chalk); } .bg-black { background: var(--black); color: var(--chalk); } .bg-photo { background: linear-gradient(120deg, #b7a98c, #6f6656 60%, #2a2823); color: var(--chalk); }
+/* Empty states */
+.es-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; width: 100%; }
+.es { padding: 26px 22px; display: grid; gap: 12px; align-content: start; min-height: 290px; }
+.es .t { font-family: var(--f-wide); font-stretch: 150%; font-weight: 900; font-size: 26px; text-transform: uppercase; line-height: .95; }
+.es .lab { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .75; }
+.es .msg { font-size: 16px; font-weight: 600; margin: 0; }
+.es .foot { margin-top: auto; display: flex; justify-content: flex-end; }
+.cta { display: inline-flex; justify-content: space-between; align-items: center; gap: 24px; width: min(230px, 100%); min-height: 48px; padding: 0 18px; border: 1px solid currentColor; font: 700 12px var(--f-display); letter-spacing: .1em; text-transform: uppercase; text-decoration: none; }
+.cta.solid { background: var(--chalk); color: var(--black); border-color: var(--chalk); }
+.es.ink { background: var(--black); color: var(--chalk); }
+.es.univ { background: #2d2a25; color: var(--chalk); }
+.es.nue { background: var(--black); color: var(--chalk); }
+.inline-btn { display: inline-flex; min-height: 44px; align-items: center; padding: 0 18px; border: 1px solid currentColor; font-size: 13px; font-weight: 600; width: max-content; }
+.flag { outline: 2px dashed var(--orange); outline-offset: 4px; }
+/* Galería */
+.gal { display: grid; grid-template-columns: 64px 1fr; gap: 10px; width: min(420px, 100%); }
+.gal .thumbs { display: grid; gap: 8px; align-content: start; }
+.gal .thumbs span { aspect-ratio: 4/5; background: #b9ae98; border: 1px solid transparent; }
+.gal .thumbs span.on { border-color: var(--ink); box-shadow: inset 0 0 0 2px var(--chalk); }
+.gal .main { aspect-ratio: 4/5; background: linear-gradient(165deg, #9aa7b5, #4d5866); position: relative; }
+.gal .count { position: absolute; right: 10px; bottom: 10px; background: var(--chalk); font-size: 12px; font-weight: 700; padding: 3px 8px; }
+.gal .foot { grid-column: 2; font-size: 12px; color: var(--muted); }
+/* Admin */
+.admin { width: min(560px, 100%); background: #fbfaf7; border: 1px solid #cfcac0; font-size: 13px; }
+.admin .ah { padding: 12px 16px; border-bottom: 1px solid #e3ded4; display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.admin .ah b { font-size: 14px; }
+.admin .ab { padding: 16px; display: grid; gap: 14px; }
+.field { display: grid; gap: 4px; } .field label { font-weight: 600; font-size: 12px; } .field .in { border: 1px solid #b9b3a7; background: #fff; padding: 8px 10px; min-height: 36px; }
+.field .hint { font-size: 11.5px; color: #6b665c; }
+.row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.switch { display: flex; align-items: center; gap: 10px; font-weight: 600; }
+.switch i { width: 38px; height: 22px; border-radius: 11px; background: var(--black); position: relative; flex: none; }
+.switch i::after { content: ""; position: absolute; right: 3px; top: 3px; width: 16px; height: 16px; border-radius: 50%; background: #fff; }
+.pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700; }
+.p-live { background: #dceedd; color: #1f6b3a; } .p-sched { background: #fdeadf; color: #9a3a0a; } .p-off { background: #ebe7df; color: #5a564e; } .p-pub { background: #e3e8f3; color: #2c3e66; }
+.imgs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.imgs span { aspect-ratio: 4/5; background: #c9c0ad; position: relative; font-size: 10px; display: grid; align-items: end; padding: 4px; }
+.imgs span.add { background: #fff; border: 1px dashed #9a958b; place-items: center; font-size: 12px; }
+.imgs span b { position: absolute; top: 4px; left: 4px; background: var(--black); color: #fff; padding: 1px 5px; font-size: 9.5px; letter-spacing: .06em; }
+.abtn { display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border: 1px solid #141414; font-weight: 600; font-size: 12px; background: #fff; }
+.abtn.pri { background: var(--black); color: #fff; }
+/* Popup */
+.scene { position: relative; width: 100%; background: linear-gradient(180deg, #cfc8ba, #bdb4a3); border: 1px solid var(--ink); overflow: hidden; }
+.scene .veil { position: absolute; inset: 0; background: rgb(10 10 10 / 55%); }
+.scene.desk { aspect-ratio: 16/9.2; display: grid; place-items: center; }
+.pop { position: relative; display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); width: min(720px, 86%); background: var(--black); color: var(--chalk); }
+.pop .img { aspect-ratio: 4/5; background: linear-gradient(160deg, #5c4a3a, #1d1814 70%), #2a2420; position: relative; }
+.pop .img::after { content: "FOTO DEL EVENTO"; position: absolute; left: 12px; bottom: 10px; font-size: 10px; letter-spacing: .14em; color: rgb(250 247 240 / 60%); }
+.pop .tx { padding: 26px 24px; display: grid; align-content: space-between; gap: 18px; min-width: 0; }
+.pop .k { font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--beige); display: flex; gap: 8px; align-items: center; }
+.pop .k::before { content: ""; width: 8px; height: 8px; background: var(--orange); }
+.pop h4 { overflow-wrap: normal; font-family: var(--f-wide); font-stretch: 150%; font-weight: 900; font-size: clamp(20px, 2.6vw, 30px); line-height: .95; text-transform: uppercase; margin: 0; }
+.pop .meta { font-size: 13px; color: var(--beige); margin: 0; }
+.pop .d { font-family: var(--f-serif); font-size: 16px; margin: 0; }
+.pop .acts { display: grid; gap: 8px; }
+.pop .cta { width: 100%; }
+.pop .later { font-size: 12px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; min-height: 40px; display: inline-flex; align-items: center; }
+.pop .close { position: absolute; top: 8px; right: 8px; width: 44px; height: 44px; border: 0; background: none; color: var(--chalk); font-size: 24px; }
+.phone { width: min(300px, 100%); aspect-ratio: 9/18.5; position: relative; border: 1px solid var(--ink); background: linear-gradient(180deg, #cfc8ba, #bdb4a3); overflow: hidden; }
+.sheet { position: absolute; left: 0; right: 0; bottom: 0; background: var(--black); color: var(--chalk); display: grid; }
+.sheet .img { aspect-ratio: 3/2; background: linear-gradient(160deg, #5c4a3a, #1d1814 70%); }
+.sheet .tx { padding: 16px; display: grid; gap: 10px; }
+.sheet .grab { position: absolute; top: 6px; left: 50%; width: 36px; height: 4px; margin-left: -18px; background: rgb(250 247 240 / 55%); border-radius: 2px; }
+.sheet h4 { font-family: var(--f-wide); font-stretch: 150%; font-weight: 900; font-size: 20px; line-height: .95; text-transform: uppercase; margin: 0; }
+.pv-row { display: flex; flex-wrap: wrap; gap: 22px; align-items: flex-start; width: 100%; }
+.pv-row > * { min-width: 0; }
+.kbd { font: 600 11px ui-monospace, monospace; border: 1px solid var(--line-control); padding: 1px 5px; background: var(--chalk); }
+@media (max-width: 640px) {
+  .pop { grid-template-columns: minmax(0,1fr); width: 92%; } .pop .img { aspect-ratio: 16/9; }
+  .block-head { grid-template-columns: 1fr; } .block-head .sub { grid-column: 1; }
+  .row2 { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+</style>
+
+<div class="wrap">
+<header class="top">
+  <p class="eyebrow">GXK12:2 · Bloque integral UX/UI · 16/11/2026 · Para aprobación</p>
+  <h1 class="wide">Decisiones y propuestas</h1>
+  <p>Lámina de revisión del bloque UX/UI. Reúne las cinco decisiones confirmadas (A–E) con su propuesta visual, la promoción de eventos y showrooms, el inventario de decisiones visuales que siguen abiertas y las inconsistencias detectadas en lo ya aprobado. Nada de esto está implementado: es la base para aprobar el bloque antes de autorizar código.</p>
+  <div class="legend">
+    <span class="tag t-ok">Aprobado / resuelto</span>
+    <span class="tag t-prop">Propuesta para aprobación</span>
+    <span class="tag t-fix">Corrección pendiente de implementación</span>
+    <span class="tag t-dep">Dependencia externa</span>
+    <span class="tag t-later">Etapa posterior</span>
+  </div>
+  <nav class="toc" aria-label="Secciones">
+    <a href="#a">A · Quick Add</a><a href="#b">B · Colores</a><a href="#c">C · Estados vacíos</a><a href="#d">D · Aviso de agregado</a><a href="#e">E · Galería de outfits</a><a href="#p">P · Promoción de eventos</a><a href="#i">Inventario de pendientes</a><a href="#x">Inconsistencias</a><a href="#r">Resumen</a>
+  </nav>
+</header>
+
+<!-- A -->
+<section class="block" id="a">
+  <div class="block-head"><span class="code">A</span><h2>Quick Add · selector de talle y color</h2>
+  <p class="sub">Decisión confirmada: separar talle y color, mejorar jerarquía y legibilidad, y mostrar el estado («Elegí una combinación») antes del botón. Se conservan el concepto de Quick Add v2 (D1–D8), su lógica y el antirrebote de doble clic.</p></div>
+  <div class="cols">
+    <div class="board">
+      <span class="cap">Hoy · captura del laboratorio (390 px)</span>
+      <div class="qa" style="width:300px">
+        <div class="qa-body" style="gap:8px">
+          <div class="qa-head"><div><div class="qa-name">TEST Pantalón Disponible</div><div class="qa-price">$ 28.000</div></div><span>×</span></div>
+          <div class="lg">Talle</div><div class="opts"><span class="sz">M</span><span class="sz">L</span></div>
+          <div class="lg">Color</div><div class="opts"><span class="sz">Negro</span></div>
+          <div class="flag" style="position:relative;height:26px"><p class="status" style="position:absolute;top:8px;clip-path:inset(0 0 55% 0)">Elegí una combinación</p></div>
+          <button class="btn-add" disabled style="margin-top:-12px">Agregar</button>
+        </div>
+      </div>
+      <p class="muted" style="margin:0;font-size:13px">El estado queda parcialmente tapado por el botón; talle y color se leen como un solo bloque y el color es texto.</p>
+    </div>
+    <div class="board">
+      <span class="cap">Propuesta · mismo panel v2, nueva estructura interna</span>
+      <div class="qa">
+        <div class="qa-body">
+          <div class="qa-head"><div><div class="qa-name">TEST Pantalón Disponible</div><div class="qa-price">$ 28.000</div></div><button class="x" aria-label="Cerrar">×</button></div>
+          <div class="grp"><div class="lg">Talle <a href="#a">Guía de talles</a></div>
+            <div class="opts"><button class="sz">S</button><button class="sz off" aria-disabled="true">M</button><button class="sz on" aria-pressed="true">L</button><button class="sz">XL</button></div></div>
+          <div class="grp"><div class="lg">Color <span>Negro</span></div>
+            <div class="sw-row"><button class="sw on" aria-label="Negro"><i style="background:#141414"></i></button><button class="sw" aria-label="Tiza"><i style="background:#f4efe3"></i></button><button class="sw off" aria-label="Celeste, sin stock en L"><i style="background:#8fb3d6"></i></button></div></div>
+          <p class="status">Elegí una combinación</p>
+          <button class="btn-add" disabled>Agregar</button>
+        </div>
+      </div>
+    </div>
+    <div class="note">
+      <h3>Cómo funciona</h3>
+      <ul>
+        <li><b>Dos grupos separados</b> por un filete suave y 14 px de aire: Talle arriba (decide el calce), Color abajo. Cada grupo es un <code>fieldset</code> con su <code>legend</code>.</li>
+        <li><b>El color elegido se nombra en la etiqueta</b>: «Color · Negro». Es la convención de las tiendas de moda y resuelve colores parecidos sin volver al texto en cada opción.</li>
+        <li><b>El estado va inmediatamente antes de «Agregar»</b>, en su propia fila: «Elegí una combinación» → «Elegí talle» / «Elegí color» → «Disponible» (señal verde) / «Sin stock». El botón nunca lo tapa (corrige el solapamiento actual).</li>
+        <li><b>Sin cambios</b> en la regla de combinaciones reales, el botón deshabilitado hasta elegir, D1–D8, el antirrebote ni la hoja mobile de 560 px.</li>
+        <li>Opción agotada: tachado diagonal, foco y lectura «sin stock»; no se oculta (patrón habitual y evita que el usuario crea que no existe el talle).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- B -->
+<section class="block" id="b">
+  <div class="block-head"><span class="code">B</span><h2>Sistema de colores · muestras circulares</h2>
+  <p class="sub">Decisión confirmada: reemplazar las etiquetas visibles por muestras circulares en cards, ficha, outfits y Quick Add, con nombre accesible. La base ya existe: cada color tiene <code>hex_code</code> en Admin (Catálogo base) y el catálogo lo lee.</p></div>
+  <div class="board">
+    <span class="cap">Estados y casos</span>
+    <div class="sw-demo">
+      <figure><div class="sw-row"><span class="sw"><i style="background:#141414"></i></span></div><figcaption>Normal · 24 px dentro de 32 px; táctil 44 px</figcaption></figure>
+      <figure><div class="sw-row"><span class="sw on"><i style="background:#141414"></i></span></div><figcaption>Seleccionado · anillo de tinta separado 2 px</figcaption></figure>
+      <figure><div class="sw-row"><span class="sw off"><i style="background:#8fb3d6"></i></span></div><figcaption>Sin stock en la combinación · tachado + 45 %</figcaption></figure>
+      <figure><div class="sw-row"><span class="sw"><i style="background:#faf7f0"></i></span><span class="sw"><i style="background:#f4efe3"></i></span></div><figcaption>Claros (Blanco / Tiza) · filete interno siempre visible</figcaption></figure>
+      <figure><div class="sw-row"><span class="sw"><i style="background:#141414"></i></span><span class="sw"><i style="background:#1d2333"></i></span></div><figcaption>Parecidos (Negro / Azul noche) · el nombre aparece al elegir y al pasar</figcaption></figure>
+      <figure><div class="sw-row"><span class="sw split" style="--a:#141414;--b:#faf7f0"><i></i></span><span class="sw split" style="--a:#7a2a1a;--b:#c7bfad"><i></i></span></div><figcaption>Dos tonos · diagonal 50/50 (segundo hex)</figcaption></figure>
+      <figure><div class="sw-row"><span class="sw print"><i></i></span></div><figcaption>Estampado · recorte de la tela (imagen de muestra)</figcaption></figure>
+    </div>
+  </div>
+  <div class="cols">
+    <div class="board"><span class="cap">Card de producto</span>
+      <div class="card"><div class="ph"><span class="chip">Agregar +</span></div><div class="nm">Buzo Oversize G&amp;K</div><div class="pr">$ 42.000</div>
+      <div class="dots" aria-label="4 colores: Negro, Tiza, Celeste, Borravino"><span class="sw sm"><i style="background:#141414"></i></span><span class="sw sm"><i style="background:#f4efe3"></i></span><span class="sw sm"><i style="background:#8fb3d6"></i></span><span class="sw sm"><i style="background:#6b1f2a"></i></span></div></div>
+      <p class="muted" style="margin:0;font-size:13px">Informativo, no interactivo: hasta 4 muestras de 12 px y «+N». Una sola variante de color → no se muestra nada.</p>
+    </div>
+    <div class="board"><span class="cap">Ficha (PDP) · mismo componente que Quick Add</span>
+      <div class="grp" style="width:280px"><div class="lg">Color <span>Tiza</span></div>
+      <div class="sw-row"><button class="sw"><i style="background:#141414"></i></button><button class="sw on"><i style="background:#f4efe3"></i></button><button class="sw"><i style="background:#8fb3d6"></i></button><button class="sw split" style="--a:#141414;--b:#faf7f0"><i></i></button></div></div>
+    </div>
+    <div class="board dark"><span class="cap">Outfit (lookbook) · línea de prenda</span>
+      <div style="display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;width:300px;font-size:14px;border-top:1px solid #3a3a3a;border-bottom:1px solid #3a3a3a;padding:12px 0">
+        <b>Pantalón Disponible</b><span>$ 28.000</span><span style="display:flex;gap:6px;align-items:center">L <span class="sw sm"><i style="background:#141414"></i></span></span></div>
+      <p style="margin:0;font-size:13px;color:var(--beige)">Variante fijada: talle + muestra; el nombre queda para lectores de pantalla y como <i>tooltip</i>.</p>
+    </div>
+  </div>
+  <div class="cols">
+    <div class="note"><h3>Reglas</h3><ul>
+      <li>Un único componente <b>Swatch</b> con tres tamaños: 12 px (card y líneas de solo lectura), 24 px (selectores) y área táctil de 44 px en mobile.</li>
+      <li><b>Accesibilidad</b>: cada muestra es un botón con <code>aria-label</code> = nombre del color (+ «sin stock» cuando corresponde) y <code>aria-pressed</code>. El nombre del elegido se ve en la etiqueta del grupo. Contraste del anillo de selección ≥ 3:1 sobre papel, tiza y negro.</li>
+      <li><b>Carrito, checkout, pedidos y Mi Casa conservan el nombre del color en texto</b> (con la muestra al lado). Son comprobantes: el texto evita dudas al revisar o reclamar. Ver consulta Q1.</li>
+      <li><b>Sin <code>hex_code</code></b>: se muestra el nombre como hoy (nunca un círculo vacío). Admin advierte «Este color no tiene muestra» al guardar.</li>
+      <li><b>Filtros de Tienda</b>: mismas muestras con el nombre al lado (en filtros el nombre ayuda a escanear la lista).</li>
+    </ul></div>
+    <div class="note"><h3>Estampados y combinaciones · alternativas</h3>
+      <div class="scroll"><table><thead><tr><th>Opción</th><th>A favor</th><th>En contra</th></tr></thead><tbody>
+      <tr><td><b>Imagen de muestra</b> (recorte de la tela) <span class="tag t-prop">Recomendado para estampados</span></td><td>Fiel al producto; patrón de las grandes tiendas.</td><td>Requiere subir un archivo por color en Admin.</td></tr>
+      <tr><td><b>Dos hex en diagonal</b> <span class="tag t-prop">Recomendado para bicolor</span></td><td>Liviano, se carga con dos códigos.</td><td>No representa estampados complejos.</td></tr>
+      <tr><td>Gradiente / ícono genérico «multicolor»</td><td>Cero carga.</td><td>No describe el producto; confunde entre estampados distintos.</td></tr>
+      </tbody></table></div>
+      <p style="margin-top:10px">Datos (para la etapa de implementación): agregar a <code>colors</code> un segundo hex opcional y una imagen de muestra opcional. Prioridad al dibujar: imagen → dos hex → hex → nombre.</p>
+    </div>
+  </div>
+</section>
+
+<!-- C -->
+<section class="block" id="c">
+  <div class="block-head"><span class="code">C</span><h2>Estados vacíos · CTA de Outfits</h2>
+  <p class="sub">Corrección puntual. Universo y Nuevos ingresos ponen su acción como botón de sección (ancho 310 px, texto + flecha, alineado a la derecha al pie). Outfits la mete dentro del mensaje vacío como botón chico, sin flecha y alineado a la izquierda. Se iguala Outfits; los estados vacíos aprobados no cambian.</p></div>
+  <div class="board" style="padding:0;border:0;background:none">
+    <div class="es-row">
+      <div class="es nue"><span class="t">Nuevos ingresos</span><span class="lab">Sin contenido por ahora</span><p class="msg">Todavía no hay productos publicados.</p><div class="foot"><a class="cta">Ver todo en tienda <span>→</span></a></div></div>
+      <div class="es univ"><span class="t">Universo</span><span class="lab">Sin contenido por ahora</span><p class="msg">Todavía no hay contenido publicado en Universo.</p><div class="foot"><a class="cta solid">Explorar universo <span>→</span></a></div></div>
+      <div class="es ink"><span class="t">Ideas de outfits</span><span class="lab">Sin contenido por ahora</span><p class="msg">Todavía no hay ideas de outfits publicadas.</p><a class="inline-btn flag">Ver outfits</a><div class="foot" style="opacity:.25"><span class="muted" style="color:var(--beige);font-size:12px">(sin acción de sección)</span></div></div>
+      <div class="es ink"><span class="t">Ideas de outfits</span><span class="lab">Sin contenido por ahora</span><p class="msg">Todavía no hay ideas de outfits publicadas.</p><div class="foot"><a class="cta">Ver outfits <span>→</span></a></div></div>
+    </div>
+  </div>
+  <div class="cols"><div class="note"><h3>Corrección</h3><ul>
+    <li>Outfits vacío = mismo esqueleto que los otros dos: título de sección → rótulo «Sin contenido por ahora» → mensaje → <b>acción de sección al pie, a la derecha</b>.</li>
+    <li>Botón «Ver outfits →» con el mismo estilo que Nuevos ingresos (contorno sobre fondo negro, porque la sección Outfits es negra), mismo ancho y misma flecha.</li>
+    <li>El mensaje vacío ya no lleva acciones propias. Copy sin cambios.</li>
+    <li>Mobile: la acción ocupa el ancho completo, como en las otras secciones.</li>
+  </ul></div></div>
+</section>
+
+<!-- D -->
+<section class="block" id="d">
+  <div class="block-head"><span class="code">D</span><h2>Aviso de producto agregado · contraste</h2>
+  <p class="sub">Se mantiene todo lo funcional aprobado (D6–D8: cantidad visible, sin animación ni barra de tiempo, un único aviso que reemplaza al anterior, «Ver carrito», ubicación). Cambia solo el tratamiento: hoy es tiza sobre papel claro y se pierde.</p></div>
+  <div class="bgdemo">
+    <div class="bg-paper"><span class="eyebrow muted">Hoy · sobre papel</span>
+      <div class="toast t-old"><div class="th"></div><div><p class="lb">Agregado al carrito</p><p class="nm">Buzo Oversize G&amp;K</p><p class="dt">Talle L · Negro · 1 unidad</p></div><div class="ac"><button class="cl" aria-label="Cerrar aviso">×</button><a class="vc">Ver carrito</a></div></div></div>
+    <div class="bg-paper"><span class="eyebrow muted">Propuesta · sobre papel</span>
+      <div class="toast t-new"><div class="th"></div><div><p class="lb">✓ Agregado al carrito</p><p class="nm">Buzo Oversize G&amp;K</p><p class="dt">Talle L · Negro · 1 unidad</p></div><div class="ac"><button class="cl" aria-label="Cerrar aviso">×</button><a class="vc">Ver carrito</a></div></div></div>
+    <div class="bg-black"><span class="eyebrow" style="color:var(--beige)">Propuesta · sobre negro (Home)</span>
+      <div class="toast t-new" style="box-shadow:0 0 0 1px rgb(250 247 240 / 30%)"><div class="th"></div><div><p class="lb">✓ Outfit agregado</p><p class="nm">Outfit 02 · Street</p><p class="dt">3 prendas · talles y colores del outfit</p></div><div class="ac"><button class="cl" aria-label="Cerrar aviso">×</button><a class="vc">Ver carrito</a></div></div></div>
+    <div class="bg-photo"><span class="eyebrow">Propuesta · sobre foto</span>
+      <div class="toast t-new"><div class="th"></div><div><p class="lb">✓ Agregado al carrito</p><p class="nm">Remera Multitalle</p><p class="dt">Talle M · Tiza · 2 unidades</p></div><div class="ac"><button class="cl" aria-label="Cerrar aviso">×</button><a class="vc">Ver carrito</a></div></div></div>
+  </div>
+  <div class="cols"><div class="note"><h3>Especificación</h3><ul>
+    <li>Fondo negro sólido #0A0A0A, texto tiza #FAF7F0 (18,9 : 1), detalle en beige #C7BFAD (10 : 1), acento naranja #F2570D en el rótulo y en un filo de 4 px a la izquierda (5,6 : 1 sobre negro, AA).</li>
+    <li>Sobre fondos negros (Home, lookbook) se suma un contorno tiza al 30 % para separarlo del fondo; la sombra suave lo despega del papel y de las fotos.</li>
+    <li>«Ver carrito» subrayado en tiza (reconocible como link) y cierre × con área de 44 px. Sin animación; sin barra de tiempo. La duración y la pausa al pasar el puntero o enfocar quedan como están.</li>
+    <li>El color de la variante se dice en texto en el aviso (confirmación), coherente con la regla de comprobantes de B.</li>
+  </ul></div></div>
+</section>
+
+<!-- E -->
+<section class="block" id="e">
+  <div class="block-head"><span class="code">E</span><h2>Galería del detalle de outfit + gestión en Admin</h2>
+  <p class="sub">Decisión confirmada: el detalle de outfit admite varias fotos y usa la misma galería que la ficha de prenda (D1b: principal 4:5, miniaturas de 72 px a la izquierda en desktop y en fila debajo en mobile, contador «1 / N» y pie «Foto 1 de N»). Cierra el pendiente B6 «solo existe la portada».</p></div>
+  <div class="cols">
+    <div class="board"><span class="cap">Sitio · detalle de outfit (desktop)</span>
+      <div class="gal"><div class="thumbs"><span class="on"></span><span></span><span></span><span></span></div><div class="main"><span class="count">1 / 4</span></div><div class="foot">Foto 1 de 4</div></div>
+      <p class="muted" style="margin:0;font-size:13px">Mismo componente <code>ProductGallery</code>; sin fotos → marcador «foto pendiente» como hoy. La primera foto (portada) sigue alimentando el lookbook y el listado.</p>
+    </div>
+    <div class="board"><span class="cap">Admin · Outfits → editar → Fotos</span>
+      <div class="admin"><div class="ah"><b>Fotos del outfit</b><span class="muted" style="font-size:12px">4 de 8 · JPG/PNG/WebP · máx. 5 MB</span></div>
+        <div class="ab"><div class="imgs"><span><b>PORTADA</b>1</span><span>2</span><span>3</span><span>4</span></div>
+        <div class="imgs" style="grid-template-columns:1fr"><span class="add" style="aspect-ratio:auto;min-height:48px">+ Agregar fotos (arrastrá o elegí archivos)</span></div>
+        <div class="field"><label>Texto alternativo de la foto 2</label><div class="in">Vista lateral del outfit Street con el pantalón negro</div><span class="hint">Describe la foto para lectores de pantalla.</span></div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="abtn">↑ ↓ Ordenar</span><span class="abtn">Usar como portada</span><span class="abtn">Quitar</span></div></div></div>
+    </div>
+    <div class="note"><h3>Reglas</h3><ul>
+      <li>Admin reutiliza el gestor de imágenes de Productos (<code>ProductImagesManager</code>): mismas acciones (subir varias, ordenar, portada, texto alternativo, quitar) y mismas validaciones.</li>
+      <li>La portada es la foto 1 del orden; cambiarla actualiza Home y Listado.</li>
+      <li>Límite sugerido: 8 fotos por outfit (igual criterio que prendas).</li>
+      <li>Datos: tabla de imágenes de outfit análoga a <code>product_images</code> (migración en la etapa de implementación; requiere autorización).</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- P -->
+<section class="block" id="p">
+  <div class="block-head"><span class="code">P</span><h2>Promoción de eventos y showrooms</h2>
+  <p class="sub">Funcionalidad nueva, opcional por evento. Publicar un evento no lo promociona: la promoción es una sección aparte del formulario, con su propio interruptor, período y contenido. En el sitio aparece como una invitación de GXK, una vez por visitante, nunca en procesos de compra.</p></div>
+
+  <div style="display:grid;gap:20px">
+    <div class="board"><span class="cap">Admin · Eventos → editar → sección «Promoción»</span>
+      <div class="admin">
+        <div class="ah"><b>Showroom de verano · Palermo</b><span><span class="pill p-pub">Evento publicado</span> <span class="pill p-sched">Promoción programada</span></span></div>
+        <div class="ab">
+          <div class="switch"><i></i> Promocionar con anuncio al ingresar al sitio</div>
+          <span class="hint" style="font-size:11.5px;color:#6b665c">Publicar el evento no activa el anuncio. El anuncio solo se muestra mientras el evento esté publicado y dentro del período.</span>
+          <div class="row2"><div class="field"><label>Mostrar desde</label><div class="in">20/11/2026 10:00</div></div><div class="field"><label>Hasta</label><div class="in">06/12/2026 20:00</div><span class="hint">Por defecto, el fin del evento.</span></div></div>
+          <div class="field"><label>Imagen del anuncio</label><div class="imgs" style="grid-template-columns:72px 1fr;align-items:center"><span style="aspect-ratio:4/5"></span><span style="background:none;padding:0;display:block;font-size:12px">Usa la portada del evento · <u>Subir otra</u><br><span class="hint">Vertical 4:5, mín. 1200 px de alto.</span></span></div></div>
+          <div class="field"><label>Título</label><div class="in">Showroom de verano</div><span class="hint">Por defecto, el título del evento · máx. 40 caracteres.</span></div>
+          <div class="field"><label>Texto</label><div class="in">Probate la colección nueva antes que nadie.</div><span class="hint">Máx. 120 caracteres.</span></div>
+          <div class="row2"><div class="field"><label>Texto del botón</label><div class="in">Ver el showroom</div></div><div class="field"><label>Destino</label><div class="in">/eventos/showroom-de-verano</div><span class="hint">Por defecto, la página del evento.</span></div></div>
+          <div class="field"><label>Prioridad</label><div class="in">Normal ▾</div><span class="hint">Si hay más de un anuncio activo, se muestra el de mayor prioridad.</span></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="abtn">Vista previa · desktop</span><span class="abtn">Vista previa · mobile</span><span class="abtn pri">Guardar promoción</span></div>
+        </div>
+      </div>
+      <p class="muted" style="margin:0;font-size:13px">Estados de la promoción: <span class="pill p-off">Inactiva</span> <span class="pill p-sched">Programada</span> <span class="pill p-live">Activa</span> <span class="pill p-off">Finalizada</span>. Si el evento no está publicado, la promoción puede guardarse pero queda «En espera: el evento no está publicado».</p>
+    </div>
+
+    <div class="board"><span class="cap">Sitio · desktop / tablet ≥ 768 px · modal editorial</span>
+      <div class="scene desk"><div class="veil"></div>
+        <div class="pop" role="dialog" aria-modal="true" aria-labelledby="pt">
+          <div class="img"></div>
+          <div class="tx"><div style="display:grid;gap:10px"><span class="k">Showroom · Palermo</span><h4 id="pt">Showroom de verano</h4><p class="meta">Sáb 22 y dom 23 de noviembre · 14 a 20 h</p><p class="d">Probate la colección nueva antes que nadie.</p></div>
+          <div class="acts"><a class="cta solid">Ver el showroom <span>→</span></a><a class="later">Ahora no</a></div></div>
+          <button class="close" aria-label="Cerrar">×</button>
+        </div>
+      </div>
+      <span class="cap">Sitio · mobile &lt; 768 px · hoja inferior</span>
+      <div class="pv-row">
+        <div class="phone"><div class="veil" style="position:absolute;inset:0;background:rgb(10 10 10 / 55%)"></div>
+          <div class="sheet"><span class="grab"></span><div class="img"></div><div class="tx"><span class="eyebrow" style="color:var(--beige)">Showroom · Palermo</span><h4>Showroom de verano</h4><span style="font-size:12px;color:var(--beige)">Sáb 22 y dom 23/11 · 14 a 20 h</span><a class="cta solid" style="width:100%">Ver el showroom <span>→</span></a><a class="later" style="font-size:12px;text-decoration:underline;justify-self:center">Ahora no</a></div><button class="close" aria-label="Cerrar" style="position:absolute;top:6px;right:6px;width:44px;height:44px;border:0;background:none;color:#faf7f0;font-size:22px">×</button></div>
+        </div>
+        <div class="note" style="flex:1;min-width:220px"><h3>Por qué estos patrones</h3><ul>
+          <li><b>Desktop:</b> modal centrado de dos columnas (foto 4:5 + texto). La foto manda y la tipografía ancha de GXK lo hace sentir invitación, no banner. Máx. 720 px de ancho.</li>
+          <li><b>Mobile:</b> hoja inferior (no modal a pantalla completa): se alcanza con el pulgar, deja ver el sitio detrás y se cierra deslizando o con ×. Foto 3:2 arriba.</li>
+          <li><b>Descartado:</b> barra superior (poca presencia para una foto) y panel lateral (compite con el carrito, que ya usa ese lugar en el patrón habitual).</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cols">
+    <div class="note"><h3>Cuándo aparece</h3><ul>
+      <li>Solo en páginas de exploración: Home, Tienda, Outfits, Universo, Eventos y fichas. <b>Nunca</b> en Carrito, Checkout, Pago, Confirmación, Seguimiento, Mi Casa, Familia (ingreso/registro), Help, legales ni Admin.</li>
+      <li>A los 5 s de llegar o al 40 % de desplazamiento, lo que ocurra primero; nunca durante la carga ni encima de un panel abierto (Quick Add, menú, aviso de agregado).</li>
+      <li>Si la visita llega a la página del mismo evento, no se muestra (ya está ahí).</li>
+      <li>Eventos <i>Members Only</i>: solo para miembros con sesión iniciada.</li>
+    </ul></div>
+    <div class="note"><h3>Frecuencia y cierre</h3><ul>
+      <li><b>Un anuncio por sesión</b> como máximo.</li>
+      <li>Cerrar (×, «Ahora no», <span class="kbd">Esc</span>, velo o deslizar) lo oculta <b>14 días</b> para ese anuncio en ese navegador.</li>
+      <li>Ir al CTA lo marca como visto: no vuelve a aparecer ese anuncio.</li>
+      <li>Si Admin cambia imagen, título o fechas de forma relevante, sube la versión y vuelve a mostrarse una vez (opcional en el formulario: «Volver a mostrar a quienes lo cerraron»).</li>
+      <li>Se guarda en el navegador (sin cuenta), sin cookies de terceros.</li>
+    </ul></div>
+    <div class="note"><h3>Varios anuncios y fin</h3><ul>
+      <li>Si hay varios activos: mayor <b>prioridad</b> → evento más próximo → creación más reciente. Se muestra uno; los demás esperan a otra sesión (y respetan su propio cierre).</li>
+      <li>Termina solo al vencer el período, al terminar el evento o si el evento deja de estar publicado. No queda ningún anuncio de un evento pasado.</li>
+      <li>Admin muestra cuál está activo hoy y cuál saldrá primero.</li>
+    </ul></div>
+    <div class="note"><h3>Accesibilidad</h3><ul>
+      <li><code>role="dialog"</code>, <code>aria-modal</code>, título enlazado; foco inicial en el título, foco atrapado dentro y devuelto al elemento anterior al cerrar.</li>
+      <li><span class="kbd">Esc</span> y × de 44 px siempre visibles; «Ahora no» como texto.</li>
+      <li>Sin animación (motion pendiente, PRO-159); respeta <code>prefers-reduced-motion</code> cuando haya.</li>
+      <li>Texto alternativo obligatorio para la imagen en Admin.</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- Inventario -->
+<section class="block" id="i">
+  <div class="block-head"><span class="code">I</span><h2>Inventario · decisiones visuales y de UX realmente pendientes</h2>
+  <p class="sub">Solo lo que sigue abierto en la documentación vigente (PRO-192, notas 10 y 13). Lo ya resuelto no se lista. Cada propuesta usa un patrón conocido de ecommerce y la identidad GXK existente (papel, tinta, negro, naranja como señal, tipografía ancha en títulos).</p></div>
+  <div class="scroll"><table>
+    <thead><tr><th>Área</th><th>Pendiente (origen)</th><th>Patrón y propuesta</th><th>Estado</th></tr></thead>
+    <tbody>
+      <tr><td>Carrito</td><td>Prenda de Early Access que sale del carrito al vencer las 24 h, hoy en silencio (B9.1)</td><td>Aviso en línea arriba de la lista, como «producto ya no disponible» de cualquier tienda: «Una prenda de acceso anticipado salió de tu carrito porque terminó la ventana de 24 h.» + link a la ficha. Persiste hasta cerrarlo; no es un toast.</td><td><span class="tag t-prop">Para aprobación</span></td></tr>
+      <tr><td>Carrito</td><td>Contador de cantidad (A3)</td><td>Paso a paso <b>– n +</b> de 44 px, n centrado, «–» deshabilitado en 1 y «Quitar» aparte (no por llegar a 0); «+» se deshabilita en el stock y explica «Máximo disponible».</td><td><span class="tag t-prop">Para aprobación</span></td></tr>
+      <tr><td>Carrito</td><td>Contador del header (B1)</td><td>Número sobre el ícono de bolsa (convención universal), oculto en 0, «9+» desde 10; el aria-label ya dice «Carrito, N productos».</td><td><span class="tag t-prop">Para aprobación</span></td></tr>
+      <tr><td>Checkout</td><td>Estados bloqueados por línea no disponible, verificación en curso y error de verificación (B1)</td><td>Mismo lenguaje que el carrito, ya aprobado: aviso de bloque arriba del resumen («Revisá tu pedido: 1 prenda ya no está disponible») + marca en la línea afectada + botón principal deshabilitado con el motivo debajo. Verificando: botón con «Verificando disponibilidad…» y sin doble envío.</td><td><span class="tag t-prop">Para aprobación</span></td></tr>
+      <tr><td>Checkout</td><td>Tablet 768–1199 px (B1, A1)</td><td>Una columna (formulario) con el resumen plegable arriba («Ver resumen · $ total»), el patrón mobile de las tiendas grandes; desde 1200 px, las dos columnas aprobadas.</td><td><span class="tag t-prop">Para aprobación</span></td></tr>
+      <tr><td>Checkout</td><td>«Revisá antes de confirmar» en mobile y resumen de Pago más alto que K1 (B4)</td><td>Mantener ambos: en mobile el usuario no ve el resumen al confirmar; repetir el total junto al botón es la convención. Solo se pide confirmar lo implementado.</td><td><span class="tag t-prop">Confirmar lo implementado</span></td></tr>
+      <tr><td>Checkout</td><td>Panel posterior a crear el pedido / reintento de pago (A2, B3, B4)</td><td>Depende del flujo real de Mercado Pago y de la idempotencia.</td><td><span class="tag t-dep">Dependencia externa</span></td></tr>
+      <tr><td>Seguimiento</td><td>Validación por campo «Datos incompletos» (B7)</td><td>Errores en línea debajo de cada campo al salir de él y al enviar, con resumen arriba y foco en el primer error (patrón de formularios accesibles); se reemplaza la validación nativa del navegador.</td><td><span class="tag t-prop">Para aprobación</span></td></tr>
+      <tr><td>Seguimiento</td><td>Texto bajo el panel: registro opcional o referencia a Mi Casa (B7)</td><td>Una línea según el estado: visitante «¿Tenés cuenta? Tus pedidos están en Mi Casa» → Ingresar; miembro con sesión: «Ver todos tus pedidos en Mi Casa». Copy a aprobar.</td><td><span class="tag t-prop">Para aprobación</span></td></tr>
+      <tr><td>Mi Casa</td><td>Esqueleto de carga vs 404 real en el detalle (B7)</td><td>Esqueleto solo mientras carga; si el pedido no es del usuario, 404 real (no se revela que existe). Es lo que hacen las tiendas con pedidos ajenos y no cambia SEO.</td><td><span class="tag t-prop">Para aprobación</span></td></tr>
+      <tr><td>Mi Casa</td><td>Direcciones A1 vs A2 (B7)</td><td>Requiere ver las dos versiones de Figma y elegir; no se puede inferir.</td><td><span class="tag t-prop">Consulta Q3</span></td></tr>
+      <tr><td>Seguimiento · Mi Casa</td><td>Tablet 768–1023 px (B7)</td><td>Adaptar la composición mobile con márgenes de tablet (8 columnas, gutter 32), como ya se decidió para el resto del sitio; no se dibuja una tercera composición.</td><td><span class="tag t-prop">Para aprobación</span></td></tr>
+      <tr><td>Members Only</td><td>Visitante no miembro que entra a Members Only: hoy puede terminar en 404 (A2)</td><td>Página con acceso restringido (no 404): título, qué es, beneficios en 3 líneas, «Sumate a Familia GxK» y «Ingresar». Mismo tono que el teaser de Early Access ya implementado.</td><td><span class="tag t-prop">Para aprobación · copy a aprobar</span></td></tr>
+      <tr><td>Búsqueda</td><td>Copy de estados (A2) y CLS menor (B10.2)</td><td>Estados estándar: vacío («Buscá prendas, outfits o colecciones»), sin resultados («No encontramos “x”» + revisar ortografía + accesos a categorías y a «Ver todo»), con resultados («N resultados para “x”»). Reservar el alto del contador para evitar el salto.</td><td><span class="tag t-prop">Para aprobación · copy a aprobar</span></td></tr>
+      <tr><td>Privacidad y Términos</td><td>Contenido legal y destino en el footer (A2, F10)</td><td>Links en la fila inferior del footer (convención); páginas de texto largo con índice y «Última actualización». El texto lo provee GXK.</td><td><span class="tag t-dep">Dependencia (texto legal)</span></td></tr>
+      <tr><td>Admin</td><td>«Posible coincidencia» al subir imágenes (B8)</td><td>Solo coincidencia exacta del archivo (mismo contenido): aviso «Esta imagen ya está cargada en …» con «Subir igual». Sin detección por parecido (no hay criterio confiable).</td><td><span class="tag t-prop">Para aprobación</span></td></tr>
+      <tr><td>Admin</td><td>Admin mobile, Lote 2 y módulo de Legales (A1, A3, F10)</td><td>Sin cambios en esta fase.</td><td><span class="tag t-later">Etapa posterior</span></td></tr>
+      <tr><td>Global</td><td>Feedback de carga en la navegación (B10.1)</td><td>Barra fina superior de progreso (patrón de navegación de sitios modernos) + esqueletos solo en listados; no altera el 404. Requiere decisión técnica.</td><td><span class="tag t-later">Etapa posterior</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- Inconsistencias -->
+<section class="block" id="x">
+  <div class="block-head"><span class="code">X</span><h2>Inconsistencias en decisiones existentes</h2>
+  <p class="sub">Se documentan con su justificación. Ninguna se modifica sin autorización.</p></div>
+  <div class="scroll"><table>
+    <thead><tr><th>#</th><th>Inconsistencia</th><th>Por qué importa</th><th>Propuesta</th></tr></thead>
+    <tbody>
+      <tr><td>X1</td><td>«Elegí una combinación» queda tapado por «Agregar» en Quick Add (captura del laboratorio).</td><td>El usuario no ve por qué el botón está deshabilitado.</td><td>Se resuelve con A. <span class="tag t-fix">Corrección</span></td></tr>
+      <tr><td>X2</td><td>La card del lookbook de la Home permite comprar parte del outfit («Agregar 2 de 3 piezas»), mientras el detalle aplica la regla aprobada de compra completa.</td><td>Mismo outfit, dos reglas según dónde se mire.</td><td>Consulta Q2 (ya registrada en PRO-192 B6).</td></tr>
+      <tr><td>X3</td><td>El acceso «EXPLORÁ LOS OUTFITS» existe pero la Home V0.4 no lo muestra.</td><td>Texto aprobado sin lugar en pantalla.</td><td>Consulta Q4.</td></tr>
+      <tr><td>X4</td><td>Color como texto en selectores y como texto en comprobantes.</td><td>Con B, los selectores pasan a muestras; los comprobantes conservan texto a propósito.</td><td>Regla explícita en B (Q1).</td></tr>
+      <tr><td>X5</td><td>Header con íconos (aprobado) frente a la propuesta de unificación con texto; favorito ícono vs texto (A1).</td><td>Dos fuentes visuales distintas.</td><td>Mantener lo aprobado (íconos) y cerrar la propuesta de unificación como no adoptada en ese punto.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<!-- Resumen -->
+<section class="block" id="r">
+  <div class="block-head"><span class="code">R</span><h2>Resumen para aprobar el bloque</h2></div>
+  <div class="cols">
+    <div class="note"><h3>Listo para aprobación</h3><ul>
+      <li>A · Selector de Quick Add (incluye X1).</li>
+      <li>B · Sistema de muestras de color y reglas.</li>
+      <li>C · CTA del estado vacío de Outfits.</li>
+      <li>D · Aviso de agregado en negro.</li>
+      <li>E · Galería de outfit + gestión en Admin.</li>
+      <li>P · Promoción de eventos y showrooms (Admin, sitio, reglas).</li>
+      <li>Inventario: Carrito (3), Checkout (3), Seguimiento (2), Mi Casa (2), Members Only, Búsqueda, Admin (coincidencias).</li>
+    </ul></div>
+    <div class="note"><h3>Necesita tu decisión</h3>
+      <div class="q"><b>Q1 · Color en comprobantes</b>¿Carrito, checkout, pedidos y Mi Casa conservan el nombre del color en texto junto a la muestra? Recomendado: sí.</div>
+      <div class="q" style="margin-top:8px"><b>Q2 · Compra parcial en la Home</b>¿La card del lookbook pasa a la regla de compra completa (como el detalle) o mantiene la compra parcial?</div>
+      <div class="q" style="margin-top:8px"><b>Q3 · Direcciones A1 vs A2</b>¿Cuál de las dos versiones de Figma rige el formulario de Mi Casa?</div>
+      <div class="q" style="margin-top:8px"><b>Q4 · «EXPLORÁ LOS OUTFITS»</b>¿Se muestra en algún lugar de la Home o queda solo como entrada de navegación?</div>
+    </div>
+    <div class="note"><h3>Dependencias y etapa posterior</h3><ul>
+      <li>Mercado Pago, envíos y dominio: fuera de esta fase (reunión con el dueño).</li>
+      <li>Texto legal de Privacidad y Términos: lo provee GXK.</li>
+      <li>Copy final de Members Only, Búsqueda y Seguimiento: propuesto, requiere aprobación de contenido.</li>
+      <li>Feedback de carga (B10.1), Admin mobile, Admin Lote 2, motion (PRO-159).</li>
+      <li>Implementación: migraciones para colores (segundo hex, imagen), imágenes de outfit y promociones; requieren autorización.</li>
+    </ul></div>
+  </div>
+</section>
+</div>
