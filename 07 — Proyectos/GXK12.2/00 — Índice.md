@@ -208,3 +208,13 @@ Detalle: nota 13 §11.15 y [registro operativo de checkpoint](https://github.com
 - **Migraciones:** M1–M3 siguen sin ejecutar y sin autorización para aplicarlas. La revisión/corrección SQL puede continuar como preparación, sin modificar Supabase.
 - **Documentación de detalle:** notas 09 (changelog), 10 (UX), 13 §11.17 (seguimiento del backlog) y 14 (laboratorio), además de Linear PRO-192.
 - **Guardas vigentes:** sin PR, merge, push a `master`, deploy, cambios en Producción ni ejecución de migraciones.
+
+## Actualización — 2026-11-17 · Integración B13 / PR #6
+
+- **B13 — Unificación UX/UI:** integrada en `master` mediante [PR #6](https://github.com/sknnnnn/GxK12-2/pull/6), merge commit `a5f9fe4961e111384011e9ac55870c9bfb9773b9`.
+- **Rama integrada:** `claude/pro-192-b13-implementacion`, HEAD integrado `813c5aee029fef19053292aace901f9351e39bb2`.
+- **Deploy:** Vercel Production asociado al merge commit; el responsable confirmó estado **READY** el 17/11. URL: https://gx-k12-2-proyecto-travesia.vercel.app/.
+- **QA previo a integración:** 657/657 tests; lint, typecheck y build OK; baterías complementarias y revisión visual/a11y documentadas en nota 13. Pendiente el chequeo funcional post-deploy por el responsable.
+- **M1–M3:** incorporadas como archivos preparados; no ejecutadas ni aplicadas a Supabase.
+- **Continuidad:** completar QA funcional post-deploy y continuar integrando/verificando los pendientes anteriores a Etapa 5. PRO-195 sigue planificada/bloqueada por sus condiciones de inicio ya documentadas; no iniciar Etapa 5 hasta reunión con el dueño, accesos/credenciales verificados, inventario actualizado y autorización explícita.
+- **Guardas:** esta actualización documental no autoriza nuevas migraciones, cambios de Supabase, otro PR/merge ni deploy.
