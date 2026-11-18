@@ -99,6 +99,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 - [[07 — Proyectos/GXK12.2/08 — GXK12.2 — Spacing & Layout Foundations V0.1|Spacing & Layout Foundations V0.1]] — sistema espacial aprobado para implementación
 - [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog]] — hitos y decisiones permanentes fechadas
 - [[07 — Proyectos/GXK12.2/10 — GXK12.2 — UX e interacción|UX e interacción]] — criterios de UX / interacción y auditoría post-funcional
+- [[07 — Proyectos/GXK12.2/15 — GXK12.2 — UX — Disponibilidad y compra de Outfits|UX — Disponibilidad y compra de Outfits]] — regla de compra parcial de Outfits (17/11/2026), implementada e integrada en `master` (18/11)
 - [[07 — Proyectos/GXK12.2/12 — GXK12.2 — Admin Lote 1 — Cierre y continuidad 2026-10-19|Admin Lote 1 — cierre y continuidad (2026-10-19)]] — estado del artefacto corregido, validación pendiente y próximo paso
 
 ---
@@ -204,3 +205,12 @@ Detalle y reglas: [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de produ
 - **Siguiente punto:** preparar Supabase staging alojado y aislado de producción para conectar Preview y validar Admin/sesión y publicación.
 - Detalle y límites: [[07 — Proyectos/GXK12.2/14 — GXK12.2 — Laboratorio local Windows y continuidad Etapa 4|Laboratorio local Windows y continuidad Etapa 4]].
 - Seguimiento: [Linear PRO-193](https://linear.app/proyecto-raices/issue/PRO-193/gxk122-etapa-4-beta-presentable-al-dueno-de-gxk-inicio-1011-beta-3011) y [PRO-192](https://linear.app/proyecto-raices/issue/PRO-192/gxk122-backlog-unico-de-correcciones-y-pendientes-etapas-1-4).
+
+---
+
+## Estado operativo — 2026-11-18 (compra parcial de Outfits)
+
+- **Decisión:** compra parcial de Outfits aprobada el 17/11 (agrega solo las prendas disponibles, «X de Y prendas»; sin disponibilidad, no agrega). Fuente de verdad: [[07 — Proyectos/GXK12.2/15 — GXK12.2 — UX — Disponibilidad y compra de Outfits|15 — UX — Disponibilidad y compra de Outfits]].
+- **Código:** integrada en `master` del repositorio `GxK12-2` por [PR #7](https://github.com/sknnnnn/GxK12-2/pull/7) (merge commit `7789fac`), con revalidación de stock en el servidor. Sin migraciones ni cambios de Supabase. Carrito general y checkout sin cambios.
+- **Pendiente:** aprobación visual de los textos; revisión funcional manual en Production y en dispositivos reales; desconectar la integración externa de Cloudflare Workers Builds (ajena al stack de GXK; falló en el PR #7).
+- **Nota sobre ramas:** esta actualización se hizo sobre `master` de forma autocontenida; el resto del trabajo documental de `docs/gxk-periodo1` (B13, nota 13 «Unificación UX-UI») sigue sin integrarse a `master`.
