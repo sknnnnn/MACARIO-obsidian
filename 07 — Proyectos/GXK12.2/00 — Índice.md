@@ -16,7 +16,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 **Estado:** Proyecto activo. LOOP 1 Producto / NUEVO / Early Access en QA final parcial. Las migraciones de producción y los archivos de la rama `claude/gxk-loop1-producto-early-access` están reconciliados; la Preview más reciente está READY y el build/TypeScript finalizaron correctamente. Por decisión explícita, Preview continúa conectada a Supabase producción y el QA se limita a lectura. No hay registros positivos para probar NUEVO ni Early Access. Analytics no registra eventos en Preview porque no tiene `SUPABASE_SERVICE_ROLE_KEY`; se mantiene así para no habilitar escrituras privilegiadas desde Preview. No hay merge ni deploy a producción autorizados. La Brand & E-commerce Bible y la Dirección Visual aprobada siguen siendo obligatorias.
 
-**Última actualización:** 2026-11-03.
+**Última actualización:** 2026-11-19. El estado vigente está en las secciones «Estado operativo» del final de esta nota (la más reciente: 2026-11-19, motion, cards e íconos); el texto de «Estado» de arriba es histórico.
 
 **Checkpoint histórico (2026-10-28) — cierre de la etapa de diseño del recorrido de compra, antes de la pasada de motion.** Fuente visual: Figma PRANA STUDIOS, página `GxK12.2` (índice del recorrido `526:1505`). Se distingue lo aprobado, lo no cerrado, lo implementado y lo pendiente:
 - **A. Diseño aprobado (no se reabre sin una nueva decisión):**
@@ -98,7 +98,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 - [[07 — Proyectos/GXK12.2/07 — GXK12.2 — V0.3 Home|V0.3 Home]] — dirección visual de Home consolidada en Figma
 - [[07 — Proyectos/GXK12.2/08 — GXK12.2 — Spacing & Layout Foundations V0.1|Spacing & Layout Foundations V0.1]] — sistema espacial aprobado para implementación
 - [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|Decisiones y Changelog]] — hitos y decisiones permanentes fechadas
-- [[07 — Proyectos/GXK12.2/10 — GXK12.2 — UX e interacción|UX e interacción]] — criterios de UX / interacción y auditoría post-funcional
+- [[07 — Proyectos/GXK12.2/10 — GXK12.2 — UX e interacción|UX e interacción]] — criterios de UX / interacción, auditoría post-funcional y §6 motion (tokens aprobados e implementación, 19/11/2026)
 - [[07 — Proyectos/GXK12.2/15 — GXK12.2 — UX — Disponibilidad y compra de Outfits|UX — Disponibilidad y compra de Outfits]] — regla de compra parcial de Outfits (17/11/2026), implementada e integrada en `master` (18/11)
 - [[07 — Proyectos/GXK12.2/12 — GXK12.2 — Admin Lote 1 — Cierre y continuidad 2026-10-19|Admin Lote 1 — cierre y continuidad (2026-10-19)]] — estado del artefacto corregido, validación pendiente y próximo paso
 
@@ -214,3 +214,15 @@ Detalle y reglas: [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de produ
 - **Código:** integrada en `master` del repositorio `GxK12-2` por [PR #7](https://github.com/sknnnnn/GxK12-2/pull/7) (merge commit `7789fac`), con revalidación de stock en el servidor. Sin migraciones ni cambios de Supabase. Carrito general y checkout sin cambios.
 - **Pendiente:** aprobación visual de los textos; revisión funcional manual en Production y en dispositivos reales; desconectar la integración externa de Cloudflare Workers Builds (ajena al stack de GXK; falló en el PR #7).
 - **Nota sobre ramas:** esta actualización se hizo sobre `master` de forma autocontenida; el resto del trabajo documental de `docs/gxk-periodo1` (B13, nota 13 «Unificación UX-UI») sigue sin integrarse a `master`.
+
+---
+
+## Estado operativo — 2026-11-19 (motion, cards e íconos)
+
+- **Qué se hizo:** capa de movimiento de toda la web (tokens aprobados, recorrido de compra, capa editorial con «rupturas»), **cards con un solo tratamiento**, **íconos propios** en lugar de caracteres de texto (corazón de favoritos: opción A, relleno negro) y salida animada al quitar una línea del carrito. Detalle: [[07 — Proyectos/GXK12.2/10 — GXK12.2 — UX e interacción|10 — UX e interacción §6]] y [[07 — Proyectos/GXK12.2/09 — GXK12.2 — Decisiones y Changelog|09 — Decisiones y Changelog]] (2026-11-19).
+- **Código:** rama `claude/gxk-motion` de `GxK12-2` → [PR #8](https://github.com/sknnnnn/GxK12-2/pull/8) (**abierto, sin fusionar**). 691 tests, `tsc`, lint y 16 baterías de QA de navegador en el laboratorio local. Sin migraciones ni cambios de Supabase ni variables nuevas.
+- **De la responsabilidad del responsable (no se tocan sin su decisión):** **Mi Camino** (queda con el diseño aprobado de Figma, sin movimiento, a rediseñar) y la **tipografía** (con ella, el momento firma con los ejes de la fuente display).
+- **Pendiente de decisión:** navegación con View Transitions (T7/T17), T21, T22, retraso de T9, estado de T12, indicador de T19, brillo de esqueletos.
+- **Pendiente de verificación:** revisión del PR y del Preview; Safari iOS y Chrome Android reales; revisión manual de la compra parcial de Outfits y de B13 en Production (de la entrada anterior); desconectar la integración externa de Cloudflare Workers Builds.
+- **Documentación técnica:** `docs/motion.md` en la rama (hasta fusionar el PR).
+- **Nota sobre ramas:** esta actualización se hizo sobre `master` de la bóveda; el resto del trabajo documental de `docs/gxk-periodo1` (B13, nota 13 «Unificación UX-UI») sigue sin integrarse a `master`.
