@@ -223,6 +223,7 @@ Detalle y reglas: [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de produ
 - **Código:** rama `claude/gxk-motion` de `GxK12-2` → [PR #8](https://github.com/sknnnnn/GxK12-2/pull/8) (**fusionado en `master` el 2026-11-19, merge commit `4ba49ee`**). 691 tests, `tsc`, lint y 16 baterías de QA de navegador en el laboratorio local. Sin migraciones ni cambios de Supabase ni variables nuevas.
 - **De la responsabilidad del responsable (no se tocan sin su decisión):** **Mi Camino** (queda con el diseño aprobado de Figma, sin movimiento, a rediseñar) y la **tipografía** (con ella, el momento firma con los ejes de la fuente display).
 - **20/11/2026:** T9, T12, T19, T21 y T22 implementados ([PR #9](https://github.com/sknnnnn/GxK12-2/pull/9), merge `ea457af`). View Transitions: decidido no hacerlas.
+- **20/11/2026 (PRO-192):** copy coherente por sección, decisiones de producto cerradas por el equipo, Home en WebP con caché y comparación de ramas ([PR #10](https://github.com/sknnnnn/GxK12-2/pull/10)). Lo único que depende del propietario de GXK son las credenciales.
 - **Pendiente de decisión:** brillo de esqueletos y salida de la hoja de filtros mobile.
 - **Pendiente de verificación:** revisión del Preview de `master`; Safari iOS y Chrome Android reales; revisión manual de la compra parcial de Outfits y de B13 en Production (de la entrada anterior); desconectar la integración externa de Cloudflare Workers Builds.
 - **Documentación técnica:** `docs/motion.md` en `master` del repositorio de código.
