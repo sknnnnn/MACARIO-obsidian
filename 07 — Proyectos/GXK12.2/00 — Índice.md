@@ -16,7 +16,7 @@ GXK 12:2 es un espacio de exploración y transformación a través de la ropa (s
 
 **Estado:** Proyecto activo. LOOP 1 Producto / NUEVO / Early Access en QA final parcial. Las migraciones de producción y los archivos de la rama `claude/gxk-loop1-producto-early-access` están reconciliados; la Preview más reciente está READY y el build/TypeScript finalizaron correctamente. Por decisión explícita, Preview continúa conectada a Supabase producción y el QA se limita a lectura. No hay registros positivos para probar NUEVO ni Early Access. Analytics no registra eventos en Preview porque no tiene `SUPABASE_SERVICE_ROLE_KEY`; se mantiene así para no habilitar escrituras privilegiadas desde Preview. No hay merge ni deploy a producción autorizados. La Brand & E-commerce Bible y la Dirección Visual aprobada siguen siendo obligatorias.
 
-**Última actualización:** 2026-11-19. El estado vigente está en las secciones «Estado operativo» del final de esta nota (la más reciente: 2026-11-19, motion, cards e íconos); el texto de «Estado» de arriba es histórico.
+**Última actualización:** 2026-11-26 (noche; ver la última sección «Estado operativo»). El estado vigente está en las secciones «Estado operativo» del final de esta nota (la más reciente: 2026-11-19, motion, cards e íconos); el texto de «Estado» de arriba es histórico.
 
 **Checkpoint histórico (2026-10-28) — cierre de la etapa de diseño del recorrido de compra, antes de la pasada de motion.** Fuente visual: Figma PRANA STUDIOS, página `GxK12.2` (índice del recorrido `526:1505`). Se distingue lo aprobado, lo no cerrado, lo implementado y lo pendiente:
 - **A. Diseño aprobado (no se reabre sin una nueva decisión):**
@@ -243,3 +243,10 @@ Detalle y reglas: [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de produ
 - **Documentación técnica:** `docs/motion.md` en `master` del repositorio de código.
 - **Seguimiento (Linear):** [PRO-196](https://linear.app/proyecto-raices/issue/PRO-196/gxk122-motion-revision-del-pr-8-verificacion-en-dispositivos-y) (pendientes del motion), [PRO-159](https://linear.app/proyecto-raices/issue/PRO-159/gxk122-direccion-de-experiencia-and-motion-de-home) (dirección de motion) y [PRO-192](https://linear.app/proyecto-raices/issue/PRO-192/gxk122-backlog-unico-de-correcciones-y-pendientes-etapas-1-4) (backlog). PR de esta documentación: [MACARIO-obsidian #24](https://github.com/sknnnnn/MACARIO-obsidian/pull/24).
 - **Nota sobre ramas:** esta actualización se hizo sobre `master` de la bóveda; el resto del trabajo documental de `docs/gxk-periodo1` (B13, nota 13 «Unificación UX-UI») sigue sin integrarse a `master`.
+
+## Estado operativo — 2026-11-26 (noche, revisión de código y 404)
+
+- **Qué se hizo:** revisión de código ejecutada y fusionada ([PR #41](https://github.com/sknnnnn/GxK12-2/pull/41) a [#50](https://github.com/sknnnnn/GxK12-2/pull/50)): actualización de seguridad, limpieza y guardas de CI, regla de nombres, tests sin aserciones de implementación, servicios de Admin, Universo y checkout partidos por tema, 404 reales en borradores y enlaces rotos, y 49 de 61 pruebas de navegador al día. Sin cambios de comportamiento salvo los 404.
+- **Verificación:** 847 tests, `tsc`, lint, `knip`, `madge` y build en verde; compra completa en el laboratorio 10/10.
+- **Pendiente:** ver la entrada del 2026-11-26 (noche) de la nota 09. Lo que bloquea el lanzamiento sigue siendo credenciales de Mercado Pago y transportistas (esa noche con el dueño), catálogo y contenido real, y legales.
+- **Seguimiento:** Linear PRO-205 (revisión de código), PRO-203 (Universo), PRO-204 (sistema de diseño).
