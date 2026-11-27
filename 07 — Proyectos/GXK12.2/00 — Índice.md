@@ -250,3 +250,4 @@ Detalle y reglas: [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de produ
 - **Verificación:** 847 tests, `tsc`, lint, `knip`, `madge` y build en verde; compra completa en el laboratorio 10/10.
 - **Pendiente:** ver la entrada del 2026-11-26 (noche) de la nota 09. Lo que bloquea el lanzamiento sigue siendo credenciales de Mercado Pago y transportistas (esa noche con el dueño), catálogo y contenido real, y legales.
 - **Seguimiento:** Linear PRO-205 (revisión de código), PRO-203 (Universo), PRO-204 (sistema de diseño).
+- **27/11/2026:** la fecha del 30/11 para la beta quedó **descartada**; sin fecha vigente hasta resolver dominio, credenciales de Mercado Pago y transportistas, y catálogo real (ver nota 09).
