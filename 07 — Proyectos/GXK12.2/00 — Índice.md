@@ -260,7 +260,8 @@ Detalle y reglas: [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de produ
 - **Universo cerrado** ([PR #51](https://github.com/sknnnnn/GxK12-2/pull/51)): temporadas, audiovisual y eventos con la estructura de la campaña.
 - **Videos de Audiovisual** ([PR #52](https://github.com/sknnnnn/GxK12-2/pull/52), [#54](https://github.com/sknnnnn/GxK12-2/pull/54), [#55](https://github.com/sknnnnn/GxK12-2/pull/55)): varios videos de YouTube por pieza, cargados en el Admin y reproducidos en fila con los controles de YouTube; el responsable confirmó que funciona en producción. Dos migraciones aditivas aplicadas con su OK. El [PR #53](https://github.com/sknnnnn/GxK12-2/pull/53) (pantalla aparte) se cerró sin fusionar.
 - **Sistema de diseño** ([PR #56](https://github.com/sknnnnn/GxK12-2/pull/56)): botones, campos, avisos y cabeceras con los componentes del sistema; tokens en lugar de valores sueltos; guardas en los tests.
-- **Documentación del repo** ([PR #57](https://github.com/sknnnnn/GxK12-2/pull/57), pendiente de fusionar): ramas, integraciones y estado.
+- **Documentación del repo** ([PR #57](https://github.com/sknnnnn/GxK12-2/pull/57), fusionado): ramas, integraciones y estado.
+- **Pago y envíos** ([PR #58](https://github.com/sknnnnn/GxK12-2/pull/58), fusionado; dos migraciones aplicadas con OK): un pago de Mercado Pago que no coincide en monto o moneda deja el pedido en incidencia; número de seguimiento cargado a mano en el Admin mientras los correos no estén conectados. La fecha objetivo del proyecto en Linear se quitó.
 - **Verificación:** 873 tests; capturas antes/después; QA de navegador de compra, checkout, carrito, ficha, outfits, contenido, 404 y promoción en verde.
 - **Pendiente:**
   - **Dominio y credenciales** (dependen del dueño): webhook de Mercado Pago, `NEXT_PUBLIC_SITE_URL`, SMTP, transportistas.
