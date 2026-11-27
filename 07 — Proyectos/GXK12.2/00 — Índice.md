@@ -251,3 +251,23 @@ Detalle y reglas: [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de produ
 - **Pendiente:** ver la entrada del 2026-11-26 (noche) de la nota 09. Lo que bloquea el lanzamiento sigue siendo credenciales de Mercado Pago y transportistas (esa noche con el dueño), catálogo y contenido real, y legales.
 - **Seguimiento:** Linear PRO-205 (revisión de código), PRO-203 (Universo), PRO-204 (sistema de diseño).
 - **27/11/2026:** la fecha del 30/11 para la beta quedó **descartada**; sin fecha vigente hasta resolver dominio, credenciales de Mercado Pago y transportistas, y catálogo real (ver nota 09).
+
+## Estado operativo — 2026-11-27 (cierre del día)
+
+- **Decisiones del responsable:** la beta del 30/11 se **descartó** (sin fecha vigente); el sitio sigue en **Vercel** hasta tener el dominio (Cloudflare se evalúa después, solo como DNS); el **Admin queda fuera** del sistema de diseño; los videos se publican en el **canal de YouTube de GXK** (no se suben archivos al sitio).
+- **Mercado Pago:** Access Token renovado y cargado en Vercel, solo Production (secreto; no se registra en ningún documento). Falta el secreto del webhook, que depende del dominio. No hacer compras de prueba en Production.
+- **Dominio `gxk122.com.ar`:** trámite y pago hechos por el dueño; todavía no está activo ni delegado. Se le consulta en unos días.
+- **Universo cerrado** ([PR #51](https://github.com/sknnnnn/GxK12-2/pull/51)): temporadas, audiovisual y eventos con la estructura de la campaña.
+- **Videos de Audiovisual** ([PR #52](https://github.com/sknnnnn/GxK12-2/pull/52), [#54](https://github.com/sknnnnn/GxK12-2/pull/54), [#55](https://github.com/sknnnnn/GxK12-2/pull/55)): varios videos de YouTube por pieza, cargados en el Admin y reproducidos en fila con los controles de YouTube; el responsable confirmó que funciona en producción. Dos migraciones aditivas aplicadas con su OK. El [PR #53](https://github.com/sknnnnn/GxK12-2/pull/53) (pantalla aparte) se cerró sin fusionar.
+- **Sistema de diseño** ([PR #56](https://github.com/sknnnnn/GxK12-2/pull/56)): botones, campos, avisos y cabeceras con los componentes del sistema; tokens en lugar de valores sueltos; guardas en los tests.
+- **Documentación del repo** ([PR #57](https://github.com/sknnnnn/GxK12-2/pull/57), pendiente de fusionar): ramas, integraciones y estado.
+- **Verificación:** 873 tests; capturas antes/después; QA de navegador de compra, checkout, carrito, ficha, outfits, contenido, 404 y promoción en verde.
+- **Pendiente:**
+  - **Dominio y credenciales** (dependen del dueño): webhook de Mercado Pago, `NEXT_PUBLIC_SITE_URL`, SMTP, transportistas.
+  - **Contenido real:** catálogo y legales.
+  - **Figma:** enlace al archivo para el mapa Figma ↔ código.
+  - **Producto:** promoción de Universo (migración); reseñas sí/no; «producción = making of»; videos en Home, eventos, outfits y productos.
+  - **Revisión en un celular real:** barra fija, zoom y portadas.
+  - **Ramas:** borrar desde GitHub las ya fusionadas (lista en `docs/ramas-y-cierre.md`).
+- **Detalle:** nota 09, entradas del 27/11. **Linear:** PRO-203 (Universo) y PRO-204 (sistema de diseño), ambas In Progress.
+
