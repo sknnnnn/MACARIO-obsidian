@@ -272,3 +272,10 @@ Detalle y reglas: [[07 — Proyectos/GXK12.2/05 — GXK12.2 — Roadmap de produ
   - **Ramas:** borrar desde GitHub las ya fusionadas (lista en `docs/ramas-y-cierre.md`).
 - **Detalle:** nota 09, entradas del 27/11. **Linear:** PRO-203 (Universo) y PRO-204 (sistema de diseño), ambas In Progress.
 
+## Estado operativo — 2026-11-28
+
+- **Fusionado** [PR #59](https://github.com/sknnnnn/GxK12-2/pull/59) con la migración del cartel aplicada antes en producción: pruebas de navegador en verde, cards y carriles unificados, y cartel promocionable para todo Universo (piezas y capítulos además de eventos).
+- **Decisiones:** los videos de Audiovisual van en Home después de Universo, con diseño que pasa el responsable (pendiente de recibir). Las reseñas en las fichas quedan para el futuro.
+- **Ramas:** el responsable borra hoy las de la lista en la nota 09 (entrada del 28/11). Quedan `master` y `experiment/gxk-bible-rebuild`.
+- **Pendiente:** dominio y credenciales (webhook de Mercado Pago, SMTP, transportistas); contenido real; diseño de los videos en Home; revisión en un celular real; enlace de Figma.
+
